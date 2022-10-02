@@ -5,7 +5,7 @@
 Start with [Arduino](Arduino.md) and explore from there. 
 
 ## Contributors
-- [that_marouk_ish](that_marouk_ish.md)
+- [that_marouk_ish](Personal%20Folders/that_marouk_ish%20(Spencer)/that_marouk_ish.md)
 - `<link to your personal page above>`
 
 ## Meta
