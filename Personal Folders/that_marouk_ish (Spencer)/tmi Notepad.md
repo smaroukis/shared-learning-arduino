@@ -1,3 +1,5 @@
+
+[2022-10-02](2022-10-02)
 - install zip libraries directly (no need to unpackage)
 - a serial terminal is important to see the interaction with the Arduino via a computer - this is the Serial Monitor
 - "Selecting which port to open in the Serial Monitor is the same as selecting a port for uploading Arduino code. Go to Tools -> Serial Port, and select the correct port." (source: [[elegooCompleteStarterMega2560]]) - should be the same COM port as in DeviceManager
@@ -5,4 +7,4 @@
 - tools > set board
 - tools > set port (forgot this one)
 - changed it to 500ms
-- 
+- https://ht-deko.com/arduino/usb2serial.html#06 for [[Serial to USB]] things (see [Serial Communication](Serial%20Communication))
