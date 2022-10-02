@@ -6,7 +6,7 @@ I thought I had ordered an (unofficial) Uno starter kit but when I opened it I f
 
  So I learned besides the main differences (more pins, more PWM, more storage, ATMega2560 vs 328P), another one is that the Mega has a USB to Serial driver chip built in, where-as the Uno's ATMEGA328P needs an external ATMega 16U2 USB-to-Serial converter. 
 
-Well, then, after that rabbit hole I did follow the instructions to get it to blink the led, and changed it from 1s to 0.5s. 
+Well, then, after that rabbit hole I did follow the instructions to get it to blink the led, and changed it from 1s to 0.5s. Also changed the variable `LED_BUILTIN` to `13` to verify that is the correct LED pin for the Mega. 
 
 
 [[2022-10-01]]
