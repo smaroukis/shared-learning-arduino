@@ -6,8 +6,3 @@ parent::[[Arduino]]
 
 ## Starter Kits
 - 
-
-## Books
-``` dataview
-list from (#book or #library) and [[Arduino]]
-```
