@@ -24,11 +24,11 @@ parent::[[_Start Here]]
 
 ### Obsidian Specific Settings
 - Turn off "Wikilinks" for portability
-	- 
+	- Settinngs > File Links > Use Wikilinks = `no (untoggled)`
 - Set Links as full relative to vault root
-	- Settings > File Links > New Link Format =  Relative Path to File 
+	- Settings > File Links > New Link Format =  `Relative Path to File `
 - If using git, please add `.obsidian` to your `.gitignore` file 
-- Set Def 
+
 
 ## Contributors
 - #tmi [2022-10-02](2022-10-02) 

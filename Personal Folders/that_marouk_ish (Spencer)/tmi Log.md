@@ -1,8 +1,12 @@
 > Reverse chronological log of my learnings on Arduino
 
-[2022-10-02](2022-10-02)
-Uploaded this vault to Github. 
+[2022-10-02](2022-10-02) - Day 1 - Unboxing  - a Mega?? and Blink
 
+I thought I had ordered an (unofficial) Uno starter kit but when I opened it I found a Mega inside. Honestly I wanted an Uno, since I'm sure many tutorials are built off that, and if I want to use an Uno later I'll have to check and change the pin numbers in the code. 
+
+ So I learned besides the main things (more pins, more PWM, more storage, ATMega2560 vs 328P), is that the Mega has a USB to Serial driver chip built in, where-as the ATMEGA328P needs an external ATMega 16U2 USB-to-Serial converter. 
+
+Well, then, after forgetting to set my 
 
 
 [[2022-10-01]]
