@@ -1,6 +1,6 @@
 parent::[[Arduino]]
 next::[[Intro to Arduino - Software]]
-status:: 🟠
+status:: #draft-outline
 
 Outline
 - Microcontroller vs microprocessor vs arduino

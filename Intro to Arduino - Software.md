@@ -1,6 +1,6 @@
 parent::[[Arduino]]
 previous::[[Introduction to Arduino - Hardware]]
-status::🟠 , #inbox/writing 
+status:: #draft-outline 
 
 - look at the provided sketches for examples
 - Initialization - initialize variables

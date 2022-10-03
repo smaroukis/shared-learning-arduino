@@ -1,5 +1,5 @@
 home: [_Start Here](_Start%20Here.md)_
-parent::[[Electronics]], [[Microcontrollers]]
+parent:: [Microcontrollers](Microcontrollers)
 
 ## Getting Started Resources
 - [[Arduino Resources]] ⬅️ put articles to read here too
