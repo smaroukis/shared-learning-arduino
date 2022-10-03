@@ -1,10 +1,10 @@
-parent::[[_Start Here]]
+parent::[_Start Here](_Start%20Here.md)
 
 ## Start Here
-> I'm using Obsidian so many of these are Obsidian specific. 
+> I'm using the Obsidian notetaking app so many of these are Obsidian specific. 
 
-1. (optional) Read the [[Project Introduction]] to understand the purpose of this specific shared Vault. 
-2. Read [[Meta - Guidlines for Using Shared Vaults]] to understand the layout, benefits, and drawbacks of using a shared Vault. 
+1. Read the [README](README.md) to understand the purpose of this specific shared Vault. 
+2. Read [Meta - Guidlines for Using Shared Vaults](Meta%20-%20Guidlines%20for%20Using%20Shared%20Vaults.md) to understand the layout, benefits, and drawbacks of using a shared Vault. 
 3. Make a Personal Folder and Your Personal Page ( see  [_Name](_Name.md) for a template_) or `./Personal Folders` for already existing ones.
 4. Edit you Markdown-Client Settings:
 	- use markdown link syntax (instead of wikilinks)
@@ -20,7 +20,7 @@ parent::[[_Start Here]]
 - Make sure you have rights to use pictures etc. that you include in your notes since this is hosted publicly. 
 
 ## Going Further
-[[Meta - Main Page]]
+[Meta - Main Page](Meta%20-%20Main%20Page.md)
 
 ### Obsidian Specific Settings
 - Turn off "Wikilinks" for portability

@@ -1,6 +1,6 @@
 topic:: #t/analog 
-parent:: [[Analog Filters]]
-[[Analog Filters]]
+parent:: [Analog Filters](Analog%20Filters.md)
+[Analog Filters](Analog%20Filters.md)
 # RLC Filter Summary
 ![[attachments/LAoE/RLC circuit.png]]
 Resonant frequency: 
@@ -14,4 +14,4 @@ Design Choices:
 - low R: low Q & more energy out
 
 Other Filters: 
-- [[RC Filters]]
+- [RC Filters](RC%20Filters.md)

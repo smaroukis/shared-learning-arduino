@@ -1,5 +1,5 @@
 topic:: #t/analog 
-parent::[[Analog Filters]]
+parent::[Analog Filters](Analog%20Filters.md)
 
 - #inbox/later  add in [[33.02L Capacitors and RC Circuits]] findings
 
