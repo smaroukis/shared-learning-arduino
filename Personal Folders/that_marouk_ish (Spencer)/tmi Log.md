@@ -3,7 +3,7 @@
 More Raw in [tmi Notepad](tmi%20Notepad.md)
 
 [2022-10-03](2022-10-03)
-Nothing today except some reading. 
+Nothing today except some reading about `millis()` vs `delay()` - basically just get comfortable with `millis()` since it allows you to do multiple things at (perceivable) the same time (see Notepad)
 
 [2022-10-02](2022-10-02) - Day 1 - Unboxing  - a Mega?? and Blink
 
