@@ -1,5 +1,7 @@
 > Reverse chronological log of my learnings on Arduino
 
+More Raw in [tmi Notepad](tmi%20Notepad.md)
+
 [2022-10-03](2022-10-03)
 Nothing today except some reading. 
 

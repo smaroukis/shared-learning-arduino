@@ -1,3 +1,22 @@
+[2022-10-03](2022-10-03)
+From https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483573 on `millis()` vs `delay()`
+- `delay()` stops all activity until the delay is finished (can't do multiple tasks at once)
+- fix: use the `millis()` function 
+- assumptions
+	- input pins defined as pullups in `pinMode()` -> that is they are defined with a pullup rsistor connecting them to 5V (normally OFF/"open"/0 state), thus closing the switch takes the pin low (ON/"closed"/1 state) -> add this to [Intro to Arduino - Software](../../Intro%20to%20Arduino%20-%20Software.md)
+- calling `milis()`  returns an unsigned long of the current time in milliseconds (since the program began) (thus it can roll over back to 0 and not affect things) [source](https://www.arduino.cc/reference/en/language/functions/time/millis/)
+- #q what is a byte variable type? (`const byte ledPin = 13;`)
+- use in conjunction with a **constant period**, **start** and **end** `millis()` calls we
+	- grab the start time in millis (in setup) -> [Common Setup Declarations](Common%20Setup%20Declarations.md)
+	- get the current time at the beginning of the loop
+	- check whether the period time has passed (`current`)
+
+``` // e.g.
+unsigned long startMillis;  
+unsigned long currentMillis;  
+const unsigned long period = 1000; 
+```
+
 
 [2022-10-02](2022-10-02)
 - install zip libraries directly (no need to unpackage)
