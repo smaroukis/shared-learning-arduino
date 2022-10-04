@@ -1,7 +1,7 @@
 parent::[Arduino](Arduino.md)
 previous::[Introduction to Arduino - Hardware](Introduction%20to%20Arduino%20-%20Hardware.md)
 status:: #draft-outline 
-
+- always need "board" on "port" - the Arduino IDE makes this easy with one click - or you can set individualy
 - look at the provided sketches for examples
 - Initialization - initialize variables
 	- initialize pin number variables as `const int` (e.g. `const int analogInPin = A0;`)

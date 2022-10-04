@@ -1,9 +1,11 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
 [2022-10-04](2022-10-04)
-https://docs.arduino.cc/software/ide-v1/tutorials/arduino-ide-v1-basics#sketchbook
-- "When you upload a sketch, you're using the Arduino **bootloader**, a small program that has been loaded on to the microcontroller on your board. It allows you to upload code without using any additional hardware." 
-- "Please note that the Serial Monitor does not process control characters; if your sketch needs a complete management of the serial communication with control characters, you can use an external terminal program and connect it to the COM port assigned to your Arduino board."
+- learned for Arduino IDE the `.ino` file needs to be inside a folder of the same name
+- failed installing Arduino extension in VS Code :/
+- https://docs.arduino.cc/software/ide-v1/tutorials/arduino-ide-v1-basics#sketchbook
+	- "When you upload a sketch, you're using the Arduino **bootloader**, a small program that has been loaded on to the microcontroller on your board. It allows you to upload code without using any additional hardware." 
+	- "Please note that the Serial Monitor does not process control characters; if your sketch needs a complete management of the serial communication with control characters, you can use an external terminal program and connect it to the COM port assigned to your Arduino board."
 
 [2022-10-03](2022-10-03)
 From https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483573 on `millis()` vs `delay()` -> see [tmi 02 millis() forum examples](code/tmi%2002%20millis()%20forum%20examples/tmi%2002%20millis()%20forum%20examples.md)
