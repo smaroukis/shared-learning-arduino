@@ -7,4 +7,4 @@ handle:: #tmi
 
 ## Pages
 - [tmi Log](tmi%20Log.md)
-- [tmi Scratchpad](tmi%20Scratchpad.md)
+- [tmi Lab Notes](tmi%20Lab%20Notes.md)

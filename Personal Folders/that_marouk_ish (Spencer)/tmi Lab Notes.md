@@ -1,6 +1,7 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
 [2022-10-04](2022-10-04)
+- [RGB LEDs](../../RGB%20LEDs.md)
 - learned for Arduino IDE the `.ino` file needs to be inside a folder of the same name
 - failed installing Arduino extension in VS Code :/
 - https://docs.arduino.cc/software/ide-v1/tutorials/arduino-ide-v1-basics#sketchbook
