@@ -1,6 +1,6 @@
 > Reverse chronological log of my learnings on Arduino
 
-More Raw in [tmi Notepad](tmi%20Notepad.md)
+More Raw in [tmi Scratchpad](tmi%20Scratchpad.md)
 
 [2022-10-03](2022-10-03)
 Nothing today except some reading about `millis()` vs `delay()` - basically just get comfortable with `millis()` since it allows you to do multiple things at (perceivable) the same time (see Notepad)

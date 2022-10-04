@@ -1,8 +1,13 @@
-
+shared list: [Arduino Resources](../../Arduino%20Resources.md)
 
 ## Resources
 
-**Tutorials**
+**Collections of Tutorials**
+- https://docs.arduino.cc/tutorials/ - Official Website
 - https://www.reddit.com/r/arduino/comments/fhdsd/arduino_tutorials_list/ (list)
 - Paul McWhorter
 - DroneBotWorkshop - "in depth" 
+
+**Individual Tutorials**
+- MIllis() vs Delay: https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483573 #inbox/reading -> [tmi 02 millis() forum examples](code/tmi%2002%20millis()%20forum%20examples/tmi%2002%20millis()%20forum%20examples.md)
+- Serial Inputs: https://forum.arduino.cc/t/serial-input-basics-updated/382007/2
