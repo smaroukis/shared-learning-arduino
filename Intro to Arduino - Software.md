@@ -1,7 +1,17 @@
 parent::[Arduino](Arduino.md)
 previous::[Introduction to Arduino - Hardware](Introduction%20to%20Arduino%20-%20Hardware.md)
 status:: #draft-outline 
+
+- [Resistor Color Codes](Resistor%20Color%20Codes.md)
+- #q/answered where is the `#macro define LED_BUILTIN 13` coming from?  - it is like a const but defined in a macro (preprocessing directive) by Arduino - really don't need to understand it unless you want to go further into the C
+	- `macros` vs `const int`  
+		- macro/`#define` is a pre-processor directive - this gets into [C - Programming](C%20-%20Programming.md) things
+			- e.g. `#define var 80000L` vs `#define var 80000`  ([source](https://forum.arduino.cc/t/when-to-use-const-int-int-or-define/668071/6?u=that_marouk_ish))
 - always need "board" on "port" - the Arduino IDE makes this easy with one click - or you can set individualy
+- LED is just labeld "L" but is pin 13 for the [Mega2560](Mega2560.md)
+	- https://forum.arduino.cc/t/digitalwrite-led-builtin-low-turns-on-the-led/965532/7
+	- "The issue is that while there is a portable way to determine the Arduino digital pin number for the LED, LED_BUILTIN, there is no portable way to determine the i/o pin output active level needed to turn the built in LED on and off." ➡️  basically we don't know for the internal LEDs whether it is a pull down or pull up (is ON +5V or 0V? ) 
+		- but for Arduino (c) boards LEDs are ==active high==
 - look at the provided sketches for examples
 - Initialization - initialize variables
 	- initialize pin number variables as `const int` (e.g. `const int analogInPin = A0;`)
