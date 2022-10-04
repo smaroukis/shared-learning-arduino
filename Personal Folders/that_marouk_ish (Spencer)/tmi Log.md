@@ -2,6 +2,86 @@
 
 More Raw in [tmi Lab Notes](tmi%20Lab%20Notes.md)
 
+[[2022-10-04]] Day 2 - Party Time - RGB LEDs 
+So today I was onto the first interesting project that I learned more than I expected from. Mostly on the analog side.
+
+First, it is relatively simple.
+The RGB LED is three seperate LEDs with a common node, and we can make "any" llight color by varying the intensities of each channel - the LEDs are close enough in space that we see the combination as a singular color. The intensity of each channel is varied by PWM. 
+
+But then I thought I could  just use one resistor on the cathode instead of three separate resistors on the anodes. I quickly learned that due to the difference in forward voltage for the different colors, this wouldn't work. Basically, the red LED will turn on before the others. Also, the total current will change based on how intense each channel shines, so the light will change intensity based on the color, which we don't want. 
+
+Here is the code, for my fellow n00bs: 
+
+```
+//adapted from www.elegoo.com 
+// note pins are for Mega 2560; for UNO PWM pins may be different
+
+// Define Pins
+const int BLUE = 6;
+const int GREEN = 5;
+const int RED = 3;
+
+void setup(){
+  pinMode(RED, OUTPUT);
+  pinMode(GREEN, OUTPUT);
+  pinMode(BLUE, OUTPUT);
+  digitalWrite(RED, HIGH);
+  digitalWrite(GREEN, LOW);
+  digitalWrite(BLUE, LOW);
+}
+
+int redVal;
+int greenVal;
+int blueVal;
+
+void loop(){
+  const int tDelay = 10;
+
+  redVal = 255;
+  greenVal = 0;
+  blueVal = 0;
+
+// fade out red, bring green in
+  for(int i = 0; i < 255; i += 1){
+    redVal -= 1; // was set to 255 previously
+    greenVal += 1; // 
+
+    analogWrite(RED, redVal);
+    analogWrite(GREEN, greenVal);
+    delay(tDelay);
+  } 
+
+  redVal = 0;
+  greenVal = 0;
+  blueVal = 255;
+
+// fade out blue, bring in blue
+  for(int i = 0; i < 255; i += 1){
+    greenVal -= 1;
+    blueVal += 1;
+    analogWrite(GREEN, greenVal);
+    analogWrite(BLUE, blueVal);
+    delay(tDelay);
+  }
+
+  redVal = 0;
+  greenVal = 0;
+  blueVal =255;
+
+  // fade out blue, bring red in
+  for(int i = 0; i < 255; i += 1){
+    analogWrite(BLUE, blueVal);
+    analogWrite(RED, redVal);
+    delay(tDelay);
+  }
+
+}
+```
+
+I changed elegoo's `define`s to `const int` - another thing I learned (define's are from the C language but const int is generally better for beginners)
+
+
+
 [2022-10-03](2022-10-03)
 Nothing today except some reading about `millis()` vs `delay()` - basically just get comfortable with `millis()` since it allows you to do multiple things at (perceivable) the same time (see Notepad)
 

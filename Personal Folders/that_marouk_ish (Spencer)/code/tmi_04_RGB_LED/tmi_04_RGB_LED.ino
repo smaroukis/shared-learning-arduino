@@ -1,5 +1,4 @@
-//adapted from www.elegoo.com
-//2016.12.8
+//adapted from www.elegoo.com for Mega 2560 Starter Kit
 
 // Define Pins
 const int BLUE = 6;

@@ -7,8 +7,12 @@
         "id": "e48467f534786172",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Personal Folders/that_marouk_ish (Spencer)/tmi Log.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "Personal Folders/that_marouk_ish (Spencer)/tmi Log.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "Personal Folders/that_marouk_ish (Spencer)/tmi Log.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -99,12 +105,18 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "Personal Folders/that_marouk_ish (Spencer)/tmi Log.md"
+          }
         }
       }
     ],
     "currentTab": 0
   },
   "active": "e48467f534786172",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Personal Folders/that_marouk_ish (Spencer)/tmi Lab Notes.md",
+    "Personal Folders/that_marouk_ish (Spencer)/tmi Log.md",
+    "RGB LEDs.md"
+  ]
 }
