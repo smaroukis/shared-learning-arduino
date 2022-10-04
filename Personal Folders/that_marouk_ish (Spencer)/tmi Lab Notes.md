@@ -1,7 +1,7 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
 [2022-10-04](2022-10-04)
-- [RGB LEDs](../../RGB%20LEDs.md) 
+- [RGB LEDs](../../RGB%20LEDs.md)  see [code](/Personal Folders/that_marouk_ish (Spencer)/code/tmi_04_RGB_LED/tmi_04_RGB_LED.ino)
 	- R, G, and B channels are mixed - from this we can develop many different colros
 	- can't use one on the cathode "In fact it would not work at all because the LED with the lowest forward voltage (the red one) would stop enough forward voltage being across the higher forward voltage LEDs."
 	- https://www.circuitbread.com/tutorials/why-cant-i-share-a-resistor-on-the-common-anode-or-cathode-of-my-rgb-led
