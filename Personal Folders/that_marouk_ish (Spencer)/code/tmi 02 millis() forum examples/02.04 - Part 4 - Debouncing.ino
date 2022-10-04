@@ -1,3 +1,4 @@
+// from https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483573
 unsigned long periodStartMillis;
 unsigned long currentMillis;
 const unsigned long period = 5000;  //period during which button input is valid
