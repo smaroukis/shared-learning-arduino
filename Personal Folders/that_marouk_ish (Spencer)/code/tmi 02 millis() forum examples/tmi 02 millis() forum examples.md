@@ -18,8 +18,7 @@ Source: https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483
 		- if so, perform some action #1 (and don't forget to save the new start time)
 		- ... code continues to action #2 <= ==the key here is that the loop executes so fast that we can't tell there is any delay between the action 1 and action 2==
 
-### Part 2 -> see [code](Personal Folders/that_marouk_ish (Spencer)/code/tmi 02 millis() forum examples/02.04 - Part 4 - Debouncing.ino)
-- obsidian://open?vault=Learning%20Arduino&file=Personal%20Folders%2Fthat_marouk_ish%20(Spencer)%2Fcode%2Ftmi%2002%20millis()%20forum%20examples%2F02.04%20-%20Part%204%20-%20Debouncing.ino
+### Part 2 -> see [02.02 - Changing LED Brightness 2 At a Time](02.02%20-%20Changing%20LED%20Brightness%202%20At%20a%20Time.ino)
 - uses millis() with a 10ms delay to turn the brightness up by one setup from `analogWrite()`s 0 to 255 
 - uses a `byte` type for the brightness value (and increment) between 0 and 255
 - `byte brightness = 0, increment = 1;`
