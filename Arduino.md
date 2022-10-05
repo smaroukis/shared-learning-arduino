@@ -6,4 +6,6 @@ parent:: [Microcontrollers](Microcontrollers)
 - [[Arduino - Setup and IDE]]
 - [Introduction to Arduino - Hardware](Introduction%20to%20Arduino%20-%20Hardware.md)
 - [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
+- [Electronic Components](Electronic%20Components.md) - Resistors, LEDs and the like
+- 
 

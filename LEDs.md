@@ -1,1 +1,1 @@
-parent::[Discrete Components](Discrete%20Components.md)
+parent::[Electronic Components](Electronic%20Components.md)
