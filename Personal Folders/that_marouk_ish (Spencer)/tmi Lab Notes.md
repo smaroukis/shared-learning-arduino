@@ -9,7 +9,7 @@ Summarized in [tmi Log](tmi%20Log.md)
 - more on [Serial Communication](../../Serial%20Communication.md) and [Serial to USB](Serial%20to%20USB) ⬇️ 
 	- "Current Arduino boards are programmed via [Universal Serial Bus](https://en.wikipedia.org/wiki/Universal_Serial_Bus "Universal Serial Bus") (USB), implemented using USB-to-serial adapter chips such as the [FTDI](https://en.wikipedia.org/wiki/FTDI "FTDI") FT232. Some boards, such as later-model Uno boards, substitute the [FTDI](https://en.wikipedia.org/wiki/FTDI "FTDI") chip with a separate AVR chip containing USB-to-serial firmware, which is reprogrammable via its own [ICSP](https://en.wikipedia.org/wiki/In-system_programming "In-system programming") header."  [[source](https://en.wikipedia.org/wiki/Arduino#Hardware)]
 - Main Learnings
-	- longs vs ints
+	- longs vs ints -> see [Intro to Arduino - Software](../../Intro%20to%20Arduino%20-%20Software.md)
 	- use `unsigned long` for `millis()` timekeeping (can go up to -4.2Ms = 50 days)
 	- some tricks for fading in and out see below and in [tmi05 Pushbutton LED Fade](code/tmi05%20Pushbutton%20LED%20Fade.md)
 		- ![](attachments/Pasted%20image%2020221005215410.png)

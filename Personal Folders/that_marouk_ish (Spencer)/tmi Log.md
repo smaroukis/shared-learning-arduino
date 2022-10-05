@@ -3,15 +3,15 @@
 More Raw in [tmi Lab Notes](tmi%20Lab%20Notes.md)
 
 [2022-10-05](2022-10-05) 
-Day 3 - Fading LED, Pushbutton
+Day 3 - Fading LED, Pushbutton Orientation
 
 Today I spent a lot of time debugging both some code errors and wiring errors. I kept forgetting the orientation of the pushbutton contacts - even looking at the schematics of the internals. But then I realized the orientation in the photo is the same as a breadboard if it spans the rails, so you don't need to look at the back to determine which contacts are connected...whew. 
 
 The mini-project combined some code from the Built in [Fade Example](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade) and from the _Make:_ book Getting Started with Arduino (Banzi, Shiloh). 
 
-I specifically liked the fade in/out check at 
+I specifically liked the `fadeAmount = -fadeAmount` line to switch between fading in and out. (see line 47 of [the code](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi05_pushbutton_led_fade/tmi05_pushbutton_led_fade.ino) in the hosted version)
 
-
+Mostly I felt good about self-identifying and fixing the wiring and coding errors, even though it took me longer than I thought. I like to type everything out by hand to get a feel for the syntax but it's easy to make software mistakes and then think it is a wiring issues and vice versa. 
 
 [[2022-10-04]] 
 Day 2 - Party Time - RGB LEDs 
