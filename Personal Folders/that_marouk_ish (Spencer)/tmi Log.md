@@ -13,7 +13,6 @@ I specifically liked the fade in/out check at
 
 
 
-
 [[2022-10-04]] 
 Day 2 - Party Time - RGB LEDs 
 So today I was onto the first interesting project that I learned more than I expected from. Mostly on the analog side about LEDs and their I-V curves.  
