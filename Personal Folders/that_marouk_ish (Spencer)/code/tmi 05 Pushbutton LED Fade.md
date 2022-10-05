@@ -1,3 +1,28 @@
+parent:: [tmi Examples](tmi%20Examples.md)
+previous:: 
+next::
+
+> from [Getting Started With Arduino](Personal%20Folders/that_marouk_ish%20(Spencer)/banziGettingStartedArduino.md), example 5-2.
+
+Desired Goal: 
+- when you press the button it turns the LED on and off (without holding)
+- when you push and hold the pushbutton the LED fades in and out repeatedly
+	- the button can be released and the LED will stay at the same brightness
+
+Concepts:
+- [Arduino - PWM](Arduino%20-%20PWM.md) - for fading in and out the LED
+- [Resistors. (Resistors.md) as current limiters
+- [Switches](Switches.md) - Pushbuttons
+- using `millis()` for timing`
+
+Code:
+- [tmi_05_pushbutton_led_fade](Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi_05_pushbutton_led_fade/tmi_05_pushbutton_led_fade.ino).
+
+Physical setup:
+![](attachments/Pasted%20image%2020221005220840.png)
+
+Copy of code: 
+``` c++
 // adapted from "Make: Getting Started with Arduino" 
 // and https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade
 
@@ -57,3 +82,4 @@ void loop(){
     analogWrite(LED, 0); // turn LED OFF
   }
 }
+```

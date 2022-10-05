@@ -8,3 +8,4 @@ handle:: #tmi
 ## Pages
 - [tmi Log](tmi%20Log.md)
 - [tmi Lab Notes](tmi%20Lab%20Notes.md)
+- [tmi Examples](../../tmi%20Examples.md)
