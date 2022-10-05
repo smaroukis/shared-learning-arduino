@@ -3,11 +3,13 @@
 // Constants
 const int LED = 9;
 const int BUTTON = 7; 
+const int t_delay = 20;
 
 // Inputs
 int val = 0;
 
 // Other
+int fadeAmount = 1;
 int old_val = 0; // stores previous value of "val" (input)
 int state = 0; // 0 = LED off and 1 = LED on
 int brightness = 128; // out of 255 (1 byte for analogWrite())
@@ -26,18 +28,22 @@ void loop(){
   if ((val == HIGH) && (old_val == LOW)){
     state = 1 - state; // change the state from ON to OFF or vice-versa
     t_start = millis(); // record time
-    delay(10); // for debouncing
+    delay(t_delay); // for debouncing
   }
 
-  // check if the button is being held down
-  if ((state == 1) && (millis() - t_start > 500)){
-    brightness++;
-    delay(20); // otherwise the brightness shoots up too quickly
+  // check if the button is (still) being held down
+  if ((val == HIGH) && (old_val == HIGH)){
 
-    if (brightness > 255){
-      brightness = 0; // reset to zero if over the analogWrite() max val of 255
-      // further: could map unsigned int values to 0, 255 and not have to reset
-    }
+    // If the button is held for more than 500 ms
+    if ((state == 1) && (millis() - t_start) > 500) {
+      brightness = brightness + fadeAmount; // increment/decrement brightness
+
+      if (brightness <= 0 || brightness >= 255) {
+        fadeAmount = -fadeAmount; // to allow the above code to work 
+        delay(t_delay); // otherwise the brightness shoots up too quickly
+        }
+
+    } 
   }
 
   old_val = val; // don't forget to store the old value for the next loop

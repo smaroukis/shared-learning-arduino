@@ -13,8 +13,15 @@ status:: #draft-outline
 	- `analogRead(<pin>)`
 	- `Serial.println()`
 	- `delay(<ms>)`
-	- `map() ` 
-		- `analogRead()` returns a value between 0 and 1023 but `analogWrite()` can only write between 0 and 255. For the Uno, it results in a [Arduino - PWM](Arduino%20-%20PWM.md) output waveform at the desired pin.
+	- `map(value, fromLow, fromHigh, toLow, toHigh)`
+		- `analogRead()` returns a value between 0 and 1023 but `analogWrite()` can only write between 0 and 255. For the Uno, it results in a [Arduino - PWM](Arduino%20-%20PWM.md) output waveform at the desired pin.	(note `map()` uses integer math - for decimal precision you will need to write your own)
+```arduino
+void loop() {
+  int val = analogRead(0);
+  val = map(val, 0, 1023, 0, 255);
+  analogWrite(9, val);
+}
+```
 
 Variable Types
 
