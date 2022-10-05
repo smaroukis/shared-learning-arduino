@@ -1,5 +1,8 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
+[2022-10-06](2022-10-06)
+Plan
+- keep going through the Banzi Book & Collecting Examples
 
 [2022-10-05](2022-10-05)
 - [State Machines](State%20Machines.md) #tdf
