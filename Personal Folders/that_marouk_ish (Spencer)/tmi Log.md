@@ -22,6 +22,13 @@ Resources:
 - Why you need 3 resistors https://www.circuitbread.com/tutorials/why-cant-i-share-a-resistor-on-the-common-anode-or-cathode-of-my-rgb-led
 - Define vs Const Int https://forum.arduino.cc/t/when-to-use-const-int-int-or-define/668071/ 
 
+RGB LEDs Going further #tdf-project
+-   Use finer tuned resistors for each color to get intensities to match
+-   Avoid light intensity changing based on the color
+-   Add more colors
+-   Set the color by a potentiometer
+- Better code (see [example](https://os.mbed.com/users/4180_1/notebook/rgb-leds/#:~:text=The%20three%20LEDs%20inside%20a,may%20drop%20around%203%20volts.))
+
 
 [2022-10-03](2022-10-03)
 Nothing today except some reading about `millis()` vs `delay()` - basically just get comfortable with `millis()` since it allows you to do multiple things at (perceivable) the same time (see Notepad)
