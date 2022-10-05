@@ -3,7 +3,8 @@ Summarized in [tmi Log](tmi%20Log.md)
 
 [2022-10-05](2022-10-05)
 - [State Machines](State%20Machines.md) #tdf
-- [[test unresolved link]]
+- [banziGettingStartedArduino](banziGettingStartedArduino.md)
+- 
 
 [2022-10-04](2022-10-04) ✅ 
 - [RGB LEDs](../../RGB%20LEDs.md)  see [code](./Personal Folders/that_marouk_ish (Spencer)/code/tmi_04_RGB_LED/tmi_04_RGB_LED.ino)

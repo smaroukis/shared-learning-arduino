@@ -11,7 +11,7 @@ The project was to fade/cycle through various colors using an RGB LED controlled
 The RGB LED is three separate LEDs with a common node, and we can make "any" light color by varying the intensities of each channel - the LEDs are close enough in space that we see the combination as a singular color. The intensity of each channel is varied by PWM.  
 
 I learned why I have a ton more of 220Ohm resistors in my kit than the others:  
-Limiting the load on a pin to 20mA: assuming worst case (lowest forward voltage) of 1.8V across an LED when on, with a 5V input leaves 3.2V across a resistor. The 220Ohm resistor limits this to I=3.3V/220=15mA.  
+Limiting the load on a pin to 20mA: assuming worst case (lowest forward voltage) of 1.8V across an LED when on, with a 5V input leaves 3.2V across a resistor. The 220Ohm resistor limits this to I=3.3V/220=15mA.  ➡️ [Resistor Calculation for LEDs](../../Resistor%20Calculation%20for%20LEDs.md)
 
 But then I thought I could just use one resistor on the cathode instead of three separate resistors on the anodes. I quickly learned that due to the difference in forward voltage for the different colors, this wouldn't work. Basically, the red LED will turn on before the others. Also, the total current will change based on how intense each channel shines, so the light will change intensity based on the color, which we don't want
 

@@ -17,7 +17,35 @@ date: 2022-09-17
 - garden-topic:: [[Arduino]]
 - status:: #library/🟢 
 
+## Notes
+
+### Ch 1 Introduction
+- #book rec Low Tech Sensors and Actuators - Haque, Somlai-Fischer - see http://lowtech.propositions.org.uk/ -- this also remidns me of 100 Makerspace Projects which also uses easy to access low tech stuff like cheap motors found in toys to make moving robots
+	- what if we did a "Daiso" day where you have a contest and have to make something just from buying things from Daiso
+	- haque did a artist in residence at International Academy of Media arts an Sciences in Japan
+- Arduino was born to teach Interaction Design "the creation of meaningful expreiences between humans and objects"- look for art/media/design programs etc , specifically Physical Interaction Design
+- don't spend time learning how to build everything from scratch - this is a waste of time an energy - [[opportunistic prototyping]] is taking ready-made devices, hacking them in order to exploit the hard work done by others
+- tinkering - it is essential to play with technology, sometimes without a defined goal
+- reduce the amount of interruptions of the flow is important momentum for  [[Creativity]]  
+	- see Robert Moog and synthesizers
+- "Don’t let the experts in one field tell you that you’ll never be one of them. Ignore them and surprise them" #quote
+
+
+### Ch 4 Debouncing
+- use 22AWG solid core as breadboard hookup wire
+- [Memory](Memory.md)
+	- **variables** are stored in RAM; programs stored in **flash**
+- neat #software-trick to change the state of a boolean `state = 1 - state`
+- debounce for 10-50ms ->  [Debouncing in Software](../../Debouncing%20in%20Software.md)
+
+### Ch 5 
+
+Example 5-2 - change the brightness as you hold the pushbutton
+`/Users/s/Library/Mobile Documents/iCloud~md~obsidian/Documents/Learning Arduino/Personal Folders/that_marouk_ish (Spencer)/code/tmi_05_pushbutton_led_fade`
+
+
 ## Highlights
+**Intro**
 - Getting cheap toys or old discarded equipment and hacking them to make them do something new is one of the best ways to get to great results.
 - it is essential to play with technology, exploring different possibilities directly on hardware and software—sometimes without a very defined goal.
 - James Dyson, who made 5127 prototypes of his vacuum cleaner before he was satisfied that he’d gotten it right.
