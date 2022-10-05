@@ -17,7 +17,22 @@ status:: #draft-outline
 		- `analogRead()` returns a value between 0 and 1023 but `analogWrite()` can only write between 0 and 255. For the Uno, it results in a [Arduino - PWM](Arduino%20-%20PWM.md) output waveform at the desired pin.
 
 Variable Types
+
+**Numbers**
 - int, long int, const in
+	- by default variables are _signed_. 
+		- for _n-bits_ of storage there is $2^n$ values; this includes 0, and we take away one possible value from the positive side, so we are left with a $2^{n-1}$ signed values and a range of $\text{int} \in [-2^{n-1}, 2^{n-1} - 1]$ since we take away one on the positive side. 
+		- e.g. for 16 bits (the [word size](word%20size) of Arduino) it is $2^{16}=65,536$ values. For both positive and negative we have $32,768$ but since we want to include 0 as a positive number the range is $-32,768$ to $32,767$.
+	- `long`: 
+		- for large numbers; stores 32 bits (4 bytes), from -2,147,483,648 to 2,147,483,647 (default unsigned)
+		- `unsigned long`  $\in [0, 4,294,967,295]$ (from $2^{32} - 1$)
+- binary: `0|1` preceded by `0b` e.g. `n = 0b101` 
+	- decimal equivalent = $(2^2 + 0 + 2^1)=5$
+- octal: `0|1` preceded by `0` e.g. `n = 0101` 
+	- decimal equivalent = 
+
+If doing math with integers at least one of the values must be of type long, either an integer constant followed by an L or a variable of type long, forcing it to be a long. See the [Integer Constants](https://www.arduino.cc/reference/en/language/variables/constants/integerconstants) page for details.
+- unsigned vs signed
 - [[const int vs define macro]]
 - 
 
