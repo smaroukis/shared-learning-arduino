@@ -2,84 +2,25 @@
 
 More Raw in [tmi Lab Notes](tmi%20Lab%20Notes.md)
 
-[[2022-10-04]] Day 2 - Party Time - RGB LEDs 
-So today I was onto the first interesting project that I learned more than I expected from. Mostly on the analog side.
+[[2022-10-04]] 
+Day 2 - Party Time - RGB LEDs 
+So today I was onto the first interesting project that I learned more than I expected from. Mostly on the analog side about LEDs and their I-V curves.  
 
-First, it is relatively simple.
-The RGB LED is three seperate LEDs with a common node, and we can make "any" llight color by varying the intensities of each channel - the LEDs are close enough in space that we see the combination as a singular color. The intensity of each channel is varied by PWM. 
+The project was to fade/cycle through various colors using an RGB LED controlled with PWM from the Arduino.  
 
-But then I thought I could  just use one resistor on the cathode instead of three separate resistors on the anodes. I quickly learned that due to the difference in forward voltage for the different colors, this wouldn't work. Basically, the red LED will turn on before the others. Also, the total current will change based on how intense each channel shines, so the light will change intensity based on the color, which we don't want. 
+The RGB LED is three separate LEDs with a common node, and we can make "any" light color by varying the intensities of each channel - the LEDs are close enough in space that we see the combination as a singular color. The intensity of each channel is varied by PWM.  
 
-Here is the code, for my fellow n00bs: 
+I learned why I have a ton more of 220Ohm resistors in my kit than the others:  
+Limiting the load on a pin to 20mA: assuming worst case (lowest forward voltage) of 1.8V across an LED when on, with a 5V input leaves 3.2V across a resistor. The 220Ohm resistor limits this to I=3.3V/220=15mA.  
 
-```
-//adapted from www.elegoo.com 
-// note pins are for Mega 2560; for UNO PWM pins may be different
+But then I thought I could just use one resistor on the cathode instead of three separate resistors on the anodes. I quickly learned that due to the difference in forward voltage for the different colors, this wouldn't work. Basically, the red LED will turn on before the others. Also, the total current will change based on how intense each channel shines, so the light will change intensity based on the color, which we don't want
 
-// Define Pins
-const int BLUE = 6;
-const int GREEN = 5;
-const int RED = 3;
+I changed the tutorial's `#define`s to `const int` - another thing I learned (define's are from the C language but const int is generally better for beginners)
 
-void setup(){
-  pinMode(RED, OUTPUT);
-  pinMode(GREEN, OUTPUT);
-  pinMode(BLUE, OUTPUT);
-  digitalWrite(RED, HIGH);
-  digitalWrite(GREEN, LOW);
-  digitalWrite(BLUE, LOW);
-}
-
-int redVal;
-int greenVal;
-int blueVal;
-
-void loop(){
-  const int tDelay = 10;
-
-  redVal = 255;
-  greenVal = 0;
-  blueVal = 0;
-
-// fade out red, bring green in
-  for(int i = 0; i < 255; i += 1){
-    redVal -= 1; // was set to 255 previously
-    greenVal += 1; // 
-
-    analogWrite(RED, redVal);
-    analogWrite(GREEN, greenVal);
-    delay(tDelay);
-  } 
-
-  redVal = 0;
-  greenVal = 0;
-  blueVal = 255;
-
-// fade out blue, bring in blue
-  for(int i = 0; i < 255; i += 1){
-    greenVal -= 1;
-    blueVal += 1;
-    analogWrite(GREEN, greenVal);
-    analogWrite(BLUE, blueVal);
-    delay(tDelay);
-  }
-
-  redVal = 0;
-  greenVal = 0;
-  blueVal =255;
-
-  // fade out blue, bring red in
-  for(int i = 0; i < 255; i += 1){
-    analogWrite(BLUE, blueVal);
-    analogWrite(RED, redVal);
-    delay(tDelay);
-  }
-
-}
-```
-
-I changed elegoo's `define`s to `const int` - another thing I learned (define's are from the C language but const int is generally better for beginners)
-
+Resources:
+- RGB LED basics https://www.circuitbread.com/tutorials/how-rgb-leds-work-and-how-to-control-color 
+- Why you need 3 resistors https://www.circuitbread.com/tutorials/why-cant-i-share-a-resistor-on-the-common-anode-or-cathode-of-my-rgb-led
+- Define vs Const Int https://forum.arduino.cc/t/when-to-use-const-int-int-or-define/668071/ 
 
 
 [2022-10-03](2022-10-03)
