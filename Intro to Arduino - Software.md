@@ -23,18 +23,26 @@ Variable Types
 	- by default variables are _signed_. 
 		- for _n-bits_ of storage there is $2^n$ values; this includes 0, and we take away one possible value from the positive side, so we are left with a $2^{n-1}$ signed values and a range of $\text{int} \in [-2^{n-1}, 2^{n-1} - 1]$ since we take away one on the positive side. 
 		- e.g. for 16 bits (the [word size](word%20size) of Arduino) it is $2^{16}=65,536$ values. For both positive and negative we have $32,768$ but since we want to include 0 as a positive number the range is $-32,768$ to $32,767$.
+	- `int`: from -16,384 to 16,383
+		- `unsigned int`: 0 to 32,768
 	- `long`: 
 		- for large numbers; stores 32 bits (4 bytes), from -2,147,483,648 to 2,147,483,647 (default unsigned)
-		- `unsigned long`  $\in [0, 4,294,967,295]$ (from $2^{32} - 1$)
-- binary: `0|1` preceded by `0b` e.g. `n = 0b101` 
-	- decimal equivalent = $(2^2 + 0 + 2^1)=5$
-- octal: `0|1` preceded by `0` e.g. `n = 0101` 
-	- decimal equivalent = 
+		- `unsigned long`  from 0 to 4,294,967,295
 
-If doing math with integers at least one of the values must be of type long, either an integer constant followed by an L or a variable of type long, forcing it to be a long. See the [Integer Constants](https://www.arduino.cc/reference/en/language/variables/constants/integerconstants) page for details.
-- unsigned vs signed
+[Integer Constants](https://www.arduino.cc/reference/en/language/variables/constants/integerconstants/)
+- are usually type `int` but can be other variable types using specific formatting
 - [[const int vs define macro]]
-- 
+
+Table of various types:
+![](Personal%20Folders/that_marouk_ish%20(Spencer)/attachments/Pasted%20image%2020221005161457.png)
+
+- _U/L formatters (appends)_
+	- `u|U`: to force the constant into an **unsigned** data format. Example: `33u`
+	- `l|L`: to force the constant into a **long** data format. Example: `100000L`
+	- `ul|UL`: to force the constant into an **unsigned** **long** constant. Example: `32767ul`
+
+
+> If doing math with integers at least one of the values must be of type long, either an integer constant followed by an L or a variable of type long, forcing it to be a long. See the [Integer Constants](https://www.arduino.cc/reference/en/language/variables/constants/integerconstants) page for details.
 
 Working with Specific Components
 - [Arduino LEDs](Arduino%20LEDs.md) are always active `HIGH` 
@@ -54,5 +62,8 @@ Working with Specific Components
 - #q why is 32,768 important?
 	- for Arduino, [[word size]] is 16 bits.  For Arduino all variables can take up a word-size worth of space, or $2^{16}=65,536$ values (in practice `0` to `65535`)  ➡️  $65,536/2 = 32,768$
 	- 
-## See Further
+
+**Further**
 - [Arduino - ADC](Arduino%20-%20ADC.md)
+
+[1]: for hexadecimal, `A-F` is case _independent_
