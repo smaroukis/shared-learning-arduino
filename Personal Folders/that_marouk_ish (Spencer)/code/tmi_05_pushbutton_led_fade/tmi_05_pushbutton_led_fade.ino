@@ -30,5 +30,19 @@ void loop(){
   }
 
   // check if the button is being held down
-  if ((val == 
+  if ((state == 1) && (millis() - t_start > 500)){
+    brightness++;
+    delay(10); // otherwise the brightness shoots up too quickly
+
+    if (brightness > 255){
+      brightness = 0; // reset to zero if over the analogWrite() max val of 255
+      // further: could map unsigned int values to 0, 255 and not have to reset
+    }
+  }
+
+  old_val = val; // don't forget to store the old value for the next loop
+
+  if (state == 1) {
+    analogWrite(LED, brightness); // turn LED ON at the brightness level
+  }
 }
