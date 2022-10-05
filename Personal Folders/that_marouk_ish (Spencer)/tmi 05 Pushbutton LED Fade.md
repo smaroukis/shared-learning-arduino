@@ -5,7 +5,8 @@ next::
 > from [Getting Started With Arduino](Personal%20Folders/that_marouk_ish%20(Spencer)/banziGettingStartedArduino.md), example 5-2.
 
 Desired Goal: 
-- when you push and hold the pushbutton the LED fades in repeatedly
+- when you press the button it turns the LED on and off (without holding)
+- when you push and hold the pushbutton the LED fades in and out repeatedly
 
 Concepts:
 - [Arduino - PWM](Arduino%20-%20PWM.md)

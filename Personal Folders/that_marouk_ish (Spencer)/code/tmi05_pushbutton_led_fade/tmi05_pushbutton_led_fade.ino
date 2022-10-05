@@ -1,4 +1,4 @@
-// from Massimo - Getting Started with Arduino
+// adapted from "Make: Getting Started with Arduino" and 
 
 // Constants
 const int LED = 9;
@@ -9,7 +9,7 @@ const int t_delay = 20;
 int val = 0;
 
 // Other
-int fadeAmount = 1;
+int fadeAmount = 5;
 int old_val = 0; // stores previous value of "val" (input)
 int state = 0; // 0 = LED off and 1 = LED on
 int brightness = 128; // out of 255 (1 byte for analogWrite())
@@ -37,11 +37,12 @@ void loop(){
     // If the button is held for more than 500 ms
     if ((state == 1) && (millis() - t_start) > 500) {
       brightness = brightness + fadeAmount; // increment/decrement brightness
+      delay(t_delay);
 
       if (brightness <= 0 || brightness >= 255) {
         fadeAmount = -fadeAmount; // to allow the above code to work 
-        delay(t_delay); // otherwise the brightness shoots up too quickly
         }
+      
 
     } 
   }
