@@ -4,6 +4,8 @@ next::
 
 > from [Getting Started With Arduino](Personal%20Folders/that_marouk_ish%20(Spencer)/banziGettingStartedArduino.md), example 5-2.
 
+> this should probably be before [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md) but I actually did this one first - that one has debouncing with `millis()` instead of the `delay()` found here
+
 Desired Goal: 
 - when you press the button it turns the LED on and off (without holding)
 - when you push and hold the pushbutton the LED fades in and out repeatedly

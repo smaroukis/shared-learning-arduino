@@ -1,6 +1,6 @@
 parent::[tmi Examples](../../../tmi%20Examples.md)
 next:: [[tmi04 RGB LED]], [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
-previous:: [[tmi 02 ]]
+previous:: [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md)
 level:: #beginner
 
 >  Adapted from Elegoo Mega2560 Starter Kit Lesson 5 and https://forum.arduino.cc/t/long-press-toggle-output-high-and-low/587500/3
@@ -15,10 +15,27 @@ Concepts:
 - Digital inputs & pullup resistors
 
 Physical Setup:
+
+Same as in the previous but with only one pushbutton.
+![](../attachments/IMG_7160.jpg)
 - 
+Notes on debouncing
+- always taking the current time at the beginning of each loop
+- reading the button state
+- if the button state changes we start a debouncing timer, store this state, and keep track of if we are debouncing
+- the loop continues to execute (doesn't enter the `else if` statement yet)
+- then we check that 1) we are debouncing 2) the button state is as required 3) enough time has elapsed to take this value as true
 
 Code:
 
+
+So it needs the variables
+- `debounce_start`
+- `current_time` (to store `millis()` at the beginning of each loop)
+- `debouncing` flag
+- `old_state` to compare with the new state 
+
+Also see [tmi03_Digital-Inputs-Debounce-Millis](tmi03_Digital-Inputs-Debounce-Millis/tmi03_Digital-Inputs-Debounce-Millis.ino)
 
 ``` c
 // Inputs
