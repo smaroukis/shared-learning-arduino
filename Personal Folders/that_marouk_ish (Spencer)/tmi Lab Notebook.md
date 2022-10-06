@@ -2,13 +2,22 @@ Summarized in [tmi Log](tmi%20Log.md)
 
 ### [2022-10-06](2022-10-06)
 [Serial Communication](../../Serial%20Communication.md) -> [UART](UART.md) - see wikipedia 
+
 **[banziGettingStartedArduino](banziGettingStartedArduino.md) Examples 5-3 onward**
 - 5-4 LED + photoresistor - analogue read [tmi06 LDR analogWrite to LED](code/tmi06%20LDR%20analogWrite%20to%20LED.md)
 	- NB: analog pins are automatically set as inputs 
+	
 **Diagramming / Tools**
 - Kicad 
 	- https://www.build-electronic-circuits.com/kicad-tutorial/
 	- https://www.youtube.com/watch?v=jTMjb-1SVHo
+
+[DIY Arduino Schematic in KiCad | AddOhms #23](https://www.youtube.com/watch?v=5fvdxd0QhTw) -> [Clocks](Clocks.md)
+- Arduino internal clock can be slow and not as accurate as an external clock circuit -> [Introduction to Arduino - Hardware](../../Introduction%20to%20Arduino%20-%20Hardware.md)
+- [ATMega328P](ATMega328P.md) has two built in oscillators - uses ceramic resonator
+- RC Circuit vs Ceramic Resonator vs Crystal for creating a clock signal
+	- Crystal > Resonator > RC Circuit
+	- ![](attachments/Screen%20Shot%202022-10-06%20at%206.59.33%20PM.png)
 
 ### [2022-10-05](2022-10-05)
 - [State Machines](State%20Machines.md) #tdf

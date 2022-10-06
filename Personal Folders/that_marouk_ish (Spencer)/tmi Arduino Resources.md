@@ -17,7 +17,9 @@ shared list: [Arduino Resources](../../Arduino%20Resources.md)
 - see rainddrop
 - Circuit Simulation
 	- iCircuit - https://icircuitapp.com/ 
-	- Falstad - iCircuit is based
+	- Falstad.com/circuit - iCircuit is based on this
+	- LTSpice (most widely used SPICE software in industry)
 	- Upverter
-- Circuit Schmatics
+- Circuit Schematics
 	- Kicad
+	- Falstad.com/circuit
