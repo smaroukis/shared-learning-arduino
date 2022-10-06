@@ -1,5 +1,7 @@
-// Description:Set the LED to a brightness specified by the value of 
-// the analog input given by the LDR 
+// Description:
+// Set the LED to a brightness specified by the value of 
+// the analog input given by the LDR and
+// print the analog value to the Serial Monitor
 
 // Constants
 const int LED = 9;

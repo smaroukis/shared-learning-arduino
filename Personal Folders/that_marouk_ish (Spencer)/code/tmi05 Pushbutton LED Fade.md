@@ -15,6 +15,9 @@ Concepts:
 - [Switches](Switches.md) - Pushbuttons
 - using `millis()` for timing`
 
+Further:
+- try to eliminate the pushbutton pulldown resistor (see [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md))
+
 Code:
 - [tmi_05_pushbutton_led_fade](Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi_05_pushbutton_led_fade/tmi_05_pushbutton_led_fade.ino).
 

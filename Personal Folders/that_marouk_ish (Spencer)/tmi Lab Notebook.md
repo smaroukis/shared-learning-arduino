@@ -1,11 +1,14 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
 ### [2022-10-06](2022-10-06)
-[Serial Communication](../../Serial%20Communication.md) -> [UART](UART.md) - see wikipedia 
-
-**[banziGettingStartedArduino](banziGettingStartedArduino.md) Examples 5-3 onward**
+(Project)
+**[banziGettingStartedArduino](banziGettingStartedArduino.md) Examples 5-3 
+ to 5-5**
 - 5-4 LED + photoresistor - analogue read [tmi06 LDR analogWrite to LED](code/tmi06%20LDR%20analogWrite%20to%20LED.md)
 	- NB: analog pins are automatically set as inputs 
+	
+(Research)
+[Serial Communication](../../Serial%20Communication.md) -> [UART](UART.md) - see wikipedia 
 	
 **Diagramming / Tools**
 - Kicad 
