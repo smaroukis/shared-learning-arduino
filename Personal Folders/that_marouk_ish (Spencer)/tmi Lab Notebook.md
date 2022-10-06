@@ -4,24 +4,14 @@ Summarized in [tmi Log](tmi%20Log.md)
 Plan
 - keep going through the Banzi Book & Collecting Examples
 
-[[UART]] - see wikipedia #refactor
-- the UART port is also called the Serial Port [[Serial Communication]]
-- hardware for serial communication that handles the tranmission/reception of serial communication (external device required to handle the singalling level of the transmitting/receiving device)
-	- electric signalling level are handled by a external driver circuit, e.g. RS-232 (12V) and RS-485 (5V)
-- an IC or part of an IC that allows data format and transmission speeds to be configurable
-- asynchronous - so uses a [shift register](shift%20register.md) to convert between serial and parallel forms
-- sends and receives bits one by one from LSB to MSB with start/stop bits
-- precise timing is handled by the communication channel
-- communication can be simplex, full duplex, half duplex
-- settings: baud rate, parity bit, data bits size, stop bits size, flow control
-- has internal clock faster than the bit rate
-- [[bit-banging]] is omitting the UART and using the CPU to sample the state of an input port or directly manipulate an output port for transmission; but it is CPU intensive because of the timing
+[Serial Communication](../../Serial%20Communication.md) -> [UART](UART.md) - see wikipedia 
+- 
 
 [2022-10-05](2022-10-05)
 - [State Machines](State%20Machines.md) #tdf
 - [banziGettingStartedArduino](banziGettingStartedArduino.md) Project - Fade in LED if pushbutton is pressed 
 	- [tmi05 Pushbutton LED Fade](code/tmi05%20Pushbutton%20LED%20Fade.md)
-- wiring vs processing vs Arduino language https://forum.arduino.cc/t/how-is-arduino-related-to-wiring/69064/5?u=that_marouk_ish
+- wiring vs processing vs Arduino language https://forum.arduino.cc/t/how-is-arduino-related-to-wiring/69064/
 - more on [Serial Communication](../../Serial%20Communication.md) and [Serial to USB](Serial%20to%20USB) ⬇️ 
 	- "Current Arduino boards are programmed via [Universal Serial Bus](https://en.wikipedia.org/wiki/Universal_Serial_Bus "Universal Serial Bus") (USB), implemented using USB-to-serial adapter chips such as the [FTDI](https://en.wikipedia.org/wiki/FTDI "FTDI") FT232. Some boards, such as later-model Uno boards, substitute the [FTDI](https://en.wikipedia.org/wiki/FTDI "FTDI") chip with a separate AVR chip containing USB-to-serial firmware, which is reprogrammable via its own [ICSP](https://en.wikipedia.org/wiki/In-system_programming "In-system programming") header."  [[source](https://en.wikipedia.org/wiki/Arduino#Hardware)]
 - Main Learnings
