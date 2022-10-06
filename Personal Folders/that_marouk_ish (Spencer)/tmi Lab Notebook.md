@@ -6,6 +6,7 @@ Summarized in [tmi Log](tmi%20Log.md)
  to 5-5**
 - 5-4 LED + photoresistor - analogue read [tmi06 LDR analogWrite to LED](code/tmi06%20LDR%20analogWrite%20to%20LED.md)
 	- NB: analog pins are automatically set as inputs 
+- [tmi03 Digital Inputs Debounce w Millis](code/tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md) - debouncing
 
 Project 2
 - `byte` is smaller than an `int` - [Arduino Variable Types](../../Arduino%20Variable%20Types.md)
