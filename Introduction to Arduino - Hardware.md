@@ -14,6 +14,7 @@ Outline
 - Pins
 	- Power
 		- 2 grounds, 3.3Vout, 5Vout, Vin - make sure the power draw is below ~30mA (see [Resistor Calculation for LEDs](Resistor%20Calculation%20for%20LEDs.md))
+		- Vin is for voltage between 7-12V for use by e.g. motors
 	- Serial (TX/RX)
 		- TX pin sends data
 		- RX pin receives data
