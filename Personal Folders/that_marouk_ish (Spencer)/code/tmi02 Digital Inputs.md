@@ -1,5 +1,5 @@
 parent::[tmi Examples](../../../tmi%20Examples.md)
-next:: [[tmi03 Digital Inputs Debounce w Millis]]
+next:: [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md)
 previous::
 level:: #beginner
 

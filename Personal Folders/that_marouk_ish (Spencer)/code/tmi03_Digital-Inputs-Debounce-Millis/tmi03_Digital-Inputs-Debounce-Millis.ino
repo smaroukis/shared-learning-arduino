@@ -1,23 +1,40 @@
 // Adapted from Elegoo Mega2560 Starter Kit Lesson 5  
-// pushbutton switches are wired to ground and used in INPUT_PULLUP mode
-// when pressed, it connects the input to GND (inverted logic)
-// unlike pinMode(INPUT) a pull-down resistor isn't needed so it simplifies things
-// c.f. tmi05 Pushbutton LED Fade where we need a pulldown resistor on the switch.
+// Pressing pushbutton switches light on and off
 // added debounce and timing to the tmi02 case
+// using Blink Without Delay techniques for debouncing
 
+// Inputs
 int LED = 9;
-int BUTTON_A = 7;
+int BUTTON = 7;
 
-void setup() 
-{
+// Others
+byte state;
+byte old_state;
+byte led_state = 0;
+
+void setup(){
   pinMode(LED, OUTPUT);
-  pinMode(BUTTON_A, INPUT_PULLUP);  // pullup = normal HIGH or 5V   
+  pinMode(BUTTON, INPUT_PULLUP);  // pullup = normal HIGH or 5V   
 }
 
-void loop() 
-{
-  if (digitalRead(BUTTON_A) == LOW) // LOW = button press
-  {
-    digitalWrite(LED, HIGH);
+void loop(){
+  old_state = state; // save the previous state
+  state = digitalRead(BUTTON);
+
+  if ((state != old_state)){ // if the button is being pressed
+    // debounce 
+    delay(20); 
+
+    if (state != old_state){ // if still being pressed
+      if (led_state == 0){
+          digitalWrite(LED, HIGH);
+          led_state = 1;
+      } else {
+        digitalWrite(LED, LOW);
+        led_state = 0;
+      }
+        state = 1 - state; // switch the pushbutton state
+    }
+    
   }
 }
