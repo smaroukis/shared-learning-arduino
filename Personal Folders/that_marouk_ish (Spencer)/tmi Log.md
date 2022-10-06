@@ -16,6 +16,7 @@ led_state = (led_state == LOW ? HIGH : LOW); // ternary operator to switch led s
 
 Hardware Learnings
 - Using digital inputs as pullups allows you to forego the current limiting resistor if they were "ON" at 5V. (e.g. `pinMode(7, INPUT_PULLUP)`
+- 
 
 Mini Projects
 - https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi02%20Digital%20Inputs.md - digital inputs and pullup inputs
