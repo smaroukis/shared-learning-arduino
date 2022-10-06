@@ -5,21 +5,22 @@ More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
 [2022-10-06](2022-10-06)
 Day 4 - LDR and `millis()` Debouncing, Using the Serial Monitor
 
-
-
-Software Learnings
+Code Snippets
+``` c
+analogWrite(LED, val/4); // since analogRead() is 16 bit but analogWrite is 8 bit ()
 ```
-  analogWrite(LED, val/4); // since analogRead() is 16 bit but analogWrite is 8 bit ()
 
+``` c
+led_state = (led_state == LOW ? HIGH : LOW); // ternary operator to switch led state
 ```
 
 Hardware Learnings
-- Using digital inputs as pullups allows you to forego the current limiting resistor if they were "ON" at 5V. (e.g. 
+- Using digital inputs as pullups allows you to forego the current limiting resistor if they were "ON" at 5V. (e.g. `pinMode(7, INPUT_PULLUP)`
 
-Projects
-- https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi06%20LDR%20analogWrite%20to%20LED.md - LDR
+Mini Projects
+- https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi02%20Digital%20Inputs.md - digital inputs and pullup inputs
 - https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md - debouncing with `millis()`
-- 
+- https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi06%20LDR%20analogWrite%20to%20LED.md - LDR, outputting value to Serial Monitor
 
 
 [2022-10-05](2022-10-05) 

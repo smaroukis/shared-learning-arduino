@@ -40,10 +40,6 @@ date: 2022-09-17
 
 ### Ch 5 
 
-Example 5-2 - change the brightness as you hold the pushbutton
-`/Users/s/Library/Mobile Documents/iCloud~md~obsidian/Documents/Learning Arduino/Personal Folders/that_marouk_ish (Spencer)/code/tmi_05_pushbutton_led_fade`
-
-
 ## Highlights
 **Intro**
 - Getting cheap toys or old discarded equipment and hacking them to make them do something new is one of the best ways to get to great results.

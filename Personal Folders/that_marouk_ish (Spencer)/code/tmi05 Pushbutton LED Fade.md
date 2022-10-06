@@ -1,6 +1,6 @@
 parent:: [tmi Examples](tmi%20Examples.md)
 previous:: 
-next::
+next:: [tmi06 LDR analogWrite to LED](tmi06%20LDR%20analogWrite%20to%20LED.md)
 
 > from [Getting Started With Arduino](Personal%20Folders/that_marouk_ish%20(Spencer)/banziGettingStartedArduino.md), example 5-2.
 
