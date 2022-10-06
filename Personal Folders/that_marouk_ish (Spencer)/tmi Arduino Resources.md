@@ -15,3 +15,9 @@ shared list: [Arduino Resources](../../Arduino%20Resources.md)
 
 **Tools**
 - see rainddrop
+- Circuit Simulation
+	- iCircuit - https://icircuitapp.com/ 
+	- Falstad - iCircuit is based
+	- Upverter
+- Circuit Schmatics
+	- Kicad

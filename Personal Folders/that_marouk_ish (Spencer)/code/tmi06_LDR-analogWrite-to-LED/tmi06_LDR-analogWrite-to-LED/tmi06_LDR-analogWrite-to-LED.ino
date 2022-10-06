@@ -1,4 +1,5 @@
-// Description:
+// Description:Set the LED to a brightness specified by the value of 
+// the analog input given by the LDR 
 
 // Constants
 const int LED = 9;
@@ -10,7 +11,7 @@ unsigned int val = 0; // analog input read value
 // Other Variables
 
 void setup() {
-  pinMode(analogPin, INPUT); //analog pins are INPUT by default, but explicit here
+  pinMode(analogPin, INPUT); // note: not needed since analog pins are INPUT by default
   pinMode(LED, OUTPUT);
 }
 
