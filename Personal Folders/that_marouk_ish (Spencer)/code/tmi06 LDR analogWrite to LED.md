@@ -1,6 +1,7 @@
 parent::[tmi Examples](../../../tmi%20Examples.md)
 next::
 previous::[tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
+level:: #beginner
 
 > From [Getting Started With Arduino](../banziGettingStartedArduino.md) Example 5-4.
 
@@ -13,6 +14,7 @@ Concepts:
 - voltage divider - converting a variable resistance to a measurable voltage
 
 Physical Setup:
+![](../attachments/IMG_7156.jpg)
 
 
 Code:
