@@ -1,13 +1,16 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
-[2022-10-06](2022-10-06)
+### [2022-10-06](2022-10-06)
 [Serial Communication](../../Serial%20Communication.md) -> [UART](UART.md) - see wikipedia 
-[banziGettingStartedArduino](banziGettingStartedArduino.md) Examples 5-3 onward
+**[banziGettingStartedArduino](banziGettingStartedArduino.md) Examples 5-3 onward**
 - 5-4 LED + photoresistor - analogue read [tmi06 LDR analogWrite to LED](code/tmi06%20LDR%20analogWrite%20to%20LED.md)
-	- NB: analog pins are automatically set as inputs -> [Introduction to Arduino - Hardware](../../Introduction%20to%20Arduino%20-%20Hardware.md) 
-	- 
+	- NB: analog pins are automatically set as inputs 
+**Diagramming / Tools**
+- Kicad 
+	- https://www.build-electronic-circuits.com/kicad-tutorial/
+	- https://www.youtube.com/watch?v=jTMjb-1SVHo
 
-[2022-10-05](2022-10-05)
+### [2022-10-05](2022-10-05)
 - [State Machines](State%20Machines.md) #tdf
 - [banziGettingStartedArduino](banziGettingStartedArduino.md) Project - Fade in LED if pushbutton is pressed 
 	- [tmi05 Pushbutton LED Fade](code/tmi05%20Pushbutton%20LED%20Fade.md)
@@ -21,7 +24,7 @@ Summarized in [tmi Log](tmi%20Log.md)
 		- ![](attachments/Pasted%20image%2020221005215410.png)
 
 
-[2022-10-04](2022-10-04) ✅ 
+### [2022-10-04](2022-10-04) ✅ 
 - [RGB LEDs](../../RGB%20LEDs.md)  see [code](./Personal Folders/that_marouk_ish (Spencer)/code/tmi_04_RGB_LED/tmi_04_RGB_LED.ino)
 	- further: use pots to change color; simplify code w functions; use optimal resistors dependent on colors for equal brightness
 	- R, G, and B channels are mixed - from this we can develop many different colros
@@ -39,11 +42,11 @@ Summarized in [tmi Log](tmi%20Log.md)
 	- "When you upload a sketch, you're using the Arduino **bootloader**, a small program that has been loaded on to the microcontroller on your board. It allows you to upload code without using any additional hardware." 
 	- "Please note that the Serial Monitor does not process control characters; if your sketch needs a complete management of the serial communication with control characters, you can use an external terminal program and connect it to the COM port assigned to your Arduino board."
 
-[2022-10-03](2022-10-03)
+### [2022-10-03](2022-10-03)
 From https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483573 on `millis()` vs `delay()` -> see [tmi 02 millis() forum examples](code/tmi%2002%20millis()%20forum%20examples/tmi%2002%20millis()%20forum%20examples.md)
 
 
-[2022-10-02](2022-10-02)
+### [2022-10-02](2022-10-02)
 - install zip libraries directly (no need to unpackage)
 - a serial terminal is important to see the interaction with the Arduino via a computer - this is the Serial Monitor
 - "Selecting which port to open in the Serial Monitor is the same as selecting a port for uploading Arduino code. Go to Tools -> Serial Port, and select the correct port." (source: [elegooCompleteStarterMega2560](elegooCompleteStarterMega2560.md)) - should be the same COM port as in DeviceManager
