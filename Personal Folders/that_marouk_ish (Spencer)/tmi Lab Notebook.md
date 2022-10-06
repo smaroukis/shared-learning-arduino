@@ -4,6 +4,19 @@ Summarized in [tmi Log](tmi%20Log.md)
 Plan
 - keep going through the Banzi Book & Collecting Examples
 
+[[UART]] - see wikipedia #refactor
+- the UART port is also called the Serial Port [[Serial Communication]]
+- hardware for serial communication that handles the tranmission/reception of serial communication (external device required to handle the singalling level of the transmitting/receiving device)
+	- electric signalling level are handled by a external driver circuit, e.g. RS-232 (12V) and RS-485 (5V)
+- an IC or part of an IC that allows data format and transmission speeds to be configurable
+- asynchronous - so uses a [shift register](shift%20register.md) to convert between serial and parallel forms
+- sends and receives bits one by one from LSB to MSB with start/stop bits
+- precise timing is handled by the communication channel
+- communication can be simplex, full duplex, half duplex
+- settings: baud rate, parity bit, data bits size, stop bits size, flow control
+- has internal clock faster than the bit rate
+- [[bit-banging]] is omitting the UART and using the CPU to sample the state of an input port or directly manipulate an output port for transmission; but it is CPU intensive because of the timing
+
 [2022-10-05](2022-10-05)
 - [State Machines](State%20Machines.md) #tdf
 - [banziGettingStartedArduino](banziGettingStartedArduino.md) Project - Fade in LED if pushbutton is pressed 

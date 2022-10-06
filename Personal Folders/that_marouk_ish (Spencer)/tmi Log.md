@@ -1,6 +1,6 @@
 > Reverse chronological log of my learnings on Arduino
 
-More Raw in [tmi Lab Notes](tmi%20Lab%20Notes.md)
+More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
 
 [2022-10-05](2022-10-05) 
 Day 3 - Fading LED, Pushbutton Orientation
