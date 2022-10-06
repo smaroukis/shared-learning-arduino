@@ -4,13 +4,18 @@ The Arduino's without an [ADCs - Analog Digital Converters](ADCs%20-%20Analog%20
 
 Note often we need to convert between 8-bit and 16-bit sizes since `analogRead()` returns a value between 0 and 1023 but `analogWrite()` can only write between 0 and 255.
 
-> note `map()` uses integer math - for decimal precision you will need to write your own
+The easiest way is to just divide by 4 when writing e.g.:
+``` c
+analogWrite(LED, analogRead(PIN)/4));
+```
 
-Example `map()` code:
-```arduino
+Another way is to use `map()`:
+``` c
 void loop() {
 int val = analogRead(0);
 val = map(val, 0, 1023, 0, 255);
 analogWrite(9, val);
 }
 ```
+
+> note `map()` uses integer math - for decimal precision you will need to write your own
