@@ -1,11 +1,11 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
 [2022-10-06](2022-10-06)
-Plan
-- keep going through the Banzi Book & Collecting Examples
-
 [Serial Communication](../../Serial%20Communication.md) -> [UART](UART.md) - see wikipedia 
-- 
+[banziGettingStartedArduino](banziGettingStartedArduino.md) Examples 5-3 onward
+- 5-4 LED + photoresistor - analogue read
+	- NB: analog pins are automatically set as inputs -> [Introduction to Arduino - Hardware](../../Introduction%20to%20Arduino%20-%20Hardware.md) 
+	- 
 
 [2022-10-05](2022-10-05)
 - [State Machines](State%20Machines.md) #tdf
