@@ -13,8 +13,8 @@ Concepts:
 - [Arduino - PWM](../../../Arduino%20-%20PWM.md)
 
 Physical Setup:
-![](../../../Pasted%20image%2020221007124800.png)
-#img #todo
+![img04-RGB-led](attachments/img04-RGB-led.JPG)
+
 
 Code:
 

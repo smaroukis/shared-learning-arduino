@@ -1,6 +1,6 @@
 parent::[tmi Examples](tmi%20Examples.md)
-next:: [tmi07 Buzzers](tmi07%20Buzzers.md)
 previous::[tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
+next:: [tmi07 Buzzers](tmi07%20Buzzers.md)
 level:: #beginner
 
 > From [Getting Started With Arduino](banziGettingStartedArduino.md) Example 5-4 & 5-5
