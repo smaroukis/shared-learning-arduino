@@ -10,7 +10,9 @@ Summarized in [tmi Log](tmi%20Log.md)
 	- datasheets (e.g. https://www.jp.tdk.com/tefe02/ec211_sdr.pdf) give a max current 25mA - 85mA  - this must be current draw based on a given voltage and pulse width
 
 08 - motors [tmi08 Micro Servo](Personal%20Folders/that_marouk_ish/tmi08%20Micro%20Servo.md)
-- 
+- mostly just uses the Servo library (download from Library Manager or online) to handle everything
+- with this one we can drive with 
+- [Motors - Servos](../../Motors%20-%20Servos.md)
 
 **Research/Notepad**
 [Buzzers - Active and Passive](../../Buzzers%20-%20Active%20and%20Passive.md)

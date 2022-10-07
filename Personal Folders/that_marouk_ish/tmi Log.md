@@ -2,6 +2,33 @@
 
 More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
 
+[2022-10-07](2022-10-07)
+Day 5 - Active vs Passive Buzzers, Servos (+Questions)
+
+Mini Project 07 - [Buzzers](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi07%20Buzzers.md)
+- various types of buzzers, by operating principle (magnetic or piezo) and input (DC / AC)
+- to change tone use _frequency modulation_ (not PWM which changes effective DC *amplitude*) 
+- active buzzers have their own oscillating circuit, but for passive buzzers you must supply an oscillating square wave (the `tone()` function handles this for Arduino on any pin). 
+
+
+
+Mini Project 08 - Servo
+- one or two servos can be powered directly from 5V on the Arduino (at least for my mini servos - check the current draw is under 20mA as usual)
+- to drive the servo we provide a pulse to a signal pin - the duration of the pulse is proportional to the rotation
+- the `Servo` library handles this for us, we just need to provide an angle in degrees (download from Library Manager) 
+
+e.g. 
+```
+#include <Servo.h>
+Servo myservo; // create Servo object from the library
+
+void setup(){
+	myservo.attach(SERVO_PIN); // digital pin
+	myservo.write(90); // moves servo to center position -> 90°
+}
+```
+
+
 [2022-10-06](2022-10-06)
 Day 4 - LDR and `millis()` Debouncing, Using the Serial Monitor
 
@@ -19,9 +46,9 @@ Hardware Learnings
 - LDRs - use 10K load/sense resistor in the example -my LDR varies from 20kOhms (10 lux) to 2MOhms (0 lux) - the voltage sensed by the pin is over the sense resistor
 
 Mini Projects
-- https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi02%20Digital%20Inputs.md - digital inputs and pullup inputs
-- https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md - debouncing with `millis()`
-- https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi06%20LDR%20analogWrite%20to%20LED.md - LDR, outputting value to Serial Monitor
+- https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi02%20Digital%20Inputs.md - digital inputs and pullup inputs
+- https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md - debouncing with `millis()`
+- https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi06%20LDR%20analogWrite%20to%20LED.md - LDR, outputting value to Serial Monitor
 
 Readings
 - https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483573/4 - millis() for debouncing e.g. Blink Without Delay
@@ -37,7 +64,7 @@ Today I spent a lot of time debugging both some code errors and wiring errors. I
 
 The mini-project combined some code from the Built in [Fade Example](https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade) and from the _Make:_ book Getting Started with Arduino (Banzi, Shiloh). 
 
-I specifically liked the `fadeAmount = -fadeAmount` line to switch between fading in and out. (see line 47 of [the code](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi05_pushbutton_led_fade/tmi05_pushbutton_led_fade.ino) in the hosted version)
+I specifically liked the `fadeAmount = -fadeAmount` line to switch between fading in and out. (see line 47 of [the code](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/code/tmi05_pushbutton_led_fade/tmi05_pushbutton_led_fade.ino) in the hosted version)
 
 Mostly I felt good about self-identifying and fixing the wiring and coding errors, even though it took me longer than I thought. I like to type everything out by hand to get a feel for the syntax but it's easy to make software mistakes and then think it is a wiring issues and vice versa. 
 

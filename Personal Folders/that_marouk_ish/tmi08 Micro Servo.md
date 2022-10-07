@@ -1,7 +1,7 @@
 parent::[tmi Examples](../../../tmi%20Examples.md)
 previous:: [tmi07 Buzzers](Personal%20Folders/that_marouk_ish/tmi07%20Buzzers.md)
 next::
-garden-topic:: [Motors - Servos](Motors%20-%20Servos.md)
+garden-topic:: [Motors - Servos](../../Motors%20-%20Servos.md)
 level:: #beginner
 
 >  Inspired by Elegoo Ultimate Starter Kit Lesson 9
@@ -11,7 +11,8 @@ Desired Goal:
 
 Concepts:
 - Using the Library Manager
-- [Motors - Servos](Motors%20-%20Servos.md)
+- [Motors - Servos](../../Motors%20-%20Servos.md)
+- 
 
 Physical Setup:
 
