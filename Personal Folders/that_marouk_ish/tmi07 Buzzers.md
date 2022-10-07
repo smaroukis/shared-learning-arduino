@@ -1,6 +1,6 @@
 parent::[tmi Examples](../../../tmi%20Examples.md)
 previous:: [tmi06 LDR analogWrite to LED](tmi06%20LDR%20analogWrite%20to%20LED.md)
-next:: [tmi08 Micro Servo](Personal%20Folders/that_marouk_ish/tmi08%20Micro%20Servo.md)
+next:: [tmi08 Micro Servo](tmi08%20Micro%20Servo.md)
 level:: #beginner
 
 > Inspired by www.elegoo.com Mega Ultimate Kit Lesson 7 and https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody
