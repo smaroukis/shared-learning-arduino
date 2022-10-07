@@ -105,7 +105,7 @@ int melody[] = {
   NOTE_C5, NOTE_D5, NOTE_E5, NOTE_F5, NOTE_G5, NOTE_A5, NOTE_B5, NOTE_C6};
 
 // the tone() library allows us to output a 
-// square wave on ANY pin even digital ones  
+// square wave on ANY pin  
 int BUZZER_PASSIVE = 3; 
  
 void setup() {

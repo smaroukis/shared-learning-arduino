@@ -3,22 +3,55 @@
 More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
 
 [2022-10-07](2022-10-07)
-Day 5 - Active vs Passive Buzzers, Servos (+Questions)
+**Day 5 - Active vs Passive Buzzers, Servos (+Questions)**
 
-Mini Project 07 - [Buzzers](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi07%20Buzzers.md)
+**Mini Project 07 - Buzzers**  ([github](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi08%20Micro%20Servo.md))
 - various types of buzzers, by operating principle (magnetic or piezo) and input (DC / AC)
 - to change tone use _frequency modulation_ (not PWM which changes effective DC *amplitude*) 
 - active buzzers have their own oscillating circuit, but for passive buzzers you must supply an oscillating square wave (the `tone()` function handles this for Arduino on any pin). 
+- I used a pullup input plus a pushbutton to beep when pressed 
+
+It is just a simple digital output - but notably my buzzer didn't require a limiting resistor unlike a speaker or LED.
+
+``` c
+void setup(){
+  pinMode(BUZZER, OUTPUT); // digital output (DC HIGH/LOW) since it is an active buzzer
+  pinMode(BUTTON, INPUT_PULLUP);
+}
+
+void loop(){
+  buttonState = !digitalRead(BUTTON); // due to pullup (unpressed = 5V), logic is reversed
+
+  // if button is pressed, set the buzzer HIGH (DC)
+  if (buttonState == 1){
+    digitalWrite(BUZZER, HIGH);
+  } else {
+    digitalWrite(BUZZER, LOW);
+  }
+}
+```
+
+Using the `tone()` function with a passive buzzer:
+``` c
+for (int thisNote = 0; thisNote < 8; thisNote++) {
+	tone(BUZZER_PASSIVE, melody[thisNote], 500); // where melody is an array of ints containing the notes, see the built in example
+	delay(1000);
+}
+noTone(BUZZER_PASSIVE); // to stop it
+```
+
+References - Buzzer
+- https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody - built in `tone()` example
+- https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/ - more on `tone()` and music theory
 
 
-
-Mini Project 08 - Servo
+**Mini Project 08 - Servo** ([github](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi07%20Buzzers.md))
 - one or two servos can be powered directly from 5V on the Arduino (at least for my mini servos - check the current draw is under 20mA as usual)
 - to drive the servo we provide a pulse to a signal pin - the duration of the pulse is proportional to the rotation
 - the `Servo` library handles this for us, we just need to provide an angle in degrees (download from Library Manager) 
 
 e.g. 
-```
+``` c
 #include <Servo.h>
 Servo myservo; // create Servo object from the library
 
@@ -28,6 +61,11 @@ void setup(){
 }
 ```
 
+References - Servo
+- https://www.arduino.cc/reference/en/libraries/servo/
+
+Outstanding Questions
+- why doesn't the buzzer need a current limiting resistor like a LED or speaker? Mine is 16 Ohms
 
 [2022-10-06](2022-10-06)
 Day 4 - LDR and `millis()` Debouncing, Using the Serial Monitor
