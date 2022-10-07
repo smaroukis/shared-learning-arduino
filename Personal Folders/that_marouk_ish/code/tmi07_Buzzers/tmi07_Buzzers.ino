@@ -74,7 +74,6 @@ void loop()
 // notes in the melody:
 int melody[] = {
   NOTE_C5, NOTE_D5, NOTE_E5, NOTE_F5, NOTE_G5, NOTE_A5, NOTE_B5, NOTE_C6};
-int duration = 500;  // 500 miliseconds
 
 // the tone() library allows us to output a 
 // square wave on ANY pin even digital ones  
@@ -83,17 +82,16 @@ int BUZZER_PASSIVE = 3;
 void setup() {
  
   for (int thisNote = 0; thisNote < 8; thisNote++) {
-    // pin8 output the voice, every scale is 0.5 sencond
-    tone(8, melody[thisNote], duration);
+    //  output the voice, every scale is 0.5 sencond
+    tone(BUZZER_PASSIVE, melody[thisNote], 500);
   
     // Output the voice after several minutes
     delay(1000);
   }
 
   noTone(BUZZER_PASSIVE);
-
 }
- 
+
 void loop() {  
   // no need to play it more than once
 } 

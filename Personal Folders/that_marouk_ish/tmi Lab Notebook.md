@@ -2,8 +2,12 @@ Summarized in [tmi Log](tmi%20Log.md)
 
 ### [2022-10-07]
 **Projects**
-07- audio - elegoo Lesson 7 & 8 - Buzzers
-
+07- audio - elegoo Lesson 7 & 8 - Buzzers -> [tmi07 Buzzers](code/tmi07%20Buzzers.md)
+- we need to do _frequency modulation_ (not PWM) to change the pitch (frequency) of the buzzer
+- if we used PWM as in `analogWrite()` we would just be varying the loudness (amplitude) of the buzzer
+- #q if my passive buzzer is only 16Ohms, how can I connect it directly to the arduino as an output? Wouldn't it draw more than 20mA? 
+	- mabye bc it can be modeled as an inductor - a short at DC and an open at AC
+	- datasheets (e.g. https://www.jp.tdk.com/tefe02/ec211_sdr.pdf) give a max current 25mA - 85mA  - this must be current draw based on a given voltage and pulse width
 
 **Research/Notepad**
 [Buzzers - Active and Passive](../../Buzzers%20-%20Active%20and%20Passive.md)
