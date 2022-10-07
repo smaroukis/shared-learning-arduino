@@ -4,7 +4,7 @@ This is my personal folder where I put all of my example projects I go through a
 
 The projects are described in the markdown files in this folder such as [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md) (until I upload a Blink sketch). All of the `tmi0X<project_name>.md` files have a summary of the project, the physical setup, and an inline copy of the code for quick perusal. There are also resources and further exploration prompts at the bottom.
 
-The actual code sketches for each project are under `code/`.
+The actual code sketches for each project are under `./code/`.
 
 List of projects so far:
 - [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md)
