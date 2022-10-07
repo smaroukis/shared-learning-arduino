@@ -2,7 +2,7 @@ Summarized in [tmi Log](tmi%20Log.md)
 
 ### [2022-10-07]
 **Projects**
-07- audio - elegoo Lesson 7 & 8 - Buzzers -> [tmi07 Buzzers](code/tmi07%20Buzzers.md)
+07- audio - elegoo Lesson 7 & 8 - Buzzers -> [tmi07 Buzzers](tmi07%20Buzzers.md)
 - we need to do _frequency modulation_ (not PWM) to change the pitch (frequency) of the buzzer
 - if we used PWM as in `analogWrite()` we would just be varying the loudness (amplitude) of the buzzer
 - #q if my passive buzzer is only 16Ohms, how can I connect it directly to the arduino as an output? Wouldn't it draw more than 20mA? 
@@ -16,9 +16,9 @@ Summarized in [tmi Log](tmi%20Log.md)
 (Project)
 **[banziGettingStartedArduino](banziGettingStartedArduino.md) Examples 5-3 
  to 5-5**
-- 5-4 LED + photoresistor - analogue read [tmi06 LDR analogWrite to LED](code/tmi06%20LDR%20analogWrite%20to%20LED.md)
+- 5-4 LED + photoresistor - analogue read [tmi06 LDR analogWrite to LED](tmi06%20LDR%20analogWrite%20to%20LED.md)
 	- NB: analog pins are automatically set as inputs 
-- [tmi03 Digital Inputs Debounce w Millis](code/tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md) - debouncing
+- [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md) - debouncing
 
 Project 2
 - `byte` is smaller than an `int` - [Arduino Variable Types](../../Arduino%20Variable%20Types.md)
@@ -41,14 +41,14 @@ Project 2
 ### [2022-10-05](2022-10-05)
 - [State Machines](State%20Machines.md) #tdf
 - [banziGettingStartedArduino](banziGettingStartedArduino.md) Project - Fade in LED if pushbutton is pressed 
-	- [tmi05 Pushbutton LED Fade](code/tmi05%20Pushbutton%20LED%20Fade.md)
+	- [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
 - wiring vs processing vs Arduino language https://forum.arduino.cc/t/how-is-arduino-related-to-wiring/69064/
 - more on [Serial Communication](../../Serial%20Communication.md) and [Serial to USB](Serial%20to%20USB) ⬇️ 
 	- "Current Arduino boards are programmed via [Universal Serial Bus](https://en.wikipedia.org/wiki/Universal_Serial_Bus "Universal Serial Bus") (USB), implemented using USB-to-serial adapter chips such as the [FTDI](https://en.wikipedia.org/wiki/FTDI "FTDI") FT232. Some boards, such as later-model Uno boards, substitute the [FTDI](https://en.wikipedia.org/wiki/FTDI "FTDI") chip with a separate AVR chip containing USB-to-serial firmware, which is reprogrammable via its own [ICSP](https://en.wikipedia.org/wiki/In-system_programming "In-system programming") header."  [[source](https://en.wikipedia.org/wiki/Arduino#Hardware)]
 - Main Learnings
 	- longs vs ints -> see [Intro to Arduino - Software](../../Intro%20to%20Arduino%20-%20Software.md)
 	- use `unsigned long` for `millis()` timekeeping (can go up to -4.2Ms = 50 days)
-	- some tricks for fading in and out see below and in [tmi05 Pushbutton LED Fade](code/tmi05%20Pushbutton%20LED%20Fade.md)
+	- some tricks for fading in and out see below and in [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
 		- ![](attachments/Pasted%20image%2020221005215410.png)
 
 

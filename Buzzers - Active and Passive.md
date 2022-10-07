@@ -1,12 +1,11 @@
 parent::[Electronic Components](Electronic%20Components.md)
-garden-topic::[tmi07 Buzzers](Personal%20Folders/that_marouk_ish/code/tmi07%20Buzzers.md)
 
 Summary
 - There are different types of buzzers, based on construction (magnetic vs. piezo), and whether they include an oscillator drive circuit (passive vs. active). They function on the same fundamental property of using a AC electrical input to vibrate the air and produce sound of a certain frequency. Note that _frequency_ modulation is employed and not _amplitude_ modulation as in [Arduino - PWM](Arduino%20-%20PWM.md) - as amplitude modulation will just change the loudness of the buzzer, not the tone.
-- It does not seem like a resistor is needed to limit the current through the buzzer, as is required with a speaker. (?)
+- It does not seem like a resistor is needed to limit the current through the buzzer, as is required with a speaker. #tdf
 
 **Piezo**
-- . he piezoelectric effect is when a material deforms in the presence of an electric charge. A piezo buzzer is a thin disc of piezoelectric ceramic adhered to a metal plate, which vibrates when an AC signal is applied.
+- The piezoelectric effect is when a material deforms in the presence of an electric charge. A piezo buzzer is a thin disc of piezoelectric ceramic adhered to a metal plate, which vibrates when an AC signal is applied.
 
 **Electromagnetic/Magnetic**
 - A varying electric charge produces a magnetic field which causes a metal disc to vibrate. A coil of wire is inside a magnet in the buzzer, when an AC current is applied it creates a magnetic field that moves the metal disc. (note there may be circuitry allowing a DC signal to be applied to the buzzer pins)

@@ -1,4 +1,4 @@
-parent::[tmi Examples](../tmi%20Examples.md)
+parent::[tmi Examples](tmi%20Examples.md)
 previous:: [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md), 
 next:: [tmi04 RGB LED](tmi04%20RGB%20LED.md), [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
 level:: #beginner
@@ -19,7 +19,7 @@ Concepts:
 Physical Setup:
 
 Same as in the previous but with only one pushbutton.
-![](../attachments/IMG_7160.jpg)
+![](attachments/IMG_7160.jpg)
 - 
 Notes on debouncing
 - always taking the current time at the beginning of each loop

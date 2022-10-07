@@ -3,7 +3,7 @@ previous:: [tmi06 LDR analogWrite to LED](tmi06%20LDR%20analogWrite%20to%20LED.m
 next::
 level:: #beginner
 
->  (source)
+> Inspired by www.elegoo.com Mega Ultimate Kit Lesson 7 and https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody
 
 Desired Goal:
 - Play a sound on active and passive buzzer elements.
@@ -19,7 +19,7 @@ Physical Setup:
 > We are using 16Ohm magnetic buzzers from the elegoo Mega Ultimate Starter Kit
 
 07A - Active Buzzer
-![](../attachments/img07-setup.JPG)
+![](attachments/img07-setup.JPG)
 
 07C - Passive Buzzer
 - same physical setup as above (note we can use a digital pin even though we are doing _frequency modulation_, as opposed to _PWM_, per the `tone()` function included in the Arduino library)

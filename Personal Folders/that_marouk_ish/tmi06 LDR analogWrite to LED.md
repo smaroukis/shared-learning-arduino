@@ -1,9 +1,9 @@
-parent::[tmi Examples](../tmi%20Examples.md)
-next::
+parent::[tmi Examples](tmi%20Examples.md)
+next:: [tmi07 Buzzers](tmi07%20Buzzers.md)
 previous::[tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
 level:: #beginner
 
-> From [Getting Started With Arduino](../banziGettingStartedArduino.md) Example 5-4 & 5-5
+> From [Getting Started With Arduino](banziGettingStartedArduino.md) Example 5-4 & 5-5
 
 Desired Goal:
 - Set the LED to a brightness specified by the value of the analog input given by the LDR 
@@ -15,7 +15,7 @@ Concepts:
 - [Serial Communication](../../../Serial%20Communication.md) - the most basic printing of serial values to the monitor
 
 Physical Setup:
-![](../attachments/IMG_7156.jpg)
+![](attachments/IMG_7156.jpg)
 
 
 Code:

@@ -1,9 +1,9 @@
-parent:: [tmi Examples](../tmi%20Examples.md)
+parent:: [tmi Examples](tmi%20Examples.md)
 previous:: [tmi04 RGB LED](tmi04%20RGB%20LED.md), [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md)
 next:: [tmi06 LDR analogWrite to LED](tmi06%20LDR%20analogWrite%20to%20LED.md)
 level:: #beginner 
 
-> Inspiration from [Getting Started With Arduino](../banziGettingStartedArduino.md), example 5-2 and https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade
+> Inspiration from [Getting Started With Arduino](banziGettingStartedArduino.md), example 5-2 and https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade
 
 
 Desired Goal: 
@@ -24,7 +24,7 @@ Code:
 - [tmi_05_pushbutton_led_fade](Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi_05_pushbutton_led_fade/tmi_05_pushbutton_led_fade.ino).
 
 Physical setup:
-![](../attachments/Pasted%20image%2020221005220840.png)
+![](attachments/Pasted%20image%2020221005220840.png)
 
 Copy of code: 
 ``` c++

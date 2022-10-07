@@ -1,4 +1,4 @@
-parent::[tmi Examples](../tmi%20Examples.md)
+parent::[tmi Examples](tmi%20Examples.md)
 previous::
 next:: [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md)
 level:: #beginner
@@ -13,7 +13,7 @@ Concepts:
 - pullup resistors and inverted logic
 
 Physical Setup:
-![](../attachments/IMG_7160.jpg)
+![](attachments/IMG_7160.jpg)
 
 Code:
 See [tmi02_Digital-Inputs](tmi02_Digital-Inputs/tmi02_Digital-Inputs.ino)
