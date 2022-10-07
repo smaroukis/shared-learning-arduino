@@ -6,7 +6,7 @@ parent::[Motors](Motors.md)
 3 pins - Power, Ground, and Signal
 - Power: typ red ➡️ 5V
 - Ground: typ. brown or black ➡️ GND
-- Signal: typ. yellow, orange, white ➡️ Digital Pin
+- Signal: typ. yellow, orange, white ➡️ PWM Digital Pin 
 
 
 ## References

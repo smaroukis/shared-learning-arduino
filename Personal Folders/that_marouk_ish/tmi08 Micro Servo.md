@@ -53,6 +53,7 @@ void loop(){
 ```
 
 Improvements:
+- use a potentiometer to control the position (see the built in Arduino sketch)
 
 Resources
 - https://www.arduino.cc/reference/en/libraries/servo/
