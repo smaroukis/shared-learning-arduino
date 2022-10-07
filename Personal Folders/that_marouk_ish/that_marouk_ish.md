@@ -1,6 +1,5 @@
 ## Metadata
 #person
-name:: Spencer
 handle:: #tmi
 
 ## About Me
@@ -8,4 +7,4 @@ handle:: #tmi
 ## Pages
 - [tmi Log](tmi%20Log.md)
 - [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
-- [tmi Examples](../../tmi%20Examples.md)
+- [tmi Examples](tmi%20Examples.md)

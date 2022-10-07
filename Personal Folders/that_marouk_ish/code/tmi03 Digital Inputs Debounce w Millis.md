@@ -1,4 +1,4 @@
-parent::[tmi Examples](../../../tmi%20Examples.md)
+parent::[tmi Examples](../tmi%20Examples.md)
 next:: [[tmi04 RGB LED]], [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
 previous:: [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md)
 level:: #beginner

@@ -17,7 +17,7 @@ parent:: [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
 - [[const int vs define macro]]
 
 Table of various types:
-![](Personal%20Folders/that_marouk_ish%20(Spencer)/attachments/Pasted%20image%2020221005161457.png)
+![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221005161457.png)
 
 - _U/L formatters (appends)_
 	- `u|U`: to force the constant into an **unsigned** data format. Example: `33u`

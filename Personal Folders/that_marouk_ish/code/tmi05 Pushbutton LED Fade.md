@@ -1,8 +1,8 @@
-parent:: [tmi Examples](tmi%20Examples.md)
+parent:: [tmi Examples](../tmi%20Examples.md)
 previous:: 
 next:: [tmi06 LDR analogWrite to LED](tmi06%20LDR%20analogWrite%20to%20LED.md)
 
-> from [Getting Started With Arduino](Personal%20Folders/that_marouk_ish%20(Spencer)/banziGettingStartedArduino.md), example 5-2.
+> from [Getting Started With Arduino](../banziGettingStartedArduino.md), example 5-2.
 
 > this should probably be before [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md) but I actually did this one first - that one has debouncing with `millis()` instead of the `delay()` found here
 
@@ -24,7 +24,7 @@ Code:
 - [tmi_05_pushbutton_led_fade](Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi_05_pushbutton_led_fade/tmi_05_pushbutton_led_fade.ino).
 
 Physical setup:
-![](attachments/Pasted%20image%2020221005220840.png)
+![](../attachments/Pasted%20image%2020221005220840.png)
 
 Copy of code: 
 ``` c++

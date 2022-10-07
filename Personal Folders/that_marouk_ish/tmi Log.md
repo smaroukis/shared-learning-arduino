@@ -16,12 +16,18 @@ led_state = (led_state == LOW ? HIGH : LOW); // ternary operator to switch led s
 
 Hardware Learnings
 - Using digital inputs as pullups allows you to forego the current limiting resistor if they were "ON" at 5V. (e.g. `pinMode(7, INPUT_PULLUP)`
-- 
+- LDRs - use 10K load/sense resistor in the example -my LDR varies from 20kOhms (10 lux) to 2MOhms (0 lux) - the voltage sensed by the pin is over the sense resistor
 
 Mini Projects
 - https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi02%20Digital%20Inputs.md - digital inputs and pullup inputs
 - https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md - debouncing with `millis()`
 - https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi06%20LDR%20analogWrite%20to%20LED.md - LDR, outputting value to Serial Monitor
+
+Readings
+- https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483573/4 - millis() for debouncing e.g. Blink Without Delay
+- https://forum.arduino.cc/t/serial-input-basics-updated/382007/2 -- didn't use this one but started to look at Serial things
+- https://docs.arduino.cc/tutorials/generic/digital-input-pullup - digital input example
+- https://forum.arduino.cc/t/long-press-toggle-output-high-and-low/587500/3 - more on debouncing and Blink Without Delay
 
 
 [2022-10-05](2022-10-05) 
