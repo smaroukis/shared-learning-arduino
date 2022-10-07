@@ -10,7 +10,8 @@ parent::[_Start Here](_Start%20Here.md)
 	- use markdown link syntax (instead of wikilinks)
 	- use full link paths relative to the root
 5. Add your name to the [Contributors](_Start%20Here.md#Contributors) list. 
-76 (optional) start a log of what you're working on in `<your_username>/<username> Log.md`
+6. (optional) start a log of what you're working on in `<your_username>/<username> Log.md` - example under `./Personal Folders/that_marouk_ish/tmi Log.md`
+7. (optional) post the log to https://www.reddit.com/r/arduino/comments/xsn3uh/shared_beginner_arduino_log_first_15_days/
 
 ## General Editing Guidelines
 - Keep Personal & Project Folders in `Personal Folders/<user>`. 
