@@ -6,7 +6,7 @@ Summarized in [tmi Log](tmi%20Log.md)
 
 
 **Research/Notepad**
-[Piezo Buzzers - Active and Passive](Piezo%20Buzzers%20-%20Active%20and%20Passive.md)
+[Buzzers - Active and Passive](../../Buzzers%20-%20Active%20and%20Passive.md)
 
 ### [2022-10-06](2022-10-06)
 (Project)
