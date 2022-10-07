@@ -1,8 +1,9 @@
 parent::[Electronic Components](Electronic%20Components.md)
 
 Summary
-- There are different types of buzzers, based on construction (magnetic vs. piezo), and whether they include an oscillator drive circuit (passive vs. active). They function on the same fundamental property of using a AC electrical input to vibrate the air and produce sound of a certain frequency. Note that _frequency_ modulation is employed and not _amplitude_ modulation as in [Arduino - PWM](Arduino%20-%20PWM.md) - as amplitude modulation will just change the loudness of the buzzer, not the tone.
-- It does not seem like a resistor is needed to limit the current through the buzzer, as is required with a speaker. #tdf
+- There are different types of buzzers (also called transducers), based on construction (magnetic vs. piezo), and whether they include an oscillator drive circuit (passive vs. active). They function on the same fundamental property of using a AC electrical input to vibrate the air and produce sound of a certain frequency. 
+- Note that _frequency_ modulation is employed and not _amplitude_ modulation as in [Arduino - PWM](Arduino%20-%20PWM.md) - as amplitude modulation will just change the loudness of the buzzer, not the tone.
+- We can simply apply the correct voltage 
 
 **Piezo**
 - The piezoelectric effect is when a material deforms in the presence of an electric charge. A piezo buzzer is a thin disc of piezoelectric ceramic adhered to a metal plate, which vibrates when an AC signal is applied.
@@ -39,9 +40,9 @@ Theory of operation
 
 ![](Pasted%20image%2020221007132552.png)
 
-**Further**:
-- a piezo buzzer is driven by a voltage - we can model it as a capacitor
-- a magnetic buzzer is driven by a current - we can model as a inductor (in series with a resistor)
+**Further** - see [Example Circuits - Buzzers](Example%20Circuits%20-%20Buzzers.md)
+- a piezo buzzer is driven by a voltage - we can model it as a capacitor. sometimes we use a reset resistor to discharge it when the switch connecting it is open
+- a magnetic buzzer is driven by a current - we can model as an inductor (in series with a resistor). no resistor is needed
 
 ## Resources
 - https://www.circuitbasics.com/how-to-use-active-and-passive-buzzers-on-the-arduino/
