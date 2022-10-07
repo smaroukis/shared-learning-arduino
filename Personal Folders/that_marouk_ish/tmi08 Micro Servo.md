@@ -1,15 +1,17 @@
 parent::[tmi Examples](../../../tmi%20Examples.md)
-previous:: [tmi08 Micro Servo](Personal%20Folders/that_marouk_ish/tmi08%20Micro%20Servo.md)
+previous:: [tmi07 Buzzers](Personal%20Folders/that_marouk_ish/tmi07%20Buzzers.md)
 next::
+garden-topic:: [Motors - Servos](Motors%20-%20Servos.md)
 level:: #beginner
 
->  (source)
+>  Inspired by Elegoo Ultimate Starter Kit Lesson 9
 
 Desired Goal:
-- Uses the `servo` library to drive a small servo motor.
+- Uses the `Servo` library to drive a small servo motor. The library can be downloaded from Library Manager in the Arduino IDE or is included in the `code/` files in this repo. 
 
 Concepts:
-- 
+- Using the Library Manager
+- [Motors - Servos](Motors%20-%20Servos.md)
 
 Physical Setup:
 
@@ -23,8 +25,34 @@ Code:
 
 
 ``` c
+// Description: Driving a small servor motor directly from 5V, using Servo library
+// Servo is supplied 5V and driven by PWM on Pin 7 (see datasheet for details)
 
+const int SERVO_PIN = 7;
+
+#include <Servo.h>
+Servo myservo; // create Servo object 
+
+void setup(){
+  myservo.attach(SERVO_PIN);
+
+  myservo.write(0);// move servos to center position -> 90°
+  delay(500);
+  myservo.write(45);// move servos to center position -> 60°
+  delay(500);
+  myservo.write(90);// move servos to center position -> 90°
+  delay(500);
+  myservo.write(135);// move servos to center position -> 120°
+  delay(500);
+  myservo.write(180);// move servos to center position -> 120°
+  delay(500);
+}
+ 
+void loop(){
+}
 ```
 
 Improvements:
-- 
+
+Resources
+- https://www.arduino.cc/reference/en/libraries/servo/
