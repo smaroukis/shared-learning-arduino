@@ -1,5 +1,5 @@
 parent::[Electronic Components](Electronic%20Components.md)
-garden-topic::
+garden-topic::[tmi07 Buzzers](Personal%20Folders/that_marouk_ish/code/tmi07%20Buzzers.md)
 
 Summary
 - 
@@ -30,6 +30,7 @@ Passive Buzzer
 - we can control the pitch since we set the square wave ourselves
 - (!) don't drive the passive buzzer with `analogWrite()`, instead use the built in `tone()` /`noTone()` functions
 
+> If you want to play different pitches on multiple pins, you need to call `noTone()` on one pin before calling `tone()` on the next pin.
 
 Theory of operation
 - a weighted metal film is vibrated at a certain frequency to produce a sound 
@@ -44,3 +45,4 @@ Theory of operation
 - https://www.circuitbasics.com/how-to-use-active-and-passive-buzzers-on-the-arduino/
 - https://www.avrfreaks.net/forum/buzzer-module-gets-warm-and-wastes-power - for modules, check which type of transistor (NPN or PNP) it is using
 - https://www.americanpiezo.com/blog/piezo-buzzers-vs-magnetic-buzzers/#:~:text=Generally%20speaking%2C%20piezo%20buzzers%20tend,usable%20frequencies%20than%20magnetic%20buzzers.
+- https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody
