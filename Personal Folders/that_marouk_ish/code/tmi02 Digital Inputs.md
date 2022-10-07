@@ -1,6 +1,6 @@
 parent::[tmi Examples](../tmi%20Examples.md)
-next:: [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md)
 previous::
+next:: [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md)
 level:: #beginner
 
 >  from Elegoo Lesson 5 Digital Inputs

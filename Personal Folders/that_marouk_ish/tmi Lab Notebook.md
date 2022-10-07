@@ -1,5 +1,12 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
+### [2022-10-07]
+**Projects**
+- 
+
+**Research/Notepad**
+
+
 ### [2022-10-06](2022-10-06)
 (Project)
 **[banziGettingStartedArduino](banziGettingStartedArduino.md) Examples 5-3 

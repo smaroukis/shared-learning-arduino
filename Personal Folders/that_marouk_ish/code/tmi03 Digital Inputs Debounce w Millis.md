@@ -1,9 +1,11 @@
 parent::[tmi Examples](../tmi%20Examples.md)
-next:: [[tmi04 RGB LED]], [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
-previous:: [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md)
+previous:: [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md), [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
+next:: [tmi04 RGB LED](tmi04%20RGB%20LED.md)
 level:: #beginner
 
 >  Adapted from Elegoo Mega2560 Starter Kit Lesson 5 and https://forum.arduino.cc/t/long-press-toggle-output-high-and-low/587500/3
+
+> Very similar to [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md) 
 
 Desired Goal:
 - Toggle the LED on and off with a pushbutton

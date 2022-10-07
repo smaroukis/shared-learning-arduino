@@ -1,10 +1,10 @@
 parent:: [tmi Examples](../tmi%20Examples.md)
-previous:: 
+previous:: [tmi04 RGB LED](tmi04%20RGB%20LED.md), [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md)
 next:: [tmi06 LDR analogWrite to LED](tmi06%20LDR%20analogWrite%20to%20LED.md)
+level:: #beginner 
 
-> from [Getting Started With Arduino](../banziGettingStartedArduino.md), example 5-2.
+> Inspiration from [Getting Started With Arduino](../banziGettingStartedArduino.md), example 5-2 and https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade
 
-> this should probably be before [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md) but I actually did this one first - that one has debouncing with `millis()` instead of the `delay()` found here
 
 Desired Goal: 
 - when you press the button it turns the LED on and off (without holding)
@@ -28,9 +28,6 @@ Physical setup:
 
 Copy of code: 
 ``` c++
-// adapted from "Make: Getting Started with Arduino" 
-// and https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade
-
 // The code (1) turns on and off an LED when the pushbutton is pressed and
 // (2) fades the LED in and out when the pushbutton is held down)
 
@@ -60,9 +57,9 @@ void loop(){
 
   //check for a button press (tranisition LOW->HIGH)
   if ((val == HIGH) && (old_val == LOW)){
-    state = 1 - state; // change the state from ON to OFF or vice-versa
+    state = 1 - state; // change the LED state variable from ON to OFF or vice-versa
     t_start = millis(); // record time
-    delay(t_delay); // for debouncing
+    delay(t_delay); // do I need this? 
   }
 
   // check if the button is (still) being held down
@@ -71,10 +68,10 @@ void loop(){
     // If the button is held for more than 500 ms
     if ((state == 1) && (millis() - t_start) > 500) {
       brightness = brightness + fadeAmount; // increment/decrement brightness
-      delay(t_delay);
+      delay(t_delay); // so the brightness doesn't shoot up
 
       if (brightness <= 0 || brightness >= 255) {
-        fadeAmount = -fadeAmount; // to allow the above code to work 
+        fadeAmount = -fadeAmount; // cool switch for fading in and out
         }
     } 
   }
