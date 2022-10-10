@@ -14,6 +14,8 @@ parent::[_Start Here](_Start%20Here.md)
 7. (optional) post the log to https://www.reddit.com/r/arduino/comments/xsn3uh/shared_beginner_arduino_log_first_15_days/
 
 ## General Editing Guidelines
+#refactor this with [Meta - Guidlines for Using Shared Vaults](Meta%20-%20Guidlines%20for%20Using%20Shared%20Vaults.md)
+
 - Keep Personal & Project Folders in `Personal Folders/<user>`. 
 - Root level pages should be relevant to the knowledge topic being explored - i.e. use a **flat file structure**. 
 	- instead of `Electrical Engineering/Microprocessors/Atmetl-AVR.md` just place `Atmel-AVR.md` in the root folder. If you want to include a hierarchy you can put `parent: Microprocessors` in the file text.
@@ -24,11 +26,12 @@ parent::[_Start Here](_Start%20Here.md)
 [Meta - Main Page](Meta%20-%20Main%20Page.md)
 
 ### Obsidian Specific Settings
-- Turn off "Wikilinks" for portability
+#refactor  with [Meta - Guidlines for Using Shared Vaults](Meta%20-%20Guidlines%20for%20Using%20Shared%20Vaults.md)
+- Turn off "Wikilinks" for portability and usage with Github
 	- Settinngs > File Links > Use Wikilinks = `no (untoggled)`
-- Set Links as full relative to vault root
+-  Set Links as relative to current file
 	- Settings > File Links > New Link Format =  `Relative Path to File `
-- If using git, please add `.obsidian` to your `.gitignore` file 
+- Add `.obsidian` to your `.gitignore` file 
 
 
 ## Contributors

@@ -1,6 +1,8 @@
 topic:: #t/analog 
 parent:: [561A Analog Circuits](561A%20Analog%20Circuits.md)
 
+#tdf formatting 
+
 
 ## ➡️ Garden
 - [Decibels Summary](Decibels%20Summary.md)

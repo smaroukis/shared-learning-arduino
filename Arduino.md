@@ -3,9 +3,33 @@ parent:: [Microcontrollers](Microcontrollers)
 
 ## Getting Started Resources
 - [Arduino Resources](Arduino%20Resources.md) ⬅️ put articles to read here too
-- [[Arduino - Setup and IDE]]
+- [Arduino - Setup and IDE](Arduino%20-%20Setup%20and%20IDE.md)
 - [Introduction to Arduino - Hardware](Introduction%20to%20Arduino%20-%20Hardware.md)
 - [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
-- [Electronic Components](Electronic%20Components.md) - Resistors, LEDs and the like
-- 
 
+## Topics
+
+### Basic Topics
+**Fundamentals**
+- [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
+- [Introduction to Arduino - Hardware](Introduction%20to%20Arduino%20-%20Hardware.md)
+- [Arduino - PWM](Arduino%20-%20PWM.md)
+- [Serial Communication](Serial%20Communication.md)
+
+
+**Hardware and Components**
+- [Electronic Components](Electronic%20Components.md) - Resistors, LEDs and the like
+	- [Resistors](Resistors.md)
+	- [LEDs](LEDs.md)
+	- [Buzzers - Active and Passive](Buzzers%20-%20Active%20and%20Passive.md)
+	- [Switches](Switches.md)
+	- [Motors](Motors.md): [Motors - Servos](Motors%20-%20Servos.md)
+	- (see Main Components page for more)
+
+### Intermediate Topics
+
+**More Components**
+- [[Transistors]]
+	- [Power MOSFETs](Power%20MOSFETs.md)
+	- BJT #tdf 
+	- 

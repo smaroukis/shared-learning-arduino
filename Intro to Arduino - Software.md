@@ -1,16 +1,28 @@
 parent::[Arduino](Arduino.md)
 previous::[Introduction to Arduino - Hardware](Introduction%20to%20Arduino%20-%20Hardware.md)
-status:: #draft-outline 
+status:: #draft
 
+#TODO clear up confusion on word size
+
+**Fundamental Concepts**:
 - Arduino cannot run multiple programs at the same time, and programs can't quit
+- Predefined `setup()` function runs once, `loop()` function loops continuously
+- ? interrups? #q 
+- The Arduino pin type constrains us in some things (analog or digital, PWM capable or not), but we can define some pins as an input or an output
 
 **Initialization - initialize variables**
+- initialize global variables before `setup()`
 - see [Arduino Variable Types](Arduino%20Variable%20Types.md) 
-- initialize pin number variables as `const int` (e.g. `const int analogInPin = A0;`)
-- for number variables that can get large, such as when using `millis()`, use `unsigned long` so it rolls over back to 0
+	- numbers that won't change - use `const int` or `const long`
+	- pin numbers - use `const int`  (more in [Arduino Pin Numbers](Arduino%20Pin%20Numbers.md))
+		- some analog pins can be defined in two ways: e.g. `A0` or `13` - check the datasheet
+	- 
 
 **Setup - runs once**
-- `Serial.begin(9600); //initialize serial data rate at 9600 bits per second`
+- setting pin mode as input or output
+	- `pinMode(13, OUTPUT)`
+	- `pinMode(7, INPUT_PULLUP) \\ sets digital 
+	- `Serial.begin(9600); //initialize serial data rate at 9600 bits per second`
 
 **Loop - Where it All Happens**
 - HIGH means the pin will be set to 5V, while LOW means the pin will be set to 0V 
@@ -36,8 +48,9 @@ Working with Specific Components
 	- $log_2(1024)=10$
 	- The Uno has a 10 bit [Arduino - ADC](Arduino%20-%20ADC.md), so converts analog voltages between 0-5V to one of 1024 different integer values (starting with 0 up to 1023). 
 - #q why is 32,768 important?
-	- for Arduino, [[word size]] is 16 bits.  For Arduino all variables can take up a word-size worth of space, or $2^{16}=65,536$ values (in practice `0` to `65535`)  ➡️  $65,536/2 = 32,768$
-	- 
+	- for Arduino, and specidically the ATMega328, the [word size](word%20size.md) is 16 bits.  This word-size worth of space, can take $2^{16}=65,536$ different values (in practice `0` to `65535`)   #tdf 
+	- the word size is basically the size of the data that can be processed during one clock cycle
+	
 
 **Further**
 - [Arduino - ADC](Arduino%20-%20ADC.md)

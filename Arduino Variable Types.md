@@ -1,5 +1,8 @@
 parent:: [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
 
+- initialize pin number variables as `const int` (e.g. `const int analogInPin = A0;`)
+- for number variables that can get large, such as when using `millis()`, use `unsigned long` so it rolls over back to 0
+
 **Numbers**
 - Integers: `int` and `long`
 	- by default variables are _signed_. 
@@ -14,7 +17,7 @@ parent:: [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
 
 [Integer Constants](https://www.arduino.cc/reference/en/language/variables/constants/integerconstants/) - `const int`
 - are usually type `int` (unsigned) but can be other variable types using specific formatting e.g. `const int 10000L` (constant long integer) or `const int 33u` (constant unsigned integer) or `const int 32767UL` (constant unsigned long integer)
-- [[const int vs define macro]]
+- [const int vs define macro](const%20int%20vs%20define%20macro.md)
 
 Table of various types:
 ![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221005161457.png)

@@ -2,18 +2,18 @@
 Parent: [Meta - Guidlines for Using Shared Vaults](Meta%20-%20Guidlines%20for%20Using%20Shared%20Vaults.md)
 
 **Wikilinks:**
-- e.g. `[[link to page]]`
+- syntax: `[[link to page]]`
 - supported by many other editors
 - not native to some editors
 - can be exported to markdown links
 
 **Markdown links:**
-- e.g. `[link text](full url of page)`
+- syntax: `[link text](full url of page)`
+- useful if the vault is a repo on github - no further formatting is required for links to work
 
 
 **Other Considerations**
 
-> Note: For either link type only "relative" links are created (it does not insert the full path for files in folders) - how does this affect other programs? 
 
 
 ## References

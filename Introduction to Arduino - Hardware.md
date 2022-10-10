@@ -1,12 +1,12 @@
 parent::[[Arduino]]
 next::[[Intro to Arduino - Software]]
-status:: #draft-outline
+status:: #draft
 
 Outline
 - Microcontroller vs microprocessor vs arduino
 	- [[Arduino Comparison]]
 - ATMEL ATMEGA AVR microcontroller(now Microchip)
-- Resonator - Crystals and Oscillator
+- [Resonators](Resonators.md) - Crystals and Oscillator
 - Mega8U2 microcontroller handles uploading the code to the AVR microcontroller
 - Power - purely from USB, or dedicated power plug barrel jack 9V (2.1mm tip, center positive) (ref. [Power Components](Power%20Components.md)) 
 	- uno has voltage regulator to reduce to 5V

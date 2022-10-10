@@ -1,6 +1,8 @@
 topic:: #t/analog 
 parent:: [Analog Filters](Analog%20Filters.md)
-[Analog Filters](Analog%20Filters.md)
+
+#tdf images
+
 # RLC Filter Summary
 ![[attachments/LAoE/RLC circuit.png]]
 Resonant frequency: 

@@ -1,4 +1,5 @@
 parent::[Buzzers - Active and Passive](Buzzers%20-%20Active%20and%20Passive.md)
+#intermediate
 
 There is a polarity to the buzzer due to the designed for magnetic field interactions with the metal plate (the buzzer will still make a sound if reversed, but it could be the incorrect sound). 
 
