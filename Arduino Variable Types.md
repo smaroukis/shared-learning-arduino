@@ -1,4 +1,6 @@
 parent:: [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
+previous::
+next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
 
 - initialize pin number variables as `const int` (e.g. `const int analogInPin = A0;`)
 - for number variables that can get large, such as when using `millis()`, use `unsigned long` so it rolls over back to 0
@@ -42,6 +44,7 @@ parent:: [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
 `array`
 - list of variables 
 - example `int light[6] = {0, 20, 50, 75, 100};`
+
 
 
 

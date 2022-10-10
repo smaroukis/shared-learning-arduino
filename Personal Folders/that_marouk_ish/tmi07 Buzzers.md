@@ -1,6 +1,7 @@
 parent::[tmi Examples](../../../tmi%20Examples.md)
 previous:: [tmi06 LDR analogWrite to LED](tmi06%20LDR%20analogWrite%20to%20LED.md)
 next:: [tmi08 Micro Servo](tmi08%20Micro%20Servo.md)
+garden-topic:: [Buzzers - Active and Passive](../../Buzzers%20-%20Active%20and%20Passive.md)
 level:: #beginner
 
 > Inspired by www.elegoo.com Mega Ultimate Kit Lesson 7 and https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody

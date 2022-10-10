@@ -1,5 +1,9 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
+### [2022-10-10](2022-10-10)
+- refactored some stuff in the notebook, better understanding of Board differences and functions
+- 
+
 ### [2022-10-07]
 **Projects**
 07- audio - elegoo Lesson 7 & 8 - Buzzers -> [tmi07 Buzzers](tmi07%20Buzzers.md)

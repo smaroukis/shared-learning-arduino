@@ -1,5 +1,9 @@
 parent::[[Arduino]]
 
+The [Uno](Uno.md) _always_ resets using the serial monitor, but that is not the case for all Arduinos (the Uno only has the one serial port)
+
+Data can arrive at the serial port faster than your program can process it, so it is kept in a buffer.
+
 The [[Mega2560]] has more Seial Ports than the. [[Uno]]
 
  > Watch out for voltage levels differing by protocol. 

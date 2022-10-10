@@ -1,6 +1,6 @@
 parent::[tmi Examples](../../../tmi%20Examples.md)
 previous:: [tmi07 Buzzers](./tmi07%20Buzzers.md)
-next::
+next:: 
 garden-topic:: [Motors - Servos](../../Motors%20-%20Servos.md)
 level:: #beginner
 
