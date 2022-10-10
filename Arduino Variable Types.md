@@ -3,6 +3,51 @@ parent:: [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
 - initialize pin number variables as `const int` (e.g. `const int analogInPin = A0;`)
 - for number variables that can get large, such as when using `millis()`, use `unsigned long` so it rolls over back to 0
 
+`boolean`
+	`true` or `false`
+
+`char`
+- a single character (i.e. one letter or number)
+- occupies one byte of memory
+
+`int`
+- -32,768 to 32,767
+- occupies 2 bytes 
+
+`unsigned int`
+- 0 to 65,535
+- occupies 2 bytes 
+
+`long`
+- approx. -2 million to 2million
+- occupies 4 bytes
+
+> Note for doing math with integers at least one must be of type `long`
+
+`unsigned long`
+- approx. 0 to 4 million
+
+`float`
+- uses 4 bytes
+- functions that use them also use a lot of memory
+- use only when need decimal precision
+
+`double`
+- double precision floating point, max value of approx $1.797 \times 10^{308}$
+
+`string`
+- set of ASCII characters 
+- uses 1 byte for each character in the string plus a null character (1 byte) at the end
+
+`array`
+- list of variables 
+- example `int light[6] = {0, 20, 50, 75, 100};`
+
+
+
+---
+verbose #refactor 
+
 **Numbers**
 - Integers: `int` and `long`
 	- by default variables are _signed_. 
