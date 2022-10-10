@@ -2,7 +2,9 @@ Summarized in [tmi Log](tmi%20Log.md)
 
 ### [2022-10-10](2022-10-10)
 - refactored some stuff in the notebook, better understanding of Board differences and functions
-- 
+Projects
+- [tmi09 Ultrasonic Sensor](tmi09%20Ultrasonic%20Sensor.md)
+- [tmi10 Matrix Keypad](tmi10%20Matrix%20Keypad.md)
 
 ### [2022-10-07]
 **Projects**
