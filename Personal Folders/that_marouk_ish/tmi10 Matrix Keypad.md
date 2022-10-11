@@ -7,17 +7,39 @@ garden-topic:: [Matrix Keypad](../../Matrix%20Keypad.md)
 >  (source)
 
 Desired Goal:
-- 
+- Display the keypress on the Serial Monitor without using a Keypad library
 
 Concepts:
-- 
+- arrays, with correct ordering
+- nested loops
+- internal pullup resistors
 
-
-Physical Setup:
+**Physical Setup:**
 
 The keypad has 8 output pins but 16 keys.
-- columns:  pins 1-4
-- rows: pins 5-8
+- columns:  pins 1-4 (columns from right to left)
+- rows: pins 5-8 (rows from bottom to top)
+
+The corresponding connected Arduino pins (Arduino pin <-  Keypad Pin):
+
+**Matrix Columns**
+- 2 <- 1 (rightmost pin, rightmost col "ABCD")
+- 3 <- 2 
+- 4 <- 3
+- 5 <- 4 (leftmost col "147\*")
+
+**Matrix Rows**
+- 8 <- 5 (bottom row "\*0#D")
+- 9 <- 6
+- 10 <- 7
+- 11 <- 8 (top row "123A")
+
+> Since the pins are defined from right to left and top to bottom, but we access an array as top to bottom and left to right, we reverse this in the pin array definition
+
+```c 
+const int pinCols[4]={5, 4, 3, 2}; 
+const int pinRows[4]={11, 10, 9, 8};
+```
 
 ![](Pasted%20image%2020221010232424.png)
 
@@ -28,23 +50,6 @@ Code:
 ``` c
 // remixed from https://forum.arduino.cc/t/keypad-without-keypad-library/656198/7
 // added pullup inputs and re-defined keys
-
-// Matrix Keypad Pins (Right to Left)
-// columns: 1-4 (right to left)
-// rows: 5-8 (bottom to top)
-
-// Arduino Pins <- Matrix Keypad
-// Matrix Columns
-// 2 <- 1 (rightmost pin, rightmost col "ABCD")
-// 3 <- 2 
-// 4 <- 3
-// 5 <- 4 (leftmost col "147*")
-
-// Matrix Rows
-// 8 <- 5 (bottom row "*0#D")
-// 9 <- 6
-// 10 <- 7
-// 11 <- 8 (top row "123A")
 
 const int pinCols[4]={5, 4, 3, 2}; // reverse order array is needed to access and print correctly
 const int pinRows[4]={11, 10, 9, 8};
@@ -103,11 +108,11 @@ void readKey(){
 ```
 
 Improvements:
-- store data as bits instead of bytes
+- store data as bits instead of bytes (see below video)
 
 Resources
-- https://www.baldengineer.com/arduino-keyboard-matrix-tutorial.html
-- 
+- https://forum.arduino.cc/t/keypad-without-keypad-library/656198/7 - mainly remixed this code
+- https://www.baldengineer.com/arduino-keyboard-matrix-tutorial.html - provides good example of the theory
 
 Further
 - https://www.youtube.com/watch?v=ycV1cP_anvI - more advanced register addressing without library - with bitwise
