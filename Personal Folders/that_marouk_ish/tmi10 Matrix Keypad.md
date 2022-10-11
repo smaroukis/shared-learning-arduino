@@ -1,6 +1,6 @@
 parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
 previous:: [tmi09 Ultrasonic Sensor](tmi09%20Ultrasonic%20Sensor.md)
-next::
+next:: [tmi11](tmi11.md)
 level:: #beginner
 garden-topic:: [Matrix Keypad](../../Matrix%20Keypad.md)
 
@@ -34,7 +34,7 @@ The corresponding connected Arduino pins (Arduino pin <-  Keypad Pin):
 - 10 <- 7
 - 11 <- 8 (top row "123A")
 
-> Since the pins are defined from right to left and top to bottom, but we access an array as top to bottom and left to right, we reverse this in the pin array definition
+> Since the pins are defined from right to left and top to bottom, but we access an array as top to bottom and left to right, we reverse this in the pin array definition (see codeblock below)
 
 ```c 
 const int pinCols[4]={5, 4, 3, 2}; 
@@ -114,6 +114,7 @@ Improvements:
 Resources
 - https://forum.arduino.cc/t/keypad-without-keypad-library/656198/7 - mainly remixed this code
 - https://www.baldengineer.com/arduino-keyboard-matrix-tutorial.html - provides good example of the theory
+- Use `Keypad` [Library](https://www.arduino.cc/reference/en/libraries/keypad/) to implement the code more simply 
 
 Further
 - https://www.youtube.com/watch?v=ycV1cP_anvI - more advanced register addressing without library - with bitwise
