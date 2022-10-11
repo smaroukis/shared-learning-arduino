@@ -1,4 +1,4 @@
-parent::[Electronic Components](Electronic%20Components.md)
+parent::[Actuators and Sensors](Actuators%20and%20Sensors)
 
 Summary
 - There are different types of buzzers (also called transducers), based on construction (magnetic vs. piezo), and whether they include an oscillator drive circuit (passive vs. active). They function on the same fundamental property of using a AC electrical input to vibrate the air and produce sound of a certain frequency. 

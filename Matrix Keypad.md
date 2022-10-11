@@ -1,4 +1,4 @@
-parent::[Arduino Peripherals](Arduino%20Peripherals.md)
+parent::[Actuators and Sensors](Actuators%20and%20Sensors)
 
 
 Operating Principle
