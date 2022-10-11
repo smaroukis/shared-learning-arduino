@@ -111,4 +111,3 @@ Improvements:
 Resources
 - HC-SR04 datasheet ([sparkfun](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf))
 - https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/
-- 

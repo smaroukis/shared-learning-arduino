@@ -7,3 +7,6 @@ My background is in electric power systems, as a Distribution Engineer for a few
 
 ## Projects
 - see [README](README.md)
+- [tmi Log](tmi%20Log.md)
+- [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
+- 

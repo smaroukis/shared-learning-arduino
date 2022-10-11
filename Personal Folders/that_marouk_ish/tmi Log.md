@@ -2,6 +2,56 @@
 
 More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
 
+2022-10-11
+Day 6 & 7 Ultrasonic Sensor, Matrix Keypad, Now What? 
+
+`<commentary>`
+I'm getting a little tired of just reading sensor data to the Serial Monitor, but now I think I have enough knowledge to try to interface a few different sensors into a novel larger project. I think the next day will be spent browsing interesting projects and creating some ideas. Things I still haven't covered and would like to incorporate before the end of day 15:
+- Serial Communications other than with the Serial Monitor e.g. I2C, etc
+- LCD screens
+- real time clock
+- shift register
+- strings and chars to the Serial Monitor
+- stepper motors
+- IR 
+`</commentary>`
+
+**Ultrasonic Sensor (SR04)** ([github](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi09%20Ultrasonic%20Sensor.md))
+
+Goal: Write the real time distance measured by the sensor to the Serial Monitor
+
+It is more fun to write it without the library, although it is nice that you can be up and running with just a library and some examples.
+
+The sensor waits for a trigger pulse, then sends out a pulse and listens for the return, the data is returned via the ECHO pin, with a duration of a pulse equal to the time between sending and receiving. 
+
+Use the built in  `pulseIn()` function to store the pulse (returns microseconds). e.g. 
+
+```c
+duration = pulseIn(ECHO, HIGH); // returns microseconds
+
+// distance = 1/2 * (duration * k_speed-of-sound-in-air)
+// k = 343 m/s (at T=20C) = 0.0343 cm/us
+cm = (duration/2) * 0.0343; 
+```
+
+Resources/Further
+- HC-SR04 datasheet ([sparkfun](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf))
+- https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/
+- use the [NewPing](https://www.arduino.cc/reference/en/libraries/newping/) library which adds improvements
+
+**Matrix Keypad** ([github](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi10%20Matrix%20Keypad.md))
+
+Goal: Output the current button press to the Serial Monitor (no libraries)
+
+Worked with arrays and nested loops. We loop through columns setting them as OUTPUTs, writing them LOW, then we loop through the rows setting them HIGH with an INPUT_PULLUP. If a button is pressed it completes the circuit pulling the input LOW. 
+
+Interestingly I had setup my array incorrectly and the rows and columns were reversed - since the Keypad pins are defined right to left and bottom to top, but we loop/access the array from the opposite direction, one of them has to be reversed in the code. [Example](https://raw.githubusercontent.com/smaroukis/shared-learning-arduino/main/Personal%20Folders/that_marouk_ish/attachments/IMG_7355.jpg).
+
+Resources
+- https://forum.arduino.cc/t/keypad-without-keypad-library/656198/7 - mainly remixed this code
+- https://www.baldengineer.com/arduino-keyboard-matrix-tutorial.html - provides good example of the theory
+- Use `Keypad` [Library](https://www.arduino.cc/reference/en/libraries/keypad/) to implement the code more easilly
+
 [2022-10-07](2022-10-07)
 **Day 5 - Active vs Passive Buzzers, Servos (+Questions)**
 

@@ -1,9 +1,26 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
+### [2022-10-12](2022-10-12)
+[tmi Everything About Serial](tmi%20Everything%20About%20Serial.md)
+
 ### [2022-10-11](2022-10-11)
+- after the matrix kind of bummed out seeing the sensor projects using all just libraries - i guess i could just look at the library and learn how it is implemented and write it from scratch 
+- but for sensors that i dont really use, what is the point
+- need to have the intersection of learning goals, interestif project but not too hard
+	- learning objectives
+		- serial & parallel communicafion
+		- real time clock
+		- lcd 
+	- project ideas / uses
+		- door alarm
+		- earthquake sensor
+		- cycling - turning signals; distance beeper
+		- button press
 - [tmi10 Matrix Keypad](tmi10%20Matrix%20Keypad.md)
 	- finished at 1400 - had to debug some code and rewrite - esp. since the indexing was reversed
-- 
+- [tmi11 Temp and Humidity Sensor](tmi11%20Temp%20and%20Humidity%20Sensor.md)
+- #tdf blocking vs non blocking arduino
+	- I'm guessing non-blocking is like using the `millis()` for debouncing instead of `delay()`
 
 ### [2022-10-10](2022-10-10)
 - refactored some stuff in the notebook, better understanding of Board differences and functions
