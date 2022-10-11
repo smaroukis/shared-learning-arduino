@@ -4,7 +4,7 @@ parent::[Electronic Components](Electronic%20Components.md)
 - used to drive large loads (i.e. loads over 20mA that an Arduino can provide)
 
 **Pinout**
-![](Pasted%20image%2020221007171631.png)
+![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221007171631.png)
 (Example from IRF520)
 
 **Theory of Operation**

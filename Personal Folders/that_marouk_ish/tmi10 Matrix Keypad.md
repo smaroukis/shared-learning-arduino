@@ -41,7 +41,7 @@ const int pinCols[4]={5, 4, 3, 2};
 const int pinRows[4]={11, 10, 9, 8};
 ```
 
-![](Pasted%20image%2020221010232424.png)
+![](attachments/Pasted%20image%2020221010232424.png)
 
 
 Code:

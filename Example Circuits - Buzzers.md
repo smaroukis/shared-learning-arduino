@@ -12,7 +12,7 @@ The current defined in the datasheet is the **average consumption current** when
 
 
 
-_Figure: Flyback diode placed across the terminals of an inductive magnetic buzzer_ ![](Pasted%20image%2020221007225401.png)
+_Figure: Flyback diode placed across the terminals of an inductive magnetic buzzer_ ![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221007225401.png)
 
 ## References
 - https://www.allaboutcircuits.com/industry-articles/an-overview-of-driver-circuits-for-piezo-transducer-buzzers/ - for driving circuits
