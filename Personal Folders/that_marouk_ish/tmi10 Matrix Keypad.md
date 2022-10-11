@@ -25,6 +25,7 @@ Code:
 ```
 
 Improvements:
+- store data as bits instead of bytes
 
 Resources
 - https://www.baldengineer.com/arduino-keyboard-matrix-tutorial.html
