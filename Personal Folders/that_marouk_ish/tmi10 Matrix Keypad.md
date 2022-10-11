@@ -35,3 +35,6 @@ Improvements:
 Resources
 - https://www.baldengineer.com/arduino-keyboard-matrix-tutorial.html
 - 
+
+Further
+- https://www.youtube.com/watch?v=ycV1cP_anvI - more advanced register addressing without library - with bitwise
