@@ -43,9 +43,10 @@ const int pinRows[4]={11, 10, 9, 8};
 
 ![](attachments/Pasted%20image%2020221010232424.png)
 
+Here is the mapping to the correctly indexed array of chars. 
+![](attachments/IMG_7355.jpg)
 
 Code:
-
 
 ``` c
 // remixed from https://forum.arduino.cc/t/keypad-without-keypad-library/656198/7

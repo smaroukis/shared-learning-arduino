@@ -2,6 +2,7 @@ Summarized in [tmi Log](tmi%20Log.md)
 
 ### [2022-10-11](2022-10-11)
 - [tmi10 Matrix Keypad](tmi10%20Matrix%20Keypad.md)
+	- finished at 1400 - had to debug some code and rewrite - esp. since the indexing was reversed
 
 ### [2022-10-10](2022-10-10)
 - refactored some stuff in the notebook, better understanding of Board differences and functions
