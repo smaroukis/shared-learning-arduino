@@ -14,7 +14,7 @@
 // CC BY-SA 4.0
 
 byte rows[] = {5, 6, 7, 8};
-const int rowCount = sizeof(rows)/sizeof(rows[0]);
+const int rowCount = sizeof(rows);
 
 byte cols[] = {1, 2, 3, 4};
 const int colCount = sizeof(cols)/sizeof(cols[0]);

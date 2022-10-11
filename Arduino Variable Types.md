@@ -39,7 +39,8 @@ next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
 
 `string`
 - set of ASCII characters 
-- uses 1 byte for each character in the string plus a null character (1 byte) at the end
+- total size is $N_{characters} + 1$ :uses 1 byte for each character in the string **plus a null character** (1 byte) at the end
+- properly formatted string has the ASCII null character at the end (ASCII value 0)
 
 `array`
 - list of variables 

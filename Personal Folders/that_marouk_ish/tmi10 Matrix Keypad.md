@@ -12,9 +12,14 @@ Desired Goal:
 Concepts:
 - 
 
+
 Physical Setup:
 
 The keypad has 8 output pins but 16 keys.
+- columns:  pins 1-4
+- rows: pins 5-8
+
+![](Pasted%20image%2020221010232424.png)
 
 
 Code:
