@@ -39,12 +39,35 @@ next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
 
 `string`
 - set of ASCII characters 
-- total size is $N_{characters} + 1$ :uses 1 byte for each character in the string **plus a null character** (1 byte) at the end
 - properly formatted string has the ASCII null character at the end (ASCII value 0)
+- total size is $N_{characters} + 1$ :➡️ uses 1 byte for each character in the string **plus a null character** (1 byte) at the end
+	- e.g. `string array[4] = "ABC"` is the same as `string array[] = "ABC"`  note the size is `4`
 
 `array`
 - list of variables 
 - example `int light[6] = {0, 20, 50, 75, 100};`
+
+---
+
+### Examples
+
+**Example - multidimensional arrays (2x2)**
+
+To create a _m-rows_ by _n-columns_ array:
+```c
+const int m = 4;
+const int n = 4;
+// initialized a fixed-size 4x4 array
+int arrayName[m][n] = { {0, 0, 0, 0}, {0, 0, 0, 0} };
+// rows are grouped by inner braces
+```
+- Rows are grouped by inner braces.
+- The syntax to access a value is `arrayName[rowIndex][colIndex]` (0-indexed).
+- To have a variable sized array initialize with `arraName[][] = ...`
+
+
+
+
 
 
 
