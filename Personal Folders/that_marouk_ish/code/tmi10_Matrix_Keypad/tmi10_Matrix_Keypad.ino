@@ -1,9 +1,9 @@
-
-
+// remixed from https://forum.arduino.cc/t/keypad-without-keypad-library/656198/7
+// added pullup inputs and re-defined keys
 
 // Matrix Keypad Pins (Right to Left)
-// columns: 1-4 
-// rows: 5-8
+// columns: 1-4 (right to left)
+// rows: 5-8 (bottom to top)
 
 // Arduino Pins <- Matrix Keypad
 // Matrix Columns
@@ -18,82 +18,57 @@
 // 10 <- 7
 // 11 <- 8 (top row "123A")
 
-// Code remixed from baldengineer.com & Elegoo Lesson 11
-// CC BY-SA 4.0
+const int pinCols[4]={5, 4, 3, 2}; // reverse order array is needed to access and print correctly
+const int pinRows[4]={11, 10, 9, 8};
 
-byte rows[] = {8, 9, 10, 11};
-const int rowCount = sizeof(rows);
-
-byte cols[] = {2, 3, 4, 5};
-const int colCount = sizeof(cols);
-
-byte keys[rowCount][colCount]; 
+char keys[4][4]={
+  {'1','2','3','A'},
+  {'4','5','6','B'},
+  {'7','8','9','C'},
+  {'*','0','#','D'}
+};
 
 void setup() {
-    Serial.begin(115200);
-
-    for (int x = 0; x < rowCount; x++) {
-      // Set Rows as Input (high Z / floating)
-      Serial.print(rows[x]); Serial.println(" as input");
-      pinMode(rows[x], INPUT); 
-    }
-
-    for (int x = 0; x < colCount; x++) {
-      // Set Cols as INPUT_PULLUP 5V VCC
-      Serial.print(cols[x]); Serial.println(" as input-pullup");
-      pinMode(cols[x], INPUT_PULLUP); 
-  }
-} 
-
-void readMatrix() {
-  // iterate the columns
-  for (int i = 0; i < colCount; i++) {
-    // set a column pin as Output and Bring Low
-    byte thisCol = cols[i];
-    pinMode(thisCol, OUTPUT); 
-    digitalWrite(thisCol, LOW); // provide ground path from row INPUT_PULLUP
-
-    // iterate the rows
-    // 0-indexed so use less than
-    for (int j = 0; j < rowCount; j++) {
-      // set a row pin as INPUT_PULLUP
-      // read and store the key's value (inverted logic)
-      byte thisRow = rows[j];
-      pinMode(thisRow, INPUT_PULLUP); // setting Vcc
-      keys[j][i] = digitalRead(thisRow); // store the value (inverted logic: LOW is pressed)
-      pinMode(thisRow, INPUT); // reset it to high impedance floating 
-    }
-
-    // disable the column
-    pinMode(thisCol, INPUT);
-  }
-}
-
-void printMatrix() {
-  // iterate over rows
-  // HERE
-  for (int j = 0; j < rowCount; j++) {
-    // print row index number
-    if (j < 10)
-      Serial.print(F("0"));
-    Serial.print(j); Serial.print(F(": ")); // F("") uses flash based memory (vs. RAM)
-
-    // iterate of cols
-    for (int k = 0; k < colCount; k++) {
-      // print value
-      Serial.print(keys[j][k]);
-      if (k < colCount)
-        Serial.print(F(", "));
-      }
-
-    Serial.println("");
-
+  Serial.begin(9600);
+  
+  for(int i=0; i<4; i++) {
+    // set Rows as Input (high Z floating)
+    pinMode(pinCols[i], INPUT);
+    // set Cols as Pullup Input (normal  +VCC)
+    pinMode(pinRows[i], INPUT_PULLUP);
+    // digitalWrite(pinCols[i], HIGH);
   }
 }
 
 void loop() {
-  readMatrix();
-  delay(200);
-  if (Serial.read() == "!")
-    printMatrix();
+  readKey();
+  delay(100);
+}
+
+void readKey(){
+  // Columns 
+  for (int c=0; c<4; c++) {
+    // provide ground path from a rows' Internal Pullup Resistor (see below)
+    pinMode(pinCols[c], OUTPUT);
+    digitalWrite(pinCols[c], LOW);
+    // Rows 
+    for(int r=0; r<4; r++){
+      // set the row as HIGH with an INPUT_PULLUP 
+      // a button press will provide a path to ground since the column pin is set LOW
+      // logic is inverted so if we read a pin LOW then the button is pressed
+      pinMode(pinRows[r], INPUT_PULLUP);
+      if (digitalRead(pinRows[r]) == LOW) { 
+        // display the right symbol
+        // make sure to define keys in correct order when initializing
+        // i.e. the index is reversed from the pin order
+        Serial.println(keys[r][c]); 
+      }
+
+      // reset row pin to high impedance floating
+      pinMode(pinRows[r], INPUT); 
+    }
+
+    // reset col pin
+    pinMode(pinCols[c], INPUT); 
+  }
 }
