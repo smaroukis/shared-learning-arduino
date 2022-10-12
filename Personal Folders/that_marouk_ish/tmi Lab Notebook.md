@@ -54,7 +54,7 @@ Projects
 - [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md) - debouncing
 
 Project 2
-- `byte` is smaller than an `int` - [Arduino Variable Types](../../Arduino%20Variable%20Types.md)
+- `byte` is smaller than an `int` - [Arduino Variable o](../../Arduino%20Variable%20o.md)
 	
 (Research)
 [Serial Communication](../../Serial%20Communication.md) -> [UART](UART.md) - see wikipedia 

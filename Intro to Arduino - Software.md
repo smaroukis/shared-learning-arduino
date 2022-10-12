@@ -10,7 +10,7 @@ status:: #draft
 
 **Initialization - initialize variables**
 - initialize global variables before `setup()`
-- see [Arduino Variable Types](Arduino%20Variable%20Types.md) 
+- see [Arduino Variable o](Arduino%20Variable%20o.md) 
 	- numbers that won't change - use `const int` or `const long`
 	- pin numbers - use `const int`  (more in [Arduino Pin Numbers](Arduino%20Pin%20Numbers.md))
 		- some analog pins can be defined in two ways: e.g. `A0` or `13` 
