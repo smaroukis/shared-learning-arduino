@@ -1,4 +1,4 @@
-parent:: [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
+parent:: [Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 previous::
 next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
 

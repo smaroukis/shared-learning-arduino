@@ -1,6 +1,9 @@
 parent::[Arduino](Arduino.md)
 previous::[Introduction to Arduino - Hardware](Introduction%20to%20Arduino%20-%20Hardware.md)
+next::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 status:: #draft
+
+#refactor `children` - put the children in their own hierarchy (e.g under [Arduino Software Concepts](Arduino%20Software%20Concepts.md))
 
 **Fundamental Concepts**:
 - Arduino cannot run multiple programs at the same time, and programs can't quit
@@ -10,7 +13,7 @@ status:: #draft
 
 **Initialization - initialize variables**
 - initialize global variables before `setup()`
-- see [Arduino Variable o](Arduino%20Variable%20o.md) 
+- see [Arduino Variable Types](Arduino%20Variable%20Types.md) 
 	- numbers that won't change - use `const int` or `const long`
 	- pin numbers - use `const int`  (more in [Arduino Pin Numbers](Arduino%20Pin%20Numbers.md))
 		- some analog pins can be defined in two ways: e.g. `A0` or `13` 
@@ -49,3 +52,4 @@ Working with Specific Components
 
 **Further**
 - [Arduino - ADC](Arduino%20-%20ADC.md)
+- [Non blocking delays](Non%20blocking%20delays.md) - instead of using `delay()` how to use `millis()`, Timers and beyond

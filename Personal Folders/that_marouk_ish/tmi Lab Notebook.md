@@ -1,5 +1,15 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
+`pinned`: Learning Goals
+- Serial Communications other than with the Serial Monitor e.g. I2C, etc
+- [Optocouplers](Optocouplers.md)
+- LCD screens
+- real time clock
+- shift register
+- [x] strings and chars to the Serial Monitor
+- stepper motors
+- IR 
+
 ### [2022-10-12](2022-10-12)
 [tmi12 Serial Input Basics](../../tmi12%20Serial%20Input%20Basics.md)
 - learned how *not* to use blocking functions like `Serial.parseInt()`, and instead using a `while(Serial.available() > 0 && newData == false)` check  to process and store _new data_ and a `if (newData == true)` check to _write_ the store data to the output
@@ -55,7 +65,7 @@ Projects
 - [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md) - debouncing
 
 Project 2
-- `byte` is smaller than an `int` - [Arduino Variable o](../../Arduino%20Variable%20o.md)
+- `byte` is smaller than an `int` - [Arduino Variable Types](../../Arduino%20Variable%20Types.md)
 	
 (Research)
 [Serial Communication](../../Serial%20Communication.md) -> [UART](UART.md) - see wikipedia 

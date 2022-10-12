@@ -1,6 +1,8 @@
 > Reverse chronological log of my learnings on Arduino
-
 More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
+
+
+
 
 2022-10-11
 Day 6 & 7 Ultrasonic Sensor, Matrix Keypad, Now What? 
@@ -11,7 +13,7 @@ I'm getting a little tired of just reading sensor data to the Serial Monitor, bu
 - LCD screens
 - real time clock
 - shift register
-- strings and chars to the Serial Monitor
+- [x] strings and chars to the Serial Monitor
 - stepper motors
 - IR 
 `</commentary>`
