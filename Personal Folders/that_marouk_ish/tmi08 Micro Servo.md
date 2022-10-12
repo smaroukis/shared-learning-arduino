@@ -58,3 +58,4 @@ Improvements:
 
 Resources
 - https://www.arduino.cc/reference/en/libraries/servo/
+- https://docs.arduino.cc/tutorials/generic/basic-servo-control
