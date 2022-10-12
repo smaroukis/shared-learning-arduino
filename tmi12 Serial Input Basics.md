@@ -1,5 +1,5 @@
 parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
-previous::
+previous:: [tmi11 Temp and Humidity Sensor](Personal%20Folders/that_marouk_ish/tmi11%20Temp%20and%20Humidity%20Sensor.md)
 next::
 level:: #beginner
 garden-topic:: [Serial Communication](Serial%20Communication.md)
@@ -38,6 +38,7 @@ Reading data from the user/serial input
 	- 2) read each char into an array until the end-line character is reached
 	- 3) print the data
 
+---
 
 **Example 1 - Receiving a Single Character**
 
@@ -63,6 +64,8 @@ void loop() {
 	    }
 }
 ```
+
+---
 
 **Example 2- Receiving Several Characters from Serial Monitor**
 
@@ -110,6 +113,8 @@ void loop(){
 	}
 }
 ```
+
+---
 
 **Example 3 - Including a Start Marker**
 
@@ -165,8 +170,37 @@ while (Serial.available > 0) {
 }
 ```
 
-## Intermediate
+---
+
+**Example 4 - Receiving a Single Number**
+
+As in Example 1 but when printing the data the `if (newData == true)` block we use `atoi()` to convert
+
+```c
+// relevant variables just for this code
+int dataNumber = 0; // new
+char receivedChars[32]; // hard coded size
+
+// setup things
+
+void loop() {
+	// 1) Receive and Store the Data - see Example 1
+
+	// 2) Show the Data - Now a Number
+	if (newData == true) {
+		dataNumber = 0; //new
+		dataNumber = atoi(receivedChars); // new
+		Serial.println(receivedChars); // prints as ASCII string
+		Serial.println(dataNumber); // prints as int
+		newData = false;
+		}
+}
+```
+
+---
 
 ## Resources
-**Basic**
-- https://www.youtube.com/watch?v=7aP5KL5clWA&list=PLGs0VKk2DiYw-L-RibttcvK-WBZm8WLEP&index=19
+
+**Further**
+- Examples 5 and 6 of the [forum example](https://forum.arduino.cc/t/serial-input-basics-updated/382007/11) go into parsing multiple numbers and parsing binary
+- for sending binary data, if the data matches the start and end markers: https://forum.arduino.cc/t/demo-of-pc-arduino-comms-using-python/219184

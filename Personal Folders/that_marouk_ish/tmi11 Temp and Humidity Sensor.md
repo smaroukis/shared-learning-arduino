@@ -1,6 +1,6 @@
 parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
 previous:: [tmi10 Matrix Keypad](Personal%20Folders/that_marouk_ish/tmi10%20Matrix%20Keypad.md)
-next::
+next:: [tmi11 Temp and Humidity Sensor](tmi11%20Temp%20and%20Humidity%20Sensor.md)
 level:: #beginner
 garden-topic::
 
