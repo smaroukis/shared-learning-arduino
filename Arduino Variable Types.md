@@ -13,7 +13,7 @@ next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
 `char`
 - a single character (i.e. one letter or number) - but for numbers between 0-255 use `byte` (see below)
 - occupies at least one byte of memory
-- encoded by the [ASCII chart](https://web.archive.org/web/20171028220458/https://www.arduino.cc/en/Reference/ASCIIchart) (note `A` starts at `65`) thus `'A' + 1` evaluates to `66`
+- encoded by the [ASCII chart](https://web.archive.org/web/20171028220458/https://www.arduino.cc/en/Reference/ASCIIchart) (note `A` starts at `65`) thus `'A' + 1` evaluates to `66` :➡️[Table - ASCII Values](Table%20-%20ASCII%20Values.md)
 - chars are single quotes (vs double quotes for strings)
 
 `byte`
