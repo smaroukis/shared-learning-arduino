@@ -1,8 +1,15 @@
 > Reverse chronological log of my learnings on Arduino
 More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
 
+2022-10-12
+Went through https://forum.arduino.cc/t/serial-input-basics-updated/382007/2 to understand Serial comms, non-blocking
+- learned how *not* to use blocking functions like `Serial.parseInt()`, and instead using a `while(Serial.available() > 0 && newData == false)` check  to process and store _new data_ and a `if (newData == true)` check to _write_ the store data to the output
 
+Did some diagramming about the things I still want to learn and some projects that are related. Perused the code on the [Arduino Built In Examples](https://docs.arduino.cc/built-in-examples/) to make sure I had seen most of the beginner stuff, which I had (well except for pots - but I already knew how voltage dividers work)
 
+Something that was new was the Calibrate Sensor Input and the Smoothing Readings From an Analog Input, which are some useful techniques.
+
+I didn't really do too much of the String and USB examples since I think I'm generally more interested in sensors and whatnot. 
 
 2022-10-11
 Day 6 & 7 Ultrasonic Sensor, Matrix Keypad, Now What? 
