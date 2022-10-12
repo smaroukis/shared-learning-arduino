@@ -2,6 +2,8 @@ parent:: [Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
 previous::
 next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
 
+### Fundamental
+
 - initialize pin number variables as `const int` (e.g. `const int analogInPin = A0;`)
 - for number variables that can get large, such as when using `millis()`, use `unsigned long` so it rolls over back to 0
 
@@ -9,12 +11,20 @@ next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
 	`true` or `false`
 
 `char`
-- a single character (i.e. one letter or number)
-- occupies one byte of memory
+- a single character (i.e. one letter or number) - but for numbers between 0-255 use `byte` (see below)
+- occupies at least one byte of memory
+- encoded by the [ASCII chart](https://web.archive.org/web/20171028220458/https://www.arduino.cc/en/Reference/ASCIIchart) (note `A` starts at `65`) thus `'A' + 1` evaluates to `66`
+- chars are single quotes (vs double quotes for strings)
+
+`byte`
+- 0 to 255
+- 8-bit (1 byte) unsigned number
 
 `int`
 - -32,768 to 32,767
 - occupies 2 bytes 
+
+> Beware of Integer Math: When we do math with integers the decimals are truncated. So 
 
 `unsigned int`
 - 0 to 65,535
@@ -38,7 +48,7 @@ next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
 - double precision floating point, max value of approx $1.797 \times 10^{308}$
 
 `string`
-- set of ASCII characters 
+- set of ASCII characters - define using _double quotes_ (vs. single quotes for `char`)
 - properly formatted string has the ASCII null character at the end (ASCII value 0)
 - total size is $N_{characters} + 1$ :➡️ uses 1 byte for each character in the string **plus a null character** (1 byte) at the end
 	- e.g. `string array[4] = "ABC"` is the same as `string array[] = "ABC"`  note the size is `4`
@@ -65,6 +75,12 @@ int arrayName[m][n] = { {0, 0, 0, 0}, {0, 0, 0, 0} };
 - The syntax to access a value is `arrayName[rowIndex][colIndex]` (0-indexed).
 - To have a variable sized array initialize with `arraName[][] = ...`
 
+
+---
+
+### Intermediate - Scope and More
+
+We can use the `static` keyword to create "local" variables that are visible to only one function but **that persist beyond the function call**. This is helpful for storing indexes or counters used by helper functions without having to pass the counter back and forth between scopes. (see "random walk" function example)
 
 
 

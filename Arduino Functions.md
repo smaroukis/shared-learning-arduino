@@ -2,6 +2,8 @@ parent::[Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
 previous:: [Arduino Variable Types](Arduino%20Variable%20Types.md)
 next::
 
+### Basic
+
 **Input and Output Functions**
 
 `pinMode(7, INPUT)`
@@ -50,5 +52,10 @@ next::
 
 `Serial.flush()`
 
+### Intermediate
 
-`Serial.flush()`
+List of interesting macros:
+
+**Bitwise Operations** (:➡️[Bitwise Operations](Bitwise%20Operations.md))
+- `bit(7)` will return a byte with 1 in the 7th position e.g. `10000000`
+- `bit(7) | bit(1)` :➡️ `10000010`
