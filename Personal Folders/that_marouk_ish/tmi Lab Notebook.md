@@ -2,6 +2,7 @@ Summarized in [tmi Log](tmi%20Log.md)
 
 ### [2022-10-12](2022-10-12)
 [tmi12 Serial Input Basics](../../tmi12%20Serial%20Input%20Basics.md)
+- learned how *not* to use blocking functions like `Serial.parseInt()`, and instead using a `while(Serial.available() > 0 && newData == false)` check  to process and store _new data_ and a `if (newData == true)` check to _write_ the store data to the output
 
 ### [2022-10-11](2022-10-11)
 - after the matrix kind of bummed out seeing the sensor projects using all just libraries - i guess i could just look at the library and learn how it is implemented and write it from scratch 
