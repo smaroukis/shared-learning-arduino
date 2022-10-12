@@ -6,21 +6,38 @@ garden-topic:: [Serial Communication](Serial%20Communication.md)
 
 ## **Fundamental**
 
-### Writing Data to the Monitor
+> Source: https://forum.arduino.cc/t/serial-input-basics-updated/382007/2 
+
+### 1) Writing Data to the Monitor
 #tdf
 
 **Numbers**
 - by default `Serial.print()` will write in decimal, but we can write something like a binary number by providing the encoding e.g. `Serial.print(136, BIN)` -> outputs `10001000`
 
-### Reading Data From a User
+### 2) Reading Data From a User
 
 Reading data from the user/serial input
 1. Ask
 2. Wait
 3. Read
 
-`while (Serial.available ==0)`  hangs the program up until something is entered
+**Blocking functions (poor)**
+- These hang up the Arduino and prevent it from doing anything else
+- It is best to design the `loop()` to run as many times as possible (no delays, no blocking)
+- So try to avoid these functions:
+
+`while (Serial.available == 0)``
 `Serial.parseInt()`   / `Serial.pareseFloat()`
+`Serial.readBytes()` / `Serial.readBytesUntil()`
+
+
+**Non-blocking functions**: 
+- All of the examples below are non-blocking (from the source above)
+- Basic Theory
+	- 1) check if there is data available and the data is valid (e.g. between start and end characters)
+	- 2) read each char into an array until the end-line character is reached
+	- 3) print the data
+
 
 **Example 1 - Receiving a Single Character**
 
@@ -47,12 +64,11 @@ void loop() {
 }
 ```
 
-**Source**
-- https://forum.arduino.cc/t/serial-input-basics-updated/382007
-
 **Example 2- Receiving Several Characters from Serial Monitor**
 
 For receiving strings of more than one character, we need to let Arduino know it has received the full message. ➡️ set the line-ending to newline in the Serial Monitor
+
+Cons: Doesn't work if the user sending the data doesn't know when the Arduino is ready to receive the data (e.g. they can't see the Serial Monitor)
 
 ```c
 // Example 2 - Receive with an end-marker
@@ -92,6 +108,60 @@ void loop(){
 		Serial.print(receivedChars);
 		newData = false; // reset the flag
 	}
+}
+```
+
+**Example 3 - Including a Start Marker**
+
+Use a new boolean that is true only after a start marker and before and end marker (`recvInProgress`)
+
+```c
+// this replaces code in 1) Store New Data above
+void recvWithStartEndMarkers(){
+	static boolean recvInProgress = false; // new boolean flag
+	static byte i = 0;
+	char startMarker = '<';
+	char endMarker = '>';
+	char rc;
+
+	while (Serial.available() > 0 && newData == false) {
+		rc = Serial.read();
+
+		if (recvInProgress == true) {
+			if (rc != endMarker) {
+				// store the chars
+				receivedChars[i] = rc;
+				i++;
+
+				if (i >= numChars) {
+					i = numChars - 1;
+				}
+			}
+			else {
+				receivedChars[i] = '\0'; // terminate string
+				i = 0; // reset index
+				recvInProgress = false; // change flag
+				newData = true; // ready to print
+			}
+		}
+		// check if the user entered a start marker
+		else if (rc == startMarker) {
+			recvInProgress = true;
+		}
+	}
+}
+
+```
+
+> Note that the 64 byte size of the Arduino serial input buffer does not limit the number of characters that you can receive because the code in the examples can empty the buffer faster than new data arrives.
+
+> `Serial.flush()` does not empty the input buffer but is used when the Arduino is sending data and blocks the Arduino until all outgoing data is sent.
+
+To ensure the Serial input buffer is empty do:
+
+```c
+while (Serial.available > 0) {
+	Serial.read(); // this will clear the Serial input buffer
 }
 ```
 
