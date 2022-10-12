@@ -10,4 +10,6 @@ Also you can post your beginner log on Reddit here:
 
 ## License
 
-The content of this project itself is licensed under the [Creative Commons Attribution 3.0 Unported license](https://creativecommons.org/licenses/by/3.0/). 
+The content of this project itself is licensed under the [Creative Commons Attribution 3.0 Unported license](https://creativecommons.org/licenses/by/3.0/).
+
+Other licenses for re-used code are given as required, which superseed the license above.
