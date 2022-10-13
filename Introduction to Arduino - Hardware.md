@@ -2,6 +2,7 @@ parent::[[Arduino]]
 next::[[Intro to Arduino - Software]]
 status:: #draft
 
+
 Outline
 - Microcontroller vs microprocessor vs arduino
 	- [[Arduino Comparison]]
@@ -30,3 +31,4 @@ Outline
 
 ## Resources
 - [Afrotechmods 15minute intro video](https://www.youtube.com/watch?v=nL34zDTPkcs)
+- https://learn.adafruit.com/arduino-tips-tricks-and-techniques

@@ -6,11 +6,27 @@ The basic theory is that we want to get the `loop()` flywheel running as fast as
 This can involve ideas like "state machines",  task managers, and Timers. But the basic thing will be incrementing counters and raising flags to tell the microprocessor if, in each time through `loop()`, it should chip away at a task or check a state machine's value. 
 
 
+**Start Here**
+- https://learn.adafruit.com/multi-tasking-the-arduino-part-1 - categorized intermediate
+	- blink without delay, flash without delay, state machine intro
+	- then into OOP - classes for state machines
+	- add in button input checks while sweeping a motor
+- https://learn.adafruit.com/multi-tasking-the-arduino-part-2
+	- into interrupts - Timer, External, Pin-change
+	- ditch the loop code to check for high priority interrupt conditions
+- https://learn.adafruit.com/multi-tasking-the-arduino-part-3
 
 ## Resources
 - https://learn.digilentinc.com/Documents/407
 - https://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html
 - https://www.instructables.com/Simple-Multi-tasking-in-Arduino-on-Any-Board/
+- [Demonstration code for several things at the same time](https://forum.arduino.cc/t/demonstration-code-for-several-things-at-the-same-time/217158) by Robin2
+	- converts the blink without delay into a state machine
+	- `previousMillis += durationToCheck` is better than `previousMillis = currentMillis`  "to ensure that successive periods are identical"  #q I'm guessing this comes from the fact that we don't know what is happening between `currentMillis` which is checked at the beginning of the loop, and when this assignment is being carried out? 
+	- loop steps are 
+		- 1) get current time (stored in global variable that other functions can access)
+		- 2)`updateLEDStatus()` check each LED "state machines" to see if they are ready to be turned on or off (compares individual state machine interval with previously stored time and current time) -- instead of turning on or off we just raise a flag to do so in ...
+		- 3) `switchLEDs()` - writes the state stored during hte UpdateStatus() functions
 - [Sandwich Analogy by StefanL38](https://forum.arduino.cc/t/easy-to-understand-analogy-how-to-code-doing-things-in-almost-parallel-multi-tasking/991589)
 	- by `StefanL38` ; explains the fundamental concept of why we should write non blocking code; calls it "step chain" ;  code is just pseudocode, just take the concepts and internalize
 	- if we are making a sandwich we want to both cut the onions in parallel and cut the tomatoes
@@ -39,3 +55,4 @@ This can involve ideas like "state machines",  task managers, and Timers. But th
 		- so basically we are task hunting during each loop seeing what tasks have been completed (by checking the value of the state machine) 
 			- but while doing the tasks we make sure to 1) not do too much at once and 2) use timers not to hang it up on one tasks
 		- the longest loop period must be shorter than any time counted
+- Task Macros - this guy - https://forum.arduino.cc/u/DrDiettrich
