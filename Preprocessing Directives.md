@@ -15,8 +15,12 @@ int main (void)
 }
 ```
 
-> Note header files will be first searched as defined by the c-preprocessor (first the current folder and then a standard list of preprocessing folders)
+> Note `#include <file.h>` directs the preprocessor to search the standard place for header files on your system, typ. `/usr/include`
+
+> `#include "file.h" ` searches in order 1) the current directory 2) the directories named with -I options, if any, and 3) the /usr/include directory (or other standard header file locations?)
 
 
 ## Resources
 - https://stackoverflow.com/questions/344317/where-does-gcc-look-for-c-and-c-header-files
+- https://stackoverflow.com/questions/46975843/cannot-access-header-files-in-separate-folders
+- https://docs.oracle.com/cd/E19205-01/819-5265/bjadq/index.html

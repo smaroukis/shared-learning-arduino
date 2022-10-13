@@ -11,7 +11,8 @@ Summarized in [tmi Log](tmi%20Log.md)
 - IR 
 
 ### [2022-10-13](2022-10-13)
-- installed platform io on vs code
+- installed platform io on vs code, copied and ran blink code; 
+	- VS code command pallet (`CMD + SHIFT + P`) -> `BUILD (PlatformIO)` 2) then `Upload`
 
 ### [2022-10-12](2022-10-12)
 [tmi12 Serial Input Basics](../../tmi12%20Serial%20Input%20Basics.md)
