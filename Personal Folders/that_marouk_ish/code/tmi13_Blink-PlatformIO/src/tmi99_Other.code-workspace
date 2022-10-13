@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../tmi99_Other"
+		},
+		{
+			"name": "tmi13_Blink-PlatformIO",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

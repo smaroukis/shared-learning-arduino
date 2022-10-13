@@ -53,6 +53,7 @@ void loop(){
   // Read the signal from the ECHO pin
   // pinMode(ECHO, INPUT); // commented out 
   duration = pulseIn(ECHO, HIGH); // builtin Arduino function; returns microseconds
+ // try to do this without pulseIn since it is blocking
 
   // Microseconds to Distance Formula:
   // distance = 1/2 * (duration * k_speed-of-sound-in-air)
@@ -107,6 +108,7 @@ void loop(){
 
 Improvements:
 - use the [NewPing](https://www.arduino.cc/reference/en/libraries/newping/) library which adds improvements
+- try to implement without `pulseIn()` since it is blocking, using pin interrupts instead
 
 Resources
 - HC-SR04 datasheet ([sparkfun](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf))

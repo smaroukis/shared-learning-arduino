@@ -21,7 +21,7 @@ Summarized in [tmi Log](tmi%20Log.md)
 ### [2022-10-11](2022-10-11)
 - after the matrix kind of bummed out seeing the sensor projects using all just libraries - i guess i could just look at the library and learn how it is implemented and write it from scratch 
 - but for sensors that i dont really use, what is the point
-- need to have the intersection of learning goals, interestif project but not too hard
+- need to have the intersection of learning goals, interesting project but not too hard
 	- learning objectives
 		- serial & parallel communicafion
 		- real time clock
