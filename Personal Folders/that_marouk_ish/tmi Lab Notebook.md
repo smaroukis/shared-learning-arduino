@@ -10,6 +10,9 @@ Summarized in [tmi Log](tmi%20Log.md)
 - stepper motors
 - IR 
 
+### [2022-10-13](2022-10-13)
+- installed platform io on vs code
+
 ### [2022-10-12](2022-10-12)
 [tmi12 Serial Input Basics](../../tmi12%20Serial%20Input%20Basics.md)
 - learned how *not* to use blocking functions like `Serial.parseInt()`, and instead using a `while(Serial.available() > 0 && newData == false)` check  to process and store _new data_ and a `if (newData == true)` check to _write_ the store data to the output
