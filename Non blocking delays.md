@@ -17,6 +17,7 @@ This can involve ideas like "state machines",  task managers, and Timers. But th
 - https://learn.adafruit.com/multi-tasking-the-arduino-part-3
 
 ## Resources
+- https://www.baldengineer.com/?s=millis - some tricks on millis
 - https://learn.digilentinc.com/Documents/407
 - https://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html
 - https://www.instructables.com/Simple-Multi-tasking-in-Arduino-on-Any-Board/
@@ -55,4 +56,4 @@ This can involve ideas like "state machines",  task managers, and Timers. But th
 		- so basically we are task hunting during each loop seeing what tasks have been completed (by checking the value of the state machine) 
 			- but while doing the tasks we make sure to 1) not do too much at once and 2) use timers not to hang it up on one tasks
 		- the longest loop period must be shorter than any time counted
-- Task Macros - this guy - https://forum.arduino.cc/u/DrDiettrich
+- Task Macros - this guy - https://forum.arduino.cc/u/DrDiettrich  - https://forum.arduino.cc/t/projekt-multitasking/399677
