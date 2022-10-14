@@ -4,8 +4,8 @@
 			"path": "../../tmi99_Other"
 		},
 		{
-			"name": "tmi13_Blink-PlatformIO",
-			"path": ".."
+			"name": "tmi14_Multitasking-1",
+			"path": "../../tmi14_Multitasking-1"
 		}
 	],
 	"settings": {}
