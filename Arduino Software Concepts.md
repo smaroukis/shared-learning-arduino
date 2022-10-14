@@ -4,6 +4,8 @@ previous::[Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
 
 Unsigned Long for timers -- [Arduino Variable Types](Arduino%20Variable%20Types.md)
 
+[Reserved Keywords](Reserved%20Keywords.md)
+
 [Non blocking delays](Non%20blocking%20delays.md)
 - After learning about the basics of the software, an important part of programming for microcontrollers is about not blocking the software from doing other things.
 
