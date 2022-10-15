@@ -24,7 +24,7 @@ parent::[Microcontrollers](Microcontrollers)
 	- [Switches](Switches.md)
 - [Actuators and Sensors](Actuators%20and%20Sensors.md)
 	- [Buzzers - Active and Passive](Buzzers%20-%20Active%20and%20Passive.md)
-	- [Motors](Motors.md): [Motors - Servos](Motors%20-%20Servos.md), [Motors - Step](Motors%20-%20Step.md)
+	- [Motors](Motors.md): [Servos](Servos.md), [Motors - Step](Motors%20-%20Step.md)
 	- [Matrix Keypad](Matrix%20Keypad.md)
 	- (see Main Components page for more)
 

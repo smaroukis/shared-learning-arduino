@@ -2,7 +2,7 @@
 More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
 
 2022-10-15
-Days 9 and 10 - Multitasking Mania and New IDE
+Days 10 and 11 - Multitasking Mania and New IDE
 "Mania" because I found many ways to skin the multitasking cat, here I am trying to go with the most simple way, and progress towards some of the other techniques - see resources I found below. 
 
 
