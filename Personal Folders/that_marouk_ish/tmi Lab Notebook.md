@@ -11,7 +11,7 @@ Summarized in [tmi Log](tmi%20Log.md)
 - IR 
 
 ### [2022-10-14](2022-10-14)
-- [tmi 13 Multitasking-1](tmi%2013%20Multitasking-1.md)
+- [tmi13 Multitasking-1](tmi13%20Multitasking-1.md)
 	- 12:48 finished writing and testing code for non-blocking servo - 0 to 180 and back 
 
 ### [2022-10-13](2022-10-13)

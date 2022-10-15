@@ -1,6 +1,6 @@
 parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
 previous:: [tmi11 Temp and Humidity Sensor](Personal%20Folders/that_marouk_ish/tmi11%20Temp%20and%20Humidity%20Sensor.md)
-next::
+next:: [tmi13 Multitasking-1](tmi13%20Multitasking-1.md)
 level:: #beginner
 garden-topic:: [Serial Communication](Serial%20Communication.md)
 
