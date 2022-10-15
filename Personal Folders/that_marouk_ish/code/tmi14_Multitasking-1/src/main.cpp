@@ -24,10 +24,11 @@ int delta_pos = 1; // {1, -1}
 unsigned long tPreviousStep = 0;
 const int tDelay = 10; // used to control the "speed" of the motor
 
+
+
 void setup() {
 // Setup the Servos
 thisServo.attach(PIN_SERVO1);
-
 }
 
 // The beginning of the "state machine"
@@ -45,14 +46,10 @@ void moveServoOneStep() {
     pos += delta_pos; // increment the position to write new position
     thisServo.write(pos); 
 
-    // if pos =180 or 0 we need to reverse the delta_pos variable
     if (pos == 180 || pos == 0) delta_pos = -delta_pos; 
-
     // update timer
     tPreviousStep = tNow; // #q - or should we use `millis()` function again? 
-
   }
-
 }
 
 void servoStop() {
@@ -66,5 +63,4 @@ void loop() {
 
   servoStart();
   moveServoOneStep();
-  servoStop();
 }
