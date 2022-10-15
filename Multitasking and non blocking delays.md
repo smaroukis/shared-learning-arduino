@@ -1,4 +1,5 @@
 parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+next:: [Interrupts and Timers](Interrupts%20and%20Timers.md)
 #draft 
 
 The basic theory is that we want to get the `loop()` flywheel running as fast as possible - we want nothing to hang it up, so we can do multiple things at once with the microprocessor.
