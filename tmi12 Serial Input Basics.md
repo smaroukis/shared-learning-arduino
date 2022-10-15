@@ -204,3 +204,4 @@ void loop() {
 **Further**
 - Examples 5 and 6 of the [forum example](https://forum.arduino.cc/t/serial-input-basics-updated/382007/11) go into parsing multiple numbers and parsing binary
 - for sending binary data, if the data matches the start and end markers: https://forum.arduino.cc/t/demo-of-pc-arduino-comms-using-python/219184
+- [Table - ASCII Values](Table%20-%20ASCII%20Values.md)
