@@ -2,7 +2,7 @@ parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
 previous:: [tmi12 Serial Input Basics](../../tmi12%20Serial%20Input%20Basics.md)
 next::
 level:: #beginner 
-garden-topic:: [Non blocking delays](../../Non%20blocking%20delays.md)
+garden-topic:: [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md)
 
 >  (source)
 

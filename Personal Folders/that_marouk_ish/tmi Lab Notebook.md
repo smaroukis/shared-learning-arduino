@@ -10,10 +10,14 @@ Summarized in [tmi Log](tmi%20Log.md)
 - stepper motors
 - IR 
 
+### [2022-10-14](2022-10-14)
+- [tmi 13 Multitasking-1](tmi%2013%20Multitasking-1.md)
+	- 12:48 finished writing and testing code for non-blocking servo - 0 to 180 and back 
+
 ### [2022-10-13](2022-10-13)
 - installed platform io on vs code, copied and ran blink code; 
 	- VS code command pallet (`CMD + SHIFT + P`) -> `BUILD (PlatformIO)` 2) then `Upload`
-- research notes in [Non blocking delays](../../Non%20blocking%20delays.md) 
+- research notes in [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md) 
 
 ### [2022-10-12](2022-10-12)
 [tmi12 Serial Input Basics](../../tmi12%20Serial%20Input%20Basics.md)

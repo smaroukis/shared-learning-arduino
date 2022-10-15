@@ -6,7 +6,7 @@ Unsigned Long for timers -- [Arduino Variable Types](Arduino%20Variable%20Types.
 
 [Reserved Keywords](Reserved%20Keywords.md)
 
-[Non blocking delays](Non%20blocking%20delays.md)
+[Multitasking and non blocking delays](Multitasking%20and%20non%20blocking%20delays.md)
 - After learning about the basics of the software, an important part of programming for microcontrollers is about not blocking the software from doing other things.
 
 [Order of operation](Order%20of%20operation.md)

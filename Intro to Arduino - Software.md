@@ -52,4 +52,4 @@ Working with Specific Components
 
 **Further**
 - [Arduino - ADC](Arduino%20-%20ADC.md)
-- [Non blocking delays](Non%20blocking%20delays.md) - instead of using `delay()` how to use `millis()`, Timers and beyond
+- [Multitasking and non blocking delays](Multitasking%20and%20non%20blocking%20delays.md) - instead of using `delay()` how to use `millis()`, Timers and beyond

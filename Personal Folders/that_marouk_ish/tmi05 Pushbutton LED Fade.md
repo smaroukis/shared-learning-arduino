@@ -15,7 +15,7 @@ Concepts:
 - [Arduino - PWM](Arduino%20-%20PWM.md) - for fading in and out the LED
 - [Resistors](../../Resistors.md) as current limiters
 - [Switches](Switches.md) - Pushbuttons
-- [Non blocking delays](../../Non%20blocking%20delays.md) using `millis()` for timing
+- [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md) using `millis()` for timing
 
 Further:
 - try to eliminate the pushbutton pulldown resistor (see [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md))
