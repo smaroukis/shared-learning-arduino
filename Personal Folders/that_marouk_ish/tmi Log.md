@@ -2,10 +2,11 @@
 More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
 
 2022-10-15
-Days 9 and 10 - Multitasking Mania
+Days 9 and 10 - Multitasking Mania and New IDE
 "Mania" because I found many ways to skin the multitasking cat, here I am trying to go with the most simple way, and progress towards some of the other techniques - see resources I found below. 
 
-Finished [this code](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi13%20Multitasking-1.md) which demonstrates the first step of better multitasking(I would say this is now upper beginner level). 
+
+Finished [this project](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi13%20Multitasking-1.md) which demonstrates the first step of better multitasking(I would say this is now upper beginner level). I also started using VSCode with the PlatformIO extension - no issues so far.
 
 The code rotates a servo motor from 0 to 180 position and stops when a pushbutton is pressed. An LED blinks at a rate proportional to the position of the servo (blinks fast at pos = 0 and slow at pos = 180). 
 
@@ -24,52 +25,15 @@ Non-blocking & multitasking Resources
 - https://learn.adafruit.com/multi-tasking-the-arduino-part-3
 - https://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html - good examples and uses an external library
 
+Next up 
+- add in object oriented programming structures to make it more readable and extendable
+
 Code: 
+- https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/code/tmi14_Multitasking-1/src/main.cpp
+
+Of interest, here is where I used the rising and falling delays for the LED blink:
 ```c
-#include <Arduino.h>
-#include <Servo.h>
-
-// Pins
-const byte PIN_SERVO1 = 9; // 9 <- SIGNAL (byte [0, 255])
-const int BUTTON = 2; // 11 <- Button (will be normal HIGH)
-const int RED = 13;
-
-// Variables
-unsigned long tNow; // for each time through the loop
-
-// LED
-unsigned long tLedDelayRising = 5;
-const int tLedDelayFalling = 10;
-unsigned long tPreviousLed = 0; 
-
-// Servo Object and Variables
-Servo thisServo; 
-boolean thisServoStarted = false; // state machine variable
-int pos = 0; // store position
-int delta_pos = 1; // {1, -1}
-unsigned long tPreviousStep = 0;
-unsigned long tDelay = 20; // instead of constant, it will be set by the motor position
-
-// Button and Debouncing
-unsigned long tDebounceStart; // to store time for debouncing algo
-const int tDebounceDelay = 30;
-boolean debouncing = false;
-int buttonState = 0; 
-int buttonPreviousState = 1; // button is INPUT_PULLUP so normal is HIGH, active LOW
-
-void setup() {
-  pinMode(RED, OUTPUT);
-  pinMode(BUTTON, INPUT_PULLUP);
-  digitalWrite(BUTTON, HIGH); // to avoid ambiguity
-
-  thisServo.attach(PIN_SERVO1);
-  Serial.begin(9600);
-}
-
 void updateLED() {
-  // flash the LED at a speed relative to the motors position
-  // this will demonstrate "loops within loops" for multitasking purposes
-  // keep flashing if button is unpressed
   if (thisServoStarted) tLedDelayRising = map(pos, 0, 180, 50, 1000);
 
   if ((tNow - tPreviousLed >= tLedDelayRising)) {
@@ -80,80 +44,7 @@ void updateLED() {
     digitalWrite(RED, LOW); // need to add a falling timer so that we can light up brighter on time offs
   }
 }
-
-// The beginning of the "state machine"
-void servoStart() {
-  // Set state
-  thisServoStarted = true;
-  Serial.println("Started Servo");
-//  tPreviousStep = tNow; // #q do we need this? -> I think we do, otherwise it starts instantaneously and jitters
-}
-
-// Start the Servo Rotating - reverse directions when we get to the end;
-void moveServoOneStep() {
-// first check if we should actually move one step
-// two conditions: 1) we are started and 2) the time condition has been met
-  if (thisServoStarted && (tNow - tPreviousStep >= tDelay)) {
-    pos += delta_pos; // increment the position to write new position
-    thisServo.write(pos); 
-    Serial.print("Moved Servo to position = ");
-    Serial.println(pos);
-
-    if (pos == 180 || pos == 0) delta_pos = -delta_pos; 
-    // update timer
-    tPreviousStep = tNow; // #q - or should we use `millis()` function again? s
-  }
-}
-
-void servoStop() {
-  thisServoStarted = false;
-//  tPreviousStep = tNow; 
-  Serial.println("Stopped Servo");
-}
-
-void servoChangeState() {
-  Serial.print("Changing Servo state from (");
-  Serial.print(thisServoStarted);
-  Serial.println(")");
-  switch (thisServoStarted) {
-    case false:
-      servoStart();
-      break;
-    case true:
-      servoStop();
-      break;
-  }
-}
-
-void checkButton() {
-  buttonState = digitalRead(BUTTON); // INPUT_PULLUP
-  if (buttonState != buttonPreviousState) {
-    tDebounceStart = tNow; // #q again, should this be tNow or millis()
-    buttonPreviousState = buttonState; 
-    debouncing = true;
-    Serial.println("Started Debouncing...");
-  }
-  else if (debouncing && buttonState == 0 && (tNow - tDebounceStart >= tDebounceDelay)) {
-    Serial.print("Debouncing finished, taking current state = ");
-    Serial.println(buttonState);
-    // stop or start the motor
-    servoChangeState();
-    // update the variables
-    debouncing = false;
-  }
-}
-
-// Loop
-void loop() {
-  tNow = millis(); 
-
-  checkButton();
-  moveServoOneStep(); 
-  updateLED();
-  }
 ```
-Next up 
-- add in object oriented programming structures to make it more readable and extendable
 
 2022-10-13
 Asked for input on what to learn next - people said non-blocking functions
