@@ -1,5 +1,6 @@
 parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 next:: [Interrupts and Timers](Interrupts%20and%20Timers.md)
+level:: #beginner 
 #draft 
 
 The basic theory is that we want to get the `loop()` flywheel running as fast as possible - we want nothing to hang it up, so we can do multiple things at once with the microprocessor.
@@ -21,10 +22,12 @@ This can involve ideas like "state machines",  task managers, and Timers. But th
 - https://learn.adafruit.com/multi-tasking-the-arduino-part-3
 
 ## Resources
+- https://learn.digilentinc.com/Documents/407 - basic 
 - https://www.baldengineer.com/?s=millis - some tricks on millis
-- https://learn.digilentinc.com/Documents/407
-- https://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html
-- https://www.instructables.com/Simple-Multi-tasking-in-Arduino-on-Any-Board/
+- https://learn.adafruit.com/multi-tasking-the-arduino-part-1 - categorized intermediate
+- https://learn.adafruit.com/multi-tasking-the-arduino-part-2
+- https://learn.adafruit.com/multi-tasking-the-arduino-part-3
+- https://www.forward.com.au/pfod/ArduinoProgramming/TimingDelaysInArduino.html - good examples and uses an external library
 - [Demonstration code for several things at the same time](https://forum.arduino.cc/t/demonstration-code-for-several-things-at-the-same-time/217158) by Robin2
 	- converts the blink without delay into a state machine
 	- `previousMillis += durationToCheck` is better than `previousMillis = currentMillis`  "to ensure that successive periods are identical"  #q I'm guessing this comes from the fact that we don't know what is happening between `currentMillis` which is checked at the beginning of the loop, and when this assignment is being carried out? 
@@ -40,7 +43,7 @@ This can involve ideas like "state machines",  task managers, and Timers. But th
 		- e.g. when cutting a tomato if there are four steps we need four constants/indices - these become `switch case` or `if` conditions that we check when we enter the "cut the tomato" function - when done with one step we increment the counter/pointer to the next step chain constant/index
 		- you can use an `enum` type to specify the constant values for switch/case
 	- then for each step chain we can further break it down it to more steps, ad infinitem...
-- [Multitasking made easy by smathieu13](https://forum.arduino.cc/t/multitasking-made-easy/1013708)
+- [Multitasking made easy by smathieu13](https://forum.arduino.cc/t/multitasking-made-easy/1013708) - heavy use of OOP
 	- cake analogy and Timers for control flows
 	- defines his Timer classes
 		- more than one timer is needed for each CakeMaker
@@ -60,4 +63,5 @@ This can involve ideas like "state machines",  task managers, and Timers. But th
 		- so basically we are task hunting during each loop seeing what tasks have been completed (by checking the value of the state machine) 
 			- but while doing the tasks we make sure to 1) not do too much at once and 2) use timers not to hang it up on one tasks
 		- the longest loop period must be shorter than any time counted
+- [Switch case state machine example by StefanL38](https://forum.arduino.cc/t/a-demo-code-explaining-the-switch-case-state-machine-and-how-to-do-things-almost-in-parallel/888172) - has some nice timer functions that let you pass the delay time in on the fly
 - Task Macros - this guy - https://forum.arduino.cc/u/DrDiettrich  - https://forum.arduino.cc/t/projekt-multitasking/399677
