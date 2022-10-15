@@ -1,6 +1,7 @@
 parent:: [Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 previous::
 next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
+see-also:: [Arduino Memory and Buffers](Arduino%20Memory%20and%20Buffers.md)
 
 ### Fundamental
 
@@ -50,9 +51,9 @@ next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
 `array`
 - list of variables 
 - example array of integers: `int light[5] = {0, 20, 50, 75, 100};`
-- example array of chars: `int char[6] = "hello"` ➡️ see note on strings belo
+- example array of chars: `int char[6] = "hello"` ➡️ last character is ASCII null character `'\0'`
 
-> Note the length and memory size is defined by the type of variable in the array. An array of chars (see cstrings) will have a length of 
+> Note the length and memory size is defined by the type of variable in the array. An array of chars (see cstrings) will have a length of $N_{chars} + 1$ and each item takes up 1 byte. For an array of `int`s, each item takes up 2 bytes from the definition of an `int`. 
 
 strings (more specifically, a C-formatted string)
 - there is no "string" variable type, although there is a `String` variable type, it is better to use a "C-formatted string"
@@ -60,6 +61,9 @@ strings (more specifically, a C-formatted string)
 - total size is $N_{characters} + 1$ :➡️ uses 1 byte for each character in the string **plus a null character** (1 byte) at the end
 	- e.g. `string array[4] = "ABC"` is the same as `string array[] = "ABC"`  note the size is `4`
 - (!) Note - #tdf the Arduino `String` class may cause memory errors after running for a long time - instead just use an array of `char`s terminated by the null character ("`\0`" as a string or the ASCII value of `0`)  [source](https://forum.arduino.cc/t/fun-with-arduino-a-series-of-introductory-videos/565112/12)
+
+**References**
+- https://www.reddit.com/r/arduino/comments/y2tv7s/comment/isbs6kw/?utm_source=share&utm_medium=web2x&context=3
 
 
 ---
