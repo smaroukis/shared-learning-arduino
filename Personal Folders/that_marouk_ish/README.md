@@ -17,4 +17,4 @@ List of projects so far:
 - [tmi09 Ultrasonic Sensor](tmi09%20Ultrasonic%20Sensor.md)
 - [tmi10 Matrix Keypad](tmi10%20Matrix%20Keypad.md)
 - [tmi11 Temp and Humidity Sensor](tmi11%20Temp%20and%20Humidity%20Sensor.md)
-- [tmi12 Serial Input Basics](../../tmi12%20Serial%20Input%20Basics.md)
+- [tmi12 Serial Input Basics](tmi12%20Serial%20Input%20Basics.md)

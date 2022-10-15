@@ -23,4 +23,4 @@ parent::[README](Personal%20Folders/that_marouk_ish/README.md)
 - [tmi10 Matrix Keypad](tmi10%20Matrix%20Keypad.md)
 
 **Serial**
-- [tmi12 Serial Input Basics](../../tmi12%20Serial%20Input%20Basics.md)
+- [tmi12 Serial Input Basics](tmi12%20Serial%20Input%20Basics.md)

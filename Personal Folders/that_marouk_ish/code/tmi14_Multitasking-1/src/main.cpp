@@ -11,14 +11,11 @@
 const byte PIN_SERVO1 = 9; // 9 <- SIGNAL (byte [0, 255])
 const int BUTTON = 2; // 11 <- Button (will be normal HIGH)
 const int RED = 13;
-const int GREEN = 13;
-const int BLUE= 13;
 
 // Variables
 unsigned long tNow; // for each time through the loop
 
 // LED
-byte redVal = 0;
 unsigned long tLedDelayRising = 5;
 const int tLedDelayFalling = 10;
 unsigned long tPreviousLed = 0; 
@@ -40,8 +37,6 @@ int buttonPreviousState = 1; // button is INPUT_PULLUP so normal is HIGH, active
 
 void setup() {
   pinMode(RED, OUTPUT);
-  pinMode(GREEN, OUTPUT);
-  pinMode(BLUE, OUTPUT);
   pinMode(BUTTON, INPUT_PULLUP);
   digitalWrite(BUTTON, HIGH); // to avoid ambiguity
 
@@ -125,8 +120,6 @@ void checkButton() {
     debouncing = false;
   }
 }
-
-
 
 // Loop
 void loop() {
