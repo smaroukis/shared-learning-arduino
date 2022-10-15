@@ -19,8 +19,9 @@ unsigned long tNow; // for each time through the loop
 
 // LED
 byte redVal = 0;
-byte greenVal = 0;
-byte blueVal = 0;
+unsigned long tLedDelayRising = 5;
+const int tLedDelayFalling = 10;
+unsigned long tPreviousLed = 0; 
 
 // Servo Object and Variables
 Servo thisServo; 
@@ -28,11 +29,11 @@ boolean thisServoStarted = false; // state machine variable
 int pos = 0; // store position
 int delta_pos = 1; // {1, -1}
 unsigned long tPreviousStep = 0;
-const int tDelay = 10; // used to control the "speed" of the motor
+unsigned long tDelay = 20; // instead of constant, it will be set by the motor position
 
 // Button and Debouncing
 unsigned long tDebounceStart; // to store time for debouncing algo
-const int tDebounceDelay = 50;
+const int tDebounceDelay = 30;
 boolean debouncing = false;
 int buttonState = 0; 
 int buttonPreviousState = 1; // button is INPUT_PULLUP so normal is HIGH, active LOW
@@ -49,22 +50,18 @@ void setup() {
 }
 
 void updateLED() {
-  // when: when servo motor is updated
-  // need access to the servo position
-  // where pos in [0, 180] is mapped between [0, 255]
-  redVal = 1.1389 * pos + 50;
-  greenVal = -0.0253 * pos + 255;
-  blueVal = 0.02531 * pos + 50;
+  // flash the LED at a speed relative to the motors position
+  // this will demonstrate "loops within loops" for multitasking purposes
+  // keep flashing if button is unpressed
+  if (thisServoStarted) tLedDelayRising = map(pos, 0, 180, 50, 1000);
 
-  analogWrite(RED, redVal);
-  analogWrite(GREEN, greenVal);
-  analogWrite(BLUE, blueVal);
+  if ((tNow - tPreviousLed >= tLedDelayRising)) {
+    tPreviousLed = tNow; 
+    digitalWrite(RED, HIGH);
 
-  // Serial.print("(red, green, blue = {");
-  // Serial.print(redVal); Serial.print(", "); 
-  // Serial.print(greenVal); Serial.print(", "); 
-  // Serial.print(blueVal); 
-  // Serial.println("}");
+  } else if (tNow - tPreviousLed >= tLedDelayFalling) {
+    digitalWrite(RED, LOW); // need to add a falling timer so that we can light up brighter on time offs
+  }
 }
 
 // The beginning of the "state machine"
@@ -82,7 +79,6 @@ void moveServoOneStep() {
   if (thisServoStarted && (tNow - tPreviousStep >= tDelay)) {
     pos += delta_pos; // increment the position to write new position
     thisServo.write(pos); 
-    updateLED();
     Serial.print("Moved Servo to position = ");
     Serial.println(pos);
 
@@ -137,5 +133,6 @@ void loop() {
   tNow = millis(); 
 
   checkButton();
-  moveServoOneStep(); // also updates LED
+  moveServoOneStep(); 
+  updateLED();
   }
