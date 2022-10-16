@@ -13,3 +13,6 @@ parent::[Arduino](Arduino.md)
 
 **Projects**
 - https://create.arduino.cc/projecthub?difficulty=beginner&sort=trending
+
+**Books and Longer Resources**
+- [This online book](https://rizkia.staff.telkomuniversity.ac.id/files/2017/11/Designing-Embedded-Systems-with-Arduino-Tianhong-Pan-Yi-Zhu-Springer-2017.pdf) goes through many sensors and gives a short description of the theory, as well as providing full project examples like an Air Quality Monitor  #book
