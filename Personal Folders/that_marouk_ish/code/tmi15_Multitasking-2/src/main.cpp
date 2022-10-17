@@ -38,7 +38,7 @@ int buttonPreviousState = 1; // button is INPUT_PULLUP so normal is HIGH, active
 // LCD 
 LiquidCrystal lcd(RS, EN, D4, D5, D6, D7);
 unsigned long tPreviousStepLcd = 0;
-unsigned long tDelayLcd = 500; // lcd update should be slower
+unsigned long tDelayLcd = 80; // lcd update should be slower
 
 
 void setup() {
@@ -91,6 +91,7 @@ void moveServoOneStep() {
     if (pos == 180 || pos == 0) delta_pos = -delta_pos; 
     // update timer
     tPreviousStep = tNow; 
+    updateLcdPos();
   }
 }
 
@@ -112,6 +113,7 @@ void servoChangeState() {
       servoStop();
       break;
   }
+  updateLcd();
 }
 
 void checkButton() {
@@ -137,31 +139,43 @@ void updateLcd() {
   // needs its own timing to avoid flicker - 
   // could also use previous servo state to only change on an edge
 
-  if(thisServoStarted && (tNow - tPreviousStepLcd >= tDelayLcd)) {
+  if(thisServoStarted) {
     lcd.clear(); // also returns the cursor to top left
-    lcd.print("Servo is running, position is:");
+    lcd.print("Servo is running:");
+    printLcdPos(); 
     updateLcdPos();
     tPreviousStepLcd = tNow;
 
-  } else if (!thisServoStarted && (tNow - tPreviousStepLcd >= tDelayLcd)) {
+  } else if (!thisServoStarted) {
     lcd.clear();
-    lcd.print("Servo is stopped at position:");
+    lcd.print("Servo is stopped:");
+    printLcdPos();
     updateLcdPos();
     tPreviousStepLcd = tNow;
   }
 }
 
+void printLcdPos() {
+  lcd.setCursor(0, 1); 
+  lcd.print("Pos: ");
+}
+
 void updateLcdPos() {
-  lcd.setCursor(0, 1);
-  lcd.print(pos);
+  lcd.setCursor(5, 1);
+  lcd.print(String(pos));
+}
+
+void checkLcdPos() {
+  if (thisServoStarted && (tNow - tPreviousStepLcd >= tDelayLcd)) {
+    updateLcdPos();
+  }
 }
 
 // Loop
 void loop() {
   tNow = millis(); 
 
-  checkButton(); // 
-  moveServoOneStep(); 
+  checkButton(); 
+  moveServoOneStep(); // calls updateLcd
   updateLED();
-  updateLcd();
 }
