@@ -52,7 +52,8 @@ void setup() {
   Serial.println("Starting Serial Monitor ...");
 
   lcd.begin(16, 2);
-  lcd.print("Servo at pos:");
+  updateLcd();
+  
 }
 
 void updateLED() {
@@ -161,6 +162,8 @@ void printLcdPos() {
 }
 
 void updateLcdPos() {
+  lcd.setCursor(5, 1);
+  lcd.print("   "); // printing three spaces for a clean "overwrite"
   lcd.setCursor(5, 1);
   lcd.print(String(pos));
 }

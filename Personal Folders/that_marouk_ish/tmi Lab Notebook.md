@@ -1,24 +1,17 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
-`pinned`: Learning Goals
-- Serial Communications other than with the Serial Monitor e.g. I2C, etc
-- [Optocouplers](Optocouplers.md)
-- LCD screens
-- real time clock
-- shift register
-- [x] strings and chars to the Serial Monitor
-- stepper motors
-- IR 
+### [2022-10-17](2022-10-17)
+- [tmi15 Multitasking-2](tmi15%20Multitasking-2.md)
 
 ### [2022-10-15](2022-10-15)
-- [tmi13 Multitasking-1](tmi13%20Multitasking-1.md)
+- [tmi14 Multitasking-1](tmi14%20Multitasking-1.md)
 	- added some non blocking functions - pushbutton and LED blink rate 
 	- had trouble getting the RGB led to work but I think I just forgot to set the Pins correctly
 	- instead I switched to just blinking a red led at a rate propo to the position
 		- the trick was adding another timer for the falling edge so it was bright enough when the motor was stopped
 
 ### [2022-10-14](2022-10-14)
-- [tmi13 Multitasking-1](tmi13%20Multitasking-1.md)
+- [tmi14 Multitasking-1](tmi14%20Multitasking-1.md)
 	- 12:48 finished writing and testing code for non-blocking servo - 0 to 180 and back 
 
 ### [2022-10-13](2022-10-13)

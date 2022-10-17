@@ -1,6 +1,6 @@
 parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
 previous:: [tmi12 Serial Input Basics](tmi12%20Serial%20Input%20Basics.md)
-next:: [tmi14](tmi14.md)
+next:: [tmi15 Multitasking-2](tmi15%20Multitasking-2.md)
 level:: #beginner 
 garden-topic:: [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md), [User Defined Functions](User%20Defined%20Functions.md)
 
