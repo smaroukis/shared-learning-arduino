@@ -22,3 +22,16 @@ Example
 
 
 
+### Testing
+
+```
+> [!test]- Test folded table within callout
+> | c1 | c2 |
+> | --- | --- | 
+> | r1,c1 | r2,c2 |
+```
+
+> [!test]- Test folded table within callout
+| c1 | c2 |
+| --- | --- | 
+| r1,c1 | r2,c2 |

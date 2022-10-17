@@ -16,6 +16,9 @@ Markdown itself is inherently portable. But the standard is actually not well de
 **TDF Guidelines**
 - [wikilinks vs. markdown links](wikilinks%20vs.%20markdown%20links.md)
 
+**Breaking/Issues**
+- sometimes I use embedded-page references in a folded callout, esp. to reference a table, which won't show up for other editors
+
 ## Contributors
 - #tmi [2022-10-02](2022-10-02) 14:27 
 

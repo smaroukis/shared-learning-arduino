@@ -26,7 +26,8 @@ Example Part: LCD1602  - see [Datasheet - LCD1602A LCD Display](Personal%20Folde
 - for quick reference see [pinout - LCD1602](pinout%20-%20LCD1602.md)
 - typically using the popular [HD44780 LCD Controller](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) by Hitachi. 
 
-> [!note]- Pin Descriptions
+> [!note]- Pin Descriptions 
+> See Example in [Table - LCD 16x2 Common Pin Configuration (4-bit)](Table%20-%20LCD%2016x2%20Common%20Pin%20Configuration%20(4-bit).md))
 > - `VSS:` A pin that connects to ground  
 > - `VDD`: A pin that connects to a +5V power supply  
 > - `VO`: A pin that adjust the contrast of LCD1602  
@@ -37,8 +38,8 @@ Example Part: LCD1602  - see [Datasheet - LCD1602A LCD Display](Personal%20Folde
 > - `A`: LED backlight anode (typ. connect to potentiometer or resistor)
 > - `K`: LED backlight cathode (typ. -> GND)
 
-> [!EXAMPLE]- Common Pin Configuration (4-bit Mode) [1] #table
-> ![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221017121001.png)
+> [!EXAMPLE]- Example Pin Configuration for LCD in 4-Bit Mode
+> ![Table - LCD 16x2 Common Pin Configuration (4-bit)](Table%20-%20LCD%2016x2%20Common%20Pin%20Configuration%20(4-bit).md)
 
 ## Example
 
