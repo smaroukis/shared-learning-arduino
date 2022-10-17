@@ -34,7 +34,8 @@ Example Part: LCD1602  - see [Datasheet - LCD1602A LCD Display](Personal%20Folde
 > - `R/W`: A Read/Write pin that selects reading mode or writing mode  
 > - `E`: An enabling pin that, when supplied with low-level energy, causes the LDC module to execute relevant instructions.  
 > - `D0-D7`:Pins that read and write data  
-> - `A `and `K`: Pins that control the LED backlight
+> - `A`: LED backlight anode (typ. connect to potentiometer or resistor)
+> - `K`: LED backlight cathode (typ. -> GND)
 
 > [!EXAMPLE]- Common Pin Configuration (4-bit Mode) [1] #table
 > ![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221017121001.png)
@@ -69,6 +70,8 @@ void loop() {
   lcd.print(millis() / 1000);
 }
 ```
+
+Note if you print without clearing or resetting cursor it will just append the data.
 
 > [!note]- Schematic: 16x2 LCD with HD44780 Driver in 4-bit Mode
 > ![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221017115858.png)
