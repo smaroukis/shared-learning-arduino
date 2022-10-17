@@ -81,6 +81,28 @@ Note if you print without clearing or resetting cursor it will just append the d
 
 Note rows are labeled as COLS, ROWS and are 0-indexed:
 
+### LCD Library Functions
+-   [LiquidCrystal()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/liquidcrystal)
+-   [begin()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/begin)
+-   [clear()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/clear)
+-   [home()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/home)
+-   [setCursor()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/setcursor)
+-   [write()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/write)
+-   [print()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/print)
+-   [cursor()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/cursor)
+-   [noCursor()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/nocursor)
+-   [blink()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/blink)
+-   [noBlink()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/noblink)
+-   [display()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/display)
+-   [noDisplay()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/nodisplay)
+-   [scrollDisplayLeft()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/scrolldisplayleft)
+-   [scrollDisplayRight()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/scrolldisplayright)
+-   [autoscroll()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/autoscroll)
+-   [noAutoscroll()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/noautoscroll)
+-   [leftToRight()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/lefttoright)
+-   [rightToLeft()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/righttoleft)
+-   [createChar()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/createchar)
+
 ## References and More
 [1] https://docs.wokwi.com/parts/wokwi-lcd1602
 

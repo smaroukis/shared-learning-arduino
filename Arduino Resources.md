@@ -9,7 +9,7 @@ parent::[Arduino](Arduino.md)
 - https://forum.arduino.cc/t/fun-with-arduino-a-series-of-introductory-videos/565112/10 - series of videos from a railway hobbyist - focused on building a configurable light timer
 
 **Mistakes to Avoid**
-- https://forum.arduino.cc/t/beginners-top-fifteen-mistakes-well-a-shot-at-them-anyway/477658
+[Beginner Mistakes to Avoid](Beginner%20Mistakes%20to%20Avoid.md)
 
 **Projects**
 - https://create.arduino.cc/projecthub?difficulty=beginner&sort=trending
