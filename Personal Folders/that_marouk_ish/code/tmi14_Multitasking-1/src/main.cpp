@@ -9,7 +9,7 @@
 
 // Pins
 const byte PIN_SERVO1 = 9; // 9 <- SIGNAL (byte [0, 255])
-const int BUTTON = 2; // 11 <- Button (will be normal HIGH)
+const int BUTTON = 2; // 2 <- Button (will be normal HIGH)
 const int RED = 13;
 
 // Variables
@@ -39,9 +39,11 @@ void setup() {
   pinMode(RED, OUTPUT);
   pinMode(BUTTON, INPUT_PULLUP);
   digitalWrite(BUTTON, HIGH); // to avoid ambiguity
+  digitalWrite(RED, LOW);
 
   thisServo.attach(PIN_SERVO1);
   Serial.begin(9600);
+  Serial.println("Starting Serial Monitor ...");
 }
 
 void updateLED() {
