@@ -9,7 +9,7 @@
 
 // Main Shared Class
 
-class Peripheral
+class LED
 {
     // constants
     int PIN;
@@ -51,20 +51,27 @@ class Peripheral
         }
         statePrevious = !state;
     }
+
+    // TODO: add mapping function for analog write
 }
 
-class Button : public Peripheral {
-   boolean debouncing = false;
+class Button {
+    int PIN;
+    long tDelay; 
+
+    int state;
+    unsigned long tPrevious; 
+    boolean debouncing = false;
     
     public: 
-    Button(int pin, long on, long off)
+    Button(int pin, long debounce_delay)
     {
         PIN = pin;
-        pinMode(PIN, INPUT_PULLUP); // change from parent class
-        tDelayOn = on;
-        tDelayOff = off;
+        pinMode(PIN, INPUT_PULLUP); 
+        digitalWrite(PIN, HIGH);
+        state = 1; // normal High
+        tDelay = debounce_delay;
         statePrevious = 0;
-        state = 0;
         tPrevious = 0; 
     }
     void checkButton() {
@@ -76,12 +83,36 @@ class Button : public Peripheral {
             statePrevious = state;
             debouncing = true; 
         } 
-            else if (debouncing && state = 0 && (tNow - tPrevious >= tDelayOn)) {
-            // here is where we updated the motor state previously
+            else if (debouncing && state = 0 && (tNow - tPrevious >= tDelay)) {
+            // TODO here is where we updated the motor state previously
             debouncing = false;
         }
     }
-       
+}
+
+class MyServo {
+    int PIN;
+    long tDelay;
+
+    int state;
+    int pos;
+    int delta_pos; 
+    unsigned long tPrevious;
+
+    public:
+    MyServo(int pin, long delay) {
+        PIN = pin;
+        tDelay = delay;
+        state = 0
+        pos = 0;
+        delta_pos = 1; // {1, -1}
+        tPrevious = 0;
+    }
+
+    void moveOneStep() {
+        // TODO
+    }
+
 }
 
 // LCD extended class
@@ -89,13 +120,6 @@ class Button : public Peripheral {
 
 // Servo extended class
 // + pos, delta_pos
-
-// Button extended class
-// has debouncing boolean
-
-// Led extended class
-// is basically the same
-
 void setup () {
 
 }
