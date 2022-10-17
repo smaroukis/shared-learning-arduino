@@ -78,5 +78,10 @@ void loop(){
 }
 ```
 
+Note, you would think we could get rid of the `debouncing` boolean and just check for the time condition, but what happens when we hold down the button?  The following condition cycles between true and false.
+
+```c
+else if (debouncing && state == LOW && (current_time - debounce_start > 50))
+```
 Improvements:
-- 
+- it is better not to use hardcoded magic numbers like `50` in the delay comparison time

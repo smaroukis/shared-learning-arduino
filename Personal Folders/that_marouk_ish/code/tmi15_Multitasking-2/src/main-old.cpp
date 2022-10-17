@@ -1,41 +1,3 @@
-parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
-previous:: [tmi14 Multitasking-1](tmi14%20Multitasking-1.md)
-next::
-level:: #intermediate 
-garden-topic:: [Multitasking and non blocking delays](Multitasking%20and%20non%20blocking%20delays.md), [Object Oriented Programming](Object%20Oriented%20Programming.md)
-
->  (source)
-
-Desired Goal:
-- 
-
-Concepts:
-
-Physical Setup:
-
-
-Code:
-- for the LCD screen if you write to the same position 100 and then 90, it will display 900 since it only "overwrites" instead of clearing 
-
-``` cpp
-void updateLcdPos() {
-  lcd.setCursor(5, 1);
-  lcd.print("   "); // printing three spaces for a clean "overwrite"
-  lcd.setCursor(5, 1);
-  lcd.print(String(pos)); // pos in [0, 180]
-}
-```
-
-**[Object Oriented Programming](../../Object%20Oriented%20Programming.md)**
-
-[Example - A Basic OOP Class for Multitasking](../../Example%20-%20A%20Basic%20OOP%20Class%20for%20Multitasking.md) shows the basic concept.
-
-But since our peripherals are all a bit different we may need to extend some classes.
-The LCD could have a class, but it is called directly in other functions (like when the servo state is changed), which already take care of the timing, although it also does have its own timing delay to update the screen at a specific rate.
-
-
-Without OOP
-``` c
 // Continued from Multitasking-1
 // Here we add in an LCD screen
 // and start to use OOP
@@ -220,7 +182,3 @@ void loop() {
   moveServoOneStep(); // calls updateLcd
   updateLED();
 }
-```
-
-Improvements:
-- 

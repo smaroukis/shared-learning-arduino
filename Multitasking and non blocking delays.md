@@ -43,7 +43,7 @@ This can involve ideas like "state machines",  task managers, and Timers. But th
 		- e.g. when cutting a tomato if there are four steps we need four constants/indices - these become `switch case` or `if` conditions that we check when we enter the "cut the tomato" function - when done with one step we increment the counter/pointer to the next step chain constant/index
 		- you can use an `enum` type to specify the constant values for switch/case
 	- then for each step chain we can further break it down it to more steps, ad infinitem...
-- [Multitasking made easy by smathieu13](https://forum.arduino.cc/t/multitasking-made-easy/1013708) - heavy use of OOP
+- [Multitasking made easy by smathieu13](https://forum.arduino.cc/t/multitasking-made-easy/1013708) - heavy use of object oriented programming 
 	- cake analogy and Timers for control flows
 	- defines his Timer classes
 		- more than one timer is needed for each CakeMaker
