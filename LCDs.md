@@ -1,6 +1,6 @@
 parent::[Actuators and Sensors](Actuators%20and%20Sensors.md)
 
-Example Part: LCD1602  
+Example Part: LCD1602  - see [Datasheet - LCD1602A LCD Display](Personal%20Folders/that_marouk_ish/attachments/Datasheet%20-%20LCD1602A%20LCD%20Display.pdf)
 - `VSS:` A pin that connects toground  
 - `VDD`: A pin that connects to a +5V powersupply  
 - `VO`: A pin that adjust the contrast of LCD1602  
@@ -9,6 +9,8 @@ Example Part: LCD1602
 - `E`: An enabling pin that, when supplied with low-level energy, causes the LDC module to execute relevant instructions.  
 - `D0-D7`:Pins that read and write data  
 - `A `and `K`: Pins that control the LED backlight
+
+See [pinout - LCD1602](pinout%20-%20LCD1602.md)
 
 Note rows are labeled as COLS, ROWS and are 0-indexed:
 e.g. `lcd.begin(16, 2); // 16 cols, 2 rows` and `lcd.setCursor(0, 1) // set at the 1st column, 2nd row'
