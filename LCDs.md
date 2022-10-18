@@ -9,7 +9,7 @@ The standard way of using an LCD will require 7 Arduino I/O pins (8 if you want 
 > [!tip]- Commonly you only need to connect 4 data pins 
 > The LCD can be driven in `4-bit` parallel mode, which is the more common configuration that you will see in examples using the `LiquidCrystal` libary.	
 > 
-> This means you only need to connect RS, E, D4, D5, D6, and D7 pins to Arduino (see example below).
+> This means you only need to connect RS, E, D4, D5, D6, and D7 pins to Arduino (see example below). (`RW`, `K`, and `VSS` go to `GND`; `VDD` &  `A` go to `+5V` )
 
 There is another library that uses [I2C](I2C) (`LiquidCrystal_I2C`) that uses just the two `SCL` and `SCA` pins (in addition to `+V` and `GND`)
 

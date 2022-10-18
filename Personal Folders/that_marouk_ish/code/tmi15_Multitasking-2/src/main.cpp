@@ -18,20 +18,25 @@ class LED
 
     // variable, maintain the current state
     int state;
+    inst statePrevious;
     unsigned long tPrevious; 
 
     // constructor
     public:
     Peripheral(int pin, long on, long off)
-    {
+    { 
         PIN = pin;
-        pinMode(PIN, OUTPUT);
         tDelayOn = on;
         tDelayOff = off;
-        statePrevious = 0;
+        
         state = 0;
+        statePrevious = 0;
         tPrevious = 0; 
     }
+
+    void initAsOutput() { pinMode(PIN, OUTPUT); }
+
+    void initAsInputPullup() { pinMode(PIN, INPUT_PULLUP); }
 
     // main function
     // update function is too difficult to combine
@@ -49,31 +54,20 @@ class LED
             tPrevious = tNow;
             digitalWrite(PIN, state); // write HIGH
         }
+        else {
+            return; // so we don't change the statePrevious value
+        }
         statePrevious = !state;
     }
 
     // TODO: add mapping function for analog write
 }
 
-class Button {
-    int PIN;
-    long tDelay; 
-
-    int state;
-    unsigned long tPrevious; 
-    boolean debouncing = false;
+class Button : Peripheral {
+    // Button class extended member variables
+    boolean debouncing = false; 
     
     public: 
-    Button(int pin, long debounce_delay)
-    {
-        PIN = pin;
-        pinMode(PIN, INPUT_PULLUP); 
-        digitalWrite(PIN, HIGH);
-        state = 1; // normal High
-        tDelay = debounce_delay;
-        statePrevious = 0;
-        tPrevious = 0; 
-    }
     void checkButton() {
         tNow = millis();    
         state = digitalRead(PIN);
@@ -82,10 +76,12 @@ class Button {
             tPrevious = 0;
             statePrevious = state;
             debouncing = true; 
+            Serial.println("Started Debouncing...");
         } 
             else if (debouncing && state = 0 && (tNow - tPrevious >= tDelay)) {
             // TODO here is where we updated the motor state previously
             debouncing = false;
+            Serial.println("Debouncing Finished, Button is Pressed");
         }
     }
 }
@@ -120,7 +116,13 @@ class MyServo {
 
 // Servo extended class
 // + pos, delta_pos
+
+
+// make button object
+
 void setup () {
+
+// initialize button as input pullup
 
 }
 
