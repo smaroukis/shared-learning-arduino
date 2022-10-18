@@ -26,11 +26,36 @@ If we have some common variables and member functions but also want to define mo
 ```cpp
 class Base {
 	// member variables initalizer list
+	int _foo; // leading underscore means "this is member variable"
+	int _bar;
+
 	public: // or `private:` 
+		// constructor example 1
+		Base(int foo, int bar) : 
+			_foo(foo), 
+			_bar(bar) {
+			// other things for the initialization
+			}
+	
+		// public member functions
+}
+```
 
-	// constructor
+Another way, alternate assignment syntax.. 
+```cpp
+class Base {
+	int foo; // note change here to naming
+	int bar;
 
-	// member functions
+	public: // or `private:` 
+		// constructor example 2
+		Base(int foo, int bar)  
+			{
+			this->foo = foo; // alternate assignment syntax
+			this->bar = bar;
+			}
+	
+		// public member functions
 }
 ```
 
