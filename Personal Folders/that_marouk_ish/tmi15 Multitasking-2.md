@@ -10,6 +10,8 @@ Desired Goal:
 - 
 
 Concepts:
+- a lot of OOP
+- in the `setup()` make it clear the hardware dependencies (e.g. `pinMode()`, etc) - don't do this in the constructor class - 
 
 Physical Setup:
 

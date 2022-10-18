@@ -9,21 +9,25 @@
 
 // Main Shared Class
 
-class LED
+class Peripheral
 {
-    // constants
-    int PIN;
-    long tDelayOn; // also just update time delay
-    long tDelayOff;
+    private:
+        // constants
+        int PIN;
+        long tDelayOn; // to check when turning OFF
+        long tDelayOff; // to check when turning ON
 
-    // variable, maintain the current state
-    int state;
-    inst statePrevious;
-    unsigned long tPrevious; 
+        // variable
+        int statePrevious;
+        unsigned long tPrevious; 
+    
+    public:
+        // better OOP keeps these private but requires more functions
+        int state;
 
     // constructor
     public:
-    Peripheral(int pin, long on, long off)
+    Peripheral(int pin, unsigned long on, unsigned long off)
     { 
         PIN = pin;
         tDelayOn = on;
@@ -34,14 +38,21 @@ class LED
         tPrevious = 0; 
     }
 
-    void initAsOutput() { pinMode(PIN, OUTPUT); }
+    void initAsOutput() { 
+        pinMode(PIN, OUTPUT); // call these in setup, not in the constructor
+        digitalWrite(PIN, LOW);
+     }
 
-    void initAsInputPullup() { pinMode(PIN, INPUT_PULLUP); }
+    void initAsInputPullup() { 
+        pinMode(PIN, INPUT_PULLUP);
+        digitalWrite(PIN, HIGH);
+     }
 
     // main function
-    // update function is too difficult to combine
     void toggleState() {
-        // only works for digital pins, non-inverted logic
+        // if ON: turns Off if tDelayOn has elapsed
+        // if OFF: turns ON if tDelayOff has elapsed
+        // non-inverted logic
         unsigned long tNow = millis();
 
         if (state == 1 && (tNow - tPrevious >= tDelayOn)) {
@@ -61,14 +72,32 @@ class LED
     }
 
     // TODO: add mapping function for analog write
-}
+}; // don't forget semicolon
+
+class Led : Peripheral {
+// needs a function to change the on delay so we can control the blinking speed
+
+    public:
+    Led(int pin, unsigned long on, unsigned long off) : Peripheral(pin, on, off) {
+        // "no new friends"
+    }
+
+    void updateBlinkRate(unsigned long newRate) {
+        tDelayOff = newRate;
+    }
+}; 
 
 class Button : Peripheral {
     // Button class extended member variables
-    boolean debouncing = false; 
+    private:
+        boolean debouncing = false; 
     
     public: 
-    void checkButton() {
+    Button(int pin, unsigned long on, unsigned long off) : Peripheral(pin, on, off) {
+        // "no new friends" i.e. no new member variables
+    }
+        
+    void checkButton() { // INPUT_PULLUP has inverted logic
         tNow = millis();    
         state = digitalRead(PIN);
 
@@ -86,15 +115,11 @@ class Button : Peripheral {
     }
 }
 
-class MyServo {
-    int PIN;
-    long tDelay;
-
-    int state;
+class MyServo : Peripheral {
     int pos;
     int delta_pos; 
-    unsigned long tPrevious;
 
+    // Need to extend the 
     public:
     MyServo(int pin, long delay) {
         PIN = pin;
@@ -117,12 +142,34 @@ class MyServo {
 // Servo extended class
 // + pos, delta_pos
 
+// Moves these to header
+#define DEFAULT_OFF_DELAY 50;
 
-// make button object
+#define BUTTON_PIN 2;
+#define BUTTON_DEBOUNCE_DELAY 30;
+
+#define LED_PIN 4;
+#define LED_ON_DELAY 10; // to check when turning off 
+#define LED_OFF_DELAY 5; // note this becomes variable in the updateBlinkRate() function
+
+#define SERVO_PIN 3;
+
+
+// make objects
+Button button(BUTTON_PIN, BUTTON_DEBOUNCE_DELAY, DEFAULT_OFF_DELAY);
+Led led(LED_PIN, LED_ON_DELAY, LED_OFF_DELAY);
+
 
 void setup () {
+    // hardware dependencies
+    button.initAsInputPullup();
+    led.initAsOutput();
 
-// initialize button as input pullup
+    // not sure how to handle Servo class with my own, so I'll leave it as is
+    thisServo.attach(SERVO_PIN);
+
+    // lcd 
+
 
 }
 

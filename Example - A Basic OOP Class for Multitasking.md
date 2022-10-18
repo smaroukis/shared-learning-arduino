@@ -1,4 +1,5 @@
-	garden-topic::[Object Oriented Programming](Object%20Oriented%20Programming.md)
+garden-topic::[Object Oriented Programming](Object%20Oriented%20Programming.md)
+next:: [Example - Even Better OOP - Header Files](Example%20-%20Even%20Better%20OOP%20-%20Header%20Files.md)
 #code 
 
 > Source: https://learn.adafruit.com/multi-tasking-the-arduino-part-1/a-classy-solution
