@@ -9,7 +9,7 @@
 
 // Main Shared Class
 
-class Peripheral
+class Led
 {
     private:
         // constants
@@ -20,14 +20,11 @@ class Peripheral
         // variable
         int statePrevious;
         unsigned long tPrevious; 
-    
-    public:
-        // better OOP keeps these private but requires more functions
         int state;
 
     // constructor
     public:
-    Peripheral(int pin, unsigned long on, unsigned long off)
+    Led(int pin, unsigned long on, unsigned long off)
     { 
         PIN = pin;
         tDelayOn = on;
@@ -43,10 +40,9 @@ class Peripheral
         digitalWrite(PIN, LOW);
      }
 
-    void initAsInputPullup() { 
-        pinMode(PIN, INPUT_PULLUP);
-        digitalWrite(PIN, HIGH);
-     }
+    int checkState() {
+        return state;
+    }
 
     // main function
     void toggleState() {
@@ -71,32 +67,48 @@ class Peripheral
         statePrevious = !state;
     }
 
-    // TODO: add mapping function for analog write
-}; // don't forget semicolon
-
-class Led : Peripheral {
-// needs a function to change the on delay so we can control the blinking speed
-
-    public:
-    Led(int pin, unsigned long on, unsigned long off) : Peripheral(pin, on, off) {
-        // "no new friends"
-    }
-
     void updateBlinkRate(unsigned long newRate) {
         tDelayOff = newRate;
     }
-}; 
 
-class Button : Peripheral {
-    // Button class extended member variables
+    // TODO: add mapping function for analog write
+}; // don't forget semicolon
+
+class Button {
     private:
-        boolean debouncing = false; 
-    
-    public: 
-    Button(int pin, unsigned long on, unsigned long off) : Peripheral(pin, on, off) {
-        // "no new friends" i.e. no new member variables
-    }
+        int PIN;
+        long tDelayOn; // to check when turning OFF
+        long tDelayOff; // to check when turning ON
+
+        unsigned long tPrevious; 
+      
+    public:
+        int state;
+        int statePrevious;
+        boolean debouncing;
+
+    Button(int pin, unsigned long on, unsigned long off)
+    { 
+        PIN = pin;
+        tDelayOn = on; // debounce delay
+        tDelayOff = off;
         
+        state = 0;
+        statePrevious = 0;
+        tPrevious = 0; 
+
+        debouncing = false;
+    }
+
+    int checkState() {
+        return state;
+    }
+
+    void initAsInputPullup() { 
+        pinMode(PIN, INPUT_PULLUP);
+        digitalWrite(PIN, HIGH);
+     }
+
     void checkButton() { // INPUT_PULLUP has inverted logic
         tNow = millis();    
         state = digitalRead(PIN);
@@ -107,42 +119,39 @@ class Button : Peripheral {
             debouncing = true; 
             Serial.println("Started Debouncing...");
         } 
-            else if (debouncing && state = 0 && (tNow - tPrevious >= tDelay)) {
+            else if (debouncing && state = 0 && (tNow - tPrevious >= tDelayOn)) {
             // TODO here is where we updated the motor state previously
             debouncing = false;
             Serial.println("Debouncing Finished, Button is Pressed");
         }
     }
-}
+}; 
 
-class MyServo : Peripheral {
-    int pos;
-    int delta_pos; 
+// class MyServo : Peripheral {
+//     int pos;
+//     int delta_pos; 
 
-    // Need to extend the 
-    public:
-    MyServo(int pin, long delay) {
-        PIN = pin;
-        tDelay = delay;
-        state = 0
-        pos = 0;
-        delta_pos = 1; // {1, -1}
-        tPrevious = 0;
-    }
+//     // Need to extend the 
+//     public:
+//     MyServo(int pin, long delay) {
+//         PIN = pin;
+//         tDelay = delay;
+//         state = 0
+//         pos = 0;
+//         delta_pos = 1; // {1, -1}
+//         tPrevious = 0;
+//     }
 
-    void moveOneStep() {
-        // TODO
-    }
+//     void moveOneStep() {
+//         // TODO
+//     }
 
-}
+// }
 
-// LCD extended class
-// many more pins
-
-// Servo extended class
-// + pos, delta_pos
 
 // Moves these to header
+unsigned long tNow; // for each time through the loop
+
 #define DEFAULT_OFF_DELAY 50;
 
 #define BUTTON_PIN 2;
@@ -153,11 +162,37 @@ class MyServo : Peripheral {
 #define LED_OFF_DELAY 5; // note this becomes variable in the updateBlinkRate() function
 
 #define SERVO_PIN 3;
+const int RS = 12, EN = 11, D4 = 10, D5 = 9, D6 = 8, D7 = 7; // LCD pins
 
 
 // make objects
 Button button(BUTTON_PIN, BUTTON_DEBOUNCE_DELAY, DEFAULT_OFF_DELAY);
 Led led(LED_PIN, LED_ON_DELAY, LED_OFF_DELAY);
+
+// Servo - later TODO - inherit class
+Servo myServo;
+boolean servoStarted = false;
+int pos = 0;
+int delta_pos = 1;
+unsigned long tPreviousServo = 0;
+unsigned long tDelayServo = 0;
+
+// LCD
+LiquidCrystal lcd(RS, EN, D4, D5, D6, D7);
+unsigned long tPreviousLcd = 0;
+unsigned long tDelayLcd = 80;
+
+void updateLcd() {
+
+}
+
+void printLcdPos() {
+
+}
+
+void checkLcdPos() {
+    
+}
 
 
 void setup () {
@@ -165,12 +200,13 @@ void setup () {
     button.initAsInputPullup();
     led.initAsOutput();
 
-    // not sure how to handle Servo class with my own, so I'll leave it as is
-    thisServo.attach(SERVO_PIN);
+    myServo.attach(SERVO_PIN);
+    lcd.begin(16, 2);
+    updateLcd();
 
-    // lcd 
-
-
+    Serial.begin(9600);
+    Serial.println("Starting Serial Monitor...")
+    
 }
 
 void loop() {
