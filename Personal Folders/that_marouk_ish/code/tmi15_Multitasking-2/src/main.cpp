@@ -20,7 +20,8 @@ class Led
         // variable
         int statePrevious;
         unsigned long tPrevious; 
-        int state;
+    public: 
+        int state; // needs to be callable from outside
 
     // constructor
     public:
@@ -39,10 +40,6 @@ class Led
         pinMode(PIN, OUTPUT); // call these in setup, not in the constructor
         digitalWrite(PIN, LOW);
      }
-
-    int checkState() {
-        return state;
-    }
 
     // main function
     void toggleState() {
@@ -81,17 +78,17 @@ class Button {
         long tDelayOff; // to check when turning ON
 
         unsigned long tPrevious; 
-      
-    public:
-        int state;
         int statePrevious;
         boolean debouncing;
 
-    Button(int pin, unsigned long on, unsigned long off)
+    public:
+        int state;
+
+    Button(int pin, unsigned long delay_pressed, unsigned long delay_unpressed)
     { 
         PIN = pin;
-        tDelayOn = on; // debounce delay
-        tDelayOff = off;
+        tDelayPressed = delay_pressed; // debounce delay
+        tDelayUnpressed = delay_unpressed;
         
         state = 0;
         statePrevious = 0;
@@ -113,16 +110,14 @@ class Button {
         tNow = millis();    
         state = digitalRead(PIN);
 
-        if (state != statePrevious) {
+        if (state == LOW && statePrevious == HIGH) {
             tPrevious = 0;
             statePrevious = state;
             debouncing = true; 
-            Serial.println("Started Debouncing...");
         } 
-            else if (debouncing && state = 0 && (tNow - tPrevious >= tDelayOn)) {
+            else if (debouncing && state = 0 && (tNow - tPrevious >= tDelayPressed)) {
             // TODO here is where we updated the motor state previously
             debouncing = false;
-            Serial.println("Debouncing Finished, Button is Pressed");
         }
     }
 }; 
@@ -191,7 +186,7 @@ void printLcdPos() {
 }
 
 void checkLcdPos() {
-    
+
 }
 
 
@@ -210,5 +205,10 @@ void setup () {
 }
 
 void loop() {
+    // First, simply toggle a led with a pushbutton
+
+    // check button for press
+    button.checkButton();
+    // update led 
         
 }
