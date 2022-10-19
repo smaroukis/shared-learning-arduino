@@ -1,12 +1,6 @@
-parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
-see-also::[Arduino Variable Types](Arduino%20Variable%20Types.md), [Serial Communication](Serial%20Communication.md)
+#raw
 
-The Arduino has a buffer to store bytes read from `Serial.read()` - 64 bytes at a time. 
-
-Note that `Serial.read()` is only reading one byte (one char) at a time. 
-
-**References**
-- https://www.reddit.com/r/arduino/comments/y2tv7s/comment/isbs6kw/?utm_source=share&utm_medium=web2x&context=3
+The Harvard model turns out to be a good match for embedded applications and the Atmega 328 used in the Arduino UNO use a relatively pure Harvard architecture. Programs are stored in Flash memory and data is stored in SRAM.
 
 **Raw Notes** 
 
@@ -48,7 +42,9 @@ void loop() {
 ```
 #q/answered how does the above `memmove()` move all the "downstream" bytes past the `&buf[1]` address? the `buflen` tells us how many bytes in memory to move.
 	**Notes on `memmove()`** ->  [C Functions - memmove()](C%20Functions%20-%20memmove())
+	
+**References**:
+-   https://www.reddit.com/r/arduino/comments/y2tv7s/comment/isbs6kw/?utm_source=share&utm_medium=web2x&context=3 
 
 **Further**
 - Ring Buffers
-

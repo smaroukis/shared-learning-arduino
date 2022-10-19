@@ -1,12 +1,16 @@
 parent:: [Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 previous::
 next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
-see-also:: [Arduino Memory and Buffers](Arduino%20Memory%20and%20Buffers.md)
+see-also:: [Memory](Memory.md)
 
 ### Fundamental
 
 - initialize pin number variables as `const int` (e.g. `const int analogInPin = A0;`)
 - for number variables that can get large, such as when using `millis()`, use `unsigned long` so it rolls over back to 0
+
+---
+
+#refactor below better as a table e.g. https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram
 
 `boolean`
 	`true` or `false`
@@ -55,12 +59,14 @@ see-also:: [Arduino Memory and Buffers](Arduino%20Memory%20and%20Buffers.md)
 
 > Note the length and memory size is defined by the type of variable in the array. An array of chars (see cstrings) will have a length of $N_{chars} + 1$ and each item takes up 1 byte. For an array of `int`s, each item takes up 2 bytes from the definition of an `int`. 
 
-strings (more specifically, a C-formatted string)
-- there is no "string" variable type, although there is a `String` variable type, it is better to use a "C-formatted string"
+strings (C-formatted array of `char`s and Arduino `String`)
+- there is no "string" variable type, although there is a `String` variable type (defined in the Arduino language, not from the C-language)
 - a string, in the C-programming sense, is just an array of ASCII `char`s plus the null character (integer value of `0` or as a char `\0`)
 - total size is $N_{characters} + 1$ :➡️ uses 1 byte for each character in the string **plus a null character** (1 byte) at the end
 	- e.g. `string array[4] = "ABC"` is the same as `string array[] = "ABC"`  note the size is `4`
-- (!) Note - #tdf the Arduino `String` class may cause memory errors after running for a long time - instead just use an array of `char`s terminated by the null character ("`\0`" as a string or the ASCII value of `0`)  [source](https://forum.arduino.cc/t/fun-with-arduino-a-series-of-introductory-videos/565112/12)
+- (!) literal strings are repeat memory offenders - they take up space both in flash and SRAM ^[https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram], so watch out for using to0 many `Serial.println("Some text"); ` :➡️ [Memory](Memory.md)
+
+---
 
 **References**
 - https://www.reddit.com/r/arduino/comments/y2tv7s/comment/isbs6kw/?utm_source=share&utm_medium=web2x&context=3
