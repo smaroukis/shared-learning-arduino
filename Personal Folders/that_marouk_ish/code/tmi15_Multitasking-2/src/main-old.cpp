@@ -30,7 +30,7 @@ unsigned long tDelay = 20; // instead of constant, it will be set by the motor p
 
 // Button and Debouncing
 unsigned long tDebounceStart; // to store time for debouncing algo
-const int tDebounceDelay = 30;
+const int tDebounceDelay = 0;
 boolean debouncing = false;
 int buttonState = 0; 
 int buttonPreviousState = 1; // button is INPUT_PULLUP so normal is HIGH, active LOW
@@ -56,10 +56,18 @@ void setup() {
   
 }
 
+// flash the LED at a speed relative to the motors position
+// this will demonstrate "loops within loops" for multitasking purposes
+// keep flashing if button is unpressed
 void updateLED() {
-  // flash the LED at a speed relative to the motors position
-  // this will demonstrate "loops within loops" for multitasking purposes
-  // keep flashing if button is unpressed
+  // top level (called by loop)
+  // requires: 
+    // thisServoStarted
+    // tPrevousLed
+    // tLedDelayRising
+  // modifies:
+    // tLedDelayRising (the blink rate)
+    // writes to the LED pin
   if (thisServoStarted) tLedDelayRising = map(pos, 0, 180, 50, 1000);
 
   if ((tNow - tPreviousLed >= tLedDelayRising)) {
@@ -73,7 +81,10 @@ void updateLED() {
 
 // The beginning of the "state machine"
 void servoStart() {
-  // Set state
+  // called by servoChangeState()
+  // modifies: 
+    // thisServoStarted state
+
   thisServoStarted = true;
   Serial.println("Started Servo");
 //  tPreviousStep = tNow; // #q do we need this? -> I think we do, otherwise it starts instantaneously and jitters
@@ -81,6 +92,15 @@ void servoStart() {
 
 // Start the Servo Rotating - reverse directions when we get to the end;
 void moveServoOneStep() {
+//  top function (called by loop)
+// requires
+  // thisServo object
+  // thisServoStarted
+// modifies
+  // pos, delta_pos
+  // tPreviousStep
+  // calls updateLcdPos
+
 // first check if we should actually move one step
 // two conditions: 1) we are started and 2) the time condition has been met
   if (thisServoStarted && (tNow - tPreviousStep >= tDelay)) {
@@ -97,12 +117,21 @@ void moveServoOneStep() {
 }
 
 void servoStop() {
+  // called by servoChangeState()
+  // modifies:
+    // thisServoStarted state 
   thisServoStarted = false;
 //  tPreviousStep = tNow; 
   Serial.println("Stopped Servo");
 }
 
 void servoChangeState() {
+  // called by checkButton()
+  // requires: 
+    // thisServoStarted state
+  // modifies: 
+    // calls servoStart() and servoStop()
+    // calls updatesLcd()
   Serial.print("Changing Servo state from (");
   Serial.print(thisServoStarted);
   Serial.println(")");
@@ -118,6 +147,17 @@ void servoChangeState() {
 }
 
 void checkButton() {
+  // top function
+  // implements debouncing
+  // requires:
+    // button pin number (reads the state)
+  // modifies:
+    // tDebounceStart
+    // buttonState
+    // buttonPreviousState
+    // debouncing boolean
+  // calls servoChangeState()
+
   buttonState = digitalRead(BUTTON); // INPUT_PULLUP
   if (buttonState != buttonPreviousState) {
     tDebounceStart = tNow;
@@ -136,9 +176,15 @@ void checkButton() {
 }
 
 void updateLcd() {
-  // requres: tPreviousStepLcd, tDelayLcd, thisServoStarted
+  // called by servoChangeState();
+  // requres:
+    //  thisServoStarted state 
+    // tPreviousStepLcd time
+  // modifies:
+    // calls printLcdPos()
+    // calls updateLcdPos()
+    // tPreviousStepLcd
   // needs its own timing to avoid flicker - 
-  // could also use previous servo state to only change on an edge
 
   if(thisServoStarted) {
     lcd.clear(); // also returns the cursor to top left
@@ -157,21 +203,20 @@ void updateLcd() {
 }
 
 void printLcdPos() {
+  // called by updateLcd
+ // modifies: prints only the second line inclucing the position
   lcd.setCursor(0, 1); 
   lcd.print("Pos: ");
 }
 
 void updateLcdPos() {
+  // called by updateLcd() and  moveServoOneStep()
+  // modifies:
+    // prints the second motor position to the lcd (does not overwirte the exisiting literal string text)
   lcd.setCursor(5, 1);
   lcd.print("   "); // printing three spaces for a clean "overwrite"
   lcd.setCursor(5, 1);
   lcd.print(String(pos));
-}
-
-void checkLcdPos() {
-  if (thisServoStarted && (tNow - tPreviousStepLcd >= tDelayLcd)) {
-    updateLcdPos();
-  }
 }
 
 // Loop
