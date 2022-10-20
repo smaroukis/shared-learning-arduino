@@ -20,6 +20,7 @@ const int RS = 12, EN = 11, D4 = 10, D5 = 9, D6 = 8, D7 = 7; // LCD pins
 
 class Led
 {
+    // could implement this without the "state" variable
     private:
         const byte PIN;
         long tDelayOn; // to check when turning OFF
@@ -38,7 +39,7 @@ class Led
 
         void setup() { 
             pinMode(PIN, OUTPUT);
-            harddOff();
+            hardOff();
         }
 
         void hardOff() {
@@ -66,7 +67,7 @@ class Led
             }
         }
 
-        void toggleState() {
+        void blink() {
             if (state == 1) { off(); }
             else if (state == 0) { on(); }
         }
@@ -74,6 +75,7 @@ class Led
         void updateOffRate(unsigned long newRate) {
             tDelayOff = newRate;
         }
+
 }; // don't forget semicolo/
 
 class Button {
@@ -117,133 +119,104 @@ class Button {
                     }
             }
         }
+
+        int getState() {
+            return state;
+        }
 }; 
 
-class ServoControllerWithButton {
+class ServoCustom {
     // here we attach a button, better OOP would be to create a higher order class
     // so we can control it with non-button peripherals
-    Servo myServo;
-    Button &button;
-    boolean isStarted;
-    byte pin; 
-    const unsigned long tDelay;
-    byte pos; // pos in [0, 180]
-    int delta_pos = 1; // {-1, 1}
-    unsigned long tPrevious;
+    private:
+        Servo _servo;
+        byte pin; 
+        const unsigned long tDelay;
+        byte pos; // pos in [0, 180]
+        int delta_pos; // {-1, 1}
+        unsigned long tPrevious;
+        boolean state; // stopped = 0, started = 1
 
     public:
-        ServoControllerWithButton(byte attachPin, byte &attachButton) :
-            pin(attachPin),
-            button(attachButton) {}
+        ServoCustom(byte attachPin) :
+            pin(attachPin) {}
 
-        setup() {
-            myServo.attach(pin); 
+        void setup() {
+            _servo.attach(pin); 
+            delta_pos = 1;
+            state = 0;
         }
+
+        void loop() {
+            // keep all the timing in here unless we access from the outside
+            if (state && (millis() - tPrevious >= tDelay)){
+                moveOneStep();
+                tPrevious = millis();
+            }
+        }
+
+        void moveOneStep() {
+            // move the servo one setp
+            _servo.write(pos);
+            pos += delta_pos;
+
+            if (pos == 180 || pos == 0) delta_pos = -delta_pos; 
+            // previously we updated the LCD here but now we do that from a controller
+        }
+
+        boolean isStarted() { return state;}
+
+        void start() { state = 1; } // accessed by controllers
+
+        void stop() { state = 0; }
+
+        void toggle() { state = !state; }
+
+        byte getPos() { return pos; }
+};
+
+// demonstrates how to pass by reference other objects to a controller
+// having a controller class helps us see what uses what
+class Controller {
+    Led &led;
+    Button &button;
+    ServoCustom &servo;
+
+    public:
+        Controller(Led &attachLed, Button &attachButton, ServoCustom &servoAttach) :
+            led(attachLed),
+            button(attachButton),
+            servo(servoAttach) {}
 
         loop() {
-            // checks for a button press
-            // and moves the servo / updates the  state/isStarted variable
-            // to be used by others
+            led.blink();
+            button.loop();
+            servo.loop();
+
+            // when the button is pressed, change the state of the servo
+            if (button.getState() == PRESSED) {
+                servo.toggle(); // servo will handle the move during loop
+            }
+
+            // update the blink rate to be proportional to the servo position
+            ledBlinkRate = map(servo.getPos(), 0, 180, 50, 1000);
+            led.updateOffRate(ledBlinkRate);
         }
-
-        moveOneStep() {
-            // move the servo one setp
-        }
-
-        // the LCD controller can look at ServoControllerWithButton.isStarted
-}
-
-
-// class LedController {
-//     private:
-//         Led &led;  //  passing by reference allows us to access the led object, without creating the whole object inside
-//         Button &button; 
-
-//     public:
-//         LedController(Led &attachToLed, Button &attachToButton) :
-//             led(attachToLed),
-//             button(attachToButton) {}
-        
-//         loop() {
-//         // this loop turns on and off the led
-//         // and checks to see if the servo pos has changed
-//         // to update the blink ratee
-//         }
-// }; 
-
-// // Servo - later TODO - inherit class
-// Servo myServo;
-// boolean servoStarted = false;
-// int pos = 0;
-// int delta_pos = 1;
-// unsigned long tPreviousServo = 0;
-// unsigned long tDelayServo = 0;
-
-// // LCD
-// LiquidCrystal lcd(RS, EN, D4, D5, D6, D7);
-// unsigned long tPreviousLcd = 0;
-// unsigned long tDelayLcd = 80;
-
-
-// class MyServo : Peripheral {
-//     int pos;
-//     int delta_pos; 
-
-//     // Need to extend the 
-//     public:
-//     MyServo(int pin, long delay) {
-//         PIN = pin;
-//         tDelay = delay;
-//         state = 0
-//         pos = 0;
-//         delta_pos = 1; // {1, -1}
-//         tPrevious = 0;
-//     }
-
-//     void moveOneStep() {
-//         // TODO
-//     }
-// }
+};
 
 // make objects
 Led led(LED_PIN, LED_ON_DELAY, LED_OFF_DELAY);
 Button button(BUTTON_PIN, BUTTON_DEBOUNCE_DELAY);
-ServoController myServoControllerWithButton(SERVO_PIN, button); // or do we pass a reference?
-// here
-LedController ledController(led, button);
+ServoCustom servo(SERVO_PIN);
+Controller controller(led, button, servo);
 
 void setup () {
     // hardware dependencies
     led.setup();
     button.setup();
-    
-    // here  
-    // For Testing
-    pinMode(LED_PIN, OUTPUT);
-    
+    servo.setup();
 }
 
 void loop() {
-
-    button.loop();
-         // this button state machine handles debouncing
-         // changes state when button is pressed 
-
-    // here
-    servoStateMachine.loop();
-        // pass the button object to the servoStateMachine
-        // this loop checks for a button press
-        // and moves the servo depending on state
-
-    ledController.loop();
-        // pass the servoStateMachineObject to the ledController
-        // this loop turns on and off the led
-        // and checks to see if the servo pos has changed
-        // to update the blink rate
-
-    lcdController.loop();
-        // pass the servoStateMachineObject to the lcdController
-        // this loop updates the lcd screen
-        // and looks at the state of the servoStateMachine
-
+    controller.loop();
 }
