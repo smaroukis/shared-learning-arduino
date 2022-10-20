@@ -1,5 +1,48 @@
 parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 
+`&porcupine_count`
+ - `&` is the "address of operator"
+- returns the address of the variable (hex)
+- `std::cout << &porcupine_count << "\n";`
+
+`int &sonny = songqiao`
+- if the `&` operator is on the left side it creates a _reference variable_, which is an alias for another object
+- anything done to the reference also happens to the origianl (this is used in the Pass By Reference example)
+
+`int* ptr = &val`
+- if the `*` is on the left side, it creates a _pointer_
+- this creates a pointer to the address of `val` which stores an `int` type
+
+`int dereference = *ptr`: 
+- if the `*` used on the right side of the equal sign it is a _dereference operator_
+- this dereferences the pointer and returns the value stored at the address
+
+
+> [!EXAMPLE]+ Example - Dereference a Pointer
+> ```cpp
+> int gum = 3;
+> 
+> // * on left side is a pointer
+> int* pointer = &gum;
+> 
+> // * on right side is a dereference of that pointer
+> int dereference = *pointer;
+> ```
+
+> [!EXAMPLE]+ **Example - Pass By Reference** ^[https://www.codecademy.com/learn/learn-c-plus-plus/modules/learn-cpp-references-and-pointers/cheatsheet]
+> Passing by reference allows us to pass just the address, thus avoiding creating a copy in the heap.
+> 
+> ```cpp
+> 
+> void swap_num(int &i, int &j) {
+> 
+>   int temp = i;
+>   i = j;
+>   j = temp;
+> 
+> }
+> ```
+
 > [!EXAMPLE]- Example Code - Writing to EEPROM ^[https://learn.adafruit.com/memories-of-an-arduino/measuring-free-memory]
 > ```cpp
 > // ************************************************

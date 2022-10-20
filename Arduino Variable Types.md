@@ -1,7 +1,7 @@
 parent:: [Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 previous::
 next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
-see-also:: [Memory](Memory.md)
+see-also:: [Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
 
 ### Fundamental
 

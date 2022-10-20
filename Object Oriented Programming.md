@@ -1,8 +1,8 @@
 parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 
 [Example - A Basic OOP Class for Multitasking](Example%20-%20A%20Basic%20OOP%20Class%20for%20Multitasking.md)
-
 [[Example - Even Better OOP - Header Files]]
+[Example - Professional Grade OOP - Inheritance and Composition](Example%20-%20Professional%20Grade%20OOP%20-%20Inheritance%20and%20Composition.md)
 
 ## General Theory
 

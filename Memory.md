@@ -1,5 +1,5 @@
 parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
-see-also::[Arduino Variable Types](Arduino%20Variable%20Types.md), [Serial Communication](Serial%20Communication.md), [Arduino Serial Buffers](Arduino%20Serial%20Buffers.md), [Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
+resource::[Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
 
 > If not mentioned, we are talking about AVR and Harvard Based memory structures, keep in mind that memory allocation differs in both architectures
 
@@ -10,15 +10,16 @@ see-also::[Arduino Variable Types](Arduino%20Variable%20Types.md), [Serial Commu
 ## Types of Memory
 
 3 types:
-- Flash: non-volatile _program_ memory
-- SRAM: reserved space for global and static variables (volatile)
-- EEPROM: more non-volatile memory
+- Flash: non-volatile _program_ memory, manage at the block level
+- SRAM: reserved space for global and static variables (volatile) - see more at [Read Access Memory (RAM)](Read%20Access%20Memory%20(RAM).md)
+- EEPROM: more non-volatile memory, managed at the byte level
 
 Flash (non-volatile)
 - stores program and initializes data (used when uploading a program to the board)
 - can't modify data in flash memory from executing your code
 - to modify the data it must first be copied into SRAM
 - finite lifetime 100,000 write cycles
+- can only be modified at the block level (vs. EEPROM which can be managed at the byte level)
 
 SRAM, Static Random Access Memory (volatile)
 - is dynamic, changes as we enter and exit function calls (use the `freeMemory()` function as a way to see the change as the program runs)
