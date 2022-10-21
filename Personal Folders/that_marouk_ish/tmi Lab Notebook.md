@@ -1,5 +1,18 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
+## [2022-10-21](2022-10-21)
+- every action must have timing
+
+### [2022-10-20](2022-10-20)
+- tried to refactor the code towards OOP, and although I understand the concept, it is actually hard to implement since we need to have timers for everything
+- for example. even just accessing a state (the button state) - with its helper function, that call itself is not debounced, 
+- how [Example - Professional Grade OOP - Inheritance and Composition](../../Example%20-%20Professional%20Grade%20OOP%20-%20Inheritance%20and%20Composition.md) handled it it seems is by throwing a "flag" on a button click
+	- HeadlampControlButton is a composition of the Headlamp and the Button
+	- it inherits from the Button class, in the `shortClick()` function it calls the `lamp.brightnessClick()` function
+	- the button loop is just constantly reading the button state, if it has a click (debounced), it calls its internal `shortClick()` function (extended by the HeadLampControlButton Class)
+	- the `brightnessClick()` function of the `Headlamp` (inherited) adds a click to the click queu and increments the brigtness
+	- it is the main `ClickQueue` class that has the `enum` state and a `loop()` including the `switch` case and checks for `pendingClicks` from `addAClick()` -- if 
+
 ### [2022-10-17](2022-10-17)
 - [tmi15 Multitasking-2](tmi15%20Multitasking-2.md)
 	- a lot of [LCDs](../../LCDs.md) research - a more complex peripheral than the others, due to pin out and whatnot - probably spent a lot more time documenting than I needed to

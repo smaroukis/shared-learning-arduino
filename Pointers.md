@@ -7,7 +7,10 @@ parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 
 `int &sonny = songqiao`
 - if the `&` operator is on the left side it creates a _reference variable_, which is an alias for another object
+- read as "`sonny` is an **integer reference** initialized to `songqiao`"
 - anything done to the reference also happens to the origianl (this is used in the Pass By Reference example)
+- for a previously created `sonny` object, now `songqiao` points to the same address, thus now `sonny` and `songquiao` are inexplicably linked - updating one will update the other
+- The main difference is that a pointer can be null, while a reference must point to a valid value.
 
 `int* ptr = &val`
 - if the `*` is on the left side, it creates a _pointer_
@@ -76,3 +79,6 @@ parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 >    }
 >    return value;
 > }
+
+More: 
+![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221021121626.png)
