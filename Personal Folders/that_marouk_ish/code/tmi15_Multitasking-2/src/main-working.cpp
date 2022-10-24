@@ -189,7 +189,7 @@ void loop() {
     // Testing Only
     button.loop();
 
-    if (button.isPressed()) {
+    if (button.getState()) {
         led.toggle();
         button.reset(); // set the button state back to unpressed since we have previously toggled the led
     }
