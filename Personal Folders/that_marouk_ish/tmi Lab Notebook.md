@@ -1,7 +1,14 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
+## [2022-10-24](2022-10-24)
+- added in a `Button::Reset()` function which helps us not loop through the led toggle state
+	- but if the debounce delay is short, it will still toggle it
+	- need to handle long pressses
+
 ## [2022-10-21](2022-10-21)
 - every action must have timing
+- still struggling with the timing in the OOP - my toggle LED is being hit too many times
+	- I only need edge detection on the button, when I have just general state detection
 
 ### [2022-10-20](2022-10-20)
 - tried to refactor the code towards OOP, and although I understand the concept, it is actually hard to implement since we need to have timers for everything

@@ -4,7 +4,7 @@
 #define DEFAULT_OFF_DELAY 50
 
 #define BUTTON_PIN 2
-#define BUTTON_DEBOUNCE_DELAY 50
+#define BUTTON_DEBOUNCE_DELAY 500 // set long for testing
 
 #define LED_PIN 4
 #define LED_MIN_ON_DELAY 500 
@@ -45,7 +45,8 @@ class Led
     // constructor
     public:
         HasSerial &mySerial; // reference object
-        boolean state;
+        byte state;
+        byte blinkState;
 
         Led(byte pin, long on, long off, HasSerial &serialAttach) : 
             _pin(pin),
@@ -58,6 +59,16 @@ class Led
             pinMode(_pin, OUTPUT);
             off();
             state = 0; // default
+            blinkState = 0; // default
+        }
+
+        void loop() {
+        // TODO - under development
+        // if we are in blink mode, run the blink command
+        if (blinkState) blink();
+
+        // if toggle...
+
         }
 
         void off() {
@@ -101,55 +112,65 @@ class Led
 class Button {
     HasSerial &mySerial;  // debugging
     // FUTURE - implement short and long button pressses
-    const byte PIN;
-    long tDelayDebounce; // better: add ms suffix
-    unsigned long tPrevious; 
-    byte lastReading;
+    const byte _pin;
+    long _tDebounce_ms; // better: add ms suffix
+    unsigned long _tPrevious_ms; 
+    byte _lastReading;
+    // HERE need was Pressed? 
 
     enum States {
         UNPRESSED = 0,
-        PRESSED = 1
-    } state;
+        SHORT_PRESS = 1,
+        LONG_PRESS = 2
+    } _state;
 
     public: 
         Button(byte pin, unsigned long delay_short, HasSerial &serialAttach) : 
-            PIN(pin),
-            tDelayDebounce(delay_short),
+            _pin(pin),
+            _tDebounce_ms(delay_short),
             mySerial(serialAttach) {
             }
 
         void setup() { 
-            pinMode(PIN, INPUT_PULLUP);
-            digitalWrite(PIN, HIGH);
-            state = UNPRESSED; 
-            lastReading = 0; // 0 == unpressed (non-inverted logic)
+            pinMode(_pin, INPUT_PULLUP);
+            digitalWrite(_pin, HIGH);
+            _state = UNPRESSED; 
+            _lastReading = 0; // 0 == unpressed (non-inverted logic)
         }
 
         void loop() {
-            byte newReading = !digitalRead(PIN); // invert logic for pullup 
+            byte newReading = !digitalRead(_pin); // invert logic for pullup 
+            // TODO here - to implement short and long button presses
 
-            if (newReading != lastReading) {
-                tPrevious = millis(); // start timer
-                lastReading = newReading; // lastReading persists
-                // state = DEBOUNCING; FUTURE use
+            if (newReading != _lastReading) {
+                _tPrevious_ms = millis(); // start timer
+                _lastReading = newReading; // lastReading persists
+                // _state = DEBOUNCING; FUTURE use
                 mySerial.sendln("Debouncing started..");
-            } else if (millis() - tPrevious >= tDelayDebounce) {
+            } else if (millis() - _tPrevious_ms >= _tDebounce_ms) {
                 // last reading must == new reading
                 if (newReading == 0) {
-                    state = UNPRESSED; 
+                    _state = UNPRESSED; 
                     mySerial.sendln("Updated Button to Unpressed..");
                     }
                 else if (newReading == 1) { 
-                    state = PRESSED; 
+                    _state = SHORT_PRESS;
                     mySerial.sendln("Updated Button to Pressed..");
                     }
-                tPrevious = millis(); // reset timer
-            }
+                _tPrevious_ms = millis(); // reset timer
+            } 
         }
 
-        boolean getState() {
-            return state;
+        void reset() {
+            // sets _state back to Unpressed so we can use button.isPressed(); only on an edge change
+            _state = UNPRESSED;
         }
+
+        byte getState() {
+            return _state;
+        }
+
+
 }; 
 
 HasSerial serialInstance(&Serial);
@@ -168,7 +189,8 @@ void loop() {
     // Testing Only
     button.loop();
 
-    if (button.getState() == 1) {
+    if (button.isPressed()) {
         led.toggle();
+        button.reset(); // set the button state back to unpressed since we have previously toggled the led
     }
 }

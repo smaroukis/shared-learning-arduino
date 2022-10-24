@@ -92,7 +92,7 @@ public:
 ```
 
 ## Resources
-- arduino forum example for a latching pushbutton, simple but powerful (goes over protected vs private, access functions, syntax ++) https://forum.arduino.cc/t/buttons-an-object-oriented-approach/279724/9 -> [Example - OOP for a Latching Pushbutton](Example%20-%20OOP%20for%20a%20Latching%20Pushbutton.md)
+- arduino forum example for a latching pushbutton, simple but powerful (goes over protected vs private, access functions, syntax ++) https://forum.arduino.cc/t/buttons-an-object-oriented-approach/279724/9 -> [Example - OOP for a Latching Button](Example%20-%20OOP%20for%20a%20Latching%20Button.md)
 - on extending classes in C++
 	- arduino example: https://forum.arduino.cc/t/class-inheritance-and-polyphormism/93778/3
 	- https://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm

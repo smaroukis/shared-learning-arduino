@@ -5,6 +5,28 @@ previous::[Example - A Basic OOP Class for Multitasking](Example%20-%20A%20Basic
 
 Note: Author comes from a C background so a heavy use of `uint8_t` instead of `byte`s, and `uint16_t` instead of `int`s is used here.
 
+**Latching Button Requirements**
+
+We have a `Button::wasPressed()` value that is set when the button **has been debounced and is pressed.**
+
+Note, to make a "latch" we have to have a way to reset the latch. This is through the `Button::reset()` function.
+
+#q  wont the `button1.wasPressed() -> digitalWrite()` code be executed for every loop - we don't really need to
+
+```cpp
+  if(button1.wasPressed()) {
+    digitalWrite(pinLed1, HIGH);
+    if(!startResetTime1) startResetTime1 = now;
+    if(now - startResetTime1 > resetTime1) {
+      startResetTime1 = 0;
+      digitalWrite(pinLed1, LOW);
+      button1.reset();
+    }
+  }
+```
+
+### Full Code
+
 ```cpp
 /*
     An object oriented approach to a latched button
