@@ -116,7 +116,7 @@ class Button {
     unsigned long _tLongPress_ms;
     unsigned long _tPrevious_ms; 
     byte _lastReading;
-    // HERE need was Pressed? 
+    byte wasChanged; 
 
     enum States {
         UNPRESSED = 0,
@@ -137,6 +137,7 @@ class Button {
             digitalWrite(_pin, HIGH);
             _state = UNPRESSED; 
             _lastReading = 0; // 0 == unpressed (non-inverted logic)
+_wasChanged = 0;
         }
 
         // void loop() {
@@ -190,6 +191,8 @@ class Button {
 
         void loopStateMachine() {
             byte newReading = !digitalRead(_pin); // invert logic for pullup 
+// if previous state was unpressed and new state is short press, throw flag
+int prevState = _state;
 
             switch (_state) {
                 case UNPRESSED:
@@ -201,6 +204,7 @@ class Button {
                     else if (newReading && (millis() - _tPrevious_ms > _tDebounce_ms)) {
                         _state = SHORT_PRESS;
                         mySerial.sendln("Changed state to Short Press...");
+// throw has changed flag here
                     } 
                     break;
                 case SHORT_PRESS:
@@ -219,6 +223,10 @@ class Button {
                     }
                     break;
             }
+
+if (prevState == 0 and _state == 1) _wasChanged = 1;
+else if (prevState == 1 and _state == 2) _wasChanged = 2;
+else _wasChanged = 0;
         }
 
         void reset() {
