@@ -4,8 +4,8 @@
 #define DEFAULT_OFF_DELAY 50
 
 #define BUTTON_PIN 2
-#define BUTTON_DEBOUNCE_DELAY 200 // set long for testing
-#define BUTTON_LONG 500 // set long for testing
+#define BUTTON_DEBOUNCE_DELAY 50 // set long for testing
+#define BUTTON_LONG 2000 // set long for testing
 
 #define LED_PIN 4
 #define LED_MIN_ON_DELAY 500 
@@ -80,7 +80,7 @@ class Led
             digitalWrite(_pin, HIGH);
         }
 
-        void toggle() {
+        void togglePower() {
             state = !state;
             digitalWrite(_pin, state);
             mySerial.sendln("Toggled LED ");
@@ -109,22 +109,26 @@ class Led
 }; // don't forget semicolo/
 
 class Button {
+    // an Input_Pullup button with short and long button press detection
+    // detect changes using _wasChanged (short == 1, long == 2)
+    // get state with _state 
+    // recommended times: short = 30
     HasSerial &mySerial;  // debugging
-    // FUTURE - implement short and long button pressses
     const byte _pin;
     long _tDebounce_ms; // better: add ms suffix
     unsigned long _tLongPress_ms;
     unsigned long _tPrevious_ms; 
     byte _lastReading;
-    // HERE need was Pressed? 
 
+    public: 
     enum States {
         UNPRESSED = 0,
         SHORT_PRESS = 1,
         LONG_PRESS = 2
     } _state;
 
-    public: 
+        byte _wasChanged; // going against common OOP practicies which uses accessor functions 
+
         Button(byte pin, unsigned long delay_short, unsigned long delay_long, HasSerial &serialAttach) : 
             _pin(pin),
             _tDebounce_ms(delay_short),
@@ -137,59 +141,12 @@ class Button {
             digitalWrite(_pin, HIGH);
             _state = UNPRESSED; 
             _lastReading = 0; // 0 == unpressed (non-inverted logic)
-        }
-
-        // void loop() {
-        //     byte newReading = !digitalRead(_pin); // invert logic for pullup 
-        //     // TODO here - to implement short and long button presses
-
-        //     if (newReading != _lastReading) {
-        //         _tPrevious_ms = millis(); // start timer
-        //         _lastReading = newReading; // lastReading persists
-        //         // _state = DEBOUNCING; FUTURE use
-        //         mySerial.sendln("Debouncing started..");
-        //     } else if (millis() - _tPrevious_ms >= _tDebounce_ms) {
-        //         // last reading must == new reading
-        //         if (newReading == 0) {
-        //             _state = UNPRESSED; 
-        //             mySerial.sendln("Updated Button to Unpressed..");
-        //             }
-        //         else if (newReading == 1) { 
-        //             _state = SHORT_PRESS;
-        //             mySerial.sendln("Updated Button to Pressed..");
-        //             }
-        //         _tPrevious_ms = millis(); // reset timer
-        //     } 
-        // }
-
-        void loopWithLongPress() {
-            // this still does not work because when we reset we start over again
-            // potentially more efficient would be to use a case/switch statement
-            byte newReading = !digitalRead(_pin); // invert logic for pullup 
-
-            if (newReading != _lastReading) {
-                // start debounce
-                _tPrevious_ms = millis(); // start timer
-                _lastReading = newReading; // lastReading persists
-            } 
-            else if (millis() - _tPrevious_ms < _tDebounce_ms) {
-                    //  do nothing, debouncing
-                    mySerial.sendln("Debouncing..");
-            } 
-            else if (newReading && (millis() - _tPrevious_ms < _tLongPress_ms)) {
-                    _state == SHORT_PRESS; 
-                    mySerial.sendln("Short Press..");
-            } 
-            else if (newReading && (millis() - _tPrevious_ms >= _tLongPress_ms)) {
-                _state = LONG_PRESS;
-                mySerial.sendln("Long Press..");
-            } else {
-                _state == UNPRESSED; 
-            }
+            _wasChanged = 0;
         }
 
         void loopStateMachine() {
             byte newReading = !digitalRead(_pin); // invert logic for pullup 
+            int prevState = _state; // for edge change detection
 
             switch (_state) {
                 case UNPRESSED:
@@ -219,15 +176,10 @@ class Button {
                     }
                     break;
             }
-        }
 
-        void reset() {
-            // sets _state back to Unpressed so we can use button.isPressed(); only on an edge change
-            _state = UNPRESSED;
-        }
-
-        byte getState() {
-            return _state;
+            if (prevState == 0 and _state == 1) _wasChanged = 1;
+            else if (prevState == 1 and _state == 2) _wasChanged = 2;
+            else _wasChanged = 0;
         }
 }; 
 
@@ -247,8 +199,7 @@ void loop() {
     // Testing Only
     button.loopStateMachine();
 
-    if (button.getState() > 0) {
-        led.toggle();
-        button.reset(); // set the button state back to unpressed since we have previously toggled the led
+    if (button._wasChanged == 1) {
+        led.togglePower();
     }
 }
