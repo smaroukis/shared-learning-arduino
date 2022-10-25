@@ -158,7 +158,7 @@ class ClickQueue: public Runnable {
         case NOT_CLICKING:
           if (pendingClicks > 0) {
             pendingClicks --;
-            digitalWrite(pin, HIGH);**
+            digitalWrite(pin, HIGH);
             clickStartMs = millis();
             state = CLICK_DOWN;
           }
