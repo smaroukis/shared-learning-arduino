@@ -5,6 +5,7 @@
 
 #define BUTTON_PIN 2
 #define BUTTON_DEBOUNCE_DELAY 200 // set long for testing
+#define BUTTON_LONG 500 // set long for testing
 
 #define LED_PIN 4
 #define LED_MIN_ON_DELAY 500 
@@ -124,9 +125,10 @@ class Button {
     } _state;
 
     public: 
-        Button(byte pin, unsigned long delay_short, HasSerial &serialAttach) : 
+        Button(byte pin, unsigned long delay_short, unsigned long delay_long, HasSerial &serialAttach) : 
             _pin(pin),
             _tDebounce_ms(delay_short),
+            _tLongPress_ms(delay_long),
             mySerial(serialAttach) {
             }
 
@@ -187,7 +189,36 @@ class Button {
         }
 
         void loopStateMachine() {
+            byte newReading = !digitalRead(_pin); // invert logic for pullup 
 
+            switch (_state) {
+                case UNPRESSED:
+                    if (newReading != _lastReading) {
+                        _tPrevious_ms = millis();
+                        _lastReading = newReading;
+                        mySerial.sendln("Debouncing...");
+                    }
+                    else if (newReading && (millis() - _tPrevious_ms > _tDebounce_ms)) {
+                        _state = SHORT_PRESS;
+                        mySerial.sendln("Changed state to Short Press...");
+                    } 
+                    break;
+                case SHORT_PRESS:
+                    mySerial.sendln("Short Press...");
+                    if (!newReading) {
+                        _state = UNPRESSED; // immmediately latch to unpressed
+                    } else if (millis() - _tPrevious_ms > _tLongPress_ms) {
+                        _state = LONG_PRESS; // increment state
+                        mySerial.sendln("Changed state to Long Press...");
+                    } 
+                    break;
+                case LONG_PRESS:
+                    mySerial.sendln("Long Press...");
+                    if (!newReading) {
+                        _state = UNPRESSED;  
+                    }
+                    break;
+            }
         }
 
         void reset() {
@@ -202,7 +233,7 @@ class Button {
 
 HasSerial serialInstance(&Serial);
 Led led(LED_PIN, LED_MIN_ON_DELAY, LED_MIN_OFF_DELAY, serialInstance);
-Button button(BUTTON_PIN, BUTTON_DEBOUNCE_DELAY, serialInstance);
+Button button(BUTTON_PIN, BUTTON_DEBOUNCE_DELAY, BUTTON_LONG, serialInstance);
 
 void setup() {
     led.setup();
@@ -214,9 +245,9 @@ void setup() {
 void loop() {
 
     // Testing Only
-    button.loopWithLongPress();
+    button.loopStateMachine();
 
-    if (button.getState()) {
+    if (button.getState() > 0) {
         led.toggle();
         button.reset(); // set the button state back to unpressed since we have previously toggled the led
     }
