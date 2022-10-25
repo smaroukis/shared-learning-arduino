@@ -4,7 +4,7 @@
 #define DEFAULT_OFF_DELAY 50
 
 #define BUTTON_PIN 2
-#define BUTTON_DEBOUNCE_DELAY 500 // set long for testing
+#define BUTTON_DEBOUNCE_DELAY 200 // set long for testing
 
 #define LED_PIN 4
 #define LED_MIN_ON_DELAY 500 
@@ -107,13 +107,12 @@ class Led
         }
 }; // don't forget semicolo/
 
-
-
 class Button {
     HasSerial &mySerial;  // debugging
     // FUTURE - implement short and long button pressses
     const byte _pin;
     long _tDebounce_ms; // better: add ms suffix
+    unsigned long _tLongPress_ms;
     unsigned long _tPrevious_ms; 
     byte _lastReading;
     // HERE need was Pressed? 
@@ -138,27 +137,57 @@ class Button {
             _lastReading = 0; // 0 == unpressed (non-inverted logic)
         }
 
-        void loop() {
+        // void loop() {
+        //     byte newReading = !digitalRead(_pin); // invert logic for pullup 
+        //     // TODO here - to implement short and long button presses
+
+        //     if (newReading != _lastReading) {
+        //         _tPrevious_ms = millis(); // start timer
+        //         _lastReading = newReading; // lastReading persists
+        //         // _state = DEBOUNCING; FUTURE use
+        //         mySerial.sendln("Debouncing started..");
+        //     } else if (millis() - _tPrevious_ms >= _tDebounce_ms) {
+        //         // last reading must == new reading
+        //         if (newReading == 0) {
+        //             _state = UNPRESSED; 
+        //             mySerial.sendln("Updated Button to Unpressed..");
+        //             }
+        //         else if (newReading == 1) { 
+        //             _state = SHORT_PRESS;
+        //             mySerial.sendln("Updated Button to Pressed..");
+        //             }
+        //         _tPrevious_ms = millis(); // reset timer
+        //     } 
+        // }
+
+        void loopWithLongPress() {
+            // this still does not work because when we reset we start over again
+            // potentially more efficient would be to use a case/switch statement
             byte newReading = !digitalRead(_pin); // invert logic for pullup 
-            // TODO here - to implement short and long button presses
 
             if (newReading != _lastReading) {
+                // start debounce
                 _tPrevious_ms = millis(); // start timer
                 _lastReading = newReading; // lastReading persists
-                // _state = DEBOUNCING; FUTURE use
-                mySerial.sendln("Debouncing started..");
-            } else if (millis() - _tPrevious_ms >= _tDebounce_ms) {
-                // last reading must == new reading
-                if (newReading == 0) {
-                    _state = UNPRESSED; 
-                    mySerial.sendln("Updated Button to Unpressed..");
-                    }
-                else if (newReading == 1) { 
-                    _state = SHORT_PRESS;
-                    mySerial.sendln("Updated Button to Pressed..");
-                    }
-                _tPrevious_ms = millis(); // reset timer
             } 
+            else if (millis() - _tPrevious_ms < _tDebounce_ms) {
+                    //  do nothing, debouncing
+                    mySerial.sendln("Debouncing..");
+            } 
+            else if (newReading && (millis() - _tPrevious_ms < _tLongPress_ms)) {
+                    _state == SHORT_PRESS; 
+                    mySerial.sendln("Short Press..");
+            } 
+            else if (newReading && (millis() - _tPrevious_ms >= _tLongPress_ms)) {
+                _state = LONG_PRESS;
+                mySerial.sendln("Long Press..");
+            } else {
+                _state == UNPRESSED; 
+            }
+        }
+
+        void loopStateMachine() {
+
         }
 
         void reset() {
@@ -169,8 +198,6 @@ class Button {
         byte getState() {
             return _state;
         }
-
-
 }; 
 
 HasSerial serialInstance(&Serial);
@@ -187,7 +214,7 @@ void setup() {
 void loop() {
 
     // Testing Only
-    button.loop();
+    button.loopWithLongPress();
 
     if (button.getState()) {
         led.toggle();
