@@ -1,15 +1,15 @@
 
 #include <Arduino.h>
 
-#define DEFAULT_OFF_DELAY 50
+const byte DEFAULT_OFF_DELAY=50;
 
-#define BUTTON_PIN 2
-#define BUTTON_DEBOUNCE_DELAY 50 // set long for testing
-#define BUTTON_LONG 2000 // set long for testing
+const byte BUTTON_PIN=2;
+const int BUTTON_DEBOUNCE_DELAY=500; //  aka short press
+const int BUTTON_LONG=9000; // set long for testing;
 
-#define LED_PIN 4
-#define LED_MIN_ON_DELAY 500 
-#define LED_MIN_OFF_DELAY 1000
+const byte LED_PIN=4;
+const int LED_MIN_ON_DELAY=500;
+const int LED_MIN_OFF_DELAY=1000;
 
 class HasSerial{
 // instantiate with eg HasSerial myinstance(&Serial);
@@ -110,9 +110,8 @@ class Led
 
 class Button {
     // an Input_Pullup button with short and long button press detection
-    // detect changes using _wasChanged (short == 1, long == 2)
+    // detect changes using _wasChanged (short or long change = 1; depress = -1)
     // get state with _state 
-    // recommended times: short = 30
     HasSerial &mySerial;  // debugging
     const byte _pin;
     long _tDebounce_ms; // better: add ms suffix
@@ -127,7 +126,7 @@ class Button {
         LONG_PRESS = 2
     } _state;
 
-        byte _wasChanged; // going against common OOP practicies which uses accessor functions 
+        int _wasChanged; // going against common OOP practicies which uses accessor functions 
 
         Button(byte pin, unsigned long delay_short, unsigned long delay_long, HasSerial &serialAttach) : 
             _pin(pin),
@@ -149,38 +148,36 @@ class Button {
             int prevState = _state; // for edge change detection
 
             switch (_state) {
-                case UNPRESSED:
+                case UNPRESSED: // 0
                     if (newReading != _lastReading) {
                         _tPrevious_ms = millis();
                         _lastReading = newReading;
-                        mySerial.sendln("Debouncing...");
+                        // mySerial.sendln("Debouncing...");
                     }
                     else if (newReading && (millis() - _tPrevious_ms > _tDebounce_ms)) {
                         _state = SHORT_PRESS;
-                        mySerial.sendln("Changed state to Short Press...");
                     } 
                     break;
-                case SHORT_PRESS:
-                    mySerial.sendln("Short Press...");
+                case SHORT_PRESS: // 1
                     if (!newReading) {
                         _state = UNPRESSED; // immmediately latch to unpressed
                     } else if (millis() - _tPrevious_ms > _tLongPress_ms) {
                         _state = LONG_PRESS; // increment state
-                        mySerial.sendln("Changed state to Long Press...");
                     } 
                     break;
-                case LONG_PRESS:
-                    mySerial.sendln("Long Press...");
+                case LONG_PRESS: // 2
                     if (!newReading) {
                         _state = UNPRESSED;  
                     }
                     break;
             }
 
-            if (prevState == 0 and _state == 1) _wasChanged = 1;
-            else if (prevState == 1 and _state == 2) _wasChanged = 2;
+            if (prevState != _state) {
+                if (_state > prevState) _wasChanged = 1;
+                else if (_state < prevState) _wasChanged = -1;
+            }
             else _wasChanged = 0;
-        }
+        } 
 }; 
 
 HasSerial serialInstance(&Serial);
@@ -199,7 +196,20 @@ void loop() {
     // Testing Only
     button.loopStateMachine();
 
-    if (button._wasChanged == 1) {
-        led.togglePower();
+    if (button._wasChanged > 0) {
+        if (button._state == 1) {
+            // short press
+            Serial.println("Short Press....");
+            led.togglePower();
+        }
+        if (button._state == 2) {
+            Serial.println("Long Press....");
+        }
     }
+
+    if (button._wasChanged < 0) Serial.println("Button unpressed");
+
+    // if long press change brightness - harder since we need another state to 
+    // indicate that we are changing the brightness over multiple loops until 
+    // the button is unpressed
 }

@@ -3,12 +3,16 @@ Summarized in [tmi Log](tmi%20Log.md)
 ## [2022-10-25](2022-10-25)
 - thought I had the  [button working](https://github.com/smaroukis/shared-learning-arduino/commit/ea4728b10641cae2ba942d364e46e915bb854f65), but there is still the issue of "callback acknowledgement" (?) or  state acknowledgement - that is, when we check that if `button.state` is pressed to take an action, say `led.toggle()`, that toggle action will be repeated over and over until we end up in a random led state of when we release the button and `button.state` is false
 - https://mypractic.com/lesson-7-classes-in-c-language-for-arduino-button-as-an-object/  -> [[Example - MyPractic OOP Button as an Object]] might be helpful as it introduces an **acknowledgement counter** and uses **inheritance** 
-- 
+	- :➡️ actually it was easier than this, I just needed to do _edge_ detection instead of _state_ detection (see `b7d43fc`)
+- next up is trying to add in the ability for a long press to change the brightness
+	- can we do this without editing too much of the `Led` class? 
+	- actually it might be easy since we can track the button `state` variable to check if it is in a `LongPress (==2)` state -- just do `while button._state == 2 { led.increaseBrightness()}`  `
 
 ## [2022-10-24](2022-10-24)
 - added in a `Button::Reset()` function which helps us not loop through the led toggle state
 	- but if the debounce delay is short, it will still toggle it
-	- need to handle long pressses
+	- need to handle long presses
+	- (later deleted this function)
 
 ## [2022-10-21](2022-10-21)
 - every action must have timing
