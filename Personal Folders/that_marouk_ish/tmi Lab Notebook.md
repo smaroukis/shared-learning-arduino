@@ -1,5 +1,54 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
+next up is to implement a long press = blinking controller code
+then is a long press = change brightness
+after that I think we have beaten this horse enough
+
+## [2022-10-27](2022-10-27)
+- Some issues with the current code
+	- for a very small debounce delay the toggle seems not to work (indeterminate state - sometimes turns off, sometimes does not)
+	- reset the timer on the release so it doesn't skip the debounce
+
+```cpp
+// in Button::loop() switch(_state)
+case SHORT_PRESS: // 1
+	if (!newReading) {
+		_state = UNPRESSED; // latch state to unpressed
+		_tPrevious_ms = millis(); // <-- HERE resetting timer helps with debouncing on release 
+	} else if (millis() - _tPrevious_ms > _tLongPress_ms) {
+		_state = LONG_PRESS;
+	} 
+	break;
+```
+
+## [2022-10-26](2022-10-26)
+- made the short / long button press easier to read, using a `_wasChanged` variable of +1  or -1, then forcing the controller to read the current state of the button to determine if it was long or short
+```cpp
+	// in Button::loopStateMachine()
+	if (prevState != _state) {
+		if (_state > prevState) _wasChanged = 1;
+		else if (_state < prevState) _wasChanged = -1;
+	}
+	else _wasChanged = 0;
+```
+
+then the controller code is 
+```cpp
+    button.loopStateMachine();
+
+    if (button._wasChanged > 0) {
+        if (button._state == 1) {
+            // short press
+            led.togglePower();
+        }
+        if (button._state == 2) {
+			//long press
+        }
+    }
+
+    if (button._wasChanged < 0) Serial.println("Button unpressed");
+```
+
 ## [2022-10-25](2022-10-25)
 - thought I had the  [button working](https://github.com/smaroukis/shared-learning-arduino/commit/ea4728b10641cae2ba942d364e46e915bb854f65), but there is still the issue of "callback acknowledgement" (?) or  state acknowledgement - that is, when we check that if `button.state` is pressed to take an action, say `led.toggle()`, that toggle action will be repeated over and over until we end up in a random led state of when we release the button and `button.state` is false
 - https://mypractic.com/lesson-7-classes-in-c-language-for-arduino-button-as-an-object/  -> [[Example - MyPractic OOP Button as an Object]] might be helpful as it introduces an **acknowledgement counter** and uses **inheritance** 

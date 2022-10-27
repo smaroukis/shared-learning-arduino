@@ -4,7 +4,7 @@
 const byte DEFAULT_OFF_DELAY=50;
 
 const byte BUTTON_PIN=2;
-const int BUTTON_DEBOUNCE_DELAY=500; //  aka short press
+const int BUTTON_DEBOUNCE_DELAY=50; //  aka short press
 const int BUTTON_LONG=9000; // set long for testing;
 
 const byte LED_PIN=4;
@@ -22,12 +22,10 @@ class HasSerial{
         HasSerial(HardwareSerial* serial){
             stream = serial;
         }
-
         void send(const char* mssg) {
             // mutable pointer to immutable strings
             stream -> print(mssg);
         }
-
         void sendln(const char* mssg) {
             stream -> println(mssg);
         }
@@ -46,8 +44,8 @@ class Led
     // constructor
     public:
         HasSerial &mySerial; // reference object
-        byte state;
-        byte blinkState;
+        byte _state;
+        byte _blinkState;
 
         Led(byte pin, long on, long off, HasSerial &serialAttach) : 
             _pin(pin),
@@ -59,17 +57,10 @@ class Led
         void setup() { 
             pinMode(_pin, OUTPUT);
             off();
-            state = 0; // default
-            blinkState = 0; // default
+            _state = 0; // default
+            _blinkState = 0; // default
         }
-
         void loop() {
-        // TODO - under development
-        // if we are in blink mode, run the blink command
-        if (blinkState) blink();
-
-        // if toggle...
-
         }
 
         void off() {
@@ -81,23 +72,25 @@ class Led
         }
 
         void togglePower() {
-            state = !state;
-            digitalWrite(_pin, state);
-            mySerial.sendln("Toggled LED ");
+            _state = !_state;
+            digitalWrite(_pin, _state);
+            mySerial.send("Toggled LED -> ");
+            if (_state) mySerial.sendln("ON");
+            else mySerial.sendln("OFF");
         }
 
         void blink() {
             unsigned long tNow_ms = millis();
                 // rising edge - ready to turn ON
-                if (state == 0 && (tNow_ms - _tPrevious_ms >= _tMinTimeOff_ms)) {
+                if (_state == 0 && (tNow_ms - _tPrevious_ms >= _tMinTimeOff_ms)) {
                     on();
-                    state = 1;
+                    _state = 1;
                     _tPrevious_ms = tNow_ms;
                 }
                 // falling edge - ready to turn Off
-                else if (state == 1 && (tNow_ms - _tPrevious_ms >= _tMinTimeOn_ms)) {
+                else if (_state == 1 && (tNow_ms - _tPrevious_ms >= _tMinTimeOn_ms)) {
                     off();
-                    state = 0;
+                    _state = 0;
                     _tPrevious_ms = tNow_ms;
             } 
         } 
@@ -110,7 +103,7 @@ class Led
 
 class Button {
     // an Input_Pullup button with short and long button press detection
-    // detect changes using _wasChanged (short or long change = 1; depress = -1)
+    // detect changes using _wasChanged (short or long change = 1; unpressed = -1)
     // get state with _state 
     HasSerial &mySerial;  // debugging
     const byte _pin;
@@ -120,11 +113,11 @@ class Button {
     byte _lastReading;
 
     public: 
-    enum States {
-        UNPRESSED = 0,
-        SHORT_PRESS = 1,
-        LONG_PRESS = 2
-    } _state;
+        enum States {
+            UNPRESSED = 0,
+            SHORT_PRESS = 1,
+            LONG_PRESS = 2
+        } _state;
 
         int _wasChanged; // going against common OOP practicies which uses accessor functions 
 
@@ -152,31 +145,44 @@ class Button {
                     if (newReading != _lastReading) {
                         _tPrevious_ms = millis();
                         _lastReading = newReading;
-                        // mySerial.sendln("Debouncing...");
-                    }
-                    else if (newReading && (millis() - _tPrevious_ms > _tDebounce_ms)) {
+                        mySerial.sendln("Debouncing...");
+                    } else if (newReading && (millis() - _tPrevious_ms > _tDebounce_ms)) {
                         _state = SHORT_PRESS;
+                        mySerial.sendln("Changed state to SHORT_PRESS...");
                     } 
                     break;
                 case SHORT_PRESS: // 1
                     if (!newReading) {
                         _state = UNPRESSED; // immmediately latch to unpressed
+                        _tPrevious_ms = millis(); // helps with debouncing on release 
+                        mySerial.sendln("Changed state to UNPRESSED...");
                     } else if (millis() - _tPrevious_ms > _tLongPress_ms) {
                         _state = LONG_PRESS; // increment state
+                        mySerial.sendln("Changed state to LONG PRESS...");
                     } 
                     break;
                 case LONG_PRESS: // 2
                     if (!newReading) {
                         _state = UNPRESSED;  
+                        _tPrevious_ms = millis(); // helps with debouncing on release 
+                        mySerial.sendln("Changed state to UNPRESSED...");
                     }
                     break;
             }
 
             if (prevState != _state) {
-                if (_state > prevState) _wasChanged = 1;
-                else if (_state < prevState) _wasChanged = -1;
+                if (_state > prevState) {
+                    _wasChanged = 1;
+                    mySerial.sendln("_wasChanged to 1...");
+                } 
+                else if (_state < prevState) {
+                    _wasChanged = -1;
+                    mySerial.sendln("_wasChanged to -1...");
+                }
             }
-            else _wasChanged = 0;
+            else {
+                _wasChanged = 0;
+            } 
         } 
 }; 
 
@@ -192,24 +198,23 @@ void setup() {
 }
 
 void loop() {
-
     // Testing Only
     button.loopStateMachine();
 
     if (button._wasChanged > 0) {
         if (button._state == 1) {
             // short press
-            Serial.println("Short Press....");
+            // Serial.println("Short Press....");
             led.togglePower();
         }
         if (button._state == 2) {
-            Serial.println("Long Press....");
+            // Serial.println("Long Press....");
         }
     }
 
-    if (button._wasChanged < 0) Serial.println("Button unpressed");
+    // if (button._wasChanged < 0) Serial.println("Button unpressed");
 
-    // if long press change brightness - harder since we need another state to 
-    // indicate that we are changing the brightness over multiple loops until 
-    // the button is unpressed
+    // HERE if long press start blinking
+
+    // NEXT if long press change brightness
 }
