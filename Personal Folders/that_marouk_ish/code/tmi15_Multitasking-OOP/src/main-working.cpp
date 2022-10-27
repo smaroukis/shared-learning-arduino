@@ -40,12 +40,15 @@ class Led
         long _tMinTimeOn_ms; // to check when turning 0
         long _tMinTimeOff_ms; // to check when turning 1s
         unsigned long _tPrevious_ms; 
+        int _delta; // for brightness
 
     // constructor
     public:
+        byte _brightness;
         HasSerial &mySerial; // reference object
         byte _state;
         byte _blinkState;
+        byte _brightnessScan;
 
         Led(byte pin, long on, long off, HasSerial &serialAttach) : 
             _pin(pin),
@@ -57,11 +60,15 @@ class Led
         void setup() { 
             pinMode(_pin, OUTPUT);
             off();
-            _state = 0; // default
             _blinkState = 0; // default
+            _brightness = 0;
+            _delta = 1;
         }
         void loop() {
-            if (_blinkState) blink();
+            _state = digitalRead(_pin);
+            if (_blinkState == 1) blink();
+
+            if (_brightnessScan == 1) sweepBrightness();
         }
 
         void off() {
@@ -73,8 +80,8 @@ class Led
         }
 
         void togglePower() {
-            _state = !_state;
-            digitalWrite(_pin, _state);
+            
+            digitalWrite(_pin, !_state);
             mySerial.send("Toggled LED -> ");
             if (_state) mySerial.sendln("ON");
             else mySerial.sendln("OFF");
@@ -85,13 +92,11 @@ class Led
                 // rising edge - ready to turn ON
                 if (_state == 0 && (tNow_ms - _tPrevious_ms >= _tMinTimeOff_ms)) {
                     on();
-                    _state = 1;
                     _tPrevious_ms = tNow_ms;
                 }
                 // falling edge - ready to turn Off
                 else if (_state == 1 && (tNow_ms - _tPrevious_ms >= _tMinTimeOn_ms)) {
                     off();
-                    _state = 0;
                     _tPrevious_ms = tNow_ms;
             } 
         } 
@@ -99,6 +104,15 @@ class Led
         void updateBlinkRate(int msOn, int msOff) {
             _tMinTimeOff_ms = msOff;
             _tMinTimeOn_ms = msOn;
+        }
+
+        void sweepBrightness() {
+            if (millis() - _tPrevious_ms >= 10) {
+                analogWrite(_pin, _brightness);
+                _brightness += _delta; // move down
+                _tPrevious_ms = millis();
+                if (_brightness == 255 || _brightness == 0) _delta = -_delta;
+            }
         }
 }; // don't forget semicolo/
 
@@ -204,16 +218,23 @@ void loop() {
     button.loopStateMachine();
 
     if (button._wasChanged > 0) {
-        if (button._state == 1) {
-            led.togglePower();
+        if (button._state == 3) {
+            led._blinkState = !led._blinkState;
+            led.off();
         }
-        if (button._state == 2) {
+        if (button._state == 1) {
             // start blinking
-            led._blinkState == 1;
-            Serial.println("Long Press - start blinking");
+            led.togglePower();
+            led._blinkState = 0;
         }
     }
 
+    if (button._state > 1) {
+        led._brightnessScan = 1;
+    }
+    else led._brightnessScan = 0;
+
+    Serial.println(led._brightness);
     // if (button._wasChanged < 0) Serial.println("Button unpressed");
 
     // HERE if long press start blinking
