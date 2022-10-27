@@ -79,7 +79,7 @@ then the controller code is
 	- it is the main `ClickQueue` class that has the `enum` state and a `loop()` including the `switch` case and checks for `pendingClicks` from `addAClick()` -- if 
 
 ### [2022-10-17](2022-10-17)
-- [tmi15 Multitasking-2](tmi15%20Multitasking-2.md)
+[tmi15 Multitasking-2](tmi15%20Multitasking-2.md)
 	- a lot of [LCDs](../../LCDs.md) research - a more complex peripheral than the others, due to pin out and whatnot - probably spent a lot more time documenting than I needed to
 	- got the non-OOP code working with the LCD 
 

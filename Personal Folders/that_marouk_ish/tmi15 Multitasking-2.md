@@ -1,20 +1,14 @@
 parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
 previous:: [tmi14 Multitasking-1](tmi14%20Multitasking-1.md)
-next::
-level:: #intermediate 
-garden-topic:: [Multitasking and non blocking delays](Multitasking%20and%20non%20blocking%20delays.md), [Object Oriented Programming](Object%20Oriented%20Programming.md)
-
->  (source)
+next:: [tmi 16 Object Oriented Programming](tmi%2016%20Object%20Oriented%20Programming.md)
+level:: #beginner 
+garden-topic::[LCDs](../../LCDs.md)
 
 Desired Goal:
-- 
-
-Concepts:
-- a lot of OOP
-- in the `setup()` make it clear the hardware dependencies (e.g. `pinMode()`, etc) - don't do this in the constructor class - 
+- Add an LCD to the previous project to display the position
 
 Physical Setup:
-
+- same as before, except see code for LCD screen setup (4bit mode) - [LCDs](../../LCDs.md)
 
 Code:
 - for the LCD screen if you write to the same position 100 and then 90, it will display 900 since it only "overwrites" instead of clearing 
@@ -28,19 +22,12 @@ void updateLcdPos() {
 }
 ```
 
-**[Object Oriented Programming](../../Object%20Oriented%20Programming.md)**
-
-[Example - A Basic OOP Class for Multitasking](../../Example%20-%20A%20Basic%20OOP%20Class%20for%20Multitasking.md) shows the basic concept.
-
-But since our peripherals are all a bit different we may need to extend some classes.
-The LCD could have a class, but it is called directly in other functions (like when the servo state is changed), which already take care of the timing, although it also does have its own timing delay to update the screen at a specific rate.
-
 
 Without OOP
 ``` c
 // Continued from Multitasking-1
 // Here we add in an LCD screen
-// and start to use OOP
+
 
 #include <Arduino.h>
 #include <Servo.h>
