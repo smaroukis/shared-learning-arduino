@@ -1,8 +1,7 @@
 {
 	"folders": [
 		{
-			"name": "tmi15_Multitasking-2",
-			"path": "../../tmi15_Multitasking-2"
+			"path": "../.."
 		}
 	],
 	"settings": {}
