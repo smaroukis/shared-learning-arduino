@@ -5,7 +5,7 @@ const byte DEFAULT_OFF_DELAY=50;
 
 const byte BUTTON_PIN=2;
 const int BUTTON_DEBOUNCE_DELAY=50; //  aka short press
-const int BUTTON_LONG=9000; // set long for testing;
+const int BUTTON_LONG=3000; // set long for testing;
 
 const byte LED_PIN=4;
 const int LED_MIN_ON_DELAY=500;
@@ -61,6 +61,7 @@ class Led
             _blinkState = 0; // default
         }
         void loop() {
+            if (_blinkState) blink();
         }
 
         void off() {
@@ -199,16 +200,17 @@ void setup() {
 
 void loop() {
     // Testing Only
+    led.loop();
     button.loopStateMachine();
 
     if (button._wasChanged > 0) {
         if (button._state == 1) {
-            // short press
-            // Serial.println("Short Press....");
             led.togglePower();
         }
         if (button._state == 2) {
-            // Serial.println("Long Press....");
+            // start blinking
+            led._blinkState == 1;
+            Serial.println("Long Press - start blinking");
         }
     }
 

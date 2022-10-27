@@ -1,6 +1,6 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
-next up is to implement a long press = blinking controller code
+- [x] next up is to implement a long press = blinking controller code
 then is a long press = change brightness
 after that I think we have beaten this horse enough
 
