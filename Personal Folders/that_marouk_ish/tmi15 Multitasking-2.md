@@ -1,14 +1,14 @@
-parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
-previous:: [tmi14 Multitasking-1](tmi14%20Multitasking-1.md)
-next:: [tmi 16 Object Oriented Programming](tmi%2016%20Object%20Oriented%20Programming.md)
+parent::[[tmi Examples]]
+previous:: [[tmi14 Multitasking-1]]
+next:: [[tmi 16 Object Oriented Programming]]
 level:: #beginner 
-garden-topic::[LCDs](../../LCDs.md)
+garden-topic::[[../../LCDs]]
 
 Desired Goal:
 - Add an LCD to the previous project to display the position
 
 Physical Setup:
-- same as before, except see code for LCD screen setup (4bit mode) - [LCDs](../../LCDs.md)
+- same as before, except see code for LCD screen setup (4bit mode) - [[../../LCDs]]
 
 Code:
 - for the LCD screen if you write to the same position 100 and then 90, it will display 900 since it only "overwrites" instead of clearing 

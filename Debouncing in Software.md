@@ -1,8 +1,8 @@
-parent::[Debouncing](Debouncing.md)
+parent::[[Debouncing]]
 
 To debounce a button, we add a 10-50ms delay between reading/comparing a new value and performing an action (e.g. turning an LED on). 
 
-From [banziGettingStartedArduino](Personal%20Folders/that_marouk_ish/banziGettingStartedArduino.md), debouncing can be as simple as comparing the read value with the previous value and waiting 10ms before writing it e.g. 
+From [[Personal Folders/that_marouk_ish/banziGettingStartedArduino]], debouncing can be as simple as comparing the read value with the previous value and waiting 10ms before writing it e.g. 
 
 ```
 if ((val == HIGH)) && (old_val ==LOW)){

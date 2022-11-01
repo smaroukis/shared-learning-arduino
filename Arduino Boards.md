@@ -1,6 +1,6 @@
-parent::[Arduino](Arduino.md)
+parent::[[Arduino]]
 
 ## Boards
-[Uno](Uno)
-[Mega2560](Mega2560.md)
-[Leonardo](Leonardo.md)
+[[Uno]]
+[[Mega2560]]
+[[Leonardo]]

@@ -1,4 +1,4 @@
-parent::[C - Programming](C%20-%20Programming), [Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+parent::[[C - Programming]], [[Arduino Software Concepts]]
 
 Preprocessing directive keywords are preceded by `#`, common ones are:
 - `#include`

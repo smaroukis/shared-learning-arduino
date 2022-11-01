@@ -1,5 +1,5 @@
-parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
-resource::[Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
+parent::[[Arduino Software Concepts]]
+resource::[[Arduino Memory Specifics]]
 
 > If not mentioned, we are talking about AVR and Harvard Based memory structures, keep in mind that memory allocation differs in both architectures
 
@@ -11,7 +11,7 @@ resource::[Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
 
 3 types:
 - Flash: non-volatile _program_ memory, manage at the block level
-- SRAM: reserved space for global and static variables (volatile) - see more at [Read Access Memory (RAM)](Read%20Access%20Memory%20(RAM).md)
+- SRAM: reserved space for global and static variables (volatile) - see more at [[RAM)](Read Access Memory (RAM|Read Access Memory (RAM)]].md)
 - EEPROM: more non-volatile memory, managed at the byte level
 
 Flash (non-volatile)
@@ -29,11 +29,11 @@ SRAM, Static Random Access Memory (volatile)
 - **Stack**: for local variables, interrupts and function calls, grows "down" from the top of the memory down toward the heap; each interrupt, function call, and local variable causes the stack to grow; space is reclaimed when functions return
 
 > [!NOTE]- SRAM: Memory Diagram
-> ![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221019124618.png) ^[https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram]
+> ![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221019124618.png]] ^[https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram]
 
 EEPROM (non-volatile)
 - like Flash it is non-volatile
-- but it can be read and written from the executing program  :➡️knowledge of [Pointers](Pointers.md) is vital
+- but it can be read and written from the executing program  :➡️knowledge of [[Pointers]] is vital
 - have to read byte-by-byte
 - slower than SRAM
 - finite lifetime around 100k _write_ cycles
@@ -42,11 +42,11 @@ From the table below we can see the Uno has only a measly 2kB of SRAM for the st
 
 > [!NOTE]- Arduino Memory Amounts
 > 
-> ![Table - Arduino Memory Amounts](Table%20-%20Arduino%20Memory%20Amounts)
+> ![[Table - Arduino Memory Amounts]]
 
 
 **Further**
-- note that although the HEAP is dynamic, de-allocating space of previously used variables **does not necessarily cause the heap to shrink**, since if there is other dynamic data above it in the heap, the top of the heap will not move - leading to a [fragmented heap](fragmented%20heap.md). 
+- note that although the HEAP is dynamic, de-allocating space of previously used variables **does not necessarily cause the heap to shrink**, since if there is other dynamic data above it in the heap, the top of the heap will not move - leading to a [[fragmented heap]]. 
 
 
 **References**

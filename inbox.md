@@ -1,4 +1,4 @@
-blink without led https://docs.arduino.cc/built-in-examples/digital/BlinkWithoutDelay -> [Multitasking and non blocking delays](Multitasking%20and%20non%20blocking%20delays.md)
+blink without led https://docs.arduino.cc/built-in-examples/digital/BlinkWithoutDelay -> [[Multitasking and non blocking delays]]
 
 a way to calibrate sensors - https://docs.arduino.cc/built-in-examples/analog/Calibration
 

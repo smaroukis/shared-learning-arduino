@@ -1,5 +1,5 @@
-parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
-previous::[Multitasking and non blocking delays](Multitasking%20and%20non%20blocking%20delays.md)
+parent::[[Arduino Software Concepts]]
+previous::[[Multitasking and non blocking delays]]
 level:: #intermediate 
 
 ### Interrupts

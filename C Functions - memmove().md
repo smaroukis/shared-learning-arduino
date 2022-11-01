@@ -1,4 +1,4 @@
-parent::[C Functions](C%20Functions.md)
+parent::[[C Functions]]
 
 Description:
 - Copies **n** characters from **str2** to **str1**, but for overlapping memory blocks, memmove() is a safer approach than memcpy().

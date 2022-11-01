@@ -1,4 +1,4 @@
-parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+parent::[[Arduino Software Concepts]]
 
 `&porcupine_count`
  - `&` is the "address of operator"
@@ -81,4 +81,4 @@ parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 > }
 
 More: 
-![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221021121626.png)
+![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221021121626.png]]

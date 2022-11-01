@@ -1,6 +1,6 @@
-parent::[tmi Examples](tmi%20Examples.md)
+parent::[[tmi Examples]]
 previous::
-next:: [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md)
+next:: [[tmi03 Digital Inputs Debounce w Millis]]
 level:: #beginner
 
 >  from Elegoo Lesson 5 Digital Inputs
@@ -13,10 +13,10 @@ Concepts:
 - pullup resistors and inverted logic
 
 Physical Setup:
-![](attachments/IMG_7160.jpg)
+![[attachments/IMG_7160.jpg]]
 
 Code:
-See [tmi02_Digital-Inputs](tmi02_Digital-Inputs/tmi02_Digital-Inputs.ino)
+See [[code/tmi02_Digital-Inputs/tmi02_Digital-Inputs.ino]]
 
 ``` c
 int LED = 9;

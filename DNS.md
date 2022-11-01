@@ -1,4 +1,4 @@
-parent::[Computer Networks](Computer%20Networks)
+parent::[[Computer Networks]]
 
 DNS simply resolves a human-readable url into the machine-readable IP address.
 

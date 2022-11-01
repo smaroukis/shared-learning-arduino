@@ -1,4 +1,4 @@
-parent::[Meta - Main Page](Meta%20-%20Main%20Page.md)
+parent::[[Meta - Main Page]]
 
 **Check Tags**:
 - #tdf 

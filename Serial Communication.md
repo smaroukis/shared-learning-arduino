@@ -1,6 +1,6 @@
 parent::[[Arduino]]
 
-The [Uno](Uno.md) _always_ resets using the serial monitor, but that is not the case for all Arduinos (the Uno only has the one serial port)
+The [[Uno]] _always_ resets using the serial monitor, but that is not the case for all Arduinos (the Uno only has the one serial port)
 
 Data can arrive at the serial port faster than your program can process it, so it is kept in a buffer.
 
@@ -8,7 +8,7 @@ The [[Mega2560]] has more Seial Ports than the. [[Uno]]
 
  > Watch out for voltage levels differing by protocol. 
 
-#tdf [I2C](I2C) vs [UART](UART.md) vs [SPI](SPI)
+#tdf [[I2C]] vs [[UART]] vs [[SPI]]
 - UART is the most simple (?) and well documented, used for communicating PCs 
 - I2C and SPI are more for connecting a bunch of peripherals
 	- SPI may be more common for beginners (?)

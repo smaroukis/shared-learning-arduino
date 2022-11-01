@@ -1,4 +1,4 @@
-parent:: [_Start Here](_Start%20Here.md)
+parent:: [[_Start Here]]
 
 **In Use**
 - Natural Language Dates (useful for Logs)

@@ -1,6 +1,6 @@
-parent::[Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
-previous::[Arduino Case Statements](Arduino%20Case%20Statements.md)
-next::[Arduino Functions](Arduino%20Functions.md)
+parent::[[Intro to Arduino - Software]]
+previous::[[Arduino Case Statements]]
+next::[[Arduino Functions]]
 
 **Boolean Operators**
 - `&&`

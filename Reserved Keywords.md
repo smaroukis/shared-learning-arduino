@@ -1,3 +1,3 @@
-parent:: [Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+parent:: [[Arduino Software Concepts]]
 
 https://en.cppreference.com/w/cpp/keyword

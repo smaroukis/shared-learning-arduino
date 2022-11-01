@@ -1,1 +1,1 @@
-parent::[Computer Engineering](Computer%20Engineering)
+parent::[[Computer Engineering]]

@@ -1,6 +1,6 @@
-parent::[tmi Examples](tmi%20Examples.md)
-previous:: [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md)
-next:: [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
+parent::[[tmi Examples]]
+previous:: [[tmi03 Digital Inputs Debounce w Millis]]
+next:: [[tmi05 Pushbutton LED Fade]]
 level:: #beginner
 
 >  Elegoo Ultimate Starter Kit Project 4
@@ -9,11 +9,11 @@ Desired Goal:
 - By using three different PWM outputs, one for each LED color, we can make almost any color by varying the intensity of each channel (the colors are "combined" by being close in space to each other)
 
 Concepts:
-- [RGB LEDs](../../../RGB%20LEDs.md) - forward drop of each color is different; by mixing colors with PWM we can make any color
-- [Arduino - PWM](../../../Arduino%20-%20PWM.md)
+- [[../../RGB LEDs]] - forward drop of each color is different; by mixing colors with PWM we can make any color
+- [[../../Arduino - PWM]]
 
 Physical Setup:
-![img04-RGB-led](attachments/img04-RGB-led.JPG)
+![[attachments/img04-RGB-led.JPG]]
 
 
 Code:

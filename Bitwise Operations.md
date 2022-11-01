@@ -1,4 +1,4 @@
-parent::[Embedded Software](Embedded%20Software.md)
+parent::[[Embedded Software]]
 
 #tdf
 

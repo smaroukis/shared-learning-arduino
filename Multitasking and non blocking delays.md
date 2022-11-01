@@ -1,5 +1,5 @@
-parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
-next:: [Interrupts and Timers](Interrupts%20and%20Timers.md)
+parent::[[Arduino Software Concepts]]
+next:: [[Interrupts and Timers]]
 level:: #beginner 
 #draft 
 
@@ -7,7 +7,7 @@ The basic theory is that we want to get the `loop()` flywheel running as fast as
 
 This can involve ideas like "state machines",  task managers, and Timers. But the basic thing will be incrementing counters and raising flags to tell the microprocessor if, in each time through `loop()`, it should chip away at a task or check a state machine's value. 
 
-![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221014223111.png)
+![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221014223111.png]]
 [source](https://forum.arduino.cc/t/a-demo-code-explaining-the-switch-case-state-machine-and-how-to-do-things-almost-in-parallel/888172/2)]
 
 
@@ -54,8 +54,8 @@ This can involve ideas like "state machines",  task managers, and Timers. But th
 			- flow is 1) do a task 2) check the condition 3) handle any errors 4) increment state machine counter to do the next task
 			- uses timers within these functions to make sure it doesn't hang up
 			- the function that calls the `addingIngredient()` , the "caller", should acknowledge that the task has been done and reset the state
-		- [software control structures](software%20control%20structures.md) -> use the correct boolean operator so that the ingredients are not added  _sequentially_ but evaluated concurrently
-			- ![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221013232938.png)
+		- [[software control structures]] -> use the correct boolean operator so that the ingredients are not added  _sequentially_ but evaluated concurrently
+			- ![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221013232938.png]]
 	- summary
 		- each time we encounter a waiting condition, we create a state for the machine
 		- the machine waits for the waiting condition to clear; a state machine returning true means that the task is not finished

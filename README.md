@@ -2,7 +2,7 @@
 
 This is a shared knowledge project to promote learning about Arduino for beginners, by beginners. It is a collection of interlinked Markdown files. At the root level are Topics, you can contribute any learnings to any of these. You can create a Personal folder and page to track and log your progress.
 
-See [_Start Here](_Start%20Here.md) to get started.
+See [[_Start Here]] to get started.
 
 Also you can post your beginner log on Reddit here: 
 

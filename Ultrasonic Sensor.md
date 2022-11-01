@@ -1,4 +1,4 @@
-parent::[Arduino Sensors](Arduino%20Sensors.md), [Electronic Components](Electronic%20Components.md)
+parent::[[Arduino Sensors.md|Arduino Sensors]], [[Electronic Components]]
 
 The speed of sound in air at 20C is 343 m/s or 0.0343 cm/us.
 

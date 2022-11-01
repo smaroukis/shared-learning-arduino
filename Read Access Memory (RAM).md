@@ -1,4 +1,4 @@
-parent::[Memory](Memory.md)
+parent::[[Memory]]
 
 SRAM, static RAM
 - usually on-chip

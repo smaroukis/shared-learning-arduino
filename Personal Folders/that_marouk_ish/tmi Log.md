@@ -1,10 +1,10 @@
 > Reverse chronological log of my learnings on Arduino
-More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
+More Raw in [[tmi Lab Notebook]]
 
-[2022-11-01](2022-11-01)
-- Cleaning up vault for publishing  in [Meta - Main Page](../../Meta%20-%20Main%20Page.md)
+[[2022-11-01]]
+- Cleaning up vault for publishing  in [[../../Meta - Main Page]]
 
-[2022-10-28](2022-10-28)
+[[2022-10-28]]
 Days 12 - 21 - Object Oriented refactor and Final Thoughts
 
 **Final Thoughts**
@@ -225,7 +225,7 @@ Resources
 - https://www.baldengineer.com/arduino-keyboard-matrix-tutorial.html - provides good example of the theory
 - Use `Keypad` [Library](https://www.arduino.cc/reference/en/libraries/keypad/) to implement the code more easilly
 
-[2022-10-07](2022-10-07)
+[[2022-10-07]]
 **Day 5 - Active vs Passive Buzzers, Servos (+Questions)**
 
 **Mini Project 07 - Buzzers**  ([github](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/tmi08%20Micro%20Servo.md))
@@ -290,7 +290,7 @@ References - Servo
 Outstanding Questions
 - why doesn't the buzzer need a current limiting resistor like a LED or speaker? Mine is 16 Ohms
 
-[2022-10-06](2022-10-06)
+[[2022-10-06]]
 Day 4 - LDR and `millis()` Debouncing, Using the Serial Monitor
 
 Code Snippets
@@ -318,7 +318,7 @@ Readings
 - https://forum.arduino.cc/t/long-press-toggle-output-high-and-low/587500/3 - more on debouncing and Blink Without Delay
 
 
-[2022-10-05](2022-10-05) 
+[[2022-10-05]] 
 Day 3 - Fading LED, Pushbutton Orientation
 
 Today I spent a lot of time debugging both some code errors and wiring errors. I kept forgetting the orientation of the pushbutton contacts - even looking at the schematics of the internals. But then I realized the orientation in the photo is the same as a breadboard if it spans the rails, so you don't need to look at the back to determine which contacts are connected...whew. 
@@ -338,7 +338,7 @@ The project was to fade/cycle through various colors using an RGB LED controlled
 The RGB LED is three separate LEDs with a common node, and we can make "any" light color by varying the intensities of each channel - the LEDs are close enough in space that we see the combination as a singular color. The intensity of each channel is varied by PWM.  
 
 I learned why I have a ton more of 220Ohm resistors in my kit than the others:  
-Limiting the load on a pin to 20mA: assuming worst case (lowest forward voltage) of 1.8V across an LED when on, with a 5V input leaves 3.2V across a resistor. The 220Ohm resistor limits this to I=3.3V/220=15mA.  ➡️ [Resistor Calculation for LEDs](../../Resistor%20Calculation%20for%20LEDs.md)
+Limiting the load on a pin to 20mA: assuming worst case (lowest forward voltage) of 1.8V across an LED when on, with a 5V input leaves 3.2V across a resistor. The 220Ohm resistor limits this to I=3.3V/220=15mA.  ➡️ [[../../Resistor Calculation for LEDs]]
 
 But then I thought I could just use one resistor on the cathode instead of three separate resistors on the anodes. I quickly learned that due to the difference in forward voltage for the different colors, this wouldn't work. Basically, the red LED will turn on before the others. Also, the total current will change based on how intense each channel shines, so the light will change intensity based on the color, which we don't want
 
@@ -354,13 +354,13 @@ RGB LEDs Going further #tdf-project
 -   Avoid light intensity changing based on the color
 -   Add more colors
 -   Set the color by a potentiometer
-- Better code (see [example](https://os.mbed.com/users/4180_1/notebook/rgb-leds/#:~:text=The%20three%20LEDs%20inside%20a,may%20drop%20around%203%20volts.))
+- Better code (see [[https://os.mbed.com/users/4180_1/notebook/rgb-leds/#:~:text=The three LEDs inside a,may drop around 3 volts.]])
 
 
-[2022-10-03](2022-10-03)
+[[2022-10-03]]
 Nothing today except some reading about `millis()` vs `delay()` - basically just get comfortable with `millis()` since it allows you to do multiple things at (perceivable) the same time (see Notepad)
 
-[2022-10-02](2022-10-02) - Day 1 - Unboxing  - a Mega?? and Blink
+[[2022-10-02]] - Day 1 - Unboxing  - a Mega?? and Blink
 
 I thought I had ordered an (unofficial) Uno starter kit but when I opened it I found a Mega inside. Honestly I wanted an Uno, since I'm sure many tutorials are built off that, and if I want to use an Uno later I'll have to check and change the pin numbers in the code. 
 
@@ -370,6 +370,6 @@ Well, then, after that rabbit hole I did follow the instructions to get it to bl
 
 
 [[2022-10-01]]
-Started this Vault with [Arduino](Arduino.md). Learned that [Arduino - PWM](Arduino%20-%20PWM.md) outputs a square wave, specific values (steps) are determined by the ADC converter - [Uno](Uno.md) is 10 bit (so $2^{10}=1024$ steps). More advanced Arduinos have ADCs with higher resolution, but must use the `analogReadResolution()` function to set this. 
+Started this Vault with [[../../Arduino]]. Learned that [[../../Arduino - PWM]] outputs a square wave, specific values (steps) are determined by the ADC converter - [[../../Uno]] is 10 bit (so $2^{10}=1024$ steps). More advanced Arduinos have ADCs with higher resolution, but must use the `analogReadResolution()` function to set this. 
 
 Also learned that `analogRead()` and `analogWrite()` functions have different bounds ( 0 to 1023 and 0 to 255 respectively).

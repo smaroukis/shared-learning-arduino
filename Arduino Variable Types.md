@@ -1,7 +1,7 @@
-parent:: [Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+parent:: [[Arduino Software Concepts]]
 previous::
-next:: [Arduino Case Statements](Arduino%20Case%20Statements.md)
-see-also:: [Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
+next:: [[Arduino Case Statements]]
+see-also:: [[Arduino Memory Specifics]]
 
 ### Fundamental
 
@@ -18,7 +18,7 @@ see-also:: [Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
 `char`
 - a single character (i.e. one letter or number) - but for numbers between 0-255 use `byte` (see below)
 - occupies at least one byte of memory
-- encoded by the [ASCII chart](https://web.archive.org/web/20171028220458/https://www.arduino.cc/en/Reference/ASCIIchart) (note `A` starts at `65`) thus `'A' + 1` evaluates to `66` :➡️[Table - ASCII Values](Table%20-%20ASCII%20Values.md)
+- encoded by the [ASCII chart](https://web.archive.org/web/20171028220458/https://www.arduino.cc/en/Reference/ASCIIchart) (note `A` starts at `65`) thus `'A' + 1` evaluates to `66` :➡️[[Table - ASCII Values]]
 - chars are single quotes (vs double quotes for strings)
 
 `byte`
@@ -64,7 +64,7 @@ strings (C-formatted array of `char`s and Arduino `String`)
 - a string, in the C-programming sense, is just an array of ASCII `char`s plus the null character (integer value of `0` or as a char `\0`)
 - total size is $N_{characters} + 1$ :➡️ uses 1 byte for each character in the string **plus a null character** (1 byte) at the end
 	- e.g. `string array[4] = "ABC"` is the same as `string array[] = "ABC"`  note the size is `4`
-- (!) literal strings are repeat memory offenders - they take up space both in flash and SRAM ^[https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram], so watch out for using to0 many `Serial.println("Some text"); ` :➡️ [Memory](Memory.md)
+- (!) literal strings are repeat memory offenders - they take up space both in flash and SRAM ^[["Some text"); ` :➡️ [Memory](Memory.md|https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram]]
 
 ---
 
@@ -118,7 +118,7 @@ verbose #refactor
 - Integers: `int` and `long`
 	- by default variables are _signed_. 
 		- for _n-bits_ of storage there is $2^n$ values; this includes 0, and we take away one possible value from the positive side, so we are left with a $2^{n-1}$ signed values and a range of $\text{int} \in [-2^{n-1}, 2^{n-1} - 1]$ since we take away one on the positive side. 
-		- e.g. for 16 bits (the [word size](word%20size) of Arduino) it is $2^{16}=65,536$ values. For both positive and negative we have $32,768$ but since we want to include 0 as a positive number the range is $-32,768$ to $32,767$.
+		- e.g. for 16 bits (the [[word size]] of Arduino) it is $2^{16}=65,536$ values. For both positive and negative we have $32,768$ but since we want to include 0 as a positive number the range is $-32,768$ to $32,767$.
 	- `int`: from -16,384 to 16,383
 		- `unsigned int`: 0 to 32,768
 	- `long`: 
@@ -128,10 +128,10 @@ verbose #refactor
 
 [Integer Constants](https://www.arduino.cc/reference/en/language/variables/constants/integerconstants/) - `const int`
 - are usually type `int` (unsigned) but can be other variable types using specific formatting e.g. `const int 10000L` (constant long integer) or `const int 33u` (constant unsigned integer) or `const int 32767UL` (constant unsigned long integer)
-- [const int vs define macro](const%20int%20vs%20define%20macro.md)
+- [[const int vs define macro]]
 
 Table of various types:
-![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221005161457.png)
+![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221005161457.png]]
 
 - _U/L formatters (appends)_
 	- `u|U`: to force the constant into an **unsigned** data format. Example: `33u`

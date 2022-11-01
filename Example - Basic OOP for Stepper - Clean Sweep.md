@@ -1,6 +1,6 @@
-garden-topic::[Object Oriented Programming](Object%20Oriented%20Programming.md)
-previous::[Example - A Basic OOP Class for Multitasking](Example%20-%20A%20Basic%20OOP%20Class%20for%20Multitasking.md)
-next::[Example - Arduino Timer Interrupts](Example%20-%20Arduino%20Timer%20Interrupts.md)
+garden-topic::[[Object Oriented Programming]]
+previous::[[Example - A Basic OOP Class for Multitasking]]
+next::[[Example - Arduino Timer Interrupts]]
 #code
 
 > Source: https://learn.adafruit.com/multi-tasking-the-arduino-part-1/a-clean-sweep

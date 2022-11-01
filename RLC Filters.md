@@ -1,5 +1,5 @@
 topic:: #t/analog 
-parent:: [Analog Filters](Analog%20Filters.md)
+parent:: [[Analog Filters.md|Analog Filters]]
 
 #tdf images
 
@@ -16,4 +16,4 @@ Design Choices:
 - low R: low Q & more energy out
 
 Other Filters: 
-- [RC Filters](RC%20Filters.md)
+- [[RC Filters]]

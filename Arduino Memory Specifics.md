@@ -1,14 +1,14 @@
-parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
-garden-topic::[Memory](Memory.md)
-see-also::[Arduino Variable Types](Arduino%20Variable%20Types.md), [Arduino Serial Buffers](Arduino%20Serial%20Buffers.md)
+parent::[[Arduino Software Concepts]]
+garden-topic::[[Memory]]
+see-also::[[Arduino Variable Types]], [[Arduino Serial Buffers]]
 
-First read [Memory](Memory.md) which gives a brief overview of microcontroller memory organization. Then look for Arduino (AVR) specific memory tables and amounts on this page.
+First read [[Memory]] which gives a brief overview of microcontroller memory organization. Then look for Arduino (AVR) specific memory tables and amounts on this page.
 
 > [!example]- Table - Memory Amounts by Arduino Board 
 > 
-> ![Table - Arduino Memory Amounts](Table%20-%20Arduino%20Memory%20Amounts.md)
+> ![[Table - Arduino Memory Amounts]]
 
-![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221019125029.png)
+![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221019125029.png]]
 
 > [!example]+ Checking the size of an `int` vs a `byte`
 > We can see here that the `bytes` only take-up one byte, whereas the `ints` take up two, since all of the variables are next to each other in memory starting from `0xF6`

@@ -1,12 +1,12 @@
-previous::[tmi 16 Object Oriented Programming](tmi%2016%20Object%20Oriented%20Programming.md)
+previous::[[tmi 16 Object Oriented Programming]]
 next::
-garden-topic::[ESP32 and ESP8266](../../ESP32%20and%20ESP8266.md), 
+garden-topic::[[../../ESP32 and ESP8266]], 
 
-Ideation in [tmi 17 Ideation](tmi%2017%20Ideation.md)
+Ideation in [[tmi 17 Ideation]]
 
 > [!NOTE]- Project Diagram 
-> Edit in [📝 2022-10-13_Arduino_Project_Ideas.excalidraw 1](attachments/📝%202022-10-13_Arduino_Project_Ideas.excalidraw%201.md) 
-> ![](attachments/Pasted%20image%2020221029142825.png)
+> Edit in [[attachments/📝 2022-10-13_Arduino_Project_Ideas.excalidraw 1]] 
+> ![[attachments/Pasted image 20221029142825.png]]
 
 ### Steps and Tasks
 1. Get RasPi Node Red Server Up and running :➡️[[tmi 17a RasPi NodeRed Server]]
@@ -15,5 +15,5 @@ Ideation in [tmi 17 Ideation](tmi%2017%20Ideation.md)
 	- [ ] MVP arduino MQTT client lib to Node Red Server (using Mega)
 
 ### Research
-- [ESP32 and ESP8266](../../ESP32%20and%20ESP8266.md)
+- [[../../ESP32 and ESP8266]]
 - 

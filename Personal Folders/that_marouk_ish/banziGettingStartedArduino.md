@@ -14,7 +14,7 @@ date: 2022-09-17
 ## Metadata
 - Author:: [[Massimo  Banzi]]
 - Title:: Getting Started With Arduino
-- garden-topic::[Arduino](Arduino.md)
+- garden-topic::[[../../Arduino]]
 - status:: #library/🟢 
 
 ## Notes
@@ -33,10 +33,10 @@ date: 2022-09-17
 
 ### Ch 4 Debouncing
 - use 22AWG solid core as breadboard hookup wire
-- [Memory](Memory.md)
+- [[../../Memory]]
 	- **variables** are stored in RAM; programs stored in **flash**
 - neat #software-trick to change the state of a boolean `state = 1 - state`
-- debounce for 10-50ms ->  [Debouncing in Software](../../Debouncing%20in%20Software.md)
+- debounce for 10-50ms ->  [[../../Debouncing in Software]]
 
 ### Ch 5 
 

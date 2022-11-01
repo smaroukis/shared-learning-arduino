@@ -1,5 +1,5 @@
 
-Parent: [Meta - Guidelines for Using Shared Vaults](Meta%20-%20Guidelines%20for%20Using%20Shared%20Vaults.md)
+Parent: [[Meta - Guidelines for Using Shared Vaults]]
 
 **Wikilinks:**
 - syntax: `[[link to page]]`
@@ -8,7 +8,7 @@ Parent: [Meta - Guidelines for Using Shared Vaults](Meta%20-%20Guidelines%20for%
 - can be exported to markdown links
 
 **Markdown links:**
-- syntax: `[link text](full url of page)`
+- syntax: `[[full url of page|link text]]`
 - useful if the vault is a repo on github - no further formatting is required for links to work
 
 

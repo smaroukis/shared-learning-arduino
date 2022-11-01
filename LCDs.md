@@ -1,20 +1,20 @@
-parent::[Actuators and Sensors](Actuators%20and%20Sensors.md)
+parent::[[Actuators and Sensors]]
 
 > Note: This is specifically about the 16 x 2 displays commonly used for beginner Arduino projects.
 
 ## Overview
 
-The standard way of using an LCD will require 7 Arduino I/O pins (8 if you want to control backlight). This is an example of [Parallel Communication](Parallel%20Communication.md) on the pins `D0` to `D7`.
+The standard way of using an LCD will require 7 Arduino I/O pins (8 if you want to control backlight). This is an example of [[Parallel Communication.md|Parallel Communication]] on the pins `D0` to `D7`.
 
 > [!tip]- Commonly you only need to connect 4 data pins 
 > The LCD can be driven in `4-bit` parallel mode, which is the more common configuration that you will see in examples using the `LiquidCrystal` libary.	
 > 
 > This means you only need to connect RS, E, D4, D5, D6, and D7 pins to Arduino (see example below). (`RW`, `K`, and `VSS` go to `GND`; `VDD` &  `A` go to `+5V` )
 
-There is another library that uses [I2C](I2C) (`LiquidCrystal_I2C`) that uses just the two `SCL` and `SCA` pins (in addition to `+V` and `GND`)
+There is another library that uses [[I2C]] (`LiquidCrystal_I2C`) that uses just the two `SCL` and `SCA` pins (in addition to `+V` and `GND`)
 
 > [!note]- Block Diagram
-> ![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221017112251.png)
+> ![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221017112251.png]]
 
 **Resources**
 - https://docs.wokwi.com/parts/wokwi-lcd1602
@@ -22,12 +22,12 @@ There is another library that uses [I2C](I2C) (`LiquidCrystal_I2C`) that uses ju
 
 ## Specifics for LCD1602
 
-Example Part: LCD1602  - see [Datasheet - LCD1602A LCD Display](Personal%20Folders/that_marouk_ish/attachments/Datasheet%20-%20LCD1602A%20LCD%20Display.pdf)
-- for quick reference see [pinout - LCD1602](pinout%20-%20LCD1602.md)
+Example Part: LCD1602  - see [[Personal Folders/that_marouk_ish/attachments/Datasheet - LCD1602A LCD Display.pdf]]
+- for quick reference see [[pinout - LCD1602]]
 - typically using the popular [HD44780 LCD Controller](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) by Hitachi. 
 
 > [!note]- Pin Descriptions 
-> See Example in [Table - LCD 16x2 Common Pin Configuration (4-bit)](Table%20-%20LCD%2016x2%20Common%20Pin%20Configuration%20(4-bit).md))
+> See Example in [[4-bit)](Table - LCD 16x2 Common Pin Configuration (4-bit|Table - LCD 16x2 Common Pin Configuration (4-bit)]].md))
 > - `VSS:` A pin that connects to ground  
 > - `VDD`: A pin that connects to a +5V power supply  
 > - `VO`: A pin that adjust the contrast of LCD1602  
@@ -39,7 +39,7 @@ Example Part: LCD1602  - see [Datasheet - LCD1602A LCD Display](Personal%20Folde
 > - `K`: LED backlight cathode (typ. -> GND)
 
 > [!EXAMPLE]- Example Pin Configuration for LCD in 4-Bit Mode
-> ![Table - LCD 16x2 Common Pin Configuration (4-bit)](Table%20-%20LCD%2016x2%20Common%20Pin%20Configuration%20(4-bit).md)
+> ![[4-bit)](Table - LCD 16x2 Common Pin Configuration (4-bit|Table - LCD 16x2 Common Pin Configuration (4-bit)]].md)
 
 ## Example
 
@@ -75,33 +75,33 @@ void loop() {
 Note if you print without clearing or resetting cursor it will just append the data.
 
 > [!note]- Schematic: 16x2 LCD with HD44780 Driver in 4-bit Mode
-> ![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221017115858.png)
+> ![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221017115858.png]]
 
 > [!CAUTION] Route to the correct [[SPI]] pins on the Arduino side as required
 
 Note rows are labeled as COLS, ROWS and are 0-indexed:
 
 ### LCD Library Functions
--   [LiquidCrystal()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/liquidcrystal)
--   [begin()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/begin)
--   [clear()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/clear)
--   [home()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/home)
--   [setCursor()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/setcursor)
--   [write()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/write)
--   [print()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/print)
--   [cursor()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/cursor)
--   [noCursor()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/nocursor)
--   [blink()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/blink)
--   [noBlink()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/noblink)
--   [display()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/display)
--   [noDisplay()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/nodisplay)
--   [scrollDisplayLeft()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/scrolldisplayleft)
--   [scrollDisplayRight()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/scrolldisplayright)
--   [autoscroll()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/autoscroll)
--   [noAutoscroll()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/noautoscroll)
--   [leftToRight()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/lefttoright)
--   [rightToLeft()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/righttoleft)
--   [createChar()](https://www.arduino.cc/reference/en/libraries/liquidcrystal/createchar)
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/liquidcrystal|LiquidCrystal()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/begin|begin()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/clear|clear()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/home|home()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/setcursor|setCursor()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/write|write()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/print|print()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/cursor|cursor()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/nocursor|noCursor()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/blink|blink()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/noblink|noBlink()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/display|display()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/nodisplay|noDisplay()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/scrolldisplayleft|scrollDisplayLeft()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/scrolldisplayright|scrollDisplayRight()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/autoscroll|autoscroll()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/noautoscroll|noAutoscroll()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/lefttoright|leftToRight()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/righttoleft|rightToLeft()]]
+-   [[)](https://www.arduino.cc/reference/en/libraries/liquidcrystal/createchar|createChar()]]
 
 ## References and More
 [1] https://docs.wokwi.com/parts/wokwi-lcd1602

@@ -1,5 +1,5 @@
 topic:: #t/analog 
-parent::[Analog Filters](Analog%20Filters.md), [[Filters]]
+parent::[[Analog Filters.md|Analog Filters]], [[Filters]]
 
 #tdf missing images++ 
 

@@ -1,8 +1,8 @@
-parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
-previous:: [tmi11 Temp and Humidity Sensor](Personal%20Folders/that_marouk_ish/tmi11%20Temp%20and%20Humidity%20Sensor.md)
-next:: [tmi14 Multitasking-1](tmi14%20Multitasking-1.md)
+parent::[[tmi Examples]]
+previous:: [[tmi11 Temp and Humidity Sensor]]
+next:: [[tmi14 Multitasking-1]]
 level:: #beginner
-garden-topic:: [Serial Communication](Serial%20Communication.md)
+garden-topic:: [[../../Serial Communication]]
 
 #refactor may need to edit links after moving folders for Github
 
@@ -206,4 +206,4 @@ void loop() {
 **Further**
 - Examples 5 and 6 of the [forum example](https://forum.arduino.cc/t/serial-input-basics-updated/382007/11) go into parsing multiple numbers and parsing binary
 - for sending binary data, if the data matches the start and end markers: https://forum.arduino.cc/t/demo-of-pc-arduino-comms-using-python/219184
-- [Table - ASCII Values](../../Table%20-%20ASCII%20Values.md)
+- [[../../Table - ASCII Values]]

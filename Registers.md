@@ -1,4 +1,4 @@
-parent::[Computer Systems. Architecture](Computer%20Systems.%20Architecture.md)
+parent::[[Computer Systems. Architecture.md|Computer Systems. Architecture]]
 
 
 ## Resources

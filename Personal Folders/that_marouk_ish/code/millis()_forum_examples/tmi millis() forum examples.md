@@ -6,19 +6,19 @@ Source: https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483
 
 ### Part 1 
 - assumptions
-	- input pins defined as pullups in `pinMode()` -> that is they are defined with a pullup rsistor connecting them to 5V (normally OFF/"open"/0 state), thus closing the switch takes the pin low (ON/"closed"/1 state) -> add this to [Intro to Arduino - Software](../../Intro%20to%20Arduino%20-%20Software.md)
+	- input pins defined as pullups in `pinMode()` -> that is they are defined with a pullup rsistor connecting them to 5V (normally OFF/"open"/0 state), thus closing the switch takes the pin low (ON/"closed"/1 state) -> add this to [[../../Intro to Arduino - Software.md|Intro to Arduino - Software]]
 - calling `milis()`  returns an unsigned long of the current time in milliseconds (since the program began) (thus it can roll over back to 0 and not affect things) [source](https://www.arduino.cc/reference/en/language/functions/time/millis/)
 	- `unsigned long start = millis()`
 	- `const unsigned long period = <ms>`
 - #q what is a byte variable type? (`const byte ledPin = 13;`)
 - use in conjunction with a **constant period**, **start** and **end** `millis()` calls we
-	- grab the start time in millis (in setup) -> [Common Setup Declarations](Common%20Setup%20Declarations.md)
+	- grab the start time in millis (in setup) -> [[Common Setup Declarations.md|Common Setup Declarations]]
 	- get the current time at the beginning of the loop
 	- check whether the period time has passed (`current - start >= period`)
 		- if so, perform some action #1 (and don't forget to save the new start time)
 		- ... code continues to action #2 <= ==the key here is that the loop executes so fast that we can't tell there is any delay between the action 1 and action 2==
 
-### Part 2 -> see [02.02 - Changing LED Brightness 2 At a Time](02.02%20-%20Changing%20LED%20Brightness%202%20At%20a%20Time.ino)
+### Part 2 -> see [[02.02 - Changing LED Brightness 2 At a Time.ino|02.02 - Changing LED Brightness 2 At a Time]]
 - uses millis() with a 10ms delay to turn the brightness up by one setup from `analogWrite()`s 0 to 255 
 - uses a `byte` type for the brightness value (and increment) between 0 and 255
 - `byte brightness = 0, increment = 1;`

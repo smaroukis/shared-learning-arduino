@@ -1,4 +1,4 @@
-parent::[Motors](Motors.md)
+parent::[[Motors]]
 
 > Motors, even small servos, can draw a lot of current, so for more than 2 servos you'll need a separate power supply. Always check the datasheet.
 
