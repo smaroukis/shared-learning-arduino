@@ -1,0 +1,11 @@
+.is-unresolved {
+    opacity: 100;
+  }
+.is-unresolved .cm-hmd-internal-link .cm-underline {
+    color: FireBrick;
+    opacity: 100;
+  }
+  .markdown-preview-view .internal-link.is-unresolved {
+    color: FireBrick;
+    opacity: 100;
+  }

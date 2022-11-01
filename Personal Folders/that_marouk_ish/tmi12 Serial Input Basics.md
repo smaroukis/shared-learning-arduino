@@ -4,8 +4,6 @@ next:: [[tmi14 Multitasking-1]]
 level:: #beginner
 garden-topic:: [[../../Serial Communication]]
 
-#refactor may need to edit links after moving folders for Github
-
 ## **Fundamental**
 
 > Source: https://forum.arduino.cc/t/serial-input-basics-updated/382007/2 

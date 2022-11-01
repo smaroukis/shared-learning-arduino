@@ -1,0 +1,10 @@
+{
+  "pinned": [
+    "app:go-back",
+    "app:go-forward",
+    "workspace:close-others",
+    "workspace:close",
+    "starred:open",
+    "global-search:open"
+  ]
+}

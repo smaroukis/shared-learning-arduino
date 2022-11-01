@@ -1,5 +1,3 @@
-#table 
-
 ASCII Table ~ Character Map
 
 | Character | Decimal | Hex | Oct | Bin |
@@ -98,3 +96,6 @@ ASCII Table ~ Character Map
  | `(pipe)` | 124 | 7C | 174 | 1111100 | 
  | `}` | 125 | 7D | 175 | 1111101 | 
  | `~` | 126 | 7E | 176 | 1111110 |
+
+garden-topic:: [Arduino Variable Types](Arduino%20Variable%20Types.md)
+#table 

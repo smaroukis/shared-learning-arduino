@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "257ea79eaa3f081a",
+    "type": "split",
+    "children": [
+      {
+        "id": "fac2ca44aaf2bfcb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d20ad979f84eea6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b0226422f9e83815",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "4221b2af55d7342b",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "6f5355a0725cf24c",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "b43b52662edf5d61",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "704ab31a4acaeb7e",
+        "type": "leaf",
+        "state": {
+          "type": "starred",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0,
+    "pinned": true
+  },
+  "right": {
+    "id": "74c7162d339a8524",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "e23f4e5d072747aa",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "af4f1bcb5251b75f",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "d3eac7042e8244c2",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md"
+          }
+        }
+      },
+      {
+        "id": "ce25a2280ce4ca7c",
+        "type": "leaf",
+        "state": {
+          "type": "BC-matrix",
+          "state": {}
+        }
+      },
+      {
+        "id": "2362452c1e1520c4",
+        "type": "leaf",
+        "state": {
+          "type": "BC-tree",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "2d20ad979f84eea6",
+  "lastOpenFiles": [
+    "Personal Folders/that_marouk_ish/tmi03 Digital Inputs Debounce w Millis.md",
+    "Personal Folders/that_marouk_ish/tmi02 Digital Inputs.md",
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+    "Personal Folders/that_marouk_ish/tmi Log.md",
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook 2.md",
+    "Personal Folders/that_marouk_ish/📝 2022-10-13_Arduino_Project_Ideas.excalidraw.md",
+    "Arduino Resources.md",
+    "Introduction to Arduino - Hardware.md",
+    "Non blocking delays.md",
+    "Arduino Software Concepts.md"
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "257ea79eaa3f081a",
+    "type": "split",
+    "children": [
+      {
+        "id": "f5d534f06ae32f02",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "db2f7d1e6cd651f3",
+    "type": "split",
+    "children": [
+      {
+        "id": "2e5280524666659b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09993c7f9e9796a8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "8203fdb2cecba58c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "sr04",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fc4ec3894fef401f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "e8caf645a6d0e8f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "19c5f28786fe6606",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e13dde9bc834228a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cf5f942e2716dda0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4de8f7f414e84f18",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ab0e0a7fa2ab07ff",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md"
+              }
+            }
+          },
+          {
+            "id": "b83fea1d43c8ded9",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {}
+            }
+          },
+          {
+            "id": "ad78cc223182f412",
+            "type": "leaf",
+            "state": {
+              "type": "BC-tree",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f5d534f06ae32f02",
+  "lastOpenFiles": [
+    "Arduino Resources.md",
+    "Introduction to Arduino - Hardware.md",
+    "Non blocking delays.md",
+    "Arduino Software Concepts.md",
+    "Personal Folders/that_marouk_ish/tmi09 Ultrasonic Sensor.md",
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+    "Personal Folders/that_marouk_ish/tmi Log.md",
+    "Preprocessing Directives.md",
+    "const int vs define macro.md",
+    "().md"
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "257ea79eaa3f081a",
+    "type": "split",
+    "children": [
+      {
+        "id": "7a9d4bc1debaab42",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ec98aaf9def4b40d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Table - ASCII Values.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9d53b9a45c8b2848",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Arduino.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "db2f7d1e6cd651f3",
+    "type": "split",
+    "children": [
+      {
+        "id": "2e5280524666659b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09993c7f9e9796a8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8203fdb2cecba58c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#table",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fc4ec3894fef401f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "5a4ea56063fd17ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Arduino - _Master Hierarchy.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e8caf645a6d0e8f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "19c5f28786fe6606",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e13dde9bc834228a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Table - ASCII Values.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cf5f942e2716dda0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Table - ASCII Values.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4de8f7f414e84f18",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ab0e0a7fa2ab07ff",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Table - ASCII Values.md"
+              }
+            }
+          },
+          {
+            "id": "7aadd20203d36151",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {}
+            }
+          },
+          {
+            "id": "e29b4aed391c936a",
+            "type": "leaf",
+            "state": {
+              "type": "BC-tree",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "ec98aaf9def4b40d",
+  "lastOpenFiles": [
+    "Arduino Memory Specifics.md",
+    "Table - Arduino Memory Amounts.md",
+    "Table - ASCII Values.md",
+    "Table - LCD 16x2 Common Pin Configuration (4-bit).md",
+    "Table ESP32 vs ESP8266.md",
+    "Personal Folders/that_marouk_ish/tmi12 Serial Input Basics.md",
+    "Arduino - _Master Hierarchy.md",
+    "Resistor Color Codes.md",
+    "Arduino.md",
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook.md"
+  ]
+}
