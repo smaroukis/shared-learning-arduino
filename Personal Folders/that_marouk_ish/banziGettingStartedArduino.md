@@ -14,7 +14,7 @@ date: 2022-09-17
 ## Metadata
 - Author:: [[Massimo  Banzi]]
 - Title:: Getting Started With Arduino
-- garden-topic:: [[Arduino]]
+- garden-topic::[Arduino](Arduino.md)
 - status:: #library/🟢 
 
 ## Notes

@@ -1,9 +1,5 @@
 Summarized in [tmi Log](tmi%20Log.md)
 
-- [x] next up is to implement a long press = blinking controller code
-then is a long press = change brightness
-after that I think we have beaten this horse enough
-
 ## [2022-10-27](2022-10-27)
 - Some issues with the current code
 	- for a very small debounce delay the toggle seems not to work (indeterminate state - sometimes turns off, sometimes does not)

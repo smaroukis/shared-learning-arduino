@@ -1,7 +1,119 @@
 > Reverse chronological log of my learnings on Arduino
 More Raw in [tmi Lab Notebook](tmi%20Lab%20Notebook.md)
 
-[2022-10-17](2022-10-17)
+[2022-11-01](2022-11-01)
+- Cleaning up vault for publishing  in [Meta - Main Page](../../Meta%20-%20Main%20Page.md)
+
+[2022-10-28](2022-10-28)
+Days 12 - 21 - Object Oriented refactor and Final Thoughts
+
+**Final Thoughts**
+This will be the wrap-up post for here (thanks Mods for the sticky and support!). I have all my notes, resources and code on this [github repo](https://github.com/smaroukis/shared-learning-arduino) (I'm sure there are many errors in thought, which is why it is public - so you can tell me where I am thinking wrong), and although no-one joined me this time around, it is open for forks and contributions if others are interested. 
+
+Like I said, my background is in electric power systems, so while I've taken programming courses and electrical circuits courses, I had never worked with microcontrollers before.
+
+Some gotchas for me overall were:
+- understanding the hardware interfaces (is a UART a protocol or a piece of hardware that handles I2C and SPI protocols?)
+- using the wrong variable types (`int` vs `byte` vs `long`) or forgetting why I chose one 
+- using `==` instead of `=` or vice versa
+- generally not being able to think at 16MHz speed - I'm a power engineer so I only run at 60Hz.
+
+**On Learning Resources**
+tl;dr 
+- find the resource for your level and desired pace, and it helps to do some basic projects before diving into the literature
+- try to do things without libraries first 
+
+I like books better than Youtube videos and articles since I can browse through them faster and they have a Table of Contents, and the most helpful book I found was Langbridge's Arduino Sketches. It's not just a cookbook of code, but rather helps you understand various protocols and hardware, and doesn't rely heavily on libraries in the example code. I also read Make: Getting Started with Arduino, but found the Langbridge book covered a broader variety of topics. 
+
+I liked the Adafruit and Arduino.cc resources but the benefit of a book is that it is sequential and builds upon prior knowledge in the book itself.
+
+**Object Oriented (OOP) Refactor**
+tl;dr 
+- OOP forced me to think differently, I had to go back to basic blinky projects to make sure it worked
+- knowing OOP will make it easier to read Libraries
+- but you will need to get comfortable with new syntax, pointers, pass-by-reference, and various scopes
+- "debugging" is more difficult (harder to `Serial.print` just anywhere)
+- a refresher course on C++ OOP or a book would have saved me some time, instead of trying to find code online for my specific use case (everyone implements OOP differently) - even though I had taken a C++ OOP course already!
+
+I spent the majority of the past two weeks trying to re-factor my Project 15 code which did a servo sweep and updated an LCD screen and LED, but I quickly got in over my head. 
+
+I ended up just refactoring to a Led and a Button class, and had a button short and long press perform different functions, in a non-blocking and object oriented way. For example here is the final loop. (full code [here](https://github.com/smaroukis/shared-learning-arduino/blob/main/Personal%20Folders/that_marouk_ish/code/tmi16_Multitasking-OOP/src/main-working.cpp))
+
+```cpp
+void loop() {
+    led.loop();
+    button.loopStateMachine();
+
+    if (button._wasChanged > 0) {
+        if (button._state == 2) { 
+            // long press
+            led.toggleBlink();
+            led.off(); // user indicator that blink is starting
+        }
+        if (button._state == 1) {
+            // short press
+            led.togglePower();
+            led._blinkActive = 0; // stop blinking
+        }
+    }
+
+    if (button._state == 3) { // state 3 does note exist
+        led._brightnessScan = 1; // using flags which will be checked during led.loop
+    }
+    else led._brightnessScan = 0;
+}
+```
+
+One of the obstacles I had to overcome was `Serial.print()`ing in a class, which would not have access to the `Serial` object at compile time. So I had to pass by reference a custom `HasSerial` class to my LED object for printing to the terminal ([source](https://forum.arduino.cc/t/using-serial-object-within-a-library-class/495564/4)): 
+
+```cpp
+//// Create Custom Serial Class /////
+class HasSerial{
+    protected:
+        Stream* stream;
+    
+    public:
+        HasSerial(HardwareSerial* serial){
+            stream = serial;
+        }
+        void send(const char* mssg) {
+            // mutable pointer to immutable strings
+            stream -> print(mssg);
+        }
+        void sendln(const char* mssg) {
+            stream -> println(mssg);
+        }
+}; 
+
+//// Pass the Custom Serial Class by Reference to Other Classes /////
+class Led {
+	HasSerial &mySerial; // reference object
+
+	Led(byte pin, long on, long off, HasSerial &serialAttach) : 
+		_pin(pin),
+		_tMinTimeOn_ms(on),
+		_tMinTimeOff_ms(off),
+		mySerial(serialAttach) // now we can use e.g. mySerial.send("message");
+		{}
+
+	void setupLed() {
+		mySerial.sendln("Hello from inside the LED class");
+	}
+}
+
+//// Create Objects /////
+
+HasSerial serialInstance(&Serial);
+Led led(LED_PIN, LED_MIN_ON_DELAY, LED_MIN_OFF_DELAY, serialInstance); 
+
+//// Setup, Loop Below /////
+```
+
+OOP Resources:
+- https://learn.adafruit.com/multi-tasking-the-arduino-part-1/a-classy-solution
+- https://forum.arduino.cc/t/using-serial-object-within-a-library-class/495564/3
+- https://forum.arduino.cc/t/class-inheritance-and-polyphormism/93778/3
+- https://paulmurraycbr.github.io/ArduinoTheOOWay.html - this goes really deep into inheritance and compound class objects and is the example of how a software engineer thinks about implementing classes for a headlamp and tail-light controller
 
 
 2022-10-15

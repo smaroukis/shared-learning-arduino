@@ -19,7 +19,4 @@ Markdown itself is inherently portable. But the standard is actually not well de
 **Breaking/Issues**
 - sometimes I use embedded-page references in a folded callout, esp. to reference a table, which won't show up for other editors
 
-## Contributors
-- #tmi [2022-10-02](2022-10-02) 14:27 
-
 

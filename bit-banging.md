@@ -2,4 +2,4 @@ common in embedded systems to save costs, **bit banging** is a term for any meth
 
 
 ## References
-- see wikipedia #source-needed
+- https://en.wikipedia.org/wiki/Bit_banging

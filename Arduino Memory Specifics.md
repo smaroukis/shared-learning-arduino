@@ -1,6 +1,9 @@
 parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 garden-topic::[Memory](Memory.md)
 see-also::[Arduino Variable Types](Arduino%20Variable%20Types.md), [Arduino Serial Buffers](Arduino%20Serial%20Buffers.md)
+
+First read [Memory](Memory.md) which gives a brief overview of microcontroller memory organization. Then look for Arduino (AVR) specific memory tables and amounts on this page.
+
 > [!example]- Table - Memory Amounts by Arduino Board 
 > 
 > ![Table - Arduino Memory Amounts](Table%20-%20Arduino%20Memory%20Amounts.md)
@@ -25,3 +28,8 @@ see-also::[Arduino Variable Types](Arduino%20Variable%20Types.md), [Arduino Seri
 > void loop() {
 > }
 > ```
+
+## Resources
+- HackadayU Reverse Engineering AVR / Arduino Youtube Video
+- https://docs.arduino.cc/learn/programming/memory-guide
+- 

@@ -31,7 +31,6 @@ parent::[Microcontrollers](Microcontrollers)
 ### Intermediate Topics
 
 **More Components**
-- [[Transistors]]
+- [Transistors](Transistors.md)
 	- [Power MOSFETs](Power%20MOSFETs.md)
-	- BJT #tdf 
 	- 

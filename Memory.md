@@ -52,4 +52,3 @@ From the table below we can see the Uno has only a measly 2kB of SRAM for the st
 **References**
 - https://www.arnabkumardas.com/arduino-tutorial/avr-memory-architecture/
 - https://docs.arduino.cc/learn/programming/memory-guide
-

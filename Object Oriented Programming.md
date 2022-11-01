@@ -92,9 +92,12 @@ public:
 ```
 
 ## Resources
+- adafruit - https://learn.adafruit.com/multi-tasking-the-arduino-part-1/a-classy-solution
+- 
 - arduino forum example for a latching pushbutton, simple but powerful (goes over protected vs private, access functions, syntax ++) https://forum.arduino.cc/t/buttons-an-object-oriented-approach/279724/9 -> [Example - OOP for a Latching Button](Example%20-%20OOP%20for%20a%20Latching%20Button.md)
 - on extending classes in C++
 	- arduino example: https://forum.arduino.cc/t/class-inheritance-and-polyphormism/93778/3
 	- https://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm
 - look at example libraries
 	- https://forum.arduino.cc/t/best-practices-for-making-a-header-library/613209/3
+- Serial object within a library class https://forum.arduino.cc/t/using-serial-object-within-a-library-class/495564/3

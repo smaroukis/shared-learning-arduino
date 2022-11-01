@@ -1,5 +1,5 @@
 
-Parent: [Meta - Guidlines for Using Shared Vaults](Meta%20-%20Guidlines%20for%20Using%20Shared%20Vaults.md)
+Parent: [Meta - Guidelines for Using Shared Vaults](Meta%20-%20Guidelines%20for%20Using%20Shared%20Vaults.md)
 
 **Wikilinks:**
 - syntax: `[[link to page]]`
