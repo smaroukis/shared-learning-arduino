@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7a9d4bc1debaab42",
+        "id": "ec1368e0d4e03dfc",
         "type": "tabs",
         "children": [
           {
-            "id": "ec98aaf9def4b40d",
+            "id": "58a58b0bb966e77b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arduino.md",
+                "file": "Meta - Vault Cleanup Tasks.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,25 +21,12 @@
             }
           },
           {
-            "id": "f3e7c7ec40765ae3",
+            "id": "0996fa359fef74b2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arduino Variable Types.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9d53b9a45c8b2848",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Arduino.md",
+                "file": "Intro to Arduino - Software.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -93,7 +80,7 @@
             }
           },
           {
-            "id": "5a4ea56063fd17ee",
+            "id": "bd66ba7ce42f3d2f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -106,7 +93,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -126,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arduino.md",
+                "file": "Meta - Vault Cleanup Tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arduino.md",
+                "file": "Meta - Vault Cleanup Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arduino.md"
+                "file": "Meta - Vault Cleanup Tasks.md"
               }
             }
           },
@@ -196,17 +183,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "ec98aaf9def4b40d",
+  "active": "58a58b0bb966e77b",
   "lastOpenFiles": [
-    "Arduino Boards.md",
-    "ESP32 and ESP8266.md",
-    "Leonardo.md",
-    "Uno.md",
-    "Meta - Vault Cleanup Tasks.md",
-    "Meta - Vault Syntax and Hierarchies.md",
-    "pinout - LCD1602.md",
-    "Arduino.md",
-    "Arduino - _Master Hierarchy.md",
-    "Arduino Variable Types.md"
+    "Intro to Arduino - Software.md",
+    "Low Pass RC Filter.md",
+    "Introduction to Arduino - Hardware.md",
+    "RLC Filters.md",
+    "RC Filters.md",
+    "Update the 16U2 Firmware.md",
+    "Intermediate Topics.md",
+    "Arduino - Setup and IDE.md",
+    "_Start Here.md",
+    "README.md"
   ]
 }

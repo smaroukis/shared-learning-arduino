@@ -13,8 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Example - Professional Grade OOP - Inheritance and Composition.md",
+                "file": "Arduino Software Concepts.md",
                 "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
@@ -85,7 +86,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Example - Professional Grade OOP - Inheritance and Composition.md",
+            "file": "Arduino Software Concepts.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Example - Professional Grade OOP - Inheritance and Composition.md",
+            "file": "Arduino Software Concepts.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,27 +115,24 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Example - Professional Grade OOP - Inheritance and Composition.md"
+            "file": "Arduino Software Concepts.md"
           }
         }
       }
     ],
     "currentTab": 0
   },
-  "ribbon": {
-    "mostRecentAction": "Open quick switcher"
-  },
   "active": "1d6be98dde6e9326",
   "lastOpenFiles": [
-    "Exclude/Elegoo Assets/Datasheet/ELEGOO MEGA Kit UNO Proto Shield Prototype Expansion Board.pdf",
+    "Intro to Arduino - Software.md",
+    "Arduino Software Concepts.md",
+    "Object Oriented Programming.md",
     "Example - Professional Grade OOP - Inheritance and Composition.md",
+    "Exclude/Elegoo Assets/Datasheet/ELEGOO MEGA Kit UNO Proto Shield Prototype Expansion Board.pdf",
     "tmi15 Multitasking-2.md",
     "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
     "inbox.md",
     "Electronic Components.md",
-    "Optocouplers.md",
-    "Personal Folders/that_marouk_ish/that_marouk_ish.md",
-    "Personal Folders/that_marouk_ish/README.md",
-    "Arduino Resources.md"
+    "Optocouplers.md"
   ]
 }

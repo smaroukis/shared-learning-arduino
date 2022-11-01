@@ -1,4 +1,4 @@
-parent:: [[Intermediate Techniques]]
+parent:: [[Intermediate Topics]]
 
 ## Resources
 - https://www.build-electronic-circuits.com/kicad-tutorial/

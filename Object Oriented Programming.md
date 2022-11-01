@@ -10,7 +10,7 @@ parent::[[Arduino Software Concepts]]
 
 Single leading underscores are usually used for defining _internal_ or _private_ attributes of a class, they shouldn't need to be accessed from outside the class. Commonly they are used for internal calculations done by that classes member functions.
 
-> We can (and should) make our member variables private, since we use the relevant constructors to initialize them, and use a public accessor to get the values.^[https://www.learncpp.com/cpp-tutorial/constructors-and-initialization-of-derived-classes/]
+> We can (and should) make our member variables private, since we use the relevant constructors to initialize them, and use a public accessor to get the values. https://www.learncpp.com/cpp-tutorial/constructors-and-initialization-of-derived-classes/
 
 **Create Classes**
 

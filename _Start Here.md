@@ -2,7 +2,8 @@
 [[Meta - Getting Started with This Vault]]
 
 ## Explore, Learn, Contribute
-Start with [[Arduino]] and explore from there. 
+[[Arduino - Setup and IDE]] ⬅️ start here then traverse via "next" links
+Alternatively see all topics in [[Arduino]].
 
 ## Contributors
 - [[Personal Folders/that_marouk_ish/that_marouk_ish]]

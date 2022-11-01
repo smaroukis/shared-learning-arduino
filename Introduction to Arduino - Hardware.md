@@ -1,15 +1,17 @@
 parent::[[Arduino]]
 next::[[Intro to Arduino - Software]]
-status:: #draft
 
+#refactor  with tables and links to [[Arduino Boards]]
+
+[[word size]] is 16 bits (2 bytes)
 
 Outline
 - Microcontroller vs microprocessor vs arduino
 	- [[Arduino Comparison]]
 - ATMEL ATMEGA AVR microcontroller(now Microchip)
 - [[Resonators]] - Crystals and Oscillator
-- Mega8U2 microcontroller handles uploading the code to the AVR microcontroller
-- Power - purely from USB, or dedicated power plug barrel jack 9V (2.1mm tip, center positive) (ref. [[Power Components.md|Power Components]]) 
+- Mega16U2 microcontroller handles uploading the code to the AVR microcontroller --> note you can even [[Update the 16U2 Firmware]]
+- Power - purely from USB, or dedicated power plug barrel jack 9V (2.1mm tip, center positive) 
 	- uno has voltage regulator to reduce to 5V
 - Reset button reboots the uploaded program
 - Pins
@@ -24,8 +26,7 @@ Outline
 		- Digital Output: Output is two states - High (=1) or Low (=0)
 			- in reality these are analog voltages that the receiving device can recognize as a 1 or 0
 		- Digital Input: You have to define what your "high" voltage reference level is, but then you can use these pins as digital input
-		- Tilde `~`: PWM output -> #q can Arduinos actually output real DC voltages or do they always just require an [[RC Filters]] to achieve a DC voltage
-		- ➡️ [[Tri-State Logic]]
+		- Tilde `~`: PWM output -> the PWM output is not a real analog output, to get a real analog output you need an [[RC Filter]] to achieve a DC voltage
 	- Analog input
 
 

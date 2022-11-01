@@ -1,6 +1,17 @@
 parent::[[Arduino]]
 previous::[[Intro to Arduino - Software]]
+next:: [[Memory]]
 
+#refactor  for sequence. 
+1. variable types, reserved keyword s, c++ vs c 
+2. scope, functions
+3. non blocking delays
+4. oop
+5. strings and chars - char *
+6. pointers
+7. timers and interrupts m
+8. best practices- define, header files, 
+9. other things- enums, cool sequences, examples
 
 Unsigned Long for timers -- [[Arduino Variable Types]]
 

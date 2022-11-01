@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fac2ca44aaf2bfcb",
+        "id": "4d9350de1b655d09",
         "type": "tabs",
         "children": [
           {
-            "id": "2d20ad979f84eea6",
+            "id": "162499d1a585da33",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -35,7 +35,7 @@
         "state": {
           "type": "file-explorer",
           "state": {
-            "sortOrder": "alphabetical"
+            "sortOrder": "byModifiedTime"
           }
         }
       },
@@ -74,8 +74,7 @@
         }
       }
     ],
-    "currentTab": 0,
-    "pinned": true
+    "currentTab": 0
   },
   "right": {
     "id": "74c7162d339a8524",
@@ -139,17 +138,17 @@
     ],
     "currentTab": 0
   },
-  "active": "2d20ad979f84eea6",
+  "active": "162499d1a585da33",
   "lastOpenFiles": [
+    "Arduino Software Concepts.md",
+    "Memory.md",
+    "Object Oriented Programming.md",
+    "Personal Folders/that_marouk_ish/tmi 16 Object Oriented Programming.md",
+    "Personal Folders/that_marouk_ish/tmi12 Serial Input Basics.md",
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
     "Personal Folders/that_marouk_ish/tmi03 Digital Inputs Debounce w Millis.md",
     "Personal Folders/that_marouk_ish/tmi02 Digital Inputs.md",
-    "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
     "Personal Folders/that_marouk_ish/tmi Log.md",
-    "Personal Folders/that_marouk_ish/tmi Lab Notebook 2.md",
-    "Personal Folders/that_marouk_ish/📝 2022-10-13_Arduino_Project_Ideas.excalidraw.md",
-    "Arduino Resources.md",
-    "Introduction to Arduino - Hardware.md",
-    "Non blocking delays.md",
-    "Arduino Software Concepts.md"
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook 2.md"
   ]
 }
