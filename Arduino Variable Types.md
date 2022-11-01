@@ -29,7 +29,7 @@ see-also:: [[Arduino Memory Specifics]]
 - -32,768 to 32,767
 - occupies 2 bytes 
 
-> Beware of Integer Math: When we do math with integers the decimals are truncated.  To force to float-precison use trailing decimals, e.g. `137./19.`
+> Beware of Integer Math: When we do math with integers the decimals are truncated.  To force to float precision use trailing decimals, e.g. `137./19.`
 
 `unsigned int`
 - 0 to 65,535
