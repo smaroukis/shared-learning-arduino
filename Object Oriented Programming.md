@@ -4,6 +4,8 @@ parent::[[Arduino Software Concepts]]
 [[Example - Even Better OOP - Header Files]]
 [[Example - Professional Grade OOP - Inheritance and Composition]]
 
+next::inheritance, code structures
+
 ## General Theory
 
 **Use Private Member Variables**
@@ -70,13 +72,14 @@ class Rectangle: public Shape {
 ```
 
 **Inheritance - Modifying Base Class Member Variables**
+#refactor  this is more advanced
 
 > However, C++ prevents classes from initializing inherited member variables in the member initializer list of a constructor. In other words, the value of a member variable can only be set in a member initializer list of a constructor belonging to the same class as the variable.^[https://www.learncpp.com/cpp-tutorial/constructors-and-initialization-of-derived-classes/]
 
 To correctly do this we can call and initialize the `Base` class within the `Derived` constructor
 
 ```cpp
-class Derived: public Base
+class derivedClass: public Base
 {
 public:
     double m_cost {};

@@ -8,10 +8,11 @@ next::[[Arduino Software Concepts]]
 
 ### **Fundamental Concepts**:
 - Arduino cannot run multiple programs at the same time, and programs can't quit
-- Predefined `setup()` function runs once, `loop()` function loops continuously
+- When uploaded to the board the `setup()` function runs once, and the `loop()` function loops continuously
 - The Arduino pin type constrains us in some things (analog or digital, PWM capable or not), but we can define some pins as an input or an output
 
-**Initialization - initialize variables**
+**Step 1: Import Headers and Initialization of Variables**
+- Import headers as needed (note using the Arduino IDE we don't need `#include <Arduino.h>` but if not using the Arduino IDE we do) ➡️ for more see [[Common Code Structure for Arduino Projects]] and [[Preprocessing Directives]]
 - initialize global variables before `setup()`
 - see [[Arduino Variable Types]] 
 	- numbers that won't change - use `const int` or `const long`

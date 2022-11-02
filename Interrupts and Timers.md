@@ -2,6 +2,8 @@ parent::[[Arduino Software Concepts]]
 previous::[[Multitasking and non blocking delays]]
 level:: #intermediate 
 
+#tdf include code examples, also callbacks
+
 ### Interrupts
 
 > **Interrupts** should really only be used for very high frequency events - not button presses. Button presses are examples of "doing something different".

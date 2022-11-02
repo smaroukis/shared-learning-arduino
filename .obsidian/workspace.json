@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ec1368e0d4e03dfc",
+        "id": "109e4d1172070aca",
         "type": "tabs",
         "children": [
           {
-            "id": "58a58b0bb966e77b",
+            "id": "cf50e1f0e9c3aed6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,7 +21,7 @@
             }
           },
           {
-            "id": "0996fa359fef74b2",
+            "id": "a4b10ecc19e83eba",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,8 +32,75 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8694d13a05dc1872",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Arduino Intermediate Memory Techniques.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "73672232ff59939b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Arduino Memory Specifics.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e1cd758d980bf0e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Arduino Software Concepts.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fea9085ee32fdf43",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Debouncing in Software.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "eaa0028c68f0b7b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pointers.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 6,
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -52,7 +119,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -62,7 +129,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "hexa",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +147,7 @@
             }
           },
           {
-            "id": "bd66ba7ce42f3d2f",
+            "id": "aa8344c77fec8a86",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -93,11 +160,11 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 272.5
   },
   "right": {
     "id": "e8caf645a6d0e8f4",
@@ -113,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Meta - Vault Cleanup Tasks.md",
+                "file": "Pointers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +197,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Meta - Vault Cleanup Tasks.md",
+                "file": "Pointers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Meta - Vault Cleanup Tasks.md"
+                "file": "Pointers.md"
               }
             }
           },
@@ -183,17 +250,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "58a58b0bb966e77b",
+  "active": "eaa0028c68f0b7b8",
   "lastOpenFiles": [
-    "Intro to Arduino - Software.md",
-    "Low Pass RC Filter.md",
-    "Introduction to Arduino - Hardware.md",
-    "RLC Filters.md",
-    "RC Filters.md",
-    "Update the 16U2 Firmware.md",
-    "Intermediate Topics.md",
-    "Arduino - Setup and IDE.md",
-    "_Start Here.md",
-    "README.md"
+    "Counting - Hexadecimal Binary and Decimal.md",
+    "Arduino - _Master Hierarchy.md",
+    "Pointers.md",
+    "Debouncing in Software.md",
+    "Arduino Variable Types.md",
+    "Arduino Software Concepts.md",
+    "User Defined Functions.md",
+    "Reserved Keywords.md",
+    "Arduino Memory Specifics.md",
+    "C Functions.md"
   ]
 }

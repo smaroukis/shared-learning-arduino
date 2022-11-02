@@ -1,4 +1,5 @@
 home: [[_Start Here]]_
+parent::[[Arduino - _Master Hierarchy]]
 
 ## Getting Started Resources
 - [[Arduino Resources]] ⬅️ put articles to read here too

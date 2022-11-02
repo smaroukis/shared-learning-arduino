@@ -1,5 +1,4 @@
 parent::[[Arduino Software Concepts]]
-resource::[[Arduino Memory Specifics]]
 
 > If not mentioned, we are talking about AVR and Harvard Based memory structures, keep in mind that memory allocation differs in both architectures
 
@@ -11,7 +10,7 @@ resource::[[Arduino Memory Specifics]]
 
 3 types:
 - Flash: non-volatile _program_ memory, manage at the block level
-- SRAM: reserved space for global and static variables (volatile) - see more at [[RAM)](Read Access Memory (RAM|Read Access Memory (RAM)]].md)
+- SRAM: reserved space for global and static variables (volatile) - see more at [[Read Access Memory (RAM)]]
 - EEPROM: more non-volatile memory, managed at the byte level
 
 Flash (non-volatile)
@@ -40,15 +39,17 @@ EEPROM (non-volatile)
 
 From the table below we can see the Uno has only a measly 2kB of SRAM for the static and global variables.
 
-> [!NOTE]- Arduino Memory Amounts
+> [!Example]- Example - Arduino Memory Amounts
 > 
 > ![[Table - Arduino Memory Amounts]]
 
 
 **Further**
 - note that although the HEAP is dynamic, de-allocating space of previously used variables **does not necessarily cause the heap to shrink**, since if there is other dynamic data above it in the heap, the top of the heap will not move - leading to a [[fragmented heap]]. 
+- strings are especially notorious memory hogs, see [[Arduino Intermediate Memory Techniques]] for more
 
 
 **References**
-- https://www.arnabkumardas.com/arduino-tutorial/avr-memory-architecture/
 - https://docs.arduino.cc/learn/programming/memory-guide
+- https://www.arnabkumardas.com/arduino-tutorial/avr-memory-architecture/
+- https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram

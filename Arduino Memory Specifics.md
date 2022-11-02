@@ -1,6 +1,6 @@
-parent::[[Arduino Software Concepts]]
-garden-topic::[[Memory]]
-see-also::[[Arduino Variable Types]], [[Arduino Serial Buffers]]
+parent:: [[Memory]]
+resource::
+related::[[Arduino Variable Types]], [[Arduino Serial Buffers]]
 
 First read [[Memory]] which gives a brief overview of microcontroller memory organization. Then look for Arduino (AVR) specific memory tables and amounts on this page.
 

@@ -36,7 +36,8 @@
     "next",
     "previous",
     "next-resource",
-    "prev-resource"
+    "prev-resource",
+    "related"
   ],
   "CHECKBOX_STATES_OVERWRITTEN": false,
   "gridDefaultDepth": 25,
@@ -103,7 +104,8 @@
     "next",
     "previous",
     "next-resource",
-    "prev-resource"
+    "prev-resource",
+    "related"
   ],
   "showAll": "All",
   "noPathMessage": "This note has no real or implied parents",
@@ -160,6 +162,15 @@
       "prev": [
         "prev-resource"
       ]
+    },
+    {
+      "up": [],
+      "same": [
+        "related"
+      ],
+      "down": [],
+      "next": [],
+      "prev": []
     }
   ],
   "writeBCsInline": false,

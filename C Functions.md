@@ -1,2 +1,2 @@
-parent::[[Arduino Software Concepts]]
+parent::[[Other Software Concepts]]
 #intermediate 

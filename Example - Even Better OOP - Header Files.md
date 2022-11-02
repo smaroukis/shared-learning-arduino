@@ -1,4 +1,4 @@
-garden-topic::[[Object Oriented Programming]]
+garden-topic::[[Object Oriented Programming]], [[Preprocessing Directives]]
 previous::[[Example - Better OOP - Private Functions]]
 #code
 

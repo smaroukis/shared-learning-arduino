@@ -1,6 +1,19 @@
-parent::[[Debouncing]]
+parent::[[Arduino Software Concepts]]
+
+#inbox/writing  here under software concpets
+
+A physical button needs to be "debounced" - since the microprocessor is running so fast, `digitalRead()` will cycle between both the ON and OFF state for a few cycles before the physical contacts are seated correctly.
 
 To debounce a button, we add a 10-50ms delay between reading/comparing a new value and performing an action (e.g. turning an LED on). 
+
+For variables we need
+- a timer
+- the previous state
+- a debounce time to compare against
+
+Non variables we can read in live
+- current time
+- current state
 
 From [[Personal Folders/that_marouk_ish/banziGettingStartedArduino]], debouncing can be as simple as comparing the read value with the previous value and waiting 10ms before writing it e.g. 
 
@@ -18,3 +31,6 @@ if ((val == LOW)) && (old_val == HIGH){
 	delay(10) // from reader Tami Takamiya
 }
 ```
+Examples
+- [[Personal Folders/that_marouk_ish/tmi03 Digital Inputs Debounce w Millis]]
+- there is another way where we add the delay to the previous measured time 

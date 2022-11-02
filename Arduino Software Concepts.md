@@ -1,8 +1,12 @@
 parent::[[Arduino]]
 previous::[[Intro to Arduino - Software]]
 next:: [[Memory]]
+sibling:: [[Other Software Concepts]]
 
-#refactor  for sequence. 
+> [!NOTE] A note about this page and the hierarchy.
+> This page should be the jumping off page for learning the fundamental Arduino software concepts. For more advanced concepts see [[Other Software Concepts]] (e.g. specific C-functions, intermediate + usages, etc.)
+
+#refactor  for sequence. , more into [[Other Software Concepts]]
 1. variable types, reserved keyword s, c++ vs c 
 2. scope, functions
 3. non blocking delays

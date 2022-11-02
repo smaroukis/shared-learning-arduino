@@ -29,7 +29,9 @@ see-also:: [[Arduino Memory Specifics]]
 - -32,768 to 32,767
 - occupies 2 bytes 
 
-> Beware of Integer Math: When we do math with integers the decimals are truncated.  To force to float precision use trailing decimals, e.g. `137./19.`
+> [!NOTE] Numbers (e.g. `int` and `long`) are by default _unsigned_
+
+> [!CAUTION] Beware of Integer Math: When we do math with integers the decimals are truncated.  To force to float precision use trailing decimals, e.g. `137./19.`
 
 `unsigned int`
 - 0 to 65,535
@@ -75,6 +77,7 @@ strings (C-formatted array of `char`s and Arduino `String`)
 ---
 
 ### Examples
+#refactor to arrays
 
 **Example - multidimensional arrays (2x2)**
 
@@ -94,6 +97,7 @@ int arrayName[m][n] = { {0, 0, 0, 0}, {0, 0, 0, 0} };
 ---
 
 ### Intermediate - Scope and More
+#refactor to scope
 
 We can use the `static` keyword to create "local" variables that are visible to only one function but **that persist beyond the function call**. This is helpful for storing indexes or counters used by helper functions without having to pass the counter back and forth between scopes. (see arduino.cc "random walk" function example)
 
@@ -102,14 +106,6 @@ void helperFunction() {
 	static int thisFunctionIndex; // only available to this function, but value persists between calls to this function
 }
 ```
-
-
-
-
-**Resources**
--
-
-
 
 ---
 verbose #refactor 
@@ -126,9 +122,9 @@ verbose #refactor
 		- `unsigned long`  from 0 to 4,294,967,295
 		- note: for doing math with integers **at least one of them must be of type `long`**
 
-[Integer Constants](https://www.arduino.cc/reference/en/language/variables/constants/integerconstants/) - `const int`
+Integer Constants - e.g. `const int`
 - are usually type `int` (unsigned) but can be other variable types using specific formatting e.g. `const int 10000L` (constant long integer) or `const int 33u` (constant unsigned integer) or `const int 32767UL` (constant unsigned long integer)
-- [[const int vs define macro]]
+- const int vs define macro]]
 
 Table of various types:
 ![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221005161457.png]]

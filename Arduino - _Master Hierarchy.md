@@ -21,7 +21,7 @@
   - [[Arduino Memory Specifics]]
   - [[Arduino Variable Types]]
   - [[C Functions]]
-    - [[C Functions - memmove()]]
+    - [[C Functions - memmove]]
   - [[Debouncing]]
     - [[Debouncing in Software]]
   - [[Interrupts and Timers]]

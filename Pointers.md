@@ -1,4 +1,36 @@
 parent::[[Arduino Software Concepts]]
+previous::[[Scope]], [[Counting - Hexadecimal Binary and Decimal]]
+
+Pointers are variables that instead of holding a character or number, hold an address in memory. This way they “point” to a place in memory - the catch is that the place in memory can function as normal, holding a character, integer or anything else. 
+
+Whats the point? Pointers provide us a way to work with stored data by passing around the reference to the address, instead of having to copy the data between various scopes of the program.
+
+Here are some use cases:
+- access data from different scopes, e.g. "pass by reference"
+- efficiently use memory
+- point to the first character in a string (commonly: `const char* ptr = <address>`)
+
+### Syntax 
+
+#### Pointers - `*`
+
+Declaration syntax: `<type> *<variable_name> = <address>`
+
+`int *ptr = 0xFF;`
+- creates a variable of type pointer named `ptr` that stores the `address of an `int` (e.g. 16 bits) - here the address is 0xFF` Note the pointer variable itself typically takes up a [[word size]] (2 bytes in Arduino) to store the address.
+
+#inbox/writing 
+
+`int `
+
+`int dereference = *ptr`: 
+- if the `*` used on the right side of the equal sign it is a _dereference operator_
+- this dereferences the pointer and returns the value stored at the address
+
+#### Reference Variable and Address Of - `&`
+`int *ptr = &val`
+- if the `*` is on the left side, it creates a _pointer_
+- this creates a pointer to the address of `val` which stores an `int` type
 
 `&porcupine_count`
  - `&` is the "address of operator"
@@ -12,13 +44,6 @@ parent::[[Arduino Software Concepts]]
 - for a previously created `sonny` object, now `songqiao` points to the same address, thus now `sonny` and `songquiao` are inexplicably linked - updating one will update the other
 - The main difference is that a pointer can be null, while a reference must point to a valid value.
 
-`int* ptr = &val`
-- if the `*` is on the left side, it creates a _pointer_
-- this creates a pointer to the address of `val` which stores an `int` type
-
-`int dereference = *ptr`: 
-- if the `*` used on the right side of the equal sign it is a _dereference operator_
-- this dereferences the pointer and returns the value stored at the address
 
 
 > [!EXAMPLE]+ Example - Dereference a Pointer
