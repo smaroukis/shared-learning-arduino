@@ -4,64 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fac2ca44aaf2bfcb",
+        "id": "5555b0d54d70cdae",
         "type": "tabs",
         "children": [
           {
-            "id": "2d20ad979f84eea6",
+            "id": "1bc4e596aae2a3e5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Arduino.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            },
-            "group": "4549480bc9d0e4c8"
-          }
-        ]
-      },
-      {
-        "id": "f4b9b978bca9c093",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "68e40c71aabd8241",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "Arduino.md",
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 1.7608420715415862,
-                  "close": false
-                }
-              }
-            },
-            "group": "4549480bc9d0e4c8"
+              "type": "empty",
+              "state": {}
+            }
           }
         ]
       }
@@ -129,7 +81,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Arduino.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -146,7 +97,6 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Arduino.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -157,9 +107,7 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {
-            "file": "Arduino.md"
-          }
+          "state": {}
         }
       },
       {
@@ -181,8 +129,9 @@
     ],
     "currentTab": 0
   },
-  "active": "2d20ad979f84eea6",
+  "active": "1bc4e596aae2a3e5",
   "lastOpenFiles": [
+    "Arduino.md",
     "Arduino Software Concepts.md",
     "Pointers.md",
     "Arduino - _Master Hierarchy.md",
@@ -191,7 +140,6 @@
     "Examples.md",
     "Interrupts and Timers.md",
     "Arduino Variable Types.md",
-    "Debouncing.md",
-    "Debouncing in Software.md"
+    "Debouncing.md"
   ]
 }

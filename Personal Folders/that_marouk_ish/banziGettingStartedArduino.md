@@ -36,7 +36,7 @@ date: 2022-09-17
 - [[../../Memory]]
 	- **variables** are stored in RAM; programs stored in **flash**
 - neat #software-trick to change the state of a boolean `state = 1 - state`
-- debounce for 10-50ms ->  [[../../Debouncing in Software]]
+- debounce for 10-50ms ->  [[../../Debouncing]]
 
 ### Ch 5 
 

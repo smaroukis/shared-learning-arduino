@@ -1,2 +1,2 @@
-parent::[[Other Software Concepts]]
+parent::[[Other Software and Computer Concepts]]
 #intermediate 

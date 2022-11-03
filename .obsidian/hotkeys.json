@@ -7,14 +7,6 @@
       "key": "D"
     }
   ],
-  "editor:toggle-code": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Key244"
-    }
-  ],
   "editor:toggle-numbered-list": [
     {
       "modifiers": [
@@ -196,6 +188,14 @@
         "Shift"
       ],
       "key": "H"
+    }
+  ],
+  "editor:toggle-code": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "`"
     }
   ]
 }

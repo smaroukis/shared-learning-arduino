@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "109e4d1172070aca",
+        "id": "b326cf1466163b1b",
         "type": "tabs",
         "children": [
           {
-            "id": "cf50e1f0e9c3aed6",
+            "id": "e6b2d89ea723a592",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta - Vault Cleanup Tasks.md",
+                "file": "Arduino.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,77 +21,12 @@
             }
           },
           {
-            "id": "a4b10ecc19e83eba",
+            "id": "c34b1d0b3b9b6ce1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Intro to Arduino - Software.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8694d13a05dc1872",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Arduino Intermediate Memory Techniques.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "73672232ff59939b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Arduino Memory Specifics.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e1cd758d980bf0e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Arduino Software Concepts.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fea9085ee32fdf43",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Debouncing in Software.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "eaa0028c68f0b7b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pointers.md",
+                "file": "Introduction to Arduino - Hardware.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +34,7 @@
             }
           }
         ],
-        "currentTab": 6,
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -129,7 +64,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hexa",
+                "query": "tag:#refactor",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -152,7 +87,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arduino - _Master Hierarchy.md",
+                "file": "Arduino - _Site Map.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -160,7 +95,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -180,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pointers.md",
+                "file": "Introduction to Arduino - Hardware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pointers.md",
+                "file": "Introduction to Arduino - Hardware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pointers.md"
+                "file": "Introduction to Arduino - Hardware.md"
               }
             }
           },
@@ -245,22 +180,83 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "eaa0028c68f0b7b8",
+  "floating": {
+    "id": "7e002baa9960909e",
+    "type": "floating",
+    "children": [
+      {
+        "id": "099499f90f2f6226",
+        "type": "window",
+        "children": [
+          {
+            "id": "12c8861a5f7dfcf2",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "584700fc634968a6",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Introduction to Arduino - Hardware.md",
+                    "options": {
+                      "collapse-filter": false,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 2.293520701061582,
+                      "close": false
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 385,
+        "y": 37,
+        "width": 700,
+        "height": 808,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "c34b1d0b3b9b6ce1",
   "lastOpenFiles": [
-    "Counting - Hexadecimal Binary and Decimal.md",
-    "Arduino - _Master Hierarchy.md",
-    "Pointers.md",
-    "Debouncing in Software.md",
-    "Arduino Variable Types.md",
-    "Arduino Software Concepts.md",
-    "User Defined Functions.md",
-    "Reserved Keywords.md",
-    "Arduino Memory Specifics.md",
-    "C Functions.md"
+    "Arduino.md",
+    "Object Oriented Programming.md",
+    "Introduction to Arduino - Hardware.md",
+    "Arduino - _Site Map.md",
+    "_Start Here.md",
+    "Intermediate Topics.md",
+    "PCB.md",
+    "Personal Folders/that_marouk_ish/Vim Cheatsheet.md",
+    "Arduino - Setup and IDE.md",
+    "Personal Folders/that_marouk_ish/tmi 17a RasPi NodeRed Server.md"
   ]
 }

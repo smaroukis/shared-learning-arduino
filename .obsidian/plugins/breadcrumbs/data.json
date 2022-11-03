@@ -85,27 +85,17 @@
     "down",
     "next",
     "prev",
-    "garden-topic",
-    "topic",
     "up",
     "parent"
   ],
   "limitJumpToFirstFields": [
-    "garden-topic",
-    "topic",
-    "resource",
     "see-also",
     "up",
     "parent",
-    "sibling-resource",
-    "sibling",
     "down",
     "child",
     "next",
-    "previous",
-    "next-resource",
-    "prev-resource",
-    "related"
+    "previous"
   ],
   "showAll": "All",
   "noPathMessage": "This note has no real or implied parents",
@@ -144,33 +134,6 @@
       "prev": [
         "previous"
       ]
-    },
-    {
-      "up": [
-        "garden-topic",
-        "topic"
-      ],
-      "same": [
-        "sibling-resource"
-      ],
-      "down": [
-        "resource"
-      ],
-      "next": [
-        "next-resource"
-      ],
-      "prev": [
-        "prev-resource"
-      ]
-    },
-    {
-      "up": [],
-      "same": [
-        "related"
-      ],
-      "down": [],
-      "next": [],
-      "prev": []
     }
   ],
   "writeBCsInline": false,

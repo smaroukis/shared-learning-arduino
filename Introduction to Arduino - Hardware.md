@@ -3,11 +3,12 @@ next::[[Intro to Arduino - Software]]
 
 #refactor  with tables and links to [[Arduino Boards]]
 
+#inbox/writing 
+
 [[word size]] is 16 bits (2 bytes)
 
 Outline
 - Microcontroller vs microprocessor vs arduino
-	- [[Arduino Comparison]]
 - ATMEL ATMEGA AVR microcontroller(now Microchip)
 - [[Resonators]] - Crystals and Oscillator
 - Mega16U2 microcontroller handles uploading the code to the AVR microcontroller --> note you can even [[Update the 16U2 Firmware]]

@@ -1,0 +1,1 @@
+![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221103213900.png]]

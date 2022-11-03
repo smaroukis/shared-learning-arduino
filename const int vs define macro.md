@@ -1,4 +1,4 @@
-parent::[[Intro to Arduino - Software]]
+parent::[[Preprocessing Directives]]
 
 `#define` is a [[Preprocessing Directives]] often used to define constants, to avoid storing them in program memory (stored in limited flash memory). The compiler will check and replace these at compile time.
 

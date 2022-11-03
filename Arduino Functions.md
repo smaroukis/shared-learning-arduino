@@ -1,4 +1,4 @@
-parent::[[Intro to Arduino - Software]]
+parent::[[Arduino Software Concepts]]
 previous:: [[Arduino Variable Types]]
 next::
 

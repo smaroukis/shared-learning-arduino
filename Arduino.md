@@ -1,5 +1,5 @@
 home: [[_Start Here]]_
-parent::[[Arduino - _Master Hierarchy]]
+parent::[[Arduino - _Site Map]]
 
 ## Getting Started Resources
 - [[Arduino Resources]] ⬅️ put articles to read here too
@@ -10,11 +10,17 @@ parent::[[Arduino - _Master Hierarchy]]
 ## Topics
 
 ### Basic Topics
-**Fundamentals**
-- [[Intro to Arduino - Software]]
-- [[Introduction to Arduino - Hardware]]
+**Fundamentals** - See [[Arduino Software Concepts]]
+- [[Arduino Variable Types]], [[Table - ASCII Values]]
+- [[Arduino Boolean and Arithmetic]], [[Arduino Case Statements]]
+- [[Memory]] & [[Arduino Memory Specifics]]
 - [[Arduino - PWM]]
 - [[Serial Communication]]
+- [[Debouncing]] & [[Multitasking and non blocking delays]]
+
+**Going Further**
+- [[Object Oriented Programming]]
+- [[Common Code Structure for Arduino Projects]]
 
 
 **Hardware and Components**

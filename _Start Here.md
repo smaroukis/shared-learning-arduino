@@ -3,7 +3,7 @@
 
 ## Explore, Learn, Contribute
 [[Arduino - Setup and IDE]] ⬅️ start here then traverse via "next" links
-Alternatively see all topics in [[Arduino]].
+Alternatively see all topics in [[Arduino - _Site Map]]
 
 ## Contributors
 - [[Personal Folders/that_marouk_ish/that_marouk_ish]]
