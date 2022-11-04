@@ -1,2 +1,2 @@
-parent::[[Actuators and Sensors]]
-see-also:: [[Servos]]
+parent::[[Motors]]
+sibling::[[Servos]]

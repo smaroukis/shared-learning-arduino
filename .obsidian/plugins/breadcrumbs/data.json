@@ -72,7 +72,7 @@
   "showImpliedRelations": true,
   "showTrail": true,
   "showGrid": true,
-  "showJuggl": false,
+  "showJuggl": true,
   "showPrevNext": true,
   "sortByNameShowAlias": false,
   "squareDirectionsOrder": [
@@ -139,7 +139,7 @@
   "writeBCsInline": false,
   "showWriteAllBCsCmd": false,
   "visGraph": "Force Directed Graph",
-  "visRelation": "Parent",
+  "visRelation": "Child",
   "visClosed": "Real",
   "visAll": "All",
   "wikilinkIndex": true,

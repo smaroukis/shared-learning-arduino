@@ -32,8 +32,8 @@ Pins defined as "Analog" mean they can read an **analog** **input** and store it
 	
 > [!CAUTION] Generally we want to connect a 470 or 1K resistor in series with a pin to limit the current to <20mA (esp. for LEDs)
 
-**Input** pins are in a high impedance state (available to _sink_ current _in_ to the pin)
-- we can easily change these by driving them with 5V or 0V (`digitalWrite()`)
+**Input** pins are in a high impedance state 
+- we can easily change these by applying 5V or 0V to the pin (actually we change the state by sinking or sourcing a small current from the pin)
 - equivalent of a 10MOhm resistor in series with the pin
 - since high impedance means z=dv/di  is large, any change in current will also easily change the voltage (z is fixed)
 - it's recommended to use a pull-up or pull-down resistor so they don't "float" and give indeterminate behavior :➡️ we can use a resistor internal to the microprocessor by setting `pinMode(INPUT_PULLUP)`, see  [[Pullup Resistors]]

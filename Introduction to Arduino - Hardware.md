@@ -5,7 +5,11 @@ next::[[Intro to Arduino - Software]]
 
 #inbox/writing 
 
-[[word size]] is 16 bits (2 bytes)
+[[word size]] is 16 bits (2 bytes)\
+
+1. [[Arduino Pin Considerations]]
+2. [[Sources and Sinks]]
+3. 
 
 Outline
 - Microcontroller vs microprocessor vs arduino
@@ -26,6 +30,7 @@ Outline
 	- 2-13: Digital I/O
 		- Digital Output: Output is two states - High (=1) or Low (=0)
 			- in reality these are analog voltages that the receiving device can recognize as a 1 or 0
+			- [[Sources and Sinks]]
 		- Digital Input: You have to define what your "high" voltage reference level is, but then you can use these pins as digital input
 		- Tilde `~`: PWM output -> the PWM output is not a real analog output, to get a real analog output you need an [[RC Filter]] to achieve a DC voltage
 	- Analog input

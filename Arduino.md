@@ -10,7 +10,11 @@ parent::[[Arduino - _Site Map]]
 ## Topics
 
 ### Basic Topics
-**Fundamentals** - See [[Arduino Software Concepts]]
+**Fundamentals** - Hardware
+[[Arduino Pin Considerations]]
+[[Sources and Sinks]]
+
+**Fundamentals - Software**
 - [[Arduino Variable Types]], [[Table - ASCII Values]]
 - [[Arduino Boolean and Arithmetic]], [[Arduino Case Statements]]
 - [[Memory]] & [[Arduino Memory Specifics]]

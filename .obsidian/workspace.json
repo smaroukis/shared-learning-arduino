@@ -4,29 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "b326cf1466163b1b",
+        "id": "76e9ebe48a8098b2",
         "type": "tabs",
         "children": [
+          {
+            "id": "9b35d26390abb977",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
           {
             "id": "e6b2d89ea723a592",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arduino.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c34b1d0b3b9b6ce1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Introduction to Arduino - Hardware.md",
+                "file": "Arduino Software Concepts.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,8 +29,7 @@
             }
           }
         ],
-        "currentTab": 1,
-        "stacked": true
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +89,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -115,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Arduino - Hardware.md",
+                "file": "Arduino Software Concepts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Arduino - Hardware.md",
+                "file": "Arduino Software Concepts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Arduino - Hardware.md"
+                "file": "Arduino Software Concepts.md"
               }
             }
           },
@@ -174,14 +168,29 @@
               "type": "BC-tree",
               "state": {}
             }
+          },
+          {
+            "id": "35d643e039d0b8da",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_nodes",
+              "state": {}
+            }
+          },
+          {
+            "id": "705a1dacde0b0bdb",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_style",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 357.5
   },
   "ribbon": {
     "mostRecentAction": ""
@@ -204,7 +213,7 @@
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Introduction to Arduino - Hardware.md",
+                    "file": "Arduino Software Concepts.md",
                     "options": {
                       "collapse-filter": false,
                       "search": "",
@@ -243,20 +252,49 @@
         "height": 808,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "3419a1753c9d259d",
+        "type": "window",
+        "children": [
+          {
+            "id": "8a61d8de632f039c",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "454abbf0b6aff148",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "Personal Folders/that_marouk_ish/attachments/Drawing 2022-11-04 10.38.02.excalidraw.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 223,
+        "y": 37,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
       }
     ]
   },
-  "active": "c34b1d0b3b9b6ce1",
+  "active": "e6b2d89ea723a592",
   "lastOpenFiles": [
+    "Compilers.md",
+    "Arduino Software Concepts.md",
     "Arduino.md",
-    "Object Oriented Programming.md",
-    "Introduction to Arduino - Hardware.md",
-    "Arduino - _Site Map.md",
-    "_Start Here.md",
-    "Intermediate Topics.md",
-    "PCB.md",
-    "Personal Folders/that_marouk_ish/Vim Cheatsheet.md",
+    "Arduino Resources.md",
+    "Arduino Boards.md",
     "Arduino - Setup and IDE.md",
-    "Personal Folders/that_marouk_ish/tmi 17a RasPi NodeRed Server.md"
+    "Actuators and Sensors.md",
+    "Motors.md",
+    "Motors - Step.md",
+    "Servos.md"
   ]
 }
