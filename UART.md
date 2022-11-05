@@ -1,9 +1,12 @@
 parent::[[Serial Communication]]
 see-also: [[I2C]], [[SPI]]
+child:: [[Arduino Serial Monitor]]
 
 ### Overview
 
-Universal Asynchronous Reception and Transmission (UART) is a Serial Communication hardware protocol (cp. [[I2C.md|I2C]] and [[SPI.md|SPI]]). When we refer to the UART controller we are talking about the hardware that can send and receive Serial messages and relay them asynchronously to the CPU. 
+Universal Asynchronous Reception and Transmission (UART) is a Serial Communication hardware protocol (cf. [[I2C.md|I2C]] and [[SPI.md|SPI]]). When we refer to the UART controller we are talking about the hardware that can send and receive Serial messages and relay them asynchronously to the CPU. 
+
+![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105121633.png]]
 
 Transmitting UART converts parallel data from the master device (eg. CPU) into serial form and transmit in serial to receiving UART. It will then convert the serial data back into parallel data for the receiving device
 
@@ -30,6 +33,8 @@ Important
 ### Configuration
 
 To begin using a UART device you need to set the speed (baud-rate) and the data/parity/stop bit configuration (e.g. 8N1 is default on Arduino and many other devices, meaning 8 data-bits, no parity bits, and one stop bit -- this results in 10 bits as a start bit is also always needed).
+
+![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105105954.png]]
 
 The UART does not define voltage levels, refer to the specific protocol (e.g. [[RS-232]]) if that is needed.
 

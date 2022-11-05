@@ -1,3 +1,6 @@
+---
+alias: ["pull-up resistor", "pullup resistor", "pull-up resistors", "pullup resistors"]
+---
 parent::[[Arduino Pin Considerations]]
 next::[[Sources and Sinks]]
 

@@ -41,7 +41,7 @@
     - [[Pointers]]
       - [[Pointers - Working with Strings]]
     - [[Compilers]]
-    - [[Interrupts and Timers]]
+    - [[Interrupts, Timers and Callbacks]]
   - [[Serial Communication]]
     - [[Arduino Serial Buffers]]
     - [[RS-232]]

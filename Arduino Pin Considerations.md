@@ -30,7 +30,7 @@ Pins defined as "Analog" mean they can read an **analog** **input** and store it
 **Output** pins can drive LEDs, etc. As an output the pin is in a low impedance state - thus they can provide, or source, a lot of current (well up to 40mA).
 - low impedance means z=dv/di is small, so a change in current results in barely any change in voltage (an ideal source has no voltage change no matter what the current draw)
 	
-> [!CAUTION] Generally we want to connect a 470 or 1K resistor in series with a pin to limit the current to <20mA (esp. for LEDs)
+> [!CAUTION] Generally we want to connect a 470 or 1K resistor in series with a pin to limit the current to <20mA (esp. for LEDs) (see [[Resistor Calculation for LEDs]])
 
 **Input** pins are in a high impedance state 
 - we can easily change these by applying 5V or 0V to the pin (actually we change the state by sinking or sourcing a small current from the pin)
@@ -50,5 +50,9 @@ Pins defined as "Analog" mean they can read an **analog** **input** and store it
 **Internal LED is connected to Pin 13**
 - Don't use digital pin 13 as an input due to the internal LED attached, see more in [[Pullup Resistors]]
 
+**Interrupts** :➡️see [[Interrupts, Timers and Callbacks]]
+- Not all pins support interrupts, and some libraries like `SoftwareSerial` require interrupts for the RX pin.
+- The Mega2560 can use pins 10 through 15, 50 to 53, and A8 to A15 for RX. On the Leonardo, pins 8 through 11 and 14 to 16 can be used.
+
 **Further**
-- Timers are internally connected to some pins - PWM can be limited because of this, see [[Interrupts and Timers]]
+- Timers are internally connected to some pins - PWM can be limited because of this, see [[Interrupts, Timers and Callbacks]]

@@ -8,20 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9b35d26390abb977",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "e6b2d89ea723a592",
+            "id": "ff95dab8a1cda5f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arduino Software Concepts.md",
+                "file": "I2C.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -29,7 +21,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -58,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#refactor",
+                "query": "tag:#inbox/writing",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,22 +66,9 @@
               "type": "starred",
               "state": {}
             }
-          },
-          {
-            "id": "aa8344c77fec8a86",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Arduino - _Site Map.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -109,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arduino Software Concepts.md",
+                "file": "I2C.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arduino Software Concepts.md",
+                "file": "I2C.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arduino Software Concepts.md"
+                "file": "I2C.md"
               }
             }
           },
@@ -186,115 +165,27 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 357.5
+    "width": 357.5,
+    "collapsed": true
   },
   "ribbon": {
     "mostRecentAction": ""
   },
-  "floating": {
-    "id": "7e002baa9960909e",
-    "type": "floating",
-    "children": [
-      {
-        "id": "099499f90f2f6226",
-        "type": "window",
-        "children": [
-          {
-            "id": "12c8861a5f7dfcf2",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "584700fc634968a6",
-                "type": "leaf",
-                "state": {
-                  "type": "localgraph",
-                  "state": {
-                    "file": "Arduino Software Concepts.md",
-                    "options": {
-                      "collapse-filter": false,
-                      "search": "",
-                      "localJumps": 1,
-                      "localBacklinks": true,
-                      "localForelinks": true,
-                      "localInterlinks": false,
-                      "showTags": false,
-                      "showAttachments": false,
-                      "hideUnresolved": false,
-                      "collapse-color-groups": true,
-                      "colorGroups": [],
-                      "collapse-display": true,
-                      "showArrow": false,
-                      "textFadeMultiplier": 0,
-                      "nodeSizeMultiplier": 1,
-                      "lineSizeMultiplier": 1,
-                      "collapse-forces": true,
-                      "centerStrength": 0.518713248970312,
-                      "repelStrength": 10,
-                      "linkStrength": 1,
-                      "linkDistance": 250,
-                      "scale": 2.293520701061582,
-                      "close": false
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 385,
-        "y": 37,
-        "width": 700,
-        "height": 808,
-        "maximize": false,
-        "zoom": 0
-      },
-      {
-        "id": "3419a1753c9d259d",
-        "type": "window",
-        "children": [
-          {
-            "id": "8a61d8de632f039c",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "454abbf0b6aff148",
-                "type": "leaf",
-                "state": {
-                  "type": "excalidraw",
-                  "state": {
-                    "file": "Personal Folders/that_marouk_ish/attachments/Drawing 2022-11-04 10.38.02.excalidraw.md"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 223,
-        "y": 37,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "e6b2d89ea723a592",
+  "active": "ff95dab8a1cda5f3",
   "lastOpenFiles": [
-    "Compilers.md",
-    "Arduino Software Concepts.md",
-    "Arduino.md",
-    "Arduino Resources.md",
-    "Arduino Boards.md",
-    "Arduino - Setup and IDE.md",
-    "Actuators and Sensors.md",
-    "Motors.md",
-    "Motors - Step.md",
-    "Servos.md"
+    "SPI.md",
+    "LN - langbridgeArduinoSketches.md",
+    "I2C.md",
+    "James A. Langbridge - Arduino Sketches.md",
+    "Example - Langbridge I2C Arduino as Secondary.md",
+    "Interrupts, Timers and Callbacks.md",
+    "Personal Folders/that_marouk_ish/attachments/Drawing 2022-11-04 10.38.02.excalidraw.md",
+    "Bitwise Operations.md",
+    "Example - Langbridge SPI Thermocouple.md",
+    "MAX31855 thermocouple.md"
   ]
 }

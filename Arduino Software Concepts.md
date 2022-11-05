@@ -13,7 +13,7 @@ sibling:: [[Other Software and Computer Concepts]]
 5. [[Common Code Structure for Arduino Projects]] best practices- define, header files, 
 6. [[Pointers]]
 7. [[Pointers - Working with Strings]] strings and chars - char *
-8. [[Interrupts and Timers]] timers and interrupts
+8. [[Interrupts, Timers and Callbacks]] timers and interrupts
 
 [[Avoid magic numbers]]
 - instead of `if (val !== 42)` define a constant variable to hold `42` and compare against that instead

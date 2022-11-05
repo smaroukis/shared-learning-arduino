@@ -2,8 +2,6 @@ parent::[[Arduino Software Concepts]]
 previous::[[Multitasking and non blocking delays]]
 level:: #intermediate 
 
-#tdf include code examples, also callbacks
-
 ### Interrupts
 
 > **Interrupts** should really only be used for very high frequency events - not button presses. Button presses are examples of "doing something different".
@@ -18,6 +16,12 @@ Reasons to use interrupts:
 - ADC conversions (analog to digital)
 - EEPROM ready for use
 - Flash memory ready
+
+### Callbacks
+
+With some libraries we can use callbacks, for example when using an Arduino as a Secondary in a [[I2C]] communication scheme. The Arduino needs to be able to respond to the Main when requested.
+
+See [[Example - Langbridge I2C Arduino as Secondary]]
 
 **Resources**
 https://forum.arduino.cc/t/beginners-interrupts-why-when-and-how/518636

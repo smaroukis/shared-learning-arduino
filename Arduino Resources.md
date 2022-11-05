@@ -16,3 +16,6 @@ parent::[[Arduino]]
 
 **Books and Longer Resources**
 - [This online book](https://rizkia.staff.telkomuniversity.ac.id/files/2017/11/Designing-Embedded-Systems-with-Arduino-Tianhong-Pan-Yi-Zhu-Springer-2017.pdf) goes through many sensors and gives a short description of the theory, as well as providing full project examples like an Air Quality Monitor  #book
+
+**Of Historical Interest**
+- https://learn.adafruit.com/arduino-tips-tricks-and-techniques#uno-r2-and-r3-1884396

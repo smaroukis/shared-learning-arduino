@@ -16,7 +16,7 @@ see-also:: [[Arduino Memory Specifics]]
 	`true` or `false`
 
 `char`
-- a single character (i.e. one letter or number) - but for numbers between 0-255 use `byte` (see below)
+- a single character (i.e. one letter or number) - but for numbers between 0-255 use `byte` or  (see below)
 - occupies at least one byte of memory
 - encoded by the [ASCII chart](https://web.archive.org/web/20171028220458/https://www.arduino.cc/en/Reference/ASCIIchart) (note `A` starts at `65`) thus `'A' + 1` evaluates to `66` :➡️[[Table - ASCII Values]]
 - chars are single quotes (vs double quotes for strings)
@@ -24,10 +24,12 @@ see-also:: [[Arduino Memory Specifics]]
 `byte`
 - 0 to 255
 - 8-bit (1 byte) unsigned number
+- preferred usage over an `unsigned char` which also encodes 0 to 255
 
 `int`
 - -32,768 to 32,767
-- occupies 2 bytes 
+- typ. occupies 2 bytes (Uno, Mega, Nano)
+- aside: if the highest bit is "1" the number is interpreted as a negative number -> see [[Counting - Hexadecimal Binary and Decimal]]
 
 > [!NOTE] Numbers (e.g. `int` and `long`) are by default _unsigned_
 
@@ -35,7 +37,11 @@ see-also:: [[Arduino Memory Specifics]]
 
 `unsigned int`
 - 0 to 65,535
-- occupies 2 bytes 
+- typ. occupies 2 bytes 
+
+`word`
+- typ. an unsigned number from 0 to 65535
+- the range depends on the microprocessor (see [[word size]]) - for Arduino the word size is 16
 
 `long`
 - approx. -2 million to 2million
@@ -72,6 +78,7 @@ strings (C-formatted array of `char`s and Arduino `String`)
 
 **References**
 - https://www.reddit.com/r/arduino/comments/y2tv7s/comment/isbs6kw/?utm_source=share&utm_medium=web2x&context=3
+- https://www.seeedstudio.com/blog/2020/05/29/getting-started-with-arduino-data-types/
 
 
 ---

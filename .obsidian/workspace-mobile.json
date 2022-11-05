@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "5555b0d54d70cdae",
+        "id": "bf28c300da4f297a",
         "type": "tabs",
         "children": [
           {
-            "id": "1bc4e596aae2a3e5",
+            "id": "0c9cb8ba75189556",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -40,7 +45,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "debounce",
+            "query": "tag:#inbox/writing",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -81,6 +86,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -107,7 +114,9 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md"
+          }
         }
       },
       {
@@ -125,21 +134,37 @@
           "type": "BC-tree",
           "state": {}
         }
+      },
+      {
+        "id": "4a9b990d201cc8e4",
+        "type": "leaf",
+        "state": {
+          "type": "juggl_nodes",
+          "state": {}
+        }
+      },
+      {
+        "id": "dea6fb32ce450510",
+        "type": "leaf",
+        "state": {
+          "type": "juggl_style",
+          "state": {}
+        }
       }
     ],
     "currentTab": 0
   },
-  "active": "1bc4e596aae2a3e5",
+  "active": "0c9cb8ba75189556",
   "lastOpenFiles": [
+    "Arduino Boards.md",
+    "Uno.md",
+    "Introduction to Arduino - Hardware.md",
+    "Arduino Pin Considerations.md",
+    "Meta - Vault Cleanup Tasks.md",
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
     "Arduino.md",
     "Arduino Software Concepts.md",
     "Pointers.md",
-    "Arduino - _Master Hierarchy.md",
-    "Object Oriented Programming.md",
-    "Example Code - Arduino Built In Examples.md",
-    "Examples.md",
-    "Interrupts and Timers.md",
-    "Arduino Variable Types.md",
-    "Debouncing.md"
+    "Arduino - _Master Hierarchy.md"
   ]
 }
