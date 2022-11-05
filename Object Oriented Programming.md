@@ -4,8 +4,6 @@ parent::[[Arduino Software Concepts]]
 [[Example - Even Better OOP - Header Files]]
 [[Example - Professional Grade OOP - Inheritance and Composition]]
 
-next::inheritance, code structures
-
 ## General Theory
 
 **Use Private Member Variables**
@@ -72,7 +70,6 @@ class Rectangle: public Shape {
 ```
 
 **Inheritance - Modifying Base Class Member Variables**
-#refactor  this is more advanced
 
 > However, C++ prevents classes from initializing inherited member variables in the member initializer list of a constructor. In other words, the value of a member variable can only be set in a member initializer list of a constructor belonging to the same class as the variable.^[https://www.learncpp.com/cpp-tutorial/constructors-and-initialization-of-derived-classes/]
 
@@ -96,7 +93,6 @@ public:
 
 ## Resources
 - adafruit - https://learn.adafruit.com/multi-tasking-the-arduino-part-1/a-classy-solution
-- 
 - arduino forum example for a latching pushbutton, simple but powerful (goes over protected vs private, access functions, syntax ++) https://forum.arduino.cc/t/buttons-an-object-oriented-approach/279724/9 -> [[Example - OOP for a Latching Button]]
 - on extending classes in C++
 	- arduino example: https://forum.arduino.cc/t/class-inheritance-and-polyphormism/93778/3

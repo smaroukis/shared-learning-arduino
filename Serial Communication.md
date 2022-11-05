@@ -27,11 +27,18 @@ UART
 - configuration required on both devices (baud rate, data/stop/parity bits)
 
 [[SPI]]
-- #tdf 
-- seems to be more common for beginners
+- pins: `MISO`, `MOSI`, `SCLK`, `SS`
+- the Main has to have a `SS` (Secondary Select) pin for each Secondary - it pulls this low to communicate with the Secondary
+- full duplex - Main and Secondary can read/write at the same time
+- configuration: bit order, clock polarity and phase, clock frequency
 
 [[I2C]]
-- #tdf
+- pins: `SDA` and `SCLK`
+- not duplex - since there is only one Data line
+- All peripherals (Secondaries) and the Main connect to the Data line (`SDA`), and have unique addresses (self-defined, pre-shipped). 
+- The Main communicates with each Secondary by broadcasting the address of the Secondary it wants to address, and then sends the data
+- The Main then listens to the `SDA` line and processes data
+- configuration: addresses, peripheral registers, clock speed
 
 ### Arduino Specifics
 

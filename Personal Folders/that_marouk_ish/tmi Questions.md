@@ -1,7 +1,9 @@
 parent:: [[that_marouk_ish]]
 
 [[2022-10-02]]
-- what is the difference between a compiler and an interepreter? #q
-	- first pass: a **compiler** takes the human-readable code (e.g. C++ or C or Arduino C) and compiless it to assembly and machine code. An example is the gcc compiler. an **interpreter** is a layer of abstraction above the compiler, it is what the Arduino does behind the scenes to convert the Arduino C to the C that can be compiled by gcc. 
-	- further questions: can you see the output of the interpreter? 
-- SRAM vs other types of RAM 
+- what is the difference between a compiler and an interpreter? #q/answered
+	- My buess: a **compiler** takes the human-readable code (e.g. C++ or C or Arduino C) and compilers it to assembly and machine code. An example is the gcc compiler. an **interpreter** is a layer of abstraction above the compiler, it is what the Arduino does behind the scenes to convert the Arduino C to the C that can be compiled by gcc. 
+			- further questions: can you see the output of the interpreter? 
+	- Answer: The difference between an interpreted and a compiled language lies in the result of the process of interpreting or compiling. **An interpreter produces a result** from a program, while a **compiler produces a program written in assembly language**. The assembler of architecture then turns the resulting program into binary code. Assembly language varies for each individual computer, depending upon its architecture. Consequently, compiled programs can only run on computers that have the same architecture as the computer on which they were compiled.
+	- In an interpreted program, on the other hand, the source code typically is the program. Programs of this type (often known as scripts) require an interpreter, which parses the commands in the program and then executes them. Some interpreters, such as the [Unix](https://kb.iu.edu/d/agat) [shells](https://kb.iu.edu/d/agvf) (`sh`, `csh`, `ksh`, etc.), read and then immediately execute each command, while others, such as Perl, analyze the entire script before sending the corresponding machine language instructions. The advantage of a script is that it is very portable. Any computer that has the appropriate interpreter installed may run the program more or less unchanged
+	- 

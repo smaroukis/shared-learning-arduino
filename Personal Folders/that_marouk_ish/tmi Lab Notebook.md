@@ -115,7 +115,6 @@ then the controller code is
 - [[tmi10 Matrix Keypad]]
 	- finished at 1400 - had to debug some code and rewrite - esp. since the indexing was reversed
 - [[tmi11 Temp and Humidity Sensor]]
-- #tdf blocking vs non blocking arduino
 	- I'm guessing non-blocking is like using the `millis()` for debouncing instead of `delay()`
 
 ### [[2022-10-10]]
@@ -129,9 +128,9 @@ Projects
 07- audio - elegoo Lesson 7 & 8 - Buzzers -> [[tmi07 Buzzers]]
 - we need to do _frequency modulation_ (not PWM) to change the pitch (frequency) of the buzzer
 - if we used PWM as in `analogWrite()` we would just be varying the loudness (amplitude) of the buzzer
-- #q if my passive buzzer is only 16Ohms, how can I connect it directly to the arduino as an output? Wouldn't it draw more than 20mA? 
-	- mabye bc it can be modeled as an inductor - a short at DC and an open at AC
-	- datasheets (e.g. https://www.jp.tdk.com/tefe02/ec211_sdr.pdf) give a max current 25mA - 85mA  - this must be current draw based on a given voltage and pulse width
+- #q/answered  if my passive buzzer is only 16Ohms, how can I connect it directly to the arduino as an output? Wouldn't it draw more than 20mA? 
+	- the [[../../Buzzers - Active and Passive]] acts like a capacitor - so we cannot use the 16 Ohm value as a DC value
+	- the datasheets (e.g. https://www.jp.tdk.com/tefe02/ec211_sdr.pdf) give a max current 25mA - 85mA  - this must be current draw based on a given voltage and pulse width
 
 08 - motors [[tmi08 Micro Servo]]
 - mostly just uses the Servo library (download from Library Manager or online) to handle everything
@@ -168,7 +167,7 @@ Project 2
 	- ![[attachments/Screen Shot 2022-10-06 at 6.59.33 PM.png]]
 
 ### [[2022-10-05]]
-- [[../../State Machines]] #tdf
+- [[../../State Machines]] 
 - [[banziGettingStartedArduino]] Project - Fade in LED if pushbutton is pressed 
 	- [[tmi05 Pushbutton LED Fade]]
 - wiring vs processing vs Arduino language https://forum.arduino.cc/t/how-is-arduino-related-to-wiring/69064/

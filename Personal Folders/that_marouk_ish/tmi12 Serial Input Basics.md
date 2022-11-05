@@ -9,7 +9,6 @@ garden-topic:: [[../../Serial Communication]]
 > Source: https://forum.arduino.cc/t/serial-input-basics-updated/382007/2 
 
 ### 1) Writing Data to the Monitor
-#tdf
 
 **Numbers**
 - by default `Serial.print()` will write in decimal, but we can write something like a binary number by providing the encoding e.g. `Serial.print(136, BIN)` -> outputs `10001000`

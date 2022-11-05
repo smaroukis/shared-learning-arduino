@@ -1,18 +1,20 @@
 parent::[[Serial Communication]]
-see-also: [[I2C]], [[SPI]]
+next::[[SPI]]
 child:: [[Arduino Serial Monitor]]
 
 ### Overview
 
 Universal Asynchronous Reception and Transmission (UART) is a Serial Communication hardware protocol (cf. [[I2C.md|I2C]] and [[SPI.md|SPI]]). When we refer to the UART controller we are talking about the hardware that can send and receive Serial messages and relay them asynchronously to the CPU. 
 
+Pins required
+- `TX`: transmit pin
+- `RX`: receive pin
+
 ![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105121633.png]]
 
 Transmitting UART converts parallel data from the master device (eg. CPU) into serial form and transmit in serial to receiving UART. It will then convert the serial data back into parallel data for the receiving device
 
 The "universal" term means UART is generic - it doesn't define voltage levels, the number of data, parity, or stop bits - thus it can be configured to support many specific serial protocols. (See Configuration below)
-
-#q In practice it seems like the I2C or SPI protocol will be used as the communication protocol and then the UART controller does the hardware conversion to relay the data to the MCU for processing.
 
 Important
 - Serial
@@ -38,10 +40,10 @@ To begin using a UART device you need to set the speed (baud-rate) and the data/
 
 The UART does not define voltage levels, refer to the specific protocol (e.g. [[RS-232]]) if that is needed.
 
-**Raw** #refactor
+---
 
-- hardware for serial communication that handles the tranmission/reception of serial communication (external device required to handle the singalling level of the transmitting/receiving device)
-	- electric signalling level are handled by a external driver circuit, e.g. RS-232 (12V) and RS-485 (5V)
+- hardware for serial communication that handles the transmission/reception of serial communication (external device required to handle the signaling level of the transmitting/receiving device)
+	- electric signaling level are handled by a external driver circuit, e.g. RS-232 (12V) and RS-485 (5V)
 - an IC or part of an IC that allows data format and transmission speeds to be configurable
 - asynchronous - so uses a [[shift register.md|shift register]] to convert between serial and parallel forms
 - sends and receives bits one by one from LSB to MSB with start/stop bits
@@ -56,4 +58,3 @@ The UART does not define voltage levels, refer to the specific protocol (e.g. [[
 - https://www.analog.com/en/analog-dialogue/articles/uart-a-hardware-communication-protocol.html
 - https://www.seeedstudio.com/blog/2019/09/25/uart-vs-i2c-vs-spi-communication-protocols-and-uses/
 - https://electronics.stackexchange.com/questions/110478/difference-between-uart-and-rs-232
-- Langbridge, Arduino Sketches 2015 #refactor 
