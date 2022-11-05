@@ -1,7 +1,7 @@
 parent::[tmi Examples](tmi%20Examples.md)
 previous:: [tmi07 Buzzers](tmi07%20Buzzers.md)
 next:: [tmi09 Ultrasonic Sensor](tmi09%20Ultrasonic%20Sensor.md)
-garden-topic:: [Servos](../../Servos.md)
+garden-topic:: [Servo Motors](../../Servo%20Motors.md)
 level:: #beginner
 
 >  Inspired by Elegoo Ultimate Starter Kit Lesson 9
@@ -11,7 +11,7 @@ Desired Goal:
 
 Concepts:
 - Using the Library Manager
-- [Servos](../../Servos.md)
+- [Servo Motors](../../Servo%20Motors.md)
 - 
 
 Physical Setup:

@@ -1,6 +1,6 @@
 {
   "alwaysUpdateLinks": true,
-  "useMarkdownLinks": false,
+  "useMarkdownLinks": true,
   "promptDelete": false,
   "newLinkFormat": "relative",
   "attachmentFolderPath": "Personal Folders/that_marouk_ish/attachments",

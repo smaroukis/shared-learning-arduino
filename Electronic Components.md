@@ -1,4 +1,17 @@
 parent::[Arduino](Arduino.md)
 see-also::[Actuators and Sensors](Actuators%20and%20Sensors.md)
 
-#stub 
+## Index
+- [LEDs](LEDs.md)
+  - [RGB LEDs](RGB%20LEDs.md)
+  - [Resistor Calculation for LEDs](Resistor%20Calculation%20for%20LEDs.md)
+- [Optocouplers](Optocouplers.md)
+- [Power MOSFETs](Power%20MOSFETs.md)
+- [Resistors](Resistors.md)
+  - [Resistor Color Codes](Resistor%20Color%20Codes.md)
+- [Resonators](Resonators.md)
+- [Switches](Switches.md)
+  - [Debouncing](Debouncing.md)
+- [Transistors](Transistors.md)
+  - [open drain](open%20drain.md)
+- [Ultrasonic Sensor](Ultrasonic%20Sensor.md)

@@ -57,9 +57,9 @@
       - [pinout - LCD1602](pinout%20-%20LCD1602.md)
     - [Matrix Keypad](Matrix%20Keypad.md)
       - [tmi10 Matrix Keypad](Personal%20Folders/that_marouk_ish/tmi10%20Matrix%20Keypad.md)
-    - [Motors - Step](Motors%20-%20Step.md)
+    - [Step Motors](Step%20Motors.md)
     - [Motors](Motors.md)
-      - [Servos](Servos.md)
+      - [Servo Motors](Servo%20Motors.md)
   - [Electronic Components](Electronic%20Components.md)
     - [LEDs](LEDs.md)
       - [RGB LEDs](RGB%20LEDs.md)
@@ -87,7 +87,6 @@
     - [Example Code - Move Servo to User Defined Position](Personal%20Folders/that_marouk_ish/code/Example%20Code%20-%20Move%20Servo%20to%20User%20Defined%20Position.md)
 
 
-
 ## Resource and Projects Hierarchy
 Memory
 - [Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
@@ -104,9 +103,6 @@ Object Oriented Programming
 - [Example - OOP with Traffic Light Controller](Example%20-%20OOP%20with%20Traffic%20Light%20Controller.md)
 - [Example - Professional Grade OOP - Inheritance and Composition](Example%20-%20Professional%20Grade%20OOP%20-%20Inheritance%20and%20Composition.md)
 - [tmi 16 Object Oriented Programming](Personal%20Folders/that_marouk_ish/tmi%2016%20Object%20Oriented%20Programming.md)
-
-Arduino
-- [banziGettingStartedArduino](Personal%20Folders/that_marouk_ish/banziGettingStartedArduino.md)
 
 Serial Communication
 - [Example Code - Move Servo to User Defined Position](Personal%20Folders/that_marouk_ish/code/Example%20Code%20-%20Move%20Servo%20to%20User%20Defined%20Position.md)

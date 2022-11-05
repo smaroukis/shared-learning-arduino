@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "file": "Arduino - _Site Map.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -72,7 +72,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 272.5
+    "width": 272.5,
+    "collapsed": true
   },
   "right": {
     "id": "e8caf645a6d0e8f4",
@@ -88,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "file": "Arduino - _Site Map.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "file": "Arduino - _Site Map.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md"
+                "file": "Arduino - _Site Map.md"
               }
             }
           },
@@ -177,15 +178,15 @@
   },
   "active": "8b661afd9a06e7f2",
   "lastOpenFiles": [
-    "Personal Folders/that_marouk_ish/tmi Questions.md",
-    "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
-    "Example - OOP for a Latching Button.md",
-    "Personal Folders/that_marouk_ish/Notes on multitasking.md",
-    "ints vs bytes.md",
-    "Personal Folders/that_marouk_ish/tmi EE Hierarchy.md",
-    "_Start Here.md",
-    "Meta - Main Page.md",
-    "Meta - Getting Started with This Vault.md",
-    "Meta - Definitions.md"
+    "Arduino Software Concepts.md",
+    "Arduino - _Site Map.md",
+    "Arduino.md",
+    "Other Software and Computer Concepts.md",
+    "Intro to Arduino - Software.md",
+    "bit-shifting.md",
+    "binary arithmetic.md",
+    "Avoid magic numbers.md",
+    "Arduino Variable Types.md",
+    "Introduction to Arduino - Hardware.md"
   ]
 }

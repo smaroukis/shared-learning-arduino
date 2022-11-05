@@ -1,12 +1,16 @@
 parent::[Arduino](Arduino.md)
 next::[Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
 
-Other Topics
-1. [Arduino Boards](Arduino%20Boards.md)
-2. [Arduino Pin Considerations](Arduino%20Pin%20Considerations.md)
-3. [Sources and Sinks](Sources%20and%20Sinks.md)
+## Index
+- [Arduino - ADC](Arduino%20-%20ADC.md)
+- [Arduino Pin Considerations](Arduino%20Pin%20Considerations.md)
+  - [Pullup Resistors](Pullup%20Resistors.md)
+- [Sources and Sinks](Sources%20and%20Sinks.md)
 
-### Introduction (Uno and Mega)
+Other Topics
+- [Arduino Boards](Arduino%20Boards.md)
+
+## Introduction (Uno and Mega)
 
 The Arduino [Uno](Uno.md) (Rev 3) uses the ATMega328P as the main microcontroller and the ATMetga 16U2 as an auxiliary microprocessor to communicate between the ATMega328P and the computer (it is used as a Serial-to-USB converter, see [Serial Communication](Serial%20Communication.md) for more)
 
