@@ -1,10 +1,10 @@
-parent::[[Arduino Boards]]
+parent::[Arduino Boards](Arduino%20Boards.md)
 
 - Uses an ATmega328 as the main microcontroller
 - Uses an ATmega16U2 to process USB connections (which ATmega328 can't)
 
 ### Pin specifics 
-For a basic intro see [[Arduino Pin Considerations]]
+For a basic intro see [Arduino Pin Considerations](Arduino%20Pin%20Considerations.md)
 
 -   Serial: 0 (RX) and 1 (TX). Used to receive (RX) and transmit (TX) TTL serial data. These pins are connected to the corresponding pins of the ATmega8U2 USB-to-TTL Serial chip.
 -   External Interrupts: 2 and 3. These pins can be configured to trigger an interrupt on a low value, a rising or falling edge, or a change in value. See the attachInterrupt() function for details.

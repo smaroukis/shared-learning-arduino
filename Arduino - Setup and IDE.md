@@ -1,5 +1,5 @@
-parent::[[Arduino]]
-next::[[Introduction to Arduino - Hardware]]
+parent::[Arduino](Arduino.md)
+next::[Introduction to Arduino - Hardware](Introduction%20to%20Arduino%20-%20Hardware.md)
 
 There are a lot of tutorials about setting up there so this page will be just a #stub - with issues that you may come across.
 

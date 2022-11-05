@@ -1,6 +1,6 @@
-parent::[[Meta - Main Page]]
+parent::[Meta - Main Page](Meta%20-%20Main%20Page.md)
 
-> Note this page is specific to [[Obsidian]] usage, talking about the root level Garden topics.
+> Note this page is specific to [Obsidian](Obsidian) usage, talking about the root level Garden topics.
 
 Hierarchies
 - we want to keep our "main" hierarchy clean, so **don't include resources, pinouts, tables** here
@@ -13,5 +13,5 @@ General Note Guidelines - Atomic & Hierarchical
 > Tables, pinouts and other specific resources should have a special format, and tagged as follows (this helps keeps other notes atomic and smaller):
 > 
 > **Tables**
-> - If a table will be used again or referenced, like the [[Table - ASCII Values]], we should put it in its **own atomic note** and then where applicable, **transclude** it in the note where we reference the information (e.g. [[Arduino Variable Types]] references the ASCII table)
+> - If a table will be used again or referenced, like the [Table - ASCII Values](Table%20-%20ASCII%20Values.md), we should put it in its **own atomic note** and then where applicable, **transclude** it in the note where we reference the information (e.g. [Arduino Variable Types](Arduino%20Variable%20Types.md) references the ASCII table)
 > - First, (1) name the page as `Table - <Description>`, then (2) at the end of the page, link to any pages that use it with the syntax `garden-topic:: <page_name>`   and (3) add the `#table` tag so we can quickly find it as needed

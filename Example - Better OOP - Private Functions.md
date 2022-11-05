@@ -1,6 +1,6 @@
-garden-topic::[[Object Oriented Programming]]
-previous::[[Example - A Basic OOP Class for Multitasking]]
-next::[[Example - Even Better OOP - Header Files]], [[Example - OOP with Traffic Light Controller]]
+garden-topic::[Object Oriented Programming](Object%20Oriented%20Programming.md)
+previous::[Example - A Basic OOP Class for Multitasking](Example%20-%20A%20Basic%20OOP%20Class%20for%20Multitasking.md)
+next::[Example - Even Better OOP - Header Files](Example%20-%20Even%20Better%20OOP%20-%20Header%20Files.md), [Example - OOP with Traffic Light Controller](Example%20-%20OOP%20with%20Traffic%20Light%20Controller.md)
 #code
 
 > Source: https://roboticsbackend.com/arduino-object-oriented-programming-oop/

@@ -1,4 +1,4 @@
-parent::[[Arduino Variable Types]]
+parent::[Arduino Variable Types](Arduino%20Variable%20Types.md)
 
 **Example - multidimensional arrays (2x2)**
 

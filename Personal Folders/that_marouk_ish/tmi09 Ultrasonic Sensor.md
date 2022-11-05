@@ -1,8 +1,8 @@
-parent::[[tmi Examples]]
-previous:: [[tmi08 Micro Servo]]
-next:: [[tmi10 Matrix Keypad]]
+parent::[tmi Examples](tmi%20Examples.md)
+previous:: [tmi08 Micro Servo](tmi08%20Micro%20Servo.md)
+next:: [tmi10 Matrix Keypad](tmi10%20Matrix%20Keypad.md)
 level:: #beginner
-garden-topic:: [[../../Ultrasonic Sensor]]
+garden-topic:: [Ultrasonic Sensor](../../Ultrasonic%20Sensor.md)
 
 >  (source)
 
@@ -11,7 +11,7 @@ Desired Goal:
 
 Concepts:
 
-[[../../Ultrasonic Sensor]] -
+[Ultrasonic Sensor](../../Ultrasonic%20Sensor.md) -
 
 Physical Setup:
 

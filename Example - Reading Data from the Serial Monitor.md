@@ -1,5 +1,5 @@
-parent::[[James A. Langbridge - Arduino Sketches]]
-garden-topic:: [[Arduino Serial Monitor]], [[UART]]
+parent::[James A. Langbridge - Arduino Sketches](James%20A.%20Langbridge%20-%20Arduino%20Sketches.md)
+garden-topic:: [Arduino Serial Monitor](Arduino%20Serial%20Monitor.md), [UART](UART.md)
 
 ## Example 1 - Basic Serial Monitor Usage
 

@@ -1,6 +1,6 @@
-parent::[[Arduino]]
+parent::[Arduino](Arduino.md)
 
-> While serial devices send bits on a single wire, parallel devices send multiple bits on multiple wires. Although parallel communications can be faster than serial, they were often more expensive, requiring more wires. ([[James A. Langbridge - Arduino Sketches]])
+> While serial devices send bits on a single wire, parallel devices send multiple bits on multiple wires. Although parallel communications can be faster than serial, they were often more expensive, requiring more wires. ([James A. Langbridge - Arduino Sketches](James%20A.%20Langbridge%20-%20Arduino%20Sketches.md))
 
 > With recent technological advances, serial communications can reach faster speeds than parallel communications, do to the decreased complexity
 
@@ -21,18 +21,18 @@ UART
 
 ### UART vs I2C vs SPI
 
-[[UART]]
+[UART](UART.md)
 - the most well documented, used for communicating with/between PCs
 - uses 2 wires, `RX` and `TX`
 - configuration required on both devices (baud rate, data/stop/parity bits)
 
-[[SPI]]
+[SPI](SPI.md)
 - pins: `MISO`, `MOSI`, `SCLK`, `SS`
 - the Main has to have a `SS` (Secondary Select) pin for each Secondary - it pulls this low to communicate with the Secondary
 - full duplex - Main and Secondary can read/write at the same time
 - configuration: bit order, clock polarity and phase, clock frequency
 
-[[I2C]]
+[I2C](I2C.md)
 - pins: `SDA` and `SCLK`
 - not duplex - since there is only one Data line
 - All peripherals (Secondaries) and the Main connect to the Data line (`SDA`), and have unique addresses (self-defined, pre-shipped). 

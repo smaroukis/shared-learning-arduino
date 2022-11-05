@@ -1,2 +1,2 @@
-parent::[[Arduino]]
-see-also::[[Electronic Components]]
+parent::[Arduino](Arduino.md)
+see-also::[Electronic Components](Electronic%20Components.md)

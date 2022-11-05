@@ -1,11 +1,11 @@
-[[James A. Langbridge - Arduino Sketches]]
+[James A. Langbridge - Arduino Sketches](James%20A.%20Langbridge%20-%20Arduino%20Sketches.md)
 
 ### Serial Communication
-garden-topic::[[Serial Communication]]
+garden-topic::[Serial Communication](Serial%20Communication.md)
 ⬇️ 
 
 #### UART ✅ 
-garden-topic::[[UART]]
+garden-topic::[UART](UART.md)
 
 RS-232 was the original standard, replaced by USB to connect more peripherals. USB can connect to RS-232 hardware using a special converter.  RS-232 was designed for longer runs(up to 1000ft) and is a low capacitance cable. RS-232 connections transmit 10 bits: a start bit, 8 data bits, and a stop bit
 
@@ -17,7 +17,7 @@ UART is hardware that translates between serial and parallel. To begin using a U
 1. the speed (baud-rate)
 2. the data/parity/stop bit configuration (e.g. 8N1 is default on Arduino, meaning 8 data-bits, no parity bits, and one stop bit -- this results in 10 bits as a start bit is also always needed). 
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105105954.png]]
+![Pasted image 20221105105954](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105105954.png)
 
 **Data encapsulation** is placing the data inside other bits that help the computer identify what is being sent:
 - **Data bits**: can be between 5 and 9, but most systems use 8 bits because that is 1 byte. 
@@ -37,7 +37,7 @@ SoftwareSerial requires pins that support change interrupts.
 
 Uses a ~~Master/Slave~~ Main/Secondary control scheme - the Main can communicate with only one Secondary peripheral at a time. Compared to networking the Main is the Host and the Secondary is the Client.
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105125854.png]]
+![Pasted image 20221105125854](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105125854.png)
 
 Requires 4 wires
 - `MOSI` and `MISO`: Data wires are MOSI (Main Out-Secondary In) and MISO (Main In-Secondary Out).
@@ -95,11 +95,11 @@ byte result = SPI.transer(byte val)
 
 ```
 
-[[Example - Langbridge SPI Thermocouple]]
+[Example - Langbridge SPI Thermocouple](Example%20-%20Langbridge%20SPI%20Thermocouple.md)
 
 #### Wire ✅
 
-I2C is short for Inter-IC bus, also goes by the name "Two Wire" - since we just need two wires (_plus_ a ground) to communicate with many devices. It is easier to configure than SPI, since there is no concept of mechanisms like chip select or chip activate (cf. [[SPI]]), but each device requires a unique address - and there is a lot of confusion around this.
+I2C is short for Inter-IC bus, also goes by the name "Two Wire" - since we just need two wires (_plus_ a ground) to communicate with many devices. It is easier to configure than SPI, since there is no concept of mechanisms like chip select or chip activate (cf. [SPI](SPI.md)), but each device requires a unique address - and there is a lot of confusion around this.
 
 Clock speed is 100kHz default and 400kHz maximum (the actual protocol maximum is 5MHz as of 2012). 
 
@@ -107,9 +107,9 @@ The two data wires are called SDA (Serial Data) and SCL (Serial Clock).
 
 I2C can only send data in 8-bit packages. Devices tend to be small with only a few pins, and usually we can't setup our own address. The Data is stored internally to the peripheral in a register - some devices only have one, some devices have multiple. 
 
-I2C requires [[Pullup Resistors]] on the data lines since they are of "[[open drain]]" type. 
+I2C requires [Pullup Resistors](Pullup%20Resistors.md) on the data lines since they are of "[open drain](open%20drain.md)" type. 
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105150231.png]]
+![Pasted image 20221105150231](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105150231.png)
 
 **Sequence**
 - Mains automatically receive all information from Secondaries
@@ -126,7 +126,7 @@ I2C requires [[Pullup Resistors]] on the data lines since they are of "[[open dr
 - In 7-bit addressing, addresses are (of course) 7 bits long, and the last bit is used to select a read or a write, for a total of 8 bits.
 - In 10-bit addressing, things are a little more complicated (since we can only send 8 bits at a time) - see the diagram below. The first 5 bits are always written as `11110` since this is reserved in 7-bit addressing. 
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105150400.png]]
+![Pasted image 20221105150400](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105150400.png)
 
 Cons
 - not full duplex, so devices can't send and receive data at the same time
@@ -195,6 +195,6 @@ Arduino as a Secondary
 - use Wire libraries callbacks - that is `Wire.onReceive()` and `Wire.onRequest()`
 
 Example
-- [[Example - Langbridge I2C Arduino as Secondary]]
+- [Example - Langbridge I2C Arduino as Secondary](Example%20-%20Langbridge%20I2C%20Arduino%20as%20Secondary.md)
 
 #inbox/writing 🍊

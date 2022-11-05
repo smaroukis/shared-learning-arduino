@@ -1,5 +1,5 @@
-garden-topic::[[Object Oriented Programming]]
-previous::[[Example - A Basic OOP Class for Multitasking]]
+garden-topic::[Object Oriented Programming](Object%20Oriented%20Programming.md)
+previous::[Example - A Basic OOP Class for Multitasking](Example%20-%20A%20Basic%20OOP%20Class%20for%20Multitasking.md)
 
 > Source: https://forum.arduino.cc/t/buttons-an-object-oriented-approach/279724/9
 

@@ -1,17 +1,17 @@
-parent::[[James A. Langbridge - Arduino Sketches]]
-garden-topic::[[SPI]], [[Bitwise Operations]]
+parent::[James A. Langbridge - Arduino Sketches](James%20A.%20Langbridge%20-%20Arduino%20Sketches.md)
+garden-topic::[SPI](SPI.md), [Bitwise Operations](Bitwise%20Operations.md)
 
-> Source:: [[James A. Langbridge - Arduino Sketches]]
+> Source:: [James A. Langbridge - Arduino Sketches](James%20A.%20Langbridge%20-%20Arduino%20Sketches.md)
 
 Hardware
-- [[MAX31855 thermocouple]]
-- Arduino [[Due]] (3.3V)
+- [MAX31855 thermocouple](MAX31855%20thermocouple.md)
+- Arduino [Due](Due.md) (3.3V)
 
 > [!NOTE]- Hardware Layout
 > 
-> ![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105132150.png]]
+> ![Pasted image 20221105132150](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105132150.png)
 
-After taking a look at the datasheet of the [[MAX31855 thermocouple]] we can see what data it gives back on the SPI bus. It is a 32 bit package, with the first 16 bits (D31 to D18) as the temperature data and the second 16 bits (D15 to D0) as an error or fault status if applicable.
+After taking a look at the datasheet of the [MAX31855 thermocouple](MAX31855%20thermocouple.md) we can see what data it gives back on the SPI bus. It is a 32 bit package, with the first 16 bits (D31 to D18) as the temperature data and the second 16 bits (D15 to D0) as an error or fault status if applicable.
 
 We read the data in 8 bits at a time with `SPI.transfer()`, then combine the data into to 16-bit variables with `word()`. 
 

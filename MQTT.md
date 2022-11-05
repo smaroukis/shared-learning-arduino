@@ -1,6 +1,6 @@
 > MQTT is an OASIS standard messaging protocol for the Internet of Things (IoT). It is designed as an extremely lightweight publish/subscribe messaging transport that is ideal for connecting remote devices with a small code footprint and minimal network bandwidth
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221028113639.png]]
+![Pasted image 20221028113639](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221028113639.png)
 Image from IBM https://www.ibm.com/developerworks/community/blogs/c565c720-fe84-4f63-873f-607d87787327/entry/tc_overview?lang=en
 
 

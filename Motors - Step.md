@@ -1,2 +1,2 @@
-parent::[[Motors]]
-sibling::[[Servos]]
+parent::[Motors](Motors.md)
+sibling::[Servos](Servos.md)

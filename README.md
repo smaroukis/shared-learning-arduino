@@ -4,7 +4,7 @@ This is a shared knowledge project to promote learning about Arduino for beginne
 
 This repo, sometimes called a "vault", is best browsed in a local markdown client like [Obsidian](https://obsidian.md), and in fact some features are native to Obsidian, like callouts and embeds, although effort has been made to promote cross-compatibility. If there is a cross-compatibility with your markdown client of choice, feel free to submit an issue to let me know.
 
-See [[_Start Here]] to get started.
+See [_Start Here](_Start%20Here.md) to get started.
 
 Example code is in https://github.com/smaroukis/shared-learning-arduino/tree/main/Personal%20Folders/that_marouk_ish/code
 

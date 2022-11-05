@@ -1,26 +1,26 @@
-parent::[[Actuators and Sensors]]
+parent::[Actuators and Sensors](Actuators%20and%20Sensors.md)
 
 > Note: This is specifically about the 16 x 2 displays commonly used for beginner Arduino projects.
 
 ## Overview
 
-The standard way of using an LCD will require 7 Arduino I/O pins (8 if you want to control backlight). This is an example of [[Parallel Communication.md|Parallel Communication]] on the pins `D0` to `D7`.
+The standard way of using an LCD will require 7 Arduino I/O pins (8 if you want to control backlight). This is an example of [Parallel Communication](Parallel%20Communication.md) on the pins `D0` to `D7`.
 
 > [!tip]- Commonly you only need to connect 4 data pins 
 > The LCD can be driven in `4-bit` parallel mode, which is the more common configuration that you will see in examples using the `LiquidCrystal` libary.	
 > 
 > This means you only need to connect RS, E, D4, D5, D6, and D7 pins to Arduino (see example below). (`RW`, `K`, and `VSS` go to `GND`; `VDD` &  `A` go to `+5V` )
 
-There is another library that uses [[I2C]] (`LiquidCrystal_I2C`) that uses just the two `SCL` and `SCA` pins (in addition to `+V` and `GND`)
+There is another library that uses [I2C](I2C.md) (`LiquidCrystal_I2C`) that uses just the two `SCL` and `SCA` pins (in addition to `+V` and `GND`)
 
 > [!note]- Block Diagram
-> ![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221017112251.png]]
+> ![Pasted image 20221017112251](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221017112251.png)
 
 **Resources**
 
 ## Specifics for LCD1602
 
-[[Example - LCD1602 Hello World]] - has the pin setup, etc, and code
+[Example - LCD1602 Hello World](Example%20-%20LCD1602%20Hello%20World.md) - has the pin setup, etc, and code
 
 ## References and More
 

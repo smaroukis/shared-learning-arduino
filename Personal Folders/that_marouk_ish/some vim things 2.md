@@ -1,4 +1,4 @@
-also see [[Vim Cheatsheet]]
+also see [Vim Cheatsheet](Vim%20Cheatsheet.md)
 
 **Macros**
 - record a macro with `q<key>` where we assign the macro to key `<key>`

@@ -1,7 +1,7 @@
-parent::[[Transistors]]
+parent::[Transistors](Transistors.md)
 
-Open drain (or open collector on a BJT) means that the drain which is used as the **output**, is not connected to a source of power. This transistor configuration can force its value low (with a base input from the microcontroller) but cannot provide power. Usually a [[pull-up resistor]] is added so the device is normally high. 
+Open drain (or open collector on a BJT) means that the drain which is used as the **output**, is not connected to a source of power. This transistor configuration can force its value low (with a base input from the microcontroller) but cannot provide power. Usually a [pull-up resistor](pull-up%20resistor) is added so the device is normally high. 
 
 Power must be provided from elsewhere.
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105102437.png]]
+![Pasted image 20221105102437](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105102437.png)

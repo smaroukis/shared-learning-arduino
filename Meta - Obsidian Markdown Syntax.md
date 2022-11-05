@@ -1,4 +1,4 @@
-parent::[[Meta - Main Page]]
+parent::[Meta - Main Page](Meta%20-%20Main%20Page.md)
 
 **Folded Callouts**
 
@@ -16,7 +16,7 @@ What's very useful about callouts is that they can be folded by default, using t
 
 Example
 > [!Tip]- Callouts can be styled by the keyword in the brackets
-> - See the [[https://help.obsidian.md/How+to/Use+callouts#Types]] for a list of callout types
+> - See the [](https://help.obsidian.md/How+to/Use+callouts#Types) for a list of callout types
 > - The keyword is case independent
 > - You can nest markdown formatting inside a callout
 

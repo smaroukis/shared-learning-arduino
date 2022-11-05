@@ -1,4 +1,4 @@
-parent::[[tmi Examples]]
+parent::[tmi Examples](tmi%20Examples.md)
 previous::
 next::
 level:: #beginner

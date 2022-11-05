@@ -1,4 +1,4 @@
-parent::[[Arduino Boards]]
+parent::[Arduino Boards](Arduino%20Boards.md)
 
 > Note the Leonardo is now a retired product from Arduino, but you still may see projects in the wild using the board.
 
@@ -10,4 +10,4 @@ parent::[[Arduino Boards]]
 - can `analogWrite()` on pin 13 (the internal LED)
 
 **Further**
-- see [[Personal Folders/that_marouk_ish/banziGettingStartedArduino]] Chapter 7 for a Leonardo project example
+- see [banziGettingStartedArduino](Personal%20Folders/that_marouk_ish/banziGettingStartedArduino.md) Chapter 7 for a Leonardo project example

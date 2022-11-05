@@ -1,4 +1,4 @@
-parent::[[Meta - Main Page]]
+parent::[Meta - Main Page](Meta%20-%20Main%20Page.md)
 
 - Turn off "Wikilinks" for portability and usage with Github
 	- Settings > File Links > Use Wikilinks = `no (untoggled)`

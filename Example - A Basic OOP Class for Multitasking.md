@@ -1,5 +1,5 @@
-garden-topic::[[Object Oriented Programming]]
-next:: [[Example - Basic OOP for Stepper - Clean Sweep]], [[Example - Even Better OOP - Header Files]]
+garden-topic::[Object Oriented Programming](Object%20Oriented%20Programming.md)
+next:: [Example - Basic OOP for Stepper - Clean Sweep](Example%20-%20Basic%20OOP%20for%20Stepper%20-%20Clean%20Sweep.md), [Example - Even Better OOP - Header Files](Example%20-%20Even%20Better%20OOP%20-%20Header%20Files.md)
 #code 
 
 > Source: https://learn.adafruit.com/multi-tasking-the-arduino-part-1/a-classy-solution

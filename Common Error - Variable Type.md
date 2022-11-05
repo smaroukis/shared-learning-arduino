@@ -1,5 +1,5 @@
 #code 
-garden-topic::[[Arduino Variable Types]]
+garden-topic::[Arduino Variable Types](Arduino%20Variable%20Types.md)
 
 The result is `255` since `baz` is a `byte` (which only goes from 0 to 255)
 

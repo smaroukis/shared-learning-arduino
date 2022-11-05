@@ -1,10 +1,10 @@
-parent::[[UART]]
+parent::[UART](UART.md)
 
-[[Example - Reading Data from the Serial Monitor]]
+[Example - Reading Data from the Serial Monitor](Example%20-%20Reading%20Data%20from%20the%20Serial%20Monitor.md)
 
 ### Writing Data
 
-By default numbers are displayed in decimal and rounded two places. Quotation marks, backslashes and single quotes need to be escaped -- also see [[Table - ASCII Values]]. 
+By default numbers are displayed in decimal and rounded two places. Quotation marks, backslashes and single quotes need to be escaped -- also see [Table - ASCII Values](Table%20-%20ASCII%20Values.md). 
 
 Write text with `Serial.print()`. Write data with `Serial.write()`. 
 

@@ -1,4 +1,4 @@
-parent::[[Actuators and Sensors]]
+parent::[Actuators and Sensors](Actuators%20and%20Sensors.md)
 
 
 **Operating Principle**
@@ -10,17 +10,17 @@ parent::[[Actuators and Sensors]]
 - use a `INPUT_PULLUP` type for the row and set the output column to `LOW`,  then we check to see if this input pin is pulled low to see if the button is pressed (see example below).
 
 **Example**:
-For example, here we are checking the button in Row 2, Column 2. If we measure `LOW` at the input, then we know the button is pressed, otherwise it is being pulled up to 5V as defined (i.e `pinMode(1, INPUT_PULLUP)`). We use a [[pull-up resistor .md|pull-up resistor ]]on the input here so we can be sure of the state (and not require an external pull-down resistor). 
+For example, here we are checking the button in Row 2, Column 2. If we measure `LOW` at the input, then we know the button is pressed, otherwise it is being pulled up to 5V as defined (i.e `pinMode(1, INPUT_PULLUP)`). We use a [pull-up resistor ](pull-up%20resistor%20.md)on the input here so we can be sure of the state (and not require an external pull-down resistor). 
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221010234949.png]]
+![Pasted image 20221010234949](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221010234949.png)
 
 For a common membrane keypad the buttons are connected in rows and columns:
 - columns:  pins 1-4
 - rows: pins 5-8
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221010232424.png]]
+![Pasted image 20221010232424](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221010232424.png)
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221010232802.png]]
+![Pasted image 20221010232802](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221010232802.png)
 
 
 

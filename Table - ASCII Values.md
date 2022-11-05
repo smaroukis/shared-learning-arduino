@@ -97,5 +97,5 @@ ASCII Table ~ Character Map
  | `}` | 125 | 7D | 175 | 1111101 | 
  | `~` | 126 | 7E | 176 | 1111110 |
 
-garden-topic:: [[Arduino Variable Types]]
+garden-topic:: [Arduino Variable Types](Arduino%20Variable%20Types.md)
 #table 

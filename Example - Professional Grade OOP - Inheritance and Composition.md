@@ -1,5 +1,5 @@
-garden-topic::[[Object Oriented Programming]]
-previous::[[Example - Even Better OOP - Header Files]]
+garden-topic::[Object Oriented Programming](Object%20Oriented%20Programming.md)
+previous::[Example - Even Better OOP - Header Files](Example%20-%20Even%20Better%20OOP%20-%20Header%20Files.md)
 
 > Source: https://paulmurraycbr.github.io/ArduinoTheOOWay.html
 

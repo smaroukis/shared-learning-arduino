@@ -1,4 +1,4 @@
-parent::[[Resistors]], [[LEDs]]
+parent::[Resistors](Resistors.md), [LEDs](LEDs.md)
 
 220Ohm (red-red-brown) are common for LEDs since they limit the current from a 5V supply to around 15mA.
 

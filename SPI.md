@@ -1,9 +1,9 @@
-parent::[[Serial Communication]]
-resource::[[Example - Langbridge SPI Thermocouple]]
-next::[[I2C]]
-previous::[[UART]]
+parent::[Serial Communication](Serial%20Communication.md)
+resource::[Example - Langbridge SPI Thermocouple](Example%20-%20Langbridge%20SPI%20Thermocouple.md)
+next::[I2C](I2C.md)
+previous::[UART](UART.md)
 
-> Source: [[James A. Langbridge - Arduino Sketches]]
+> Source: [James A. Langbridge - Arduino Sketches](James%20A.%20Langbridge%20-%20Arduino%20Sketches.md)
 
 ## Intro
 
@@ -11,7 +11,7 @@ previous::[[UART]]
 
 Uses a ~~Master/Slave~~ Main/Secondary control scheme - the Main can communicate with only one Secondary peripheral at a time. Compared to networking the Main is the Host and the Secondary is the Client.
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105125854.png]]
+![Pasted image 20221105125854](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105125854.png)
 
 Requires 4 wires
 - `MOSI` and `MISO`: Data wires are MOSI (Main Out-Secondary In) and MISO (Main In-Secondary Out).

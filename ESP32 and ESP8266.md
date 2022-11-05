@@ -1,4 +1,4 @@
-parent::[[Arduino Boards]]
+parent::[Arduino Boards](Arduino%20Boards.md)
 
 The [ESP32 is a dual-core](https://randomnerdtutorials.com/esp32-dual-core-arduino-ide/) 160MHz to 240MHz CPU, whereas the ESP8266 is a single-core processor that runs at 80MHz.
 
@@ -8,7 +8,7 @@ The [ESP32](https://makeradvisor.com/esp32-development-boards-review-comparison
 
 > [!EXAMPLE]+ ESP32 vs ESP8266
 > 
-> ![[Table ESP32 vs ESP8266]]
+> ![Table ESP32 vs ESP8266](Table%20ESP32%20vs%20ESP8266.md)
 
 > [!CAUTION]- When using the Arduino IDE, ESP32 and ESP82666 code may not be compatible
 

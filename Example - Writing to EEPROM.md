@@ -1,4 +1,4 @@
-garden-topic:[[Pointers]], [[EEPROM]]
+garden-topic:[Pointers](Pointers.md), [EEPROM](EEPROM.md)
 
 > Source: https://learn.adafruit.com/memories-of-an-arduino/measuring-free-memory
 

@@ -1,9 +1,9 @@
-parent:: [[tmi Examples]]
-previous:: [[tmi04 RGB LED]], [[tmi03 Digital Inputs Debounce w Millis]]
-next:: [[tmi06 LDR analogWrite to LED]]
+parent:: [tmi Examples](tmi%20Examples.md)
+previous:: [tmi04 RGB LED](tmi04%20RGB%20LED.md), [tmi03 Digital Inputs Debounce w Millis](tmi03%20Digital%20Inputs%20Debounce%20w%20Millis.md)
+next:: [tmi06 LDR analogWrite to LED](tmi06%20LDR%20analogWrite%20to%20LED.md)
 level:: #beginner 
 
-> Inspiration from [[banziGettingStartedArduino|Getting Started With Arduino]], example 5-2 and https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade
+> Inspiration from [Getting Started With Arduino](banziGettingStartedArduino.md), example 5-2 and https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade
 
 
 Desired Goal: 
@@ -12,19 +12,19 @@ Desired Goal:
 	- the button can be released and the LED will stay at the same brightness
 
 Concepts:
-- [[../../Arduino - PWM]] - for fading in and out the LED
-- [[../../Resistors]] as current limiters
-- [[../../Switches]] - Pushbuttons
-- [[../../Multitasking and non blocking delays]] using `millis()` for timing
+- [Arduino - PWM](../../Arduino%20-%20PWM.md) - for fading in and out the LED
+- [Resistors](../../Resistors.md) as current limiters
+- [Switches](../../Switches.md) - Pushbuttons
+- [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md) using `millis()` for timing
 
 Further:
-- try to eliminate the pushbutton pulldown resistor (see [[tmi02 Digital Inputs]])
+- try to eliminate the pushbutton pulldown resistor (see [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md))
 
 Code:
-- [[Personal Folders/that_marouk_ish (Spencer|tmi_05_pushbutton_led_fade]]/code/tmi_05_pushbutton_led_fade/tmi_05_pushbutton_led_fade.ino).
+- [tmi_05_pushbutton_led_fade](Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi_05_pushbutton_led_fade/tmi_05_pushbutton_led_fade.ino).
 
 Physical setup:
-![[attachments/Pasted image 20221005220840.png]]
+![Pasted image 20221005220840](attachments/Pasted%20image%2020221005220840.png)
 
 Copy of code: 
 ``` c++

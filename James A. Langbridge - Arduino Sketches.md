@@ -12,10 +12,10 @@ isbn: 9781118919699
 ![rw-book-cover](https://m.media-amazon.com/images/I/51hRFzL6fHL._SY160.jpg)
 
 ## Metadata
-- Author:: [[James A. Langbridge]]
+- Author:: [James A. Langbridge](James%20A.%20Langbridge)
 - Title:: Arduino Sketches
-- garden-topic:: [[Arduino]]
-- literature-note:: [[LN - langbridgeArduinoSketches]]
+- garden-topic:: [Arduino](Arduino.md)
+- literature-note:: [LN - langbridgeArduinoSketches](LN%20-%20langbridgeArduinoSketches.md)
 - status:: #library/🟣  #inbox/reading 
 - summary::
 
@@ -46,7 +46,7 @@ isbn: 9781118919699
 - Modern electronic devices usually use 1 stop bit, but older systems can use 1 1/2 or 2 bits. ([Location 2362](https://readwise.io/to_kindle?action=open&asin=B00SL47ZJG&location=2362))
 
 **Debugging and Output ([Location 2364](https://readwise.io/to_kindle?action=open&asin=B00SL47ZJG&location=2364))**
-	garden-topic:: [[Arduino Serial Monitor]]
+	garden-topic:: [Arduino Serial Monitor](Arduino%20Serial%20Monitor.md)
 - All Arduinos have at least one serial port to communicate with a PC called Serial. ([Location 2388](https://readwise.io/to_kindle?action=open&asin=B00SL47ZJG&location=2388))
 - Some boards have several UART devices. The Arduino Mega, for example, has three additional UART controllers called Serial1, Serial2, and Serial3. ([Location 2388](https://readwise.io/to_kindle?action=open&asin=B00SL47ZJG&location=2388))
 - The Arduino Leonardo's microcontroller has a built-in USB communication device, separating USB and Serial communication. ([Location 2391](https://readwise.io/to_kindle?action=open&asin=B00SL47ZJG&location=2391))

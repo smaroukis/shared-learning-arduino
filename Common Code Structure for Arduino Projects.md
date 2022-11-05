@@ -1,9 +1,9 @@
-parent::[[Arduino Software Concepts]]
-see-also::[[Preprocessing Directives]]
-previous::[[Object Oriented Programming]]
-resource::[[Example - Even Better OOP - Header Files]]
+parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+see-also::[Preprocessing Directives](Preprocessing%20Directives.md)
+previous::[Object Oriented Programming](Object%20Oriented%20Programming.md)
+resource::[Example - Even Better OOP - Header Files](Example%20-%20Even%20Better%20OOP%20-%20Header%20Files.md)
 
-When using [[Object Oriented Programming]], we will commonly have three separate files for our code:
+When using [Object Oriented Programming](Object%20Oriented%20Programming.md), we will commonly have three separate files for our code:
 - Header or Library files: typically have class definitions, end with `.h`, for example a custom `Led.h` class code
 - cpp files
 - main file

@@ -13,5 +13,5 @@ handle:: #nme
 > (about me)
 
 ## Pages
-- [[_Name Log]]
+- [_Name Log](_Name%20Log.md)
 - 

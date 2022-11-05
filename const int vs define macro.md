@@ -1,6 +1,6 @@
-parent::[[Preprocessing Directives]]
+parent::[Preprocessing Directives](Preprocessing%20Directives.md)
 
-`#define` is a [[Preprocessing Directives]] often used to define constants, to avoid storing them in program memory (stored in limited flash memory). The compiler will check and replace these at compile time.
+`#define` is a [Preprocessing Directives](Preprocessing%20Directives.md) often used to define constants, to avoid storing them in program memory (stored in limited flash memory). The compiler will check and replace these at compile time.
 
 For example, if we use `#define ledPin 13`, any reference to `ledPin` will be replaced with the number 13 at compile time. 
 
@@ -13,7 +13,7 @@ Drawbacks
 > [!CAUTION] Use very specific variable names for `#define <variable_name> <value>` to avoid having other variables overwritten
 
 
-- macro/`#define`.  is a pre-processor directive - this gets more into [[C - Programming]] 
+- macro/`#define`.  is a pre-processor directive - this gets more into [C - Programming](C%20-%20Programming.md) 
 	- e.g. `#define var 80000L` vs `#define var 80000`  ([source](https://forum.arduino.cc/t/when-to-use-const-int-int-or-define/668071/6?u=that_marouk_ish))
 
 **Answered Questions**

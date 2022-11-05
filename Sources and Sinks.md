@@ -1,5 +1,5 @@
-parent::[[Introduction to Arduino - Hardware]]
-previous::[[Arduino Pin Considerations]]
+parent::[Introduction to Arduino - Hardware](Introduction%20to%20Arduino%20-%20Hardware.md)
+previous::[Arduino Pin Considerations](Arduino%20Pin%20Considerations.md)
 
 For a pin acting as a **source**, current will flow **out** of the pin, whereas for a pin acting as a **sink**, current will flow **in** to the pin.
 
@@ -7,7 +7,7 @@ For a pin acting as a **source**, current will flow **out** of the pin, whereas 
 
 The following diagram shows the two ways to power an LED using digital outputs.
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221104111436.png]]
+![Pasted image 20221104111436](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221104111436.png)
 
 **Source**
 - the LED is connected between the IO pin and ground

@@ -1,1 +1,1 @@
-parent::[[Arduino]]
+parent::[Arduino](Arduino.md)

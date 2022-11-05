@@ -1,4 +1,4 @@
-parent::[[tmi 17 Home Automation]]
+parent::[tmi 17 Home Automation](tmi%2017%20Home%20Automation.md)
 
 Project Specs
 - outdoor sensor
@@ -42,7 +42,7 @@ ESPHome is a _tool_ which aims to make managing your ESP boards as simple as p
 ---
 
 ### MQTT
-- [[../../MQTT]]
+- [MQTT](../../MQTT.md)
 - Adafruit has their own MQTT broker - cloud hosted, free - https://learn.adafruit.com/mqtt-in-circuitpython/connecting-to-the-adafruit-io-mqtt-broker
 	- https://github.com/adafruit/Adafruit_MQTT_Library 
 - Mosquitto is popular for local and edge networks

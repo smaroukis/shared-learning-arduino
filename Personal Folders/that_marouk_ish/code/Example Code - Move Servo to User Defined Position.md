@@ -1,9 +1,9 @@
 #code 
-garden-topic::[[../../../Serial Communication]], [[../../../Servos]]
+garden-topic::[Serial Communication](../../../Serial%20Communication.md), [Servos](../../../Servos.md)
 
 > Takes an integer input from the Serial Monitor and moves the servo to that position.
 > Anything more than 3 digits will be truncated. 
-> Serial code from [[../tmi12 Serial Input Basics]]
+> Serial code from [tmi12 Serial Input Basics](../tmi12%20Serial%20Input%20Basics.md)
 
 ```c
 #include <Servo.h>

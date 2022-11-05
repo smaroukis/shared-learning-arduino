@@ -1,8 +1,8 @@
-parent::[[tmi Examples]]
-previous:: [[tmi12 Serial Input Basics]]
-next:: [[tmi15 Multitasking-2]]
+parent::[tmi Examples](tmi%20Examples.md)
+previous:: [tmi12 Serial Input Basics](tmi12%20Serial%20Input%20Basics.md)
+next:: [tmi15 Multitasking-2](tmi15%20Multitasking-2.md)
 level:: #beginner 
-garden-topic:: [[../../Multitasking and non blocking delays]], [[../../User Defined Functions]]
+garden-topic:: [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md), [../../User Defined Functions](../../User%20Defined%20Functions)
 
 Desired Goal:
 - rotate a servo back and forth, outputting the position to the Serial Monitor, using a pushbutton to start/stop, blinking an LED at a rate proportional to the position (e.g. fast blinking at position 0 and slow blinking at position 180).
@@ -13,7 +13,7 @@ Concepts:
 
 
 Physical Setup:
-![[attachments/IMG_7397.jpg]]
+![IMG_7397](attachments/IMG_7397.jpg)
 
 Code:
 

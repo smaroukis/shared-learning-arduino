@@ -1,15 +1,15 @@
-parent::[[tmi Examples]]
-previous:: [[tmi15 Multitasking-2]]
+parent::[tmi Examples](tmi%20Examples.md)
+previous:: [tmi15 Multitasking-2](tmi15%20Multitasking-2.md)
 next:: 
 level:: #intermediate 
-garden-topic:: [[../../Multitasking and non blocking delays]], [[../../Object Oriented Programming]]
+garden-topic:: [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md), [Object Oriented Programming](../../Object%20Oriented%20Programming.md)
 
 >  (source)
 
 Desired Goal:
 -  Refactor some of the previous examples using object oriented programming structures
 
-[[../../Example - A Basic OOP Class for Multitasking]] shows the basic concept, but does't implement any interesting control schemes.
+[Example - A Basic OOP Class for Multitasking](../../Example%20-%20A%20Basic%20OOP%20Class%20for%20Multitasking.md) shows the basic concept, but does't implement any interesting control schemes.
 
 Concepts:
 - passing values back and forth between function calls and class objects forces you to really understand how to write non-blocking code and functions, and how to structure the flow of the program

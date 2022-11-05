@@ -1,8 +1,8 @@
-parent::[[tmi Examples]]
-previous:: [[tmi09 Ultrasonic Sensor]]
-next:: [[tmi11 Temp and Humidity Sensor]]
+parent::[tmi Examples](tmi%20Examples.md)
+previous:: [tmi09 Ultrasonic Sensor](tmi09%20Ultrasonic%20Sensor.md)
+next:: [tmi11 Temp and Humidity Sensor](tmi11%20Temp%20and%20Humidity%20Sensor.md)
 level:: #beginner
-garden-topic:: [[../../Matrix Keypad]]
+garden-topic:: [Matrix Keypad](../../Matrix%20Keypad.md)
 
 >  (source)
 
@@ -41,10 +41,10 @@ const int pinCols[4]={5, 4, 3, 2};
 const int pinRows[4]={11, 10, 9, 8};
 ```
 
-![[attachments/Pasted image 20221010232424.png]]
+![Pasted image 20221010232424](attachments/Pasted%20image%2020221010232424.png)
 
 Here is the mapping to the correctly indexed array of chars. 
-![[attachments/IMG_7355.jpg]]
+![IMG_7355](attachments/IMG_7355.jpg)
 
 Code:
 

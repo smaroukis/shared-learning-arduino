@@ -1,4 +1,4 @@
-parent::[[Arduino Software Concepts]], [[Switches]]
+parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md), [Switches](Switches.md)
 
 ### A Basic Debounce with Delay
 
@@ -24,7 +24,7 @@ if ((val == LOW)) && (old_val == HIGH){
 ```
 
 > [!TIP] Level up! Avoid using `delay()`
-> See [[Multitasking and non blocking delays]] for ways to debounce in a "non-blocking" fashion
+> See [Multitasking and non blocking delays](Multitasking%20and%20non%20blocking%20delays.md) for ways to debounce in a "non-blocking" fashion
 For variables we need
 
 ### Non-blocking Debounce
@@ -45,4 +45,4 @@ General Process
 
 ### Example - Non-blocking
 
-![[Example - Simple Debounce with MIllis]]
+![Example - Simple Debounce with MIllis](Example%20-%20Simple%20Debounce%20with%20MIllis.md)

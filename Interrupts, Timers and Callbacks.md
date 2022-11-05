@@ -1,5 +1,5 @@
-parent::[[Arduino Software Concepts]]
-previous::[[Multitasking and non blocking delays]]
+parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+previous::[Multitasking and non blocking delays](Multitasking%20and%20non%20blocking%20delays.md)
 level:: #intermediate 
 
 ### Interrupts
@@ -19,9 +19,9 @@ Reasons to use interrupts:
 
 ### Callbacks
 
-With some libraries we can use callbacks, for example when using an Arduino as a Secondary in a [[I2C]] communication scheme. The Arduino needs to be able to respond to the Main when requested.
+With some libraries we can use callbacks, for example when using an Arduino as a Secondary in a [I2C](I2C.md) communication scheme. The Arduino needs to be able to respond to the Main when requested.
 
-See [[Example - Langbridge I2C Arduino as Secondary]]
+See [Example - Langbridge I2C Arduino as Secondary](Example%20-%20Langbridge%20I2C%20Arduino%20as%20Secondary.md)
 
 **Resources**
 https://forum.arduino.cc/t/beginners-interrupts-why-when-and-how/518636

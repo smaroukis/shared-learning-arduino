@@ -1,5 +1,5 @@
-parent::[[Arduino Software Concepts]]
-previous::[[Scope]], [[Counting - Hexadecimal Binary and Decimal]]
+parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+previous::[Scope](Scope.md), [Counting - Hexadecimal Binary and Decimal](Counting%20-%20Hexadecimal%20Binary%20and%20Decimal.md)
 
 ### Introduction
 
@@ -19,7 +19,7 @@ Here are some use cases:
 Declaration syntax: `<type> *<variable_name> = <address>`
 
 `int *ptr = 0xFF;`
-- creates a variable of type pointer named `ptr` that stores the address of an `int` (e.g. 16 bits) - here the address is 0xFF Note the pointer variable itself typically takes up a [[word size]] (2 bytes in Arduino) to store the address.
+- creates a variable of type pointer named `ptr` that stores the address of an `int` (e.g. 16 bits) - here the address is 0xFF Note the pointer variable itself typically takes up a [word size](word%20size.md) (2 bytes in Arduino) to store the address.
 - in practice we don't explicitly set the address, but rather use the address of an already created variable (see below)
 
 > [!CAUTION] `int *p` vs. `value = *p`
@@ -83,5 +83,5 @@ Another important syntax is the ampersand operator (`&`), which is used on **"no
 > ```
 
 ### More 
-- [[Pointers - Working with Strings]]
-- [[Example - Writing to EEPROM]]
+- [Pointers - Working with Strings](Pointers%20-%20Working%20with%20Strings.md)
+- [Example - Writing to EEPROM](Example%20-%20Writing%20to%20EEPROM.md)

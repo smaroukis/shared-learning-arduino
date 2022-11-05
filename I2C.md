@@ -1,16 +1,16 @@
 ---
 alias: ["Two Wire", "TWI", "Wire"]
 ---
-parent::[[Serial Communication]]
-previous::[[SPI]]
+parent::[Serial Communication](Serial%20Communication.md)
+previous::[SPI](SPI.md)
 
-> Source: [[James A. Langbridge - Arduino Sketches]]
+> Source: [James A. Langbridge - Arduino Sketches](James%20A.%20Langbridge%20-%20Arduino%20Sketches.md)
 
 ## I2C Overview
 
-[[I2C]] is a [[Serial Communication]] protocol (cf. [[UART]], [[SPI]]) used for communicating with many peripherals that can connect to the same bus. Unlike [[SPI]], we don't require select pins for the peripherals - each peripheral has its own unique address to know whether it is being requested by the Main.
+[I2C](.md) is a [Serial Communication](Serial%20Communication.md) protocol (cf. [UART](UART.md), [SPI](SPI.md)) used for communicating with many peripherals that can connect to the same bus. Unlike [SPI](SPI.md), we don't require select pins for the peripherals - each peripheral has its own unique address to know whether it is being requested by the Main.
 
-I2C is short for Inter-IC bus, also goes by the name "Two Wire" - since we just need two wires (_plus_ a ground) to communicate with many devices. It is easier to configure than SPI, since there is no concept of mechanisms like chip select or chip activate (cf. [[SPI]]), but each device requires a unique address - and there is a lot of confusion around this.
+I2C is short for Inter-IC bus, also goes by the name "Two Wire" - since we just need two wires (_plus_ a ground) to communicate with many devices. It is easier to configure than SPI, since there is no concept of mechanisms like chip select or chip activate (cf. [SPI](SPI.md)), but each device requires a unique address - and there is a lot of confusion around this.
 
 Clock speed is 100kHz default and 400kHz maximum (the actual protocol maximum is 5MHz as of 2012). 
 
@@ -18,9 +18,9 @@ The two data wires are called SDA (Serial Data) and SCL (Serial Clock).
 
 I2C can only send data in 8-bit packages. Devices tend to be small with only a few pins, and usually we can't setup our own address. The Data is stored internally to the peripheral in a register - some devices only have one, some devices have multiple. 
 
-I2C requires [[Pullup Resistors]] on the data lines since they are of "[[open drain]]" type. 
+I2C requires [Pullup Resistors](Pullup%20Resistors.md) on the data lines since they are of "[open drain](open%20drain.md)" type. 
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105150231.png]]
+![Pasted image 20221105150231](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105150231.png)
 
 **Sequence**
 - Mains automatically receive all information from Secondaries
@@ -37,7 +37,7 @@ I2C requires [[Pullup Resistors]] on the data lines since they are of "[[open dr
 - In 7-bit addressing, addresses are (of course) 7 bits long, and the last bit is used to select a read or a write, for a total of 8 bits.
 - In 10-bit addressing, things are a little more complicated (since we can only send 8 bits at a time) - see the diagram below. The first 5 bits are always written as `11110` since this is reserved in 7-bit addressing. 
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221105150400.png]]
+![Pasted image 20221105150400](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105150400.png)
 
 Cons
 - not full duplex, so devices can't send and receive data at the same time
@@ -107,7 +107,7 @@ Arduino as a Secondary
 - use Wire libraries callbacks - that is `Wire.onReceive()` and `Wire.onRequest()`
 
 Example
-- [[Example - Langbridge I2C Arduino as Secondary]]
+- [Example - Langbridge I2C Arduino as Secondary](Example%20-%20Langbridge%20I2C%20Arduino%20as%20Secondary.md)
 
 ## Resources
 - https://www.arduino.cc/reference/en/language/functions/communication/wire/

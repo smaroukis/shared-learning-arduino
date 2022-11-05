@@ -1,4 +1,4 @@
-parent::[[Math -Basic.md|Math -Basic]]
+parent::[Math -Basic](Math%20-Basic.md)
 
 **Vertex Form (up, down) : $y=a(x-h)^2 + k$
 - vertex is at `(h, k)` 

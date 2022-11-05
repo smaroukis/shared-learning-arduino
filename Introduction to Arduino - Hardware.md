@@ -1,18 +1,18 @@
-parent::[[Arduino]]
-next::[[Intro to Arduino - Software]]
+parent::[Arduino](Arduino.md)
+next::[Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
 
 Other Topics
-1. [[Arduino Boards]]
-2. [[Arduino Pin Considerations]]
-3. [[Sources and Sinks]]
+1. [Arduino Boards](Arduino%20Boards.md)
+2. [Arduino Pin Considerations](Arduino%20Pin%20Considerations.md)
+3. [Sources and Sinks](Sources%20and%20Sinks.md)
 
 ### Introduction (Uno and Mega)
 
-The Arduino [[Uno]] (Rev 3) uses the ATMega328P as the main microcontroller and the ATMetga 16U2 as an auxiliary microprocessor to communicate between the ATMega328P and the computer (it is used as a Serial-to-USB converter, see [[Serial Communication]] for more)
+The Arduino [Uno](Uno.md) (Rev 3) uses the ATMega328P as the main microcontroller and the ATMetga 16U2 as an auxiliary microprocessor to communicate between the ATMega328P and the computer (it is used as a Serial-to-USB converter, see [Serial Communication](Serial%20Communication.md) for more)
 
-The [[Mega2560]] also uses the 16U2 is a usb-serial converter but uses the ATMega 2560 as the main microprocessor which has more IO pins, more serial ports, more memory, etc. This makes it especially good for working with many peripherals. 
+The [Mega2560](Mega2560.md) also uses the 16U2 is a usb-serial converter but uses the ATMega 2560 as the main microprocessor which has more IO pins, more serial ports, more memory, etc. This makes it especially good for working with many peripherals. 
 
-The [[word size]] is 16 bits (2 bytes). The clock speed is 16MHz. 
+The [word size](word%20size.md) is 16 bits (2 bytes). The clock speed is 16MHz. 
 
 **Power**
 - Power can be purely from USB (which is how it runs when connected to your computer), or via the dedicated power plug - a 9V barrel jack (2.1mm tip, center positive). The microcontroller itself runs on 5V (some Arduino's run at 3.3V, so make sure you know which you are using).
@@ -21,7 +21,7 @@ The [[word size]] is 16 bits (2 bytes). The clock speed is 16MHz.
 
 The reset button reboots the uploaded program.
 
-Pins - see [[Arduino Pin Considerations]]. Generally the rule is to keep output draw <25mA (max in the spec sheet is 40mA).
+Pins - see [Arduino Pin Considerations](Arduino%20Pin%20Considerations.md). Generally the rule is to keep output draw <25mA (max in the spec sheet is 40mA).
 
 ## Resources
 - [Afrotechmods 15minute intro video](https://www.youtube.com/watch?v=nL34zDTPkcs)

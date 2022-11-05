@@ -1,5 +1,5 @@
-garden-topic::[[Object Oriented Programming]]
-previous::[[Example - Better OOP - Private Functions]]
+garden-topic::[Object Oriented Programming](Object%20Oriented%20Programming.md)
+previous::[Example - Better OOP - Private Functions](Example%20-%20Better%20OOP%20-%20Private%20Functions.md)
 
 > Source: https://rayantonius.com/tech/classes-in-arduino-creating-a-traffic-light/
 

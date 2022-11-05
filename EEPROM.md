@@ -1,1 +1,1 @@
-parent::[[Memory]]
+parent::[Memory](Memory.md)

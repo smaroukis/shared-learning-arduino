@@ -1,26 +1,26 @@
-parent::[[tmi Examples]]
-previous::[[tmi05 Pushbutton LED Fade]]
-next:: [[tmi07 Buzzers]]
+parent::[tmi Examples](tmi%20Examples.md)
+previous::[tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
+next:: [tmi07 Buzzers](tmi07%20Buzzers.md)
 level:: #beginner
 
-> From [[banziGettingStartedArduino|Getting Started With Arduino]] Example 5-4 & 5-5
+> From [Getting Started With Arduino](banziGettingStartedArduino.md) Example 5-4 & 5-5
 
 Desired Goal:
 - Set the LED to a brightness specified by the value of the analog input given by the LDR 
 
 Concepts:
-- [[../../Arduino - PWM]] -  analogWrite() vs analogRead()
-- [[LDR.md|LDR]]s
+- [Arduino - PWM](../../Arduino%20-%20PWM.md) -  analogWrite() vs analogRead()
+- [LDR](LDR.md)s
 - voltage divider - converting a variable resistance to a measurable voltage
-- [[../../Serial Communication]] - the most basic printing of serial values to the monitor
+- [Serial Communication](../../Serial%20Communication.md) - the most basic printing of serial values to the monitor
 
 Physical Setup:
-![[attachments/IMG_7156.jpg]]
+![IMG_7156](attachments/IMG_7156.jpg)
 
 
 Code:
 
-Also in [[tmi06_LDR-analogWrite-to-LED/tmi06_LDR-analogWrite-to-LED/tmi06_LDR-analogWrite-to-LED.ino|tmi06_LDR-analogWrite-to-LED]]
+Also in [tmi06_LDR-analogWrite-to-LED](tmi06_LDR-analogWrite-to-LED/tmi06_LDR-analogWrite-to-LED/tmi06_LDR-analogWrite-to-LED.ino)
 
 ``` c
 // Description:

@@ -1,4 +1,4 @@
-parent::[[Electronic Components]]
+parent::[Electronic Components](Electronic%20Components.md)
 #intermediate 
 
 A resonator is a component that is used to establish a clock signal for a microcontroller. 

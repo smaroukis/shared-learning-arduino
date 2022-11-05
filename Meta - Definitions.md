@@ -1,4 +1,4 @@
-parent::[[Meta - Main Page]]
+parent::[Meta - Main Page](Meta%20-%20Main%20Page.md)
 
 > A non-exhaustive list of abbreviations and definitions used in this repo.
 

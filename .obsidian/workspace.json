@@ -11,8 +11,13 @@
             "id": "8b661afd9a06e7f2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ],
@@ -62,7 +67,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -82,6 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +127,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md"
+              }
             }
           },
           {
@@ -165,7 +175,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "09993c7f9e9796a8",
+  "active": "8b661afd9a06e7f2",
   "lastOpenFiles": [
     "Personal Folders/that_marouk_ish/tmi Questions.md",
     "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",

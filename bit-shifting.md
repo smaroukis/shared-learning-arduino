@@ -1,7 +1,7 @@
-parent::[[Bitwise Operations]]
-also see:: [[Arduino Boolean and Arithmetic]]
+parent::[Bitwise Operations](Bitwise%20Operations.md)
+also see:: [Arduino Boolean and Arithmetic](Arduino%20Boolean%20and%20Arithmetic.md)
 
-Bit shifting uses the bit shift operator `>>` (right shift) or `<<` (left shift), to shift all the bits in a variable left or right, which is a way to do [[binary arithmetic]].
+Bit shifting uses the bit shift operator `>>` (right shift) or `<<` (left shift), to shift all the bits in a variable left or right, which is a way to do [binary arithmetic](binary%20arithmetic.md).
 
 This requires us to understand how the number is represented in memory. 
 

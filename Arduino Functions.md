@@ -1,5 +1,5 @@
-parent::[[Arduino Software Concepts]]
-previous:: [[Arduino Variable Types]]
+parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+previous:: [Arduino Variable Types](Arduino%20Variable%20Types.md)
 next::
 
 ### Basic
@@ -46,7 +46,7 @@ next::
 
 `int Serial.available()`: returns how many unread bytes are available on the serial port 
 
-> See [[Serial Communication]] resources for an example of how this can be misused
+> See [Serial Communication](Serial%20Communication.md) resources for an example of how this can be misused
 
 `int Serial.read()`; fetches 1 byte of incoming serial data
 
@@ -56,6 +56,6 @@ next::
 
 List of interesting macros:
 
-**Bitwise Operations** (:➡️[[Bitwise Operations]])
+**Bitwise Operations** (:➡️[Bitwise Operations](Bitwise%20Operations.md))
 - `bit(7)` will return a byte with 1 in the 7th position e.g. `10000000`
 - `bit(7) | bit(1)` :➡️ `10000010`

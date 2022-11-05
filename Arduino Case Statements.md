@@ -1,6 +1,6 @@
-parent::[[Arduino Software Concepts]]
-previous:: [[Arduino Variable Types]]
-next:: [[Arduino Boolean and Arithmetic]]
+parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+previous:: [Arduino Variable Types](Arduino%20Variable%20Types.md)
+next:: [Arduino Boolean and Arithmetic](Arduino%20Boolean%20and%20Arithmetic.md)
 
 **If**
 ``` c 

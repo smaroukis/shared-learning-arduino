@@ -1,4 +1,4 @@
-garden-topic::[[LCDs]]
+garden-topic::[LCDs](LCDs.md)
 
 LCD1602 refers to the common 16x2 LCD display which has 16 columns and 2 rows (typ. using the [HD44780 LCD Controller](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller) by Hitachi.
 
@@ -16,14 +16,14 @@ LCD1602 refers to the common 16x2 LCD display which has 16 columns and 2 rows (t
 Note if you print without clearing or resetting cursor it will just append the data.
 
 > [!note]- Schematic: 16x2 LCD with HD44780 Driver in 4-bit Mode
-> ![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221017115858.png]]
+> ![Pasted image 20221017115858](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221017115858.png)
 
 Note rows are labeled as COLS, ROWS and are 0-indexed:
 
-> [!CAUTION] Route to the correct [[SPI]] pins on the Arduino side as required
+> [!CAUTION] Route to the correct [SPI](SPI.md) pins on the Arduino side as required
 
 > [!EXAMPLE]- Example Pin Configuration for LCD in 4-Bit Mode
-> ![[Table - LCD 16x2 Common Pin Configuration (4-bit)]]
+> ![Table - LCD 16x2 Common Pin Configuration (4-bit)](Table%20-%20LCD%2016x2%20Common%20Pin%20Configuration%20(4-bit).md)
 
 ### Code
 

@@ -1,7 +1,7 @@
-parent::[[tmi Examples]]
-previous:: [[tmi06 LDR analogWrite to LED]]
-next:: [[tmi08 Micro Servo]]
-garden-topic:: [[../../Buzzers - Active and Passive]]
+parent::[tmi Examples](tmi%20Examples.md)
+previous:: [tmi06 LDR analogWrite to LED](tmi06%20LDR%20analogWrite%20to%20LED.md)
+next:: [tmi08 Micro Servo](tmi08%20Micro%20Servo.md)
+garden-topic:: [Buzzers - Active and Passive](../../Buzzers%20-%20Active%20and%20Passive.md)
 level:: #beginner
 
 > Inspired by www.elegoo.com Mega Ultimate Kit Lesson 7 and https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody
@@ -11,7 +11,7 @@ Desired Goal:
 - 3 different code are included in the same file, the first (07A) simply plays an active buzzer every time the pushbutton is pressed. The second (07B) also uses the active buzzer but uses a `delay()` to vary the frequency, thus tone, of the buzzer. The third (07C) switches the active buzzer out for a passive buzzer and uses the `tone()` function included by Arduino to play a tone on the passive buzzer (it implements the frequency modulation behind the scenes, which is needed for the passive buzzer). 
 
 Concepts:
-- [[../../Buzzers - Active and Passive]]
+- [Buzzers - Active and Passive](../../Buzzers%20-%20Active%20and%20Passive.md)
 - PWM vs frequency modulation
 - Including C Header Code (e.g. `pitches.h` for defining musical notes)
 
@@ -20,7 +20,7 @@ Physical Setup:
 > We are using 16Ohm magnetic buzzers from the elegoo Mega Ultimate Starter Kit
 
 07A - Active Buzzer
-![[attachments/img07-setup.JPG]]
+![img07-setup](attachments/img07-setup.JPG)
 
 07C - Passive Buzzer
 - same physical setup as above (note we can use a digital pin even though we are doing _frequency modulation_, as opposed to _PWM_, per the `tone()` function included in the Arduino library)
@@ -131,6 +131,6 @@ Improvements:
 - see https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/ for ideas
 
 Resources
-- See the "References" section of the [[../../Buzzers - Active and Passive]] page
+- See the "References" section of the [Buzzers - Active and Passive](../../Buzzers%20-%20Active%20and%20Passive.md) page
 - https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody - built in `tone()` example
 - https://itp.nyu.edu/physcomp/labs/labs-arduino-digital-and-analog/tone-output-using-an-arduino/ - more on `tone()` and music theory

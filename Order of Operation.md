@@ -1,4 +1,4 @@
-parent::[[Arduino Software Concepts]]
+parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 
 Order of operation is important especially when using compound operators. 
 

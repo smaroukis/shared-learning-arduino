@@ -1,8 +1,8 @@
-parent::[[Arduino Software Concepts]]
+parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 
-[[Example - A Basic OOP Class for Multitasking]]
-[[Example - Even Better OOP - Header Files]]
-[[Example - Professional Grade OOP - Inheritance and Composition]]
+[Example - A Basic OOP Class for Multitasking](Example%20-%20A%20Basic%20OOP%20Class%20for%20Multitasking.md)
+[Example - Even Better OOP - Header Files](Example%20-%20Even%20Better%20OOP%20-%20Header%20Files.md)
+[Example - Professional Grade OOP - Inheritance and Composition](Example%20-%20Professional%20Grade%20OOP%20-%20Inheritance%20and%20Composition.md)
 
 ## General Theory
 
@@ -14,7 +14,7 @@ Single leading underscores are usually used for defining _internal_ or _private_
 
 **Create Classes**
 
-Base classes are useful when we have the same variables for multiple objects. In the Arduino case it would be like defining a Pushbutton. See [[Example - Better OOP - Private Functions]]
+Base classes are useful when we have the same variables for multiple objects. In the Arduino case it would be like defining a Pushbutton. See [Example - Better OOP - Private Functions](Example%20-%20Better%20OOP%20-%20Private%20Functions.md)
 
 **Inheritance - Extend Classes From a Base Class**
 
@@ -93,7 +93,7 @@ public:
 
 ## Resources
 - adafruit - https://learn.adafruit.com/multi-tasking-the-arduino-part-1/a-classy-solution
-- arduino forum example for a latching pushbutton, simple but powerful (goes over protected vs private, access functions, syntax ++) https://forum.arduino.cc/t/buttons-an-object-oriented-approach/279724/9 -> [[Example - OOP for a Latching Button]]
+- arduino forum example for a latching pushbutton, simple but powerful (goes over protected vs private, access functions, syntax ++) https://forum.arduino.cc/t/buttons-an-object-oriented-approach/279724/9 -> [Example - OOP for a Latching Button](Example%20-%20OOP%20for%20a%20Latching%20Button.md)
 - on extending classes in C++
 	- arduino example: https://forum.arduino.cc/t/class-inheritance-and-polyphormism/93778/3
 	- https://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm

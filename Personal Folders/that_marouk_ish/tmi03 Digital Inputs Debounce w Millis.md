@@ -1,26 +1,26 @@
-parent::[[tmi Examples]]
-previous:: [[tmi02 Digital Inputs]], 
-next:: [[tmi04 RGB LED]], [[tmi05 Pushbutton LED Fade]]
+parent::[tmi Examples](tmi%20Examples.md)
+previous:: [tmi02 Digital Inputs](tmi02%20Digital%20Inputs.md), 
+next:: [tmi04 RGB LED](tmi04%20RGB%20LED.md), [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
 level:: #beginner
 
 >  Adapted from Elegoo Mega2560 Starter Kit Lesson 5 and https://forum.arduino.cc/t/long-press-toggle-output-high-and-low/587500/3
 
-> Very similar to [[tmi05 Pushbutton LED Fade]] 
+> Very similar to [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md) 
 
 Desired Goal:
 - Toggle the LED on and off with a pushbutton
-- Debounce the pushbutton in software (see [[tmi05 Pushbutton LED Fade]] first for an easier example)
+- Debounce the pushbutton in software (see [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md) first for an easier example)
 
 Concepts:
-- [[../../Multitasking and non blocking delays]]
-- [[../../Debouncing]] - Blink Without Delay (BWD) - using `millis()` and not `delay()`
+- [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md)
+- [Debouncing](../../Debouncing.md) - Blink Without Delay (BWD) - using `millis()` and not `delay()`
 - `byte` vs `ints` vs `longs` 
 - Digital inputs & pullup resistors
 
 Physical Setup:
 
 Same as in the previous but with only one pushbutton.
-![[attachments/IMG_7160.jpg]]
+![IMG_7160](attachments/IMG_7160.jpg)
 - 
 Notes on debouncing
 - always taking the current time at the beginning of each loop
@@ -38,7 +38,7 @@ So it needs the variables
 - `debouncing` flag
 - `old_state` to compare with the new state 
 
-Also see [[code/tmi03_Digital-Inputs-Debounce-Millis/tmi03_Digital-Inputs-Debounce-Millis.ino]]
+Also see [tmi03_Digital-Inputs-Debounce-Millis](code/tmi03_Digital-Inputs-Debounce-Millis/tmi03_Digital-Inputs-Debounce-Millis.ino)
 
 ``` c
 // Inputs

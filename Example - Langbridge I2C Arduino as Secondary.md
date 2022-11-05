@@ -1,5 +1,5 @@
-parent::[[James A. Langbridge - Arduino Sketches]], [[Examples]]
-garden-topic::[[I2C]], [[Interrupts, Timers and Callbacks]]
+parent::[James A. Langbridge - Arduino Sketches](James%20A.%20Langbridge%20-%20Arduino%20Sketches.md), [Examples](Examples.md)
+garden-topic::[I2C](I2C.md), [Interrupts, Timers and Callbacks](Interrupts,%20Timers%20and%20Callbacks.md)
 
 ### `Secondary Sketch`
 - Runs on the Arduino acting as a Secondary (peripheral)

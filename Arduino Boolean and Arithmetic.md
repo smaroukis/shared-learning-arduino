@@ -1,6 +1,6 @@
-parent::[[Arduino Software Concepts]]
-previous::[[Arduino Case Statements]]
-next::[[Arduino Functions]]
+parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
+previous::[Arduino Case Statements](Arduino%20Case%20Statements.md)
+next::[Arduino Functions](Arduino%20Functions.md)
 
 **Boolean Operators**
 - `&&`
@@ -19,7 +19,7 @@ next::[[Arduino Functions]]
 
 **Bitwise Operators** 
 - `&` (bitwise and)
-- `<<` (bitshift left) see [[bit-shifting]]
+- `<<` (bitshift left) see [bit-shifting](bit-shifting.md)
 - `>>` (bitshift right)
 - `^` (bitwise xor)
 - `|` (bitwise or)

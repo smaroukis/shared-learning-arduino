@@ -1,8 +1,8 @@
-parent::[[Actuators and Sensors]]
+parent::[Actuators and Sensors](Actuators%20and%20Sensors.md)
 
 Summary
 - There are different types of buzzers (also called transducers), based on construction (magnetic vs. piezo), and whether they include an oscillator drive circuit (passive vs. active). They function on the same fundamental property of using a AC electrical input to vibrate the air and produce sound of a certain frequency. 
-- Note that _frequency_ modulation is employed and not _amplitude_ modulation as in [[Arduino - PWM]] - as amplitude modulation will just change the loudness of the buzzer, not the tone.
+- Note that _frequency_ modulation is employed and not _amplitude_ modulation as in [Arduino - PWM](Arduino%20-%20PWM.md) - as amplitude modulation will just change the loudness of the buzzer, not the tone.
 - We can simply apply the correct voltage 
 
 **Piezo**
@@ -14,14 +14,14 @@ Summary
 ### Electromagnetic Buzzers
 
 Active vs Passive
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221007132507.png]]
+![Pasted image 20221007132507](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221007132507.png)
 - both are _polarized_
 
 Active Buzzer
 - can be driven with DC 
 - has built in oscillator circuit 
 - can't control the pitch (since we are not controlling the oscillator circuit)
-- for [[Arduino]] - use just like an LED e.g. `digitalWrite(PIN, HIGH)`
+- for [Arduino](Arduino.md) - use just like an LED e.g. `digitalWrite(PIN, HIGH)`
 - 
 
 
@@ -38,9 +38,9 @@ Theory of operation
 - a magnetic field is created by applying current to a coil.
 
 
-![[Personal Folders/that_marouk_ish/attachments/Pasted image 20221007132552.png]]
+![Pasted image 20221007132552](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221007132552.png)
 
-**Further** - see [[Example Circuits - Buzzers]]
+**Further** - see [Example Circuits - Buzzers](Example%20Circuits%20-%20Buzzers.md)
 - a piezo buzzer is driven by a voltage - we can model it as a capacitor. sometimes we use a reset resistor to discharge it when the switch connecting it is open
 - a magnetic buzzer is driven by a current - we can model as an inductor (in series with a resistor). no resistor is needed
 
