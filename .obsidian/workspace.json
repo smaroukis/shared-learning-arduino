@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "257ea79eaa3f081a",
+    "type": "split",
+    "children": [
+      {
+        "id": "26fcb595d7e500d3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b661afd9a06e7f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Arduino - _Site Map.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "db2f7d1e6cd651f3",
+    "type": "split",
+    "children": [
+      {
+        "id": "2e5280524666659b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09993c7f9e9796a8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime"
+              }
+            }
+          },
+          {
+            "id": "8203fdb2cecba58c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fc4ec3894fef401f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 272.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "e8caf645a6d0e8f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "19c5f28786fe6606",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e13dde9bc834228a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Arduino - _Site Map.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cf5f942e2716dda0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Arduino - _Site Map.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4de8f7f414e84f18",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ab0e0a7fa2ab07ff",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Arduino - _Site Map.md"
+              }
+            }
+          },
+          {
+            "id": "7aadd20203d36151",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {}
+            }
+          },
+          {
+            "id": "e29b4aed391c936a",
+            "type": "leaf",
+            "state": {
+              "type": "BC-tree",
+              "state": {}
+            }
+          },
+          {
+            "id": "35d643e039d0b8da",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_nodes",
+              "state": {}
+            }
+          },
+          {
+            "id": "705a1dacde0b0bdb",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_style",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 357.5,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "8b661afd9a06e7f2",
+  "lastOpenFiles": [
+    "Arduino Software Concepts.md",
+    "Arduino - _Site Map.md",
+    "Arduino.md",
+    "Other Software and Computer Concepts.md",
+    "Intro to Arduino - Software.md",
+    "bit-shifting.md",
+    "binary arithmetic.md",
+    "Avoid magic numbers.md",
+    "Arduino Variable Types.md",
+    "Introduction to Arduino - Hardware.md"
+  ]
+}

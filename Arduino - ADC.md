@@ -1,5 +1,4 @@
-parent::[Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
-related-parent::[ADCs - Analog Digital Converters](ADCs%20-%20Analog%20Digital%20Converters.md)
+parent::[Introduction to Arduino - Hardware](Introduction%20to%20Arduino%20-%20Hardware.md)
 
 The ADC, or Analog to Digital Converter, converts the analog voltages to a discrete number (integer). For the Arduino 10-bit ADC by default it converts a voltage between 0-5V to an integer decimal between 0-1023. The upper value, 5V, is the reference value and can be changed with  `analogReference();`
 
@@ -27,4 +26,3 @@ dividedValue = originalValue >> 10;
 
 ## Further Reading
 - https://forum.arduino.cc/t/10-bit-adc-divide-by-1024-or-1023/657174/3
-- further::[ADCs - Analog Digital Converters](ADCs%20-%20Analog%20Digital%20Converters.md)

@@ -47,7 +47,7 @@ then the controller code is
 
 ## [2022-10-25](2022-10-25)
 - thought I had the  [button working](https://github.com/smaroukis/shared-learning-arduino/commit/ea4728b10641cae2ba942d364e46e915bb854f65), but there is still the issue of "callback acknowledgement" (?) or  state acknowledgement - that is, when we check that if `button.state` is pressed to take an action, say `led.toggle()`, that toggle action will be repeated over and over until we end up in a random led state of when we release the button and `button.state` is false
-- https://mypractic.com/lesson-7-classes-in-c-language-for-arduino-button-as-an-object/  -> [[Example - MyPractic OOP Button as an Object]] might be helpful as it introduces an **acknowledgement counter** and uses **inheritance** 
+- https://mypractic.com/lesson-7-classes-in-c-language-for-arduino-button-as-an-object/  -> [Example - MyPractic OOP Button as an Object](../../Example%20-%20MyPractic%20OOP%20Button%20as%20an%20Object.md) might be helpful as it introduces an **acknowledgement counter** and uses **inheritance** 
 	- :➡️ actually it was easier than this, I just needed to do _edge_ detection instead of _state_ detection (see `b7d43fc`)
 - next up is trying to add in the ability for a long press to change the brightness
 	- can we do this without editing too much of the `Led` class? 
@@ -115,7 +115,6 @@ then the controller code is
 - [tmi10 Matrix Keypad](tmi10%20Matrix%20Keypad.md)
 	- finished at 1400 - had to debug some code and rewrite - esp. since the indexing was reversed
 - [tmi11 Temp and Humidity Sensor](tmi11%20Temp%20and%20Humidity%20Sensor.md)
-- #tdf blocking vs non blocking arduino
 	- I'm guessing non-blocking is like using the `millis()` for debouncing instead of `delay()`
 
 ### [2022-10-10](2022-10-10)
@@ -129,14 +128,14 @@ Projects
 07- audio - elegoo Lesson 7 & 8 - Buzzers -> [tmi07 Buzzers](tmi07%20Buzzers.md)
 - we need to do _frequency modulation_ (not PWM) to change the pitch (frequency) of the buzzer
 - if we used PWM as in `analogWrite()` we would just be varying the loudness (amplitude) of the buzzer
-- #q if my passive buzzer is only 16Ohms, how can I connect it directly to the arduino as an output? Wouldn't it draw more than 20mA? 
-	- mabye bc it can be modeled as an inductor - a short at DC and an open at AC
-	- datasheets (e.g. https://www.jp.tdk.com/tefe02/ec211_sdr.pdf) give a max current 25mA - 85mA  - this must be current draw based on a given voltage and pulse width
+- #q/answered  if my passive buzzer is only 16Ohms, how can I connect it directly to the arduino as an output? Wouldn't it draw more than 20mA? 
+	- the [Buzzers - Active and Passive](../../Buzzers%20-%20Active%20and%20Passive.md) acts like a capacitor - so we cannot use the 16 Ohm value as a DC value
+	- the datasheets (e.g. https://www.jp.tdk.com/tefe02/ec211_sdr.pdf) give a max current 25mA - 85mA  - this must be current draw based on a given voltage and pulse width
 
-08 - motors [tmi08 Micro Servo](Personal%20Folders/that_marouk_ish/tmi08%20Micro%20Servo.md)
+08 - motors [tmi08 Micro Servo](tmi08%20Micro%20Servo.md)
 - mostly just uses the Servo library (download from Library Manager or online) to handle everything
 - with this one we can drive with 
-- [Servos](../../Servos.md)
+- [Servo Motors](../../Servo%20Motors.md)
 
 **Research/Notepad**
 [Buzzers - Active and Passive](../../Buzzers%20-%20Active%20and%20Passive.md)
@@ -153,7 +152,7 @@ Project 2
 - `byte` is smaller than an `int` - [Arduino Variable Types](../../Arduino%20Variable%20Types.md)
 	
 (Research)
-[Serial Communication](../../Serial%20Communication.md) -> [UART](UART.md) - see wikipedia 
+[Serial Communication](../../Serial%20Communication.md) -> [UART](../../UART.md) - see wikipedia 
 	
 **Diagramming / Tools**
 - Kicad 
@@ -165,24 +164,24 @@ Project 2
 - [ATMega328P](ATMega328P.md) has two built in oscillators - uses ceramic resonator
 - RC Circuit vs Ceramic Resonator vs Crystal for creating a clock signal
 	- Crystal > Resonator > RC Circuit
-	- ![](attachments/Screen%20Shot%202022-10-06%20at%206.59.33%20PM.png)
+	- ![attachments/Screen Shot 2022-10-06 at 6.59.33 PM.png](attachments/Screen%20Shot%202022-10-06%20at%206.59.33%20PM.png)
 
 ### [2022-10-05](2022-10-05)
-- [State Machines](State%20Machines.md) #tdf
+- [State Machines](../../State%20Machines.md) 
 - [banziGettingStartedArduino](banziGettingStartedArduino.md) Project - Fade in LED if pushbutton is pressed 
 	- [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
 - wiring vs processing vs Arduino language https://forum.arduino.cc/t/how-is-arduino-related-to-wiring/69064/
 - more on [Serial Communication](../../Serial%20Communication.md) and [Serial to USB](Serial%20to%20USB) ⬇️ 
-	- "Current Arduino boards are programmed via [Universal Serial Bus](https://en.wikipedia.org/wiki/Universal_Serial_Bus "Universal Serial Bus") (USB), implemented using USB-to-serial adapter chips such as the [FTDI](https://en.wikipedia.org/wiki/FTDI "FTDI") FT232. Some boards, such as later-model Uno boards, substitute the [FTDI](https://en.wikipedia.org/wiki/FTDI "FTDI") chip with a separate AVR chip containing USB-to-serial firmware, which is reprogrammable via its own [ICSP](https://en.wikipedia.org/wiki/In-system_programming "In-system programming") header."  [[source](https://en.wikipedia.org/wiki/Arduino#Hardware)]
+	- "Current Arduino boards are programmed via [Universal Serial Bus](https://en.wikipedia.org/wiki/Universal_Serial_Bus "Universal Serial Bus") (USB), implemented using USB-to-serial adapter chips such as the [FTDI](https://en.wikipedia.org/wiki/FTDI "FTDI") FT232. Some boards, such as later-model Uno boards, substitute the [FTDI](https://en.wikipedia.org/wiki/FTDI "FTDI") chip with a separate AVR chip containing USB-to-serial firmware, which is reprogrammable via its own [ICSP](https://en.wikipedia.org/wiki/In-system_programming "In-system programming") header."  [](https://en.wikipedia.org/wiki/Arduino#Hardware)]
 - Main Learnings
 	- longs vs ints -> see [Intro to Arduino - Software](../../Intro%20to%20Arduino%20-%20Software.md)
 	- use `unsigned long` for `millis()` timekeeping (can go up to -4.2Ms = 50 days)
 	- some tricks for fading in and out see below and in [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
-		- ![](attachments/Pasted%20image%2020221005215410.png)
+		- ![Pasted image 20221005215410](attachments/Pasted%20image%2020221005215410.png)
 
 
 ### [2022-10-04](2022-10-04) ✅ 
-- [RGB LEDs](../../RGB%20LEDs.md)  see [code](./Personal Folders/that_marouk_ish (Spencer)/code/tmi_04_RGB_LED/tmi_04_RGB_LED.ino)
+- [RGB LEDs](../../RGB%20LEDs.md)  see [code](./Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi_04_RGB_LED/tmi_04_RGB_LED.ino)
 	- further: use pots to change color; simplify code w functions; use optimal resistors dependent on colors for equal brightness
 	- R, G, and B channels are mixed - from this we can develop many different colros
 	- https://www.circuitbread.com/tutorials/how-rgb-leds-work-and-how-to-control-color
@@ -200,15 +199,15 @@ Project 2
 	- "Please note that the Serial Monitor does not process control characters; if your sketch needs a complete management of the serial communication with control characters, you can use an external terminal program and connect it to the COM port assigned to your Arduino board."
 
 ### [2022-10-03](2022-10-03)
-From https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483573 on `millis()` vs `delay()` -> see [tmi 02 millis() forum examples](code/tmi%2002%20millis()%20forum%20examples/tmi%2002%20millis()%20forum%20examples.md)
+From https://forum.arduino.cc/t/using-millis-for-timing-a-beginners-guide/483573 on `millis()` vs `delay()` -> see [tmi 02 millis() forum examples]()%20forum%20examples)%20forum%20examples/tmi%2002%20millis()%20forum%20examples.md)
 
 
 ### [2022-10-02](2022-10-02)
 - install zip libraries directly (no need to unpackage)
 - a serial terminal is important to see the interaction with the Arduino via a computer - this is the Serial Monitor
 - "Selecting which port to open in the Serial Monitor is the same as selecting a port for uploading Arduino code. Go to Tools -> Serial Port, and select the correct port." (source: [elegooCompleteStarterMega2560](elegooCompleteStarterMega2560.md)) - should be the same COM port as in DeviceManager
-- [Mega2560](Mega2560.md) led is digital pin 13, see `LED_BUILTIN` variable
+- [Mega2560](../../Mega2560.md) led is digital pin 13, see `LED_BUILTIN` variable
 - tools > set board
 - tools > set port (forgot this one)
 - changed it to 500ms
-- https://ht-deko.com/arduino/usb2serial.html#06 for [Serial to USB](Serial%20to%20USB.md) things (see [Serial Communication](Serial%20Communication.md)
+- https://ht-deko.com/arduino/usb2serial.html#06 for [Serial to USB](Serial%20to%20USB.md) things (see [Serial Communication](../../Serial%20Communication.md)

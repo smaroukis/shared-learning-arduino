@@ -1,4 +1,4 @@
-parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
+parent::[tmi Examples](tmi%20Examples.md)
 previous:: [tmi14 Multitasking-1](tmi14%20Multitasking-1.md)
 next:: [tmi 16 Object Oriented Programming](tmi%2016%20Object%20Oriented%20Programming.md)
 level:: #beginner 

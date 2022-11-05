@@ -1,7 +1,7 @@
-parent::[[Computer Networks]]
-see-also::[[Static IP Address]]
+parent::[Computer Networks](Computer%20Networks)
+see-also::[Static IP Address](Static%20IP%20Address)
 
-Related protocols:: [[UDP]]
+Related protocols:: [UDP](UDP)
 
 It simply allows devices (phone, pc, etc) to be assigned a unique _local_ IP address by the DHCP server (typ. the router). Note that the _dynamic_ means that the unique IP address is periodically changed (vs. Static IP Address) by the Server. 
 
@@ -20,7 +20,7 @@ DHCP is supposed to be simple to use - clients automatically look for a DHCP ser
 
 > DHCP works by leasing IP addresses and IP information to network clients for a period of time. To achieve this, the DHCP client has to interact with DHCP servers through a series of DHCP messages, which mainly include DHCP DISCOVER, DHCP OFFER, DHCP REQUEST, and DHCP ACK, as shown in the following figure.
 
-`DHCP DISCOVER`: The client looks for a DHCP server by broadcasting its [[MAC address]] and name.
+`DHCP DISCOVER`: The client looks for a DHCP server by broadcasting its [MAC address](MAC%20address) and name.
 Then there is a back-and-forth between the server and client:
 
 > Simply put, it’s a story of “take and give” between DHCP client (A) and DHCP server (B):

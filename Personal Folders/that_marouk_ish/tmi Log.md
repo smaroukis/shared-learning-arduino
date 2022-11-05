@@ -329,7 +329,7 @@ I specifically liked the `fadeAmount = -fadeAmount` line to switch between fadin
 
 Mostly I felt good about self-identifying and fixing the wiring and coding errors, even though it took me longer than I thought. I like to type everything out by hand to get a feel for the syntax but it's easy to make software mistakes and then think it is a wiring issues and vice versa. 
 
-[[2022-10-04]] 
+[2022-10-04](2022-10-04) 
 Day 2 - Party Time - RGB LEDs 
 So today I was onto the first interesting project that I learned more than I expected from. Mostly on the analog side about LEDs and their I-V curves.  
 
@@ -354,7 +354,7 @@ RGB LEDs Going further #tdf-project
 -   Avoid light intensity changing based on the color
 -   Add more colors
 -   Set the color by a potentiometer
-- Better code (see [example](https://os.mbed.com/users/4180_1/notebook/rgb-leds/#:~:text=The%20three%20LEDs%20inside%20a,may%20drop%20around%203%20volts.))
+- Better code (see [](https://os.mbed.com/users/4180_1/notebook/rgb-leds/#:~:text=The%20three%20LEDs%20inside%20a,may%20drop%20around%203%20volts.))
 
 
 [2022-10-03](2022-10-03)
@@ -369,7 +369,7 @@ I thought I had ordered an (unofficial) Uno starter kit but when I opened it I f
 Well, then, after that rabbit hole I did follow the instructions to get it to blink the led, and changed it from 1s to 0.5s. Also changed the variable `LED_BUILTIN` to `13` to verify that is the correct LED pin for the Mega. 
 
 
-[[2022-10-01]]
-Started this Vault with [Arduino](Arduino.md). Learned that [Arduino - PWM](Arduino%20-%20PWM.md) outputs a square wave, specific values (steps) are determined by the ADC converter - [Uno](Uno.md) is 10 bit (so $2^{10}=1024$ steps). More advanced Arduinos have ADCs with higher resolution, but must use the `analogReadResolution()` function to set this. 
+[2022-10-01](2022-10-01)
+Started this Vault with [Arduino](../../Arduino.md). Learned that [Arduino - PWM](../../Arduino%20-%20PWM.md) outputs a square wave, specific values (steps) are determined by the ADC converter - [Uno](../../Uno.md) is 10 bit (so $2^{10}=1024$ steps). More advanced Arduinos have ADCs with higher resolution, but must use the `analogReadResolution()` function to set this. 
 
 Also learned that `analogRead()` and `analogWrite()` functions have different bounds ( 0 to 1023 and 0 to 255 respectively).

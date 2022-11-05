@@ -13,14 +13,14 @@ Desired Goal:
 
 Concepts:
 - [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md)
-- [Debouncing](Debouncing) - Blink Without Delay (BWD) - using `millis()` and not `delay()`
+- [Debouncing](../../Debouncing.md) - Blink Without Delay (BWD) - using `millis()` and not `delay()`
 - `byte` vs `ints` vs `longs` 
 - Digital inputs & pullup resistors
 
 Physical Setup:
 
 Same as in the previous but with only one pushbutton.
-![](attachments/IMG_7160.jpg)
+![IMG_7160](attachments/IMG_7160.jpg)
 - 
 Notes on debouncing
 - always taking the current time at the beginning of each loop
@@ -38,7 +38,7 @@ So it needs the variables
 - `debouncing` flag
 - `old_state` to compare with the new state 
 
-Also see [tmi03_Digital-Inputs-Debounce-Millis](tmi03_Digital-Inputs-Debounce-Millis/tmi03_Digital-Inputs-Debounce-Millis.ino)
+Also see [tmi03_Digital-Inputs-Debounce-Millis](code/tmi03_Digital-Inputs-Debounce-Millis/tmi03_Digital-Inputs-Debounce-Millis.ino)
 
 ``` c
 // Inputs

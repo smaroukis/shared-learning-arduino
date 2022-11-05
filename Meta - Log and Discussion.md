@@ -3,7 +3,7 @@
 parent:: [Meta - Main Page](Meta%20-%20Main%20Page.md)
 
 [2022-10-04](2022-10-04)
-- #tmi can use Obs to link to code in github directly - need to enable all file extensions in settings - for example see [tmi 02 millis() forum examples](Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi%2002%20millis()%20forum%20examples/tmi%2002%20millis()%20forum%20examples.md)
+- #tmi can use Obs to link to code in github directly - need to enable all file extensions in settings - for example see [tmi 02 millis() forum examples]()%20forum%20examples)/code/tmi%2002%20millis()%20forum%20examples/tmi%2002%20millis()%20forum%20examples.md)
 - also changed my default image and attachment link to be under a personal assets folder
 
 [2022-10-02](2022-10-02)

@@ -1,4 +1,4 @@
-parent::[Arduino Resources](Arduino%20Resources.md)
+parent::[Examples](Examples.md)
 
 **Beginner**
 

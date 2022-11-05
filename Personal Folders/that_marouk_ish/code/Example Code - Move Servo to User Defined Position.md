@@ -1,5 +1,5 @@
 #code 
-garden-topic::[Serial Communication](../../../Serial%20Communication.md), [Servos](../../../Servos.md)
+garden-topic::[Serial Communication](../../../Serial%20Communication.md), [Servo Motors](../../../Servo%20Motors.md)
 
 > Takes an integer input from the Serial Monitor and moves the servo to that position.
 > Anything more than 3 digits will be truncated. 

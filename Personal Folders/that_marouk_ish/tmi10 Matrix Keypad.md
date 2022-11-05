@@ -1,4 +1,4 @@
-parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
+parent::[tmi Examples](tmi%20Examples.md)
 previous:: [tmi09 Ultrasonic Sensor](tmi09%20Ultrasonic%20Sensor.md)
 next:: [tmi11 Temp and Humidity Sensor](tmi11%20Temp%20and%20Humidity%20Sensor.md)
 level:: #beginner
@@ -41,10 +41,10 @@ const int pinCols[4]={5, 4, 3, 2};
 const int pinRows[4]={11, 10, 9, 8};
 ```
 
-![](attachments/Pasted%20image%2020221010232424.png)
+![Pasted image 20221010232424](attachments/Pasted%20image%2020221010232424.png)
 
 Here is the mapping to the correctly indexed array of chars. 
-![](attachments/IMG_7355.jpg)
+![IMG_7355](attachments/IMG_7355.jpg)
 
 Code:
 

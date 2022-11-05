@@ -1,17 +1,14 @@
-parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
-previous:: [tmi11 Temp and Humidity Sensor](Personal%20Folders/that_marouk_ish/tmi11%20Temp%20and%20Humidity%20Sensor.md)
+parent::[tmi Examples](tmi%20Examples.md)
+previous:: [tmi11 Temp and Humidity Sensor](tmi11%20Temp%20and%20Humidity%20Sensor.md)
 next:: [tmi14 Multitasking-1](tmi14%20Multitasking-1.md)
 level:: #beginner
-garden-topic:: [Serial Communication](Serial%20Communication.md)
-
-#refactor may need to edit links after moving folders for Github
+garden-topic:: [Serial Communication](../../Serial%20Communication.md)
 
 ## **Fundamental**
 
 > Source: https://forum.arduino.cc/t/serial-input-basics-updated/382007/2 
 
 ### 1) Writing Data to the Monitor
-#tdf
 
 **Numbers**
 - by default `Serial.print()` will write in decimal, but we can write something like a binary number by providing the encoding e.g. `Serial.print(136, BIN)` -> outputs `10001000`

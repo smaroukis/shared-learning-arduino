@@ -12,9 +12,9 @@ date: 2022-09-17
 ![rw-book-cover](https://img1.od-cdn.com/ImageType-100/2858-1/{99227FF1-1BD5-4F09-BF71-848EA4675E77}Img100.jpg)
 
 ## Metadata
-- Author:: [[Massimo  Banzi]]
+- Author:: [Massimo  Banzi](Massimo%20%20Banzi)
 - Title:: Getting Started With Arduino
-- garden-topic::[Arduino](Arduino.md)
+- garden-topic::[Arduino](../../Arduino.md)
 - status:: #library/🟢 
 
 ## Notes
@@ -24,19 +24,19 @@ date: 2022-09-17
 	- what if we did a "Daiso" day where you have a contest and have to make something just from buying things from Daiso
 	- haque did a artist in residence at International Academy of Media arts an Sciences in Japan
 - Arduino was born to teach Interaction Design "the creation of meaningful expreiences between humans and objects"- look for art/media/design programs etc , specifically Physical Interaction Design
-- don't spend time learning how to build everything from scratch - this is a waste of time an energy - [[opportunistic prototyping]] is taking ready-made devices, hacking them in order to exploit the hard work done by others
+- don't spend time learning how to build everything from scratch - this is a waste of time an energy - [opportunistic prototyping](opportunistic%20prototyping) is taking ready-made devices, hacking them in order to exploit the hard work done by others
 - tinkering - it is essential to play with technology, sometimes without a defined goal
-- reduce the amount of interruptions of the flow is important momentum for  [[Creativity]]  
+- reduce the amount of interruptions of the flow is important momentum for  [Creativity](Creativity)  
 	- see Robert Moog and synthesizers
 - "Don’t let the experts in one field tell you that you’ll never be one of them. Ignore them and surprise them" #quote
 
 
 ### Ch 4 Debouncing
 - use 22AWG solid core as breadboard hookup wire
-- [Memory](Memory.md)
+- [Memory](../../Memory.md)
 	- **variables** are stored in RAM; programs stored in **flash**
 - neat #software-trick to change the state of a boolean `state = 1 - state`
-- debounce for 10-50ms ->  [Debouncing in Software](../../Debouncing%20in%20Software.md)
+- debounce for 10-50ms ->  [Debouncing](../../Debouncing.md)
 
 ### Ch 5 
 
@@ -111,5 +111,5 @@ date: 2022-09-17
 - When possible, I like to put the LED on the farthest point, to verify as much as possible
 - Most LEDs use about 2 volts and are safe below 30 mA
 - The DHT11 is a popular Temperature and Humidity Sensor. Like the RTC, it is inexpensive and easy to use with Arduino
-- [[2022-10-05]] copied to anotehr vault
+- [2022-10-05](2022-10-05) copied to anotehr vault
 

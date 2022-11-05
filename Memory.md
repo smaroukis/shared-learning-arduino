@@ -1,5 +1,4 @@
 parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
-resource::[Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
 
 > If not mentioned, we are talking about AVR and Harvard Based memory structures, keep in mind that memory allocation differs in both architectures
 
@@ -29,7 +28,7 @@ SRAM, Static Random Access Memory (volatile)
 - **Stack**: for local variables, interrupts and function calls, grows "down" from the top of the memory down toward the heap; each interrupt, function call, and local variable causes the stack to grow; space is reclaimed when functions return
 
 > [!NOTE]- SRAM: Memory Diagram
-> ![](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221019124618.png) ^[https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram]
+> ![Pasted image 20221019124618](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221019124618.png) ^[https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram]
 
 EEPROM (non-volatile)
 - like Flash it is non-volatile
@@ -40,15 +39,17 @@ EEPROM (non-volatile)
 
 From the table below we can see the Uno has only a measly 2kB of SRAM for the static and global variables.
 
-> [!NOTE]- Arduino Memory Amounts
+> [!Example]- Example - Arduino Memory Amounts
 > 
-> ![Table - Arduino Memory Amounts](Table%20-%20Arduino%20Memory%20Amounts)
+> ![Table - Arduino Memory Amounts](Table%20-%20Arduino%20Memory%20Amounts.md)
 
 
 **Further**
 - note that although the HEAP is dynamic, de-allocating space of previously used variables **does not necessarily cause the heap to shrink**, since if there is other dynamic data above it in the heap, the top of the heap will not move - leading to a [fragmented heap](fragmented%20heap.md). 
+- strings are especially notorious memory hogs, see [Arduino Intermediate Memory Techniques](Arduino%20Intermediate%20Memory%20Techniques.md) for more
 
 
 **References**
-- https://www.arnabkumardas.com/arduino-tutorial/avr-memory-architecture/
 - https://docs.arduino.cc/learn/programming/memory-guide
+- https://www.arnabkumardas.com/arduino-tutorial/avr-memory-architecture/
+- https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram

@@ -1,4 +1,4 @@
-parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
+parent::[tmi Examples](tmi%20Examples.md)
 previous::
 next::
 level:: #beginner

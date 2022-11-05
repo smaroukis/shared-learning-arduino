@@ -9,8 +9,8 @@ Desired Goal:
 - By using three different PWM outputs, one for each LED color, we can make almost any color by varying the intensity of each channel (the colors are "combined" by being close in space to each other)
 
 Concepts:
-- [RGB LEDs](../../../RGB%20LEDs.md) - forward drop of each color is different; by mixing colors with PWM we can make any color
-- [Arduino - PWM](../../../Arduino%20-%20PWM.md)
+- [RGB LEDs](../../RGB%20LEDs.md) - forward drop of each color is different; by mixing colors with PWM we can make any color
+- [Arduino - PWM](../../Arduino%20-%20PWM.md)
 
 Physical Setup:
 ![img04-RGB-led](attachments/img04-RGB-led.JPG)

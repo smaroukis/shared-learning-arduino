@@ -1,4 +1,3 @@
-.obsidian*
 .DS_Store
 Exclude/*
-.trash
+.trash/*

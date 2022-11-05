@@ -1,4 +1,3 @@
-#table 
 
 |             **Board**             | **Microcontroller** |    **Family**    | **Architecture** | **Flash** | **SRAM** | **EEPROM** |
 |-----------------------------------|---------------------|------------------|------------------|-----------|----------|------------|
@@ -10,3 +9,6 @@
 |                Nano               |      ATmega328P     |        AVR       |      Harvard     |    32kB   |    2kB   |     1kB    |
 |            Nano 33 BLE            |       nRF52840      |   ARM Cortex M4  |      Harvard     |    1MB    |   256kB  |      -     |
 > Source: https://docs.arduino.cc/learn/programming/memory-guide
+
+garden-topic::[Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
+#table 

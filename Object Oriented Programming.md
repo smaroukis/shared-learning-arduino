@@ -1,7 +1,7 @@
 parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 
 [Example - A Basic OOP Class for Multitasking](Example%20-%20A%20Basic%20OOP%20Class%20for%20Multitasking.md)
-[[Example - Even Better OOP - Header Files]]
+[Example - Even Better OOP - Header Files](Example%20-%20Even%20Better%20OOP%20-%20Header%20Files.md)
 [Example - Professional Grade OOP - Inheritance and Composition](Example%20-%20Professional%20Grade%20OOP%20-%20Inheritance%20and%20Composition.md)
 
 ## General Theory
@@ -10,7 +10,7 @@ parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 
 Single leading underscores are usually used for defining _internal_ or _private_ attributes of a class, they shouldn't need to be accessed from outside the class. Commonly they are used for internal calculations done by that classes member functions.
 
-> We can (and should) make our member variables private, since we use the relevant constructors to initialize them, and use a public accessor to get the values.^[https://www.learncpp.com/cpp-tutorial/constructors-and-initialization-of-derived-classes/]
+> We can (and should) make our member variables private, since we use the relevant constructors to initialize them, and use a public accessor to get the values. https://www.learncpp.com/cpp-tutorial/constructors-and-initialization-of-derived-classes/
 
 **Create Classes**
 
@@ -76,7 +76,7 @@ class Rectangle: public Shape {
 To correctly do this we can call and initialize the `Base` class within the `Derived` constructor
 
 ```cpp
-class Derived: public Base
+class derivedClass: public Base
 {
 public:
     double m_cost {};
@@ -93,7 +93,6 @@ public:
 
 ## Resources
 - adafruit - https://learn.adafruit.com/multi-tasking-the-arduino-part-1/a-classy-solution
-- 
 - arduino forum example for a latching pushbutton, simple but powerful (goes over protected vs private, access functions, syntax ++) https://forum.arduino.cc/t/buttons-an-object-oriented-approach/279724/9 -> [Example - OOP for a Latching Button](Example%20-%20OOP%20for%20a%20Latching%20Button.md)
 - on extending classes in C++
 	- arduino example: https://forum.arduino.cc/t/class-inheritance-and-polyphormism/93778/3

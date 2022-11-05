@@ -1,8 +1,8 @@
-parent::[tmi Examples](Personal%20Folders/that_marouk_ish/tmi%20Examples.md)
-previous:: [tmi15 Multitasking-2](Personal%20Folders/that_marouk_ish/tmi15%20Multitasking-2.md)
+parent::[tmi Examples](tmi%20Examples.md)
+previous:: [tmi15 Multitasking-2](tmi15%20Multitasking-2.md)
 next:: 
 level:: #intermediate 
-garden-topic:: [Multitasking and non blocking delays](Multitasking%20and%20non%20blocking%20delays.md), [Object Oriented Programming](Object%20Oriented%20Programming.md)
+garden-topic:: [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md), [Object Oriented Programming](../../Object%20Oriented%20Programming.md)
 
 >  (source)
 

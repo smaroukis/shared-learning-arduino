@@ -1,7 +1,7 @@
-parent::[tmi Examples](../../../tmi%20Examples.md)
-previous:: [tmi07 Buzzers](./tmi07%20Buzzers.md)
+parent::[tmi Examples](tmi%20Examples.md)
+previous:: [tmi07 Buzzers](tmi07%20Buzzers.md)
 next:: [tmi09 Ultrasonic Sensor](tmi09%20Ultrasonic%20Sensor.md)
-garden-topic:: [Servos](../../Servos.md)
+garden-topic:: [Servo Motors](../../Servo%20Motors.md)
 level:: #beginner
 
 >  Inspired by Elegoo Ultimate Starter Kit Lesson 9
@@ -11,7 +11,7 @@ Desired Goal:
 
 Concepts:
 - Using the Library Manager
-- [Servos](../../Servos.md)
+- [Servo Motors](../../Servo%20Motors.md)
 - 
 
 Physical Setup:
@@ -20,7 +20,7 @@ Physical Setup:
 
 - The motor (+) lead is connected directly to 5V on the Arduino and (-) to ground. The motor is driven by an Arduino PWM output pin to the `pulse` pin on the motor.
 
-![](attachments/Pasted%20image%2020221007173416.png)
+![Pasted image 20221007173416](attachments/Pasted%20image%2020221007173416.png)
 
 Code:
 

@@ -9,13 +9,13 @@ Desired Goal:
 - Set the LED to a brightness specified by the value of the analog input given by the LDR 
 
 Concepts:
-- [Arduino - PWM](../../../Arduino%20-%20PWM.md) -  analogWrite() vs analogRead()
+- [Arduino - PWM](../../Arduino%20-%20PWM.md) -  analogWrite() vs analogRead()
 - [LDR](LDR.md)s
 - voltage divider - converting a variable resistance to a measurable voltage
-- [Serial Communication](../../../Serial%20Communication.md) - the most basic printing of serial values to the monitor
+- [Serial Communication](../../Serial%20Communication.md) - the most basic printing of serial values to the monitor
 
 Physical Setup:
-![](attachments/IMG_7156.jpg)
+![IMG_7156](attachments/IMG_7156.jpg)
 
 
 Code:

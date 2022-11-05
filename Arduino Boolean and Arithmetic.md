@@ -1,4 +1,4 @@
-parent::[Intro to Arduino - Software](Intro%20to%20Arduino%20-%20Software.md)
+parent::[Arduino Software Concepts](Arduino%20Software%20Concepts.md)
 previous::[Arduino Case Statements](Arduino%20Case%20Statements.md)
 next::[Arduino Functions](Arduino%20Functions.md)
 
@@ -16,3 +16,11 @@ next::[Arduino Functions](Arduino%20Functions.md)
 - `-=`
 - `*=`
 - `/=`
+
+**Bitwise Operators** 
+- `&` (bitwise and)
+- `<<` (bitshift left) see [bit-shifting](bit-shifting.md)
+- `>>` (bitshift right)
+- `^` (bitwise xor)
+- `|` (bitwise or)
+- `~` (bitwise not)

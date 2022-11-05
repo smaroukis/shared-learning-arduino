@@ -1,4 +1,6 @@
-#raw
+parent::[Arduino Memory Specifics](Arduino%20Memory%20Specifics.md), [Serial Communication](Serial%20Communication.md)
+level:: #intermediate 
+also see: [Pointers](Pointers.md)
 
 The Harvard model turns out to be a good match for embedded applications and the Atmega 328 used in the Arduino UNO use a relatively pure Harvard architecture. Programs are stored in Flash memory and data is stored in SRAM.
 
@@ -6,7 +8,7 @@ The Harvard model turns out to be a good match for embedded applications and the
 
 > By default the core Arduino runtime firmware actually has an array to buffer the bytes already to store these in and the default length of **this buffer is 64 bytes** at the time of this writing
 
-#code handling arduino memory with our own buffer and using [C Functions - memmove()](C%20Functions%20-%20memmove().md) - note the code here is not checked or verified, just a rough example
+#code handling Arduino memory with our own buffer and using [C Functions - memmove](C%20Functions%20-%20memmove.md) - note the code here is not checked or verified, just a rough example
 ```c
 #define BUFSIZE 128
 
@@ -41,7 +43,7 @@ void loop() {
 }
 ```
 #q/answered how does the above `memmove()` move all the "downstream" bytes past the `&buf[1]` address? the `buflen` tells us how many bytes in memory to move.
-	**Notes on `memmove()`** ->  [C Functions - memmove()](C%20Functions%20-%20memmove())
+	**Notes on `memmove()`** -> [C Functions - memmove](C%20Functions%20-%20memmove.md)
 	
 **References**:
 -   https://www.reddit.com/r/arduino/comments/y2tv7s/comment/isbs6kw/?utm_source=share&utm_medium=web2x&context=3 

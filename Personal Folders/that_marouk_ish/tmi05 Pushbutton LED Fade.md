@@ -12,9 +12,9 @@ Desired Goal:
 	- the button can be released and the LED will stay at the same brightness
 
 Concepts:
-- [Arduino - PWM](Arduino%20-%20PWM.md) - for fading in and out the LED
+- [Arduino - PWM](../../Arduino%20-%20PWM.md) - for fading in and out the LED
 - [Resistors](../../Resistors.md) as current limiters
-- [Switches](Switches.md) - Pushbuttons
+- [Switches](../../Switches.md) - Pushbuttons
 - [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md) using `millis()` for timing
 
 Further:
@@ -24,7 +24,7 @@ Code:
 - [tmi_05_pushbutton_led_fade](Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi_05_pushbutton_led_fade/tmi_05_pushbutton_led_fade.ino).
 
 Physical setup:
-![](attachments/Pasted%20image%2020221005220840.png)
+![Pasted image 20221005220840](attachments/Pasted%20image%2020221005220840.png)
 
 Copy of code: 
 ``` c++
