@@ -5,7 +5,7 @@ Integer Constants - e.g. `const int`
 - are usually type `int` (unsigned) but can be other variable types using specific formatting e.g. `const int 10000L` (constant long integer) or `const int 33u` (constant unsigned integer) or `const int 32767UL` (constant unsigned long integer)
 
 Table of various types:
-![Pasted image 20221005161457](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221005161457.png)
+![Pasted image 20221005161457](attachments/Pasted%20image%2020221005161457.png)
 
 - _U/L formatters (appends)_
 	- `u|U`: to force the constant into an **unsigned** data format. Example: `33u`

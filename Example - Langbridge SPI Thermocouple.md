@@ -9,7 +9,7 @@ Hardware
 
 > [!NOTE]- Hardware Layout
 > 
-> ![Pasted image 20221105132150](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105132150.png)
+> ![Pasted image 20221105132150](attachments/Pasted%20image%2020221105132150.png)
 
 After taking a look at the datasheet of the [MAX31855 thermocouple](MAX31855%20thermocouple.md) we can see what data it gives back on the SPI bus. It is a 32 bit package, with the first 16 bits (D31 to D18) as the temperature data and the second 16 bits (D15 to D0) as an error or fault status if applicable.
 

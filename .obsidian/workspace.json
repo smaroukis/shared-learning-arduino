@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9da05da0041c9faf",
+        "id": "68c2582720f4d0e5",
         "type": "tabs",
         "children": [
           {
-            "id": "623dd7d115ab34a9",
+            "id": "a0d4af394f43514d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Start Here.md",
+                "file": "LCDs.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -67,13 +67,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 272.5,
-    "collapsed": true
+    "width": 272.5
   },
   "right": {
     "id": "e8caf645a6d0e8f4",
@@ -89,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_Start Here.md",
+                "file": "LCDs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_Start Here.md",
+                "file": "LCDs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_Start Here.md"
+                "file": "LCDs.md"
               }
             }
           },
@@ -176,17 +174,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "623dd7d115ab34a9",
+  "active": "a0d4af394f43514d",
   "lastOpenFiles": [
-    "Meta - Getting Started with This Vault.md",
-    "_Start Here.md",
-    "README.md",
+    "I2C.md",
+    "LN - langbridgeArduinoSketches.md",
+    "Mounting LEDs.md",
+    "open drain.md",
+    "pinout - LCD1602.md",
+    "Personal Folders/that_marouk_ish/tmi02 Digital Inputs.md",
     "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
-    "Arduino Software Concepts.md",
-    "Arduino - _Site Map.md",
-    "Arduino.md",
-    "Other Software and Computer Concepts.md",
-    "Intro to Arduino - Software.md",
-    "bit-shifting.md"
+    "Personal Folders/that_marouk_ish/tmi 17 Home Automation.md",
+    "Personal Folders/that_marouk_ish/tmi Notes on multitasking.md",
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook 2.md"
   ]
 }

@@ -28,7 +28,7 @@ SRAM, Static Random Access Memory (volatile)
 - **Stack**: for local variables, interrupts and function calls, grows "down" from the top of the memory down toward the heap; each interrupt, function call, and local variable causes the stack to grow; space is reclaimed when functions return
 
 > [!NOTE]- SRAM: Memory Diagram
-> ![Pasted image 20221019124618](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221019124618.png) ^[https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram]
+> ![Pasted image 20221019124618](attachments/Pasted%20image%2020221019124618.png) ^[https://learn.adafruit.com/memories-of-an-arduino/optimizing-sram]
 
 EEPROM (non-volatile)
 - like Flash it is non-volatile

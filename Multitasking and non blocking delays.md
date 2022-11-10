@@ -6,7 +6,7 @@ The basic theory is that we want to get the `loop()` flywheel running as fast as
 
 This can involve ideas like "state machines",  task managers, and Timers. But the basic thing will be incrementing counters and raising flags to tell the microprocessor if, in each time through `loop()`, it should chip away at a task or check a state machine's value. 
 
-![Pasted image 20221014223111](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221014223111.png)
+![Pasted image 20221014223111](attachments/Pasted%20image%2020221014223111.png)
 [source](https://forum.arduino.cc/t/a-demo-code-explaining-the-switch-case-state-machine-and-how-to-do-things-almost-in-parallel/888172/2)]
 
 See [Example - Simple Debounce with MIllis](Example%20-%20Simple%20Debounce%20with%20MIllis.md)

@@ -1,1 +1,0 @@
-- VSCode Arduino extension https://gitter.im/Microsoft/vscode-arduino

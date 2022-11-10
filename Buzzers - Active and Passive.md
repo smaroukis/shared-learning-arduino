@@ -14,7 +14,7 @@ Summary
 ### Electromagnetic Buzzers
 
 Active vs Passive
-![Pasted image 20221007132507](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221007132507.png)
+![Pasted image 20221007132507](attachments/Pasted%20image%2020221007132507.png)
 - both are _polarized_
 
 Active Buzzer
@@ -38,7 +38,7 @@ Theory of operation
 - a magnetic field is created by applying current to a coil.
 
 
-![Pasted image 20221007132552](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221007132552.png)
+![Pasted image 20221007132552](attachments/Pasted%20image%2020221007132552.png)
 
 **Further** - see [Example Circuits - Buzzers](Example%20Circuits%20-%20Buzzers.md)
 - a piezo buzzer is driven by a voltage - we can model it as a capacitor. sometimes we use a reset resistor to discharge it when the switch connecting it is open

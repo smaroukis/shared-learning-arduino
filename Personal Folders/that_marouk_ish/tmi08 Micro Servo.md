@@ -20,7 +20,7 @@ Physical Setup:
 
 - The motor (+) lead is connected directly to 5V on the Arduino and (-) to ground. The motor is driven by an Arduino PWM output pin to the `pulse` pin on the motor.
 
-![Pasted image 20221007173416](attachments/Pasted%20image%2020221007173416.png)
+![Pasted image 20221007173416](tmi%20attachments/Pasted%20image%2020221007173416.png)
 
 Code:
 

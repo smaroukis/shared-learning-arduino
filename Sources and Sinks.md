@@ -7,7 +7,7 @@ For a pin acting as a **source**, current will flow **out** of the pin, whereas 
 
 The following diagram shows the two ways to power an LED using digital outputs.
 
-![Pasted image 20221104111436](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221104111436.png)
+![Pasted image 20221104111436](attachments/Pasted%20image%2020221104111436.png)
 
 **Source**
 - the LED is connected between the IO pin and ground

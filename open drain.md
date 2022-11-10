@@ -4,4 +4,4 @@ Open drain (or open collector on a BJT) means that the drain which is used as th
 
 Power must be provided from elsewhere.
 
-![Pasted image 20221105102437](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105102437.png)
+![Pasted image 20221105102437](attachments/Pasted%20image%2020221105102437.png)

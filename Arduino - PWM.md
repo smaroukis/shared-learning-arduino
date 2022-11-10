@@ -4,7 +4,7 @@ Pulse-width-modulation, or PWM, is a technique to create a quasi-analog voltage 
 
 The result depends on the component connected to the output, but for LEDs this results in brightness corresponding to the duty cycle of the PWM wave. 
 
-![Pasted image 20221103213229](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221103213229.png)
+![Pasted image 20221103213229](attachments/Pasted%20image%2020221103213229.png)
 Source: https://docs.arduino.cc/tutorials/generic/secrets-of-arduino-pwm
 
 The PWM-capable digital output pins can output a PWM square-wave when using the `analogWrite()` function. This can be combined with an RC [Low Pass RC Filter](Low%20Pass%20RC%20Filter.md) to create a DC voltage (e.g. 1K and 100uF) other than the normal 0 and 5V. 

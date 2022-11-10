@@ -10,7 +10,7 @@ Pins required
 - `TX`: transmit pin
 - `RX`: receive pin
 
-![Pasted image 20221105121633](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105121633.png)
+![Pasted image 20221105121633](attachments/Pasted%20image%2020221105121633.png)
 
 Transmitting UART converts parallel data from the master device (eg. CPU) into serial form and transmit in serial to receiving UART. It will then convert the serial data back into parallel data for the receiving device
 
@@ -36,7 +36,7 @@ Important
 
 To begin using a UART device you need to set the speed (baud-rate) and the data/parity/stop bit configuration (e.g. 8N1 is default on Arduino and many other devices, meaning 8 data-bits, no parity bits, and one stop bit -- this results in 10 bits as a start bit is also always needed).
 
-![Pasted image 20221105105954](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105105954.png)
+![Pasted image 20221105105954](attachments/Pasted%20image%2020221105105954.png)
 
 The UART does not define voltage levels, refer to the specific protocol (e.g. [RS-232](RS-232.md)) if that is needed.
 

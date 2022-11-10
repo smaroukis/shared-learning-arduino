@@ -17,7 +17,7 @@ UART is hardware that translates between serial and parallel. To begin using a U
 1. the speed (baud-rate)
 2. the data/parity/stop bit configuration (e.g. 8N1 is default on Arduino, meaning 8 data-bits, no parity bits, and one stop bit -- this results in 10 bits as a start bit is also always needed). 
 
-![Pasted image 20221105105954](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105105954.png)
+![Pasted image 20221105105954](attachments/Pasted%20image%2020221105105954.png)
 
 **Data encapsulation** is placing the data inside other bits that help the computer identify what is being sent:
 - **Data bits**: can be between 5 and 9, but most systems use 8 bits because that is 1 byte. 
@@ -37,7 +37,7 @@ SoftwareSerial requires pins that support change interrupts.
 
 Uses a ~~Master/Slave~~ Main/Secondary control scheme - the Main can communicate with only one Secondary peripheral at a time. Compared to networking the Main is the Host and the Secondary is the Client.
 
-![Pasted image 20221105125854](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105125854.png)
+![Pasted image 20221105125854](attachments/Pasted%20image%2020221105125854.png)
 
 Requires 4 wires
 - `MOSI` and `MISO`: Data wires are MOSI (Main Out-Secondary In) and MISO (Main In-Secondary Out).
@@ -109,7 +109,7 @@ I2C can only send data in 8-bit packages. Devices tend to be small with only a f
 
 I2C requires [Pullup Resistors](Pullup%20Resistors.md) on the data lines since they are of "[open drain](open%20drain.md)" type. 
 
-![Pasted image 20221105150231](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105150231.png)
+![Pasted image 20221105150231](attachments/Pasted%20image%2020221105150231.png)
 
 **Sequence**
 - Mains automatically receive all information from Secondaries
@@ -126,7 +126,7 @@ I2C requires [Pullup Resistors](Pullup%20Resistors.md) on the data lines since t
 - In 7-bit addressing, addresses are (of course) 7 bits long, and the last bit is used to select a read or a write, for a total of 8 bits.
 - In 10-bit addressing, things are a little more complicated (since we can only send 8 bits at a time) - see the diagram below. The first 5 bits are always written as `11110` since this is reserved in 7-bit addressing. 
 
-![Pasted image 20221105150400](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105150400.png)
+![Pasted image 20221105150400](attachments/Pasted%20image%2020221105150400.png)
 
 Cons
 - not full duplex, so devices can't send and receive data at the same time

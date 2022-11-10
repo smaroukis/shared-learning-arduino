@@ -11,7 +11,7 @@ previous::[UART](UART.md)
 
 Uses a ~~Master/Slave~~ Main/Secondary control scheme - the Main can communicate with only one Secondary peripheral at a time. Compared to networking the Main is the Host and the Secondary is the Client.
 
-![Pasted image 20221105125854](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105125854.png)
+![Pasted image 20221105125854](attachments/Pasted%20image%2020221105125854.png)
 
 Requires 4 wires
 - `MOSI` and `MISO`: Data wires are MOSI (Main Out-Secondary In) and MISO (Main In-Secondary Out).

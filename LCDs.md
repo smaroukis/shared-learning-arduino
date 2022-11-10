@@ -14,7 +14,7 @@ The standard way of using an LCD will require 7 Arduino I/O pins (8 if you want 
 There is another library that uses [I2C](I2C.md) (`LiquidCrystal_I2C`) that uses just the two `SCL` and `SCA` pins (in addition to `+V` and `GND`)
 
 > [!note]- Block Diagram
-> ![Pasted image 20221017112251](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221017112251.png)
+> ![Pasted image 20221017112251](attachments/Pasted%20image%2020221017112251.png)
 
 **Resources**
 

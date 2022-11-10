@@ -13,10 +13,10 @@ Concepts:
 - pullup resistors and inverted logic
 
 Physical Setup:
-![IMG_7160](attachments/IMG_7160.jpg)
+![IMG_7160](tmi%20attachments/IMG_7160.jpg)
 
 Code:
-See [tmi02_Digital-Inputs](code/tmi02_Digital-Inputs/tmi02_Digital-Inputs.ino)
+See [tmi02_Digital-Inputs](tmi%20code/tmi02_Digital-Inputs/tmi02_Digital-Inputs.ino)
 
 ``` c
 int LED = 9;

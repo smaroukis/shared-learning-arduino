@@ -24,7 +24,7 @@ Code:
 - [tmi_05_pushbutton_led_fade](Personal%20Folders/that_marouk_ish%20(Spencer)/code/tmi_05_pushbutton_led_fade/tmi_05_pushbutton_led_fade.ino).
 
 Physical setup:
-![Pasted image 20221005220840](attachments/Pasted%20image%2020221005220840.png)
+![Pasted image 20221005220840](tmi%20attachments/Pasted%20image%2020221005220840.png)
 
 Copy of code: 
 ``` c++

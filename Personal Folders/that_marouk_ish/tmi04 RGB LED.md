@@ -13,7 +13,7 @@ Concepts:
 - [Arduino - PWM](../../Arduino%20-%20PWM.md)
 
 Physical Setup:
-![img04-RGB-led](attachments/img04-RGB-led.JPG)
+![img04-RGB-led](tmi%20attachments/img04-RGB-led.JPG)
 
 
 Code:

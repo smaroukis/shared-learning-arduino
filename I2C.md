@@ -20,7 +20,7 @@ I2C can only send data in 8-bit packages. Devices tend to be small with only a f
 
 I2C requires [Pullup Resistors](Pullup%20Resistors.md) on the data lines since they are of "[open drain](open%20drain.md)" type. 
 
-![Pasted image 20221105150231](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105150231.png)
+![Pasted image 20221105150231](attachments/Pasted%20image%2020221105150231.png)
 
 **Sequence**
 - Mains automatically receive all information from Secondaries
@@ -37,7 +37,7 @@ I2C requires [Pullup Resistors](Pullup%20Resistors.md) on the data lines since t
 - In 7-bit addressing, addresses are (of course) 7 bits long, and the last bit is used to select a read or a write, for a total of 8 bits.
 - In 10-bit addressing, things are a little more complicated (since we can only send 8 bits at a time) - see the diagram below. The first 5 bits are always written as `11110` since this is reserved in 7-bit addressing. 
 
-![Pasted image 20221105150400](Personal%20Folders/that_marouk_ish/attachments/Pasted%20image%2020221105150400.png)
+![Pasted image 20221105150400](attachments/Pasted%20image%2020221105150400.png)
 
 Cons
 - not full duplex, so devices can't send and receive data at the same time
