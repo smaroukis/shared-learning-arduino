@@ -3,8 +3,7 @@
 This shared learning project was completed on 11/10/2022 and will no longer be updated by the original author unless pull requests are submitted. 
 
 **Concepts Covered**:
-
-![[attachments/Pasted image 20221110124223.png]]
+![](Pasted%20image%2020221110124223.png)
 
 ## Project Description
 
