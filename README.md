@@ -1,3 +1,7 @@
+## Project Update
+
+This shared learning project was completed on 11/10/2022 and will no longer be updated by the original author unless pull requests are submitted. 
+
 ## Project Description
 
 This is a shared knowledge project to promote learning about Arduino for beginners, by beginners. It is a collection of interlinked markdown files. At the root level are Topics, you can contribute any learnings to any of these. You can create a Personal folder and page to track and log your progress.
