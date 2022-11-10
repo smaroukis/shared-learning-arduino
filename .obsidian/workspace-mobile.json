@@ -4,19 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "bf28c300da4f297a",
+        "id": "5cb349e80a6a2b76",
         "type": "tabs",
         "children": [
           {
-            "id": "0c9cb8ba75189556",
+            "id": "0e1a671711e6a3a7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "Personal Folders/that_marouk_ish/attachments/📝 2022-10-13_Arduino_Project_Ideas.excalidraw 1.md"
               }
             }
           }
@@ -45,7 +42,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "tag:#inbox/writing",
+            "query": "",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -86,7 +83,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+            "file": "Personal Folders/that_marouk_ish/attachments/📝 2022-10-13_Arduino_Project_Ideas.excalidraw 1.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -103,7 +100,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+            "file": "Personal Folders/that_marouk_ish/attachments/📝 2022-10-13_Arduino_Project_Ideas.excalidraw 1.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -115,7 +112,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md"
+            "file": "Personal Folders/that_marouk_ish/attachments/📝 2022-10-13_Arduino_Project_Ideas.excalidraw 1.md"
           }
         }
       },
@@ -154,14 +151,14 @@
     ],
     "currentTab": 0
   },
-  "active": "0c9cb8ba75189556",
+  "active": "0e1a671711e6a3a7",
   "lastOpenFiles": [
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
     "Arduino Boards.md",
     "Uno.md",
     "Introduction to Arduino - Hardware.md",
     "Arduino Pin Considerations.md",
     "Meta - Vault Cleanup Tasks.md",
-    "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
     "Arduino.md",
     "Arduino Software Concepts.md",
     "Pointers.md",
