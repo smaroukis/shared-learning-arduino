@@ -20,7 +20,7 @@ Physical Setup:
 > We are using 16Ohm magnetic buzzers from the elegoo Mega Ultimate Starter Kit
 
 07A - Active Buzzer
-![img07-setup](img07-setup.JPG)
+![img07-setup](attachments/img07-setup.JPG)
 
 07C - Passive Buzzer
 - same physical setup as above (note we can use a digital pin even though we are doing _frequency modulation_, as opposed to _PWM_, per the `tone()` function included in the Arduino library)

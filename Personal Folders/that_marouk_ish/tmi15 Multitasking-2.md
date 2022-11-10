@@ -1,63 +1,43 @@
 parent::[tmi Examples](tmi%20Examples.md)
-previous:: [tmi12 Serial Input Basics](tmi12%20Serial%20Input%20Basics.md)
-next:: [tmi15 Multitasking-2](tmi15%20Multitasking-2.md)
+previous:: [tmi14 Multitasking-1](tmi14%20Multitasking-1.md)
+next:: [tmi 16 Object Oriented Programming](tmi%2016%20Object%20Oriented%20Programming.md)
 level:: #beginner 
-garden-topic:: [Multitasking and non blocking delays](../../Multitasking%20and%20non%20blocking%20delays.md), [../../User Defined Functions](../../User%20Defined%20Functions)
+garden-topic::[LCDs](../../LCDs.md)
 
 Desired Goal:
-- rotate a servo back and forth, outputting the position to the Serial Monitor, using a pushbutton to start/stop, blinking an LED at a rate proportional to the position (e.g. fast blinking at position 0 and slow blinking at position 180).
-
-Concepts:
-- used Functions to split up the code to be more readable
-- used non-blocking functions to allow us to multitask
-
+- Add an LCD to the previous project to display the position
 
 Physical Setup:
-![IMG_7397](attachments/IMG_7397.jpg)
+- same as before, except see code for LCD screen setup (4bit mode) - [LCDs](../../LCDs.md)
 
 Code:
+- for the LCD screen if you write to the same position 100 and then 90, it will display 900 since it only "overwrites" instead of clearing 
 
-- [x] 1 - Rotate the Motor Back and Forth
-- [x] 2 - Add pushbutton to start/ stop
-- [x] 3 - Add LED color indicator
-4 - add a pot for speed control
-- speed control will be more advanced concept than previous
-5 - output to LCD
-
-A tricky part was getting the LED to blink at a rate proportional to the motor position - at the correct _brightness_ when the **motor was paused**. Here the loop was always hitting a `digitalWrite(LED, LOW)` only one loop cycle after the `digitalWright(LED, HIGH)`, resulting in a very dim blink. We needed to add another timer to track a "falling" or turn off value - to make sure it had delayed enough from being "on" before we turned off. 
-
-The key code is using the `tLedDelayFalling` variable (set to `10ms`), which resulted in a brighter LED when the motor was paused. 
-
-```c
-void updateLED() {
-  if (thisServoStarted) tLedDelayRising = map(pos, 0, 180, 50, 1000);
-
-  if ((tNow - tPreviousLed >= tLedDelayRising)) {
-    tPreviousLed = tNow; 
-    digitalWrite(RED, HIGH);
-
-  } else if (tNow - tPreviousLed >= tLedDelayFalling) {
-    digitalWrite(RED, LOW); // need to add a falling timer so that we can light up brighter on time offs
-  }
+``` cpp
+void updateLcdPos() {
+  lcd.setCursor(5, 1);
+  lcd.print("   "); // printing three spaces for a clean "overwrite"
+  lcd.setCursor(5, 1);
+  lcd.print(String(pos)); // pos in [0, 180]
 }
 ```
 
-**Full Code**:
 
+Without OOP
 ``` c
-// Learning Objective: Demonstrate multitasking capabilities with non-blocking functions
-// (without using OOP paradigm)
-// Move a servo motor back and forth while changing the blink rate of an LED
-// Blink rate is proportional to the motor position
-// Pressing a pushbutton press stops motor movement, LED blinking continues
+// Continued from Multitasking-1
+// Here we add in an LCD screen
+
 
 #include <Arduino.h>
 #include <Servo.h>
+#include <LiquidCrystal.h>
 
 // Pins
-const byte PIN_SERVO1 = 9; // 9 <- SIGNAL (byte [0, 255])
-const int BUTTON = 2; // 11 <- Button (will be normal HIGH)
-const int RED = 13;
+const byte PIN_SERVO1 = 3; // SIGNAL (byte [0, 255])
+const int BUTTON = 2; // Button (will be normal HIGH)
+const int RED = 4;
+const int RS = 12, EN = 11, D4 = 10, D5 = 9, D6 = 8, D7 = 7; // LCD pins
 
 // Variables
 unsigned long tNow; // for each time through the loop
@@ -81,14 +61,26 @@ const int tDebounceDelay = 30;
 boolean debouncing = false;
 int buttonState = 0; 
 int buttonPreviousState = 1; // button is INPUT_PULLUP so normal is HIGH, active LOW
+  
+// LCD 
+LiquidCrystal lcd(RS, EN, D4, D5, D6, D7);
+unsigned long tPreviousStepLcd = 0;
+unsigned long tDelayLcd = 80; // lcd update should be slower
+
 
 void setup() {
   pinMode(RED, OUTPUT);
   pinMode(BUTTON, INPUT_PULLUP);
   digitalWrite(BUTTON, HIGH); // to avoid ambiguity
+  digitalWrite(RED, LOW);
 
   thisServo.attach(PIN_SERVO1);
   Serial.begin(9600);
+  Serial.println("Starting Serial Monitor ...");
+
+  lcd.begin(16, 2);
+  updateLcd();
+  
 }
 
 void updateLED() {
@@ -126,7 +118,8 @@ void moveServoOneStep() {
 
     if (pos == 180 || pos == 0) delta_pos = -delta_pos; 
     // update timer
-    tPreviousStep = tNow; // #q - or should we use `millis()` function again? s
+    tPreviousStep = tNow; 
+    updateLcdPos();
   }
 }
 
@@ -148,12 +141,13 @@ void servoChangeState() {
       servoStop();
       break;
   }
+  updateLcd();
 }
 
 void checkButton() {
   buttonState = digitalRead(BUTTON); // INPUT_PULLUP
   if (buttonState != buttonPreviousState) {
-    tDebounceStart = tNow; // #q again, should this be tNow or millis()
+    tDebounceStart = tNow;
     buttonPreviousState = buttonState; 
     debouncing = true;
     Serial.println("Started Debouncing...");
@@ -168,20 +162,54 @@ void checkButton() {
   }
 }
 
+void updateLcd() {
+  // requres: tPreviousStepLcd, tDelayLcd, thisServoStarted
+  // needs its own timing to avoid flicker - 
+  // could also use previous servo state to only change on an edge
+
+  if(thisServoStarted) {
+    lcd.clear(); // also returns the cursor to top left
+    lcd.print("Servo is running:");
+    printLcdPos(); 
+    updateLcdPos();
+    tPreviousStepLcd = tNow;
+
+  } else if (!thisServoStarted) {
+    lcd.clear();
+    lcd.print("Servo is stopped:");
+    printLcdPos();
+    updateLcdPos();
+    tPreviousStepLcd = tNow;
+  }
+}
+
+void printLcdPos() {
+  lcd.setCursor(0, 1); 
+  lcd.print("Pos: ");
+}
+
+void updateLcdPos() {
+  lcd.setCursor(5, 1);
+  lcd.print("   "); // printing three spaces for a clean "overwrite"
+  lcd.setCursor(5, 1);
+  lcd.print(String(pos));
+}
+
+void checkLcdPos() {
+  if (thisServoStarted && (tNow - tPreviousStepLcd >= tDelayLcd)) {
+    updateLcdPos();
+  }
+}
+
 // Loop
 void loop() {
   tNow = millis(); 
 
-  checkButton();
-  moveServoOneStep(); 
+  checkButton(); 
+  moveServoOneStep(); // calls updateLcd
   updateLED();
-  }
+}
 ```
 
 Improvements:
-- add in a potentiometer as a controller and an LCD to display position
-- start to use object oriented programming structures
-
-Outstanding Questions
-- see `#q` in the code 
-	- when updating the time of a non-blocking time variable, should we use the `tNow` which grabs the `millis()` at the beginning of the main `loop()` or should we call  `millis()` again each time? 
+- 
