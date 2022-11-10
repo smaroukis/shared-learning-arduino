@@ -20,7 +20,7 @@ Concepts:
 Physical Setup:
 
 Same as in the previous but with only one pushbutton.
-![IMG_7160](IMG_7160.jpg)
+![IMG_7160](attachments/IMG_7160.jpg)
 - 
 Notes on debouncing
 - always taking the current time at the beginning of each loop
@@ -38,7 +38,7 @@ So it needs the variables
 - `debouncing` flag
 - `old_state` to compare with the new state 
 
-Also see [tmi03_Digital-Inputs-Debounce-Millis](tmi03_Digital-Inputs-Debounce-Millis.ino)
+Also see [tmi03_Digital-Inputs-Debounce-Millis](code/tmi03_Digital-Inputs-Debounce-Millis/tmi03_Digital-Inputs-Debounce-Millis.ino)
 
 ``` c
 // Inputs

@@ -135,7 +135,7 @@ Projects
 08 - motors [tmi08 Micro Servo](tmi08%20Micro%20Servo.md)
 - mostly just uses the Servo library (download from Library Manager or online) to handle everything
 - with this one we can drive with 
-- [Servo Motors](../../Servo%20Motors.md)
+- [Servos](../../Servos.md)
 
 **Research/Notepad**
 [Buzzers - Active and Passive](../../Buzzers%20-%20Active%20and%20Passive.md)
@@ -177,7 +177,7 @@ Project 2
 	- longs vs ints -> see [Intro to Arduino - Software](../../Intro%20to%20Arduino%20-%20Software.md)
 	- use `unsigned long` for `millis()` timekeeping (can go up to -4.2Ms = 50 days)
 	- some tricks for fading in and out see below and in [tmi05 Pushbutton LED Fade](tmi05%20Pushbutton%20LED%20Fade.md)
-		- ![Pasted image 20221005215410](Pasted%20image%2020221005215410.png)
+		- ![Pasted image 20221005215410](attachments/Pasted%20image%2020221005215410.png)
 
 
 ### [2022-10-04](2022-10-04) ✅ 
