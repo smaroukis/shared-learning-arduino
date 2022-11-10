@@ -14,7 +14,8 @@
   "processBig": true,
   "honorObsidianExcludedFiles": true,
   "excludedFilesFilters": [
-    "Personal Folders/that_marouk_ish/code/",
-    "Exclude/"
+    "Exclude/",
+    "Personal Folders/that_marouk_ish/tree-sample/",
+    "Personal Folders/that_marouk_ish/tmi code/"
   ]
 }

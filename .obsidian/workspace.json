@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LCDs.md",
+                "file": "Personal Folders/that_marouk_ish/tmi10 Matrix Keypad.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LCDs.md",
+                "file": "Personal Folders/that_marouk_ish/tmi10 Matrix Keypad.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LCDs.md",
+                "file": "Personal Folders/that_marouk_ish/tmi10 Matrix Keypad.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LCDs.md"
+                "file": "Personal Folders/that_marouk_ish/tmi10 Matrix Keypad.md"
               }
             }
           },
@@ -176,15 +176,15 @@
   },
   "active": "a0d4af394f43514d",
   "lastOpenFiles": [
-    "I2C.md",
-    "LN - langbridgeArduinoSketches.md",
-    "Mounting LEDs.md",
-    "open drain.md",
-    "pinout - LCD1602.md",
-    "Personal Folders/that_marouk_ish/tmi02 Digital Inputs.md",
+    "Personal Folders/that_marouk_ish/tmi04 RGB LED.md",
+    "Personal Folders/that_marouk_ish/tmi07 Buzzers.md",
     "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
-    "Personal Folders/that_marouk_ish/tmi 17 Home Automation.md",
     "Personal Folders/that_marouk_ish/tmi Notes on multitasking.md",
-    "Personal Folders/that_marouk_ish/tmi Lab Notebook 2.md"
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook 2.md",
+    "Personal Folders/that_marouk_ish/tmi08 Micro Servo.md",
+    "_Start Here.md",
+    "README.md",
+    "LCDs.md",
+    "I2C.md"
   ]
 }
