@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "file": "_Start Here.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "file": "_Start Here.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
+                "file": "_Start Here.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi Lab Notebook.md"
+                "file": "_Start Here.md"
               }
             }
           },
@@ -178,15 +178,15 @@
   },
   "active": "623dd7d115ab34a9",
   "lastOpenFiles": [
+    "Meta - Getting Started with This Vault.md",
+    "_Start Here.md",
+    "README.md",
+    "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
     "Arduino Software Concepts.md",
     "Arduino - _Site Map.md",
     "Arduino.md",
     "Other Software and Computer Concepts.md",
     "Intro to Arduino - Software.md",
-    "bit-shifting.md",
-    "binary arithmetic.md",
-    "Avoid magic numbers.md",
-    "Arduino Variable Types.md",
-    "Introduction to Arduino - Hardware.md"
+    "bit-shifting.md"
   ]
 }
