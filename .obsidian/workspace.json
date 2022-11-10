@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi10 Matrix Keypad.md",
+                "file": "Mega2560.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi10 Matrix Keypad.md",
+                "file": "Mega2560.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi10 Matrix Keypad.md",
+                "file": "Mega2560.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Personal Folders/that_marouk_ish/tmi10 Matrix Keypad.md"
+                "file": "Mega2560.md"
               }
             }
           },
@@ -176,6 +176,7 @@
   },
   "active": "a0d4af394f43514d",
   "lastOpenFiles": [
+    "Personal Folders/that_marouk_ish/tmi10 Matrix Keypad.md",
     "Personal Folders/that_marouk_ish/tmi04 RGB LED.md",
     "Personal Folders/that_marouk_ish/tmi07 Buzzers.md",
     "Personal Folders/that_marouk_ish/tmi Lab Notebook.md",
@@ -184,7 +185,6 @@
     "Personal Folders/that_marouk_ish/tmi08 Micro Servo.md",
     "_Start Here.md",
     "README.md",
-    "LCDs.md",
-    "I2C.md"
+    "LCDs.md"
   ]
 }
