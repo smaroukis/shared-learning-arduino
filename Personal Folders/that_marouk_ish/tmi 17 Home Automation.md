@@ -6,7 +6,7 @@ Ideation in [tmi 17 Ideation](tmi%2017%20Ideation.md)
 
 > [!NOTE]- Project Diagram 
 > Edit in [📝 2022-10-13_Arduino_Project_Ideas.excalidraw 1](attachments/📝%202022-10-13_Arduino_Project_Ideas.excalidraw%201.md) 
-> ![Pasted image 20221029142825](tmi%20attachments/Pasted%20image%2020221029142825.png)
+> ![Pasted image 20221029142825](Pasted%20image%2020221029142825.png)
 
 ### Steps and Tasks
 1. Get RasPi Node Red Server Up and running :➡️[tmi 17a RasPi NodeRed Server](tmi%2017a%20RasPi%20NodeRed%20Server.md)

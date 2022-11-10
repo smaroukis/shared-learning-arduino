@@ -13,7 +13,7 @@ Concepts:
 
 
 Physical Setup:
-![IMG_7397](tmi%20attachments/IMG_7397.jpg)
+![IMG_7397](IMG_7397.jpg)
 
 Code:
 

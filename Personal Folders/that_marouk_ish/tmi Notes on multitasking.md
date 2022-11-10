@@ -32,7 +32,7 @@
 			- uses timers within these functions to make sure it doesn't hang up
 			- the function that calls the `addingIngredient()` , the "caller", should acknowledge that the task has been done and reset the state
 		- [software control structures](software%20control%20structures) -> use the correct boolean operator so that the ingredients are not added  _sequentially_ but evaluated concurrently
-			- ![Pasted image 20221013232938](tmi%20attachments/Pasted%20image%2020221013232938.png)
+			- ![Pasted image 20221013232938](Pasted%20image%2020221013232938.png)
 	- summary
 		- each time we encounter a waiting condition, we create a state for the machine
 		- the machine waits for the waiting condition to clear; a state machine returning true means that the task is not finished

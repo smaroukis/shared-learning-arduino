@@ -84,7 +84,7 @@
     - [Example - OOP for a Latching Button](Example%20-%20OOP%20for%20a%20Latching%20Button.md)
     - [Example - OOP with Traffic Light Controller](Example%20-%20OOP%20with%20Traffic%20Light%20Controller.md)
     - [Example - Professional Grade OOP - Inheritance and Composition](Example%20-%20Professional%20Grade%20OOP%20-%20Inheritance%20and%20Composition.md)
-    - [Example Code - Move Servo to User Defined Position](Personal%20Folders/that_marouk_ish/tmi%20code/Example%20Code%20-%20Move%20Servo%20to%20User%20Defined%20Position.md)
+    - [Example Code - Move Servo to User Defined Position](Example%20Code%20-%20Move%20Servo%20to%20User%20Defined%20Position.md)
 
 
 ## Resource and Projects Hierarchy
@@ -105,11 +105,11 @@ Object Oriented Programming
 - [tmi 16 Object Oriented Programming](Personal%20Folders/that_marouk_ish/tmi%2016%20Object%20Oriented%20Programming.md)
 
 Serial Communication
-- [Example Code - Move Servo to User Defined Position](Personal%20Folders/that_marouk_ish/tmi%20code/Example%20Code%20-%20Move%20Servo%20to%20User%20Defined%20Position.md)
+- [Example Code - Move Servo to User Defined Position](Example%20Code%20-%20Move%20Servo%20to%20User%20Defined%20Position.md)
 - [tmi12 Serial Input Basics](Personal%20Folders/that_marouk_ish/tmi12%20Serial%20Input%20Basics.md)
 
 Servos
-- [Example Code - Move Servo to User Defined Position](Personal%20Folders/that_marouk_ish/tmi%20code/Example%20Code%20-%20Move%20Servo%20to%20User%20Defined%20Position.md)
+- [Example Code - Move Servo to User Defined Position](Example%20Code%20-%20Move%20Servo%20to%20User%20Defined%20Position.md)
 - [tmi08 Micro Servo](Personal%20Folders/that_marouk_ish/tmi08%20Micro%20Servo.md)
 
 ESP32 and ESP8266

@@ -15,7 +15,7 @@ Concepts:
 - [Serial Communication](../../Serial%20Communication.md) - the most basic printing of serial values to the monitor
 
 Physical Setup:
-![IMG_7156](tmi%20attachments/IMG_7156.jpg)
+![IMG_7156](IMG_7156.jpg)
 
 
 Code:
