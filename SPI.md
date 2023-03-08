@@ -1,4 +1,6 @@
 parent::[Serial Communication](Serial%20Communication.md)
+
+		 
 resource::[Example - Langbridge SPI Thermocouple](Example%20-%20Langbridge%20SPI%20Thermocouple.md)
 next::[I2C](I2C.md)
 previous::[UART](UART.md)

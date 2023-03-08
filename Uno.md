@@ -6,6 +6,9 @@ parent::[Arduino Boards](Arduino%20Boards.md)
 ### Pin specifics 
 For a basic intro see [Arduino Pin Considerations](Arduino%20Pin%20Considerations.md)
 
+
+![[Uno Pinout]]
+
 -   Serial: 0 (RX) and 1 (TX). Used to receive (RX) and transmit (TX) TTL serial data. These pins are connected to the corresponding pins of the ATmega8U2 USB-to-TTL Serial chip.
 -   External Interrupts: 2 and 3. These pins can be configured to trigger an interrupt on a low value, a rising or falling edge, or a change in value. See the attachInterrupt() function for details.
 -   PWM: 3, 5, 6, 9, 10, and 11. Provide 8-bit PWM output with the analogWrite() function.

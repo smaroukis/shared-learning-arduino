@@ -1,0 +1,1 @@
+![[uno-pinout-rev3.png]]
