@@ -56,3 +56,4 @@ Pins defined as "Analog" mean they can read an **analog** **input** and store it
 
 **Further**
 - Timers are internally connected to some pins - PWM can be limited because of this, see [Interrupts, Timers and Callbacks](Interrupts,%20Timers%20and%20Callbacks.md)
+- For hacking purposes, we can look at the impedance path of the digital IO pins and determine that [[its ok to connect an LED directly to the digital IO pins]]

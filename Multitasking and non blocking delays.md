@@ -9,7 +9,7 @@ This can involve ideas like "state machines",  task managers, and Timers. But th
 ![Pasted image 20221014223111](attachments/Pasted%20image%2020221014223111.png)
 [source](https://forum.arduino.cc/t/a-demo-code-explaining-the-switch-case-state-machine-and-how-to-do-things-almost-in-parallel/888172/2)]
 
-See [Example - Simple Debounce with MIllis](Example%20-%20Simple%20Debounce%20with%20MIllis.md)
+See [Example - Debounce with Millis and Static Variables](Example%20-%20Debounce%20with%20Millis%20and%20Static%20Variables.md)
 
 **Start Here**
 - https://learn.adafruit.com/multi-tasking-the-arduino-part-1 - categorized intermediate

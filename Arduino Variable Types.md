@@ -7,7 +7,7 @@ see-also:: [Arduino Memory Specifics](Arduino%20Memory%20Specifics.md)
 - for number variables that can get large, such as when using `millis()`, use `unsigned long` so it rolls over back to 0
 
 - By default number variables are unsigned, thus when a number "overflows" (becomes bigger than the value that it can hold), it will turn negative
-- for _n-bits_ of storage there is $2^n$ values; this includes 0, and we take away one possible value from the positive side, so we are left with a $2^{n-1}$ signed values and a range of $\text{int} \in [-2^{n-1}, 2^{n-1} - 1]$ since we take away one on the positive side. 
+- for _n-bits_ of storage there is $2^n$ values; this includes 0, and we take away one possible value from the positive side, so we are left with a $2^{n-1}$ *signed* values and a range of $\text{int} \in [-2^{n-1}, 2^{n-1} - 1]$ since we take away one on the positive side. 
 		- e.g. for 16 bits (the [word size](word%20size.md) of Arduino) it is $2^{16}=65,536$ values. For both positive and negative we have $32,768$ but since we want to include 0 as a positive number the range is $-32,768$ to $32,767$.
 
 `boolean`

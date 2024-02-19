@@ -43,6 +43,7 @@ class Led {
 
 #include "Led.h"
 
+// Constructor
 Led::Led(byte pin) {
   // Use 'this->' to make the difference between the
   // 'pin' attribute of the class and the 
@@ -70,7 +71,8 @@ void Led::off() {
 
 ### `Button.h`
 ```cpp
-// in Button.h we define the member variables only
+// in Button.h we provide function prototypes and define member variables
+// definitions go in the c file
 
 #ifndef MY_BUTTON_H
 #define MY_BUTTON_H
@@ -101,7 +103,7 @@ class Button {
 
 ### `Button.c`
 ```cpp
-// in Button.c we define the class function, incl. constructor
+// in Button.c we add function definitions usince 
 
 #include "Button.h"
 

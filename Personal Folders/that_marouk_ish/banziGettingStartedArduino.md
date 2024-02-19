@@ -35,7 +35,7 @@ date: 2022-09-17
 - use 22AWG solid core as breadboard hookup wire
 - [Memory](../../Memory.md)
 	- **variables** are stored in RAM; programs stored in **flash**
-- neat #software-trick to change the state of a boolean `state = 1 - state`
+- change the state of a boolean `state = 1 - state`
 - debounce for 10-50ms ->  [Debouncing](../../Debouncing.md)
 
 ### Ch 5 

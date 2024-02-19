@@ -45,4 +45,4 @@ General Process
 
 ### Example - Non-blocking
 
-![Example - Simple Debounce with MIllis](Example%20-%20Simple%20Debounce%20with%20MIllis.md)
+![Example - Debounce with Millis and Static Variables](Example%20-%20Debounce%20with%20Millis%20and%20Static%20Variables.md)
